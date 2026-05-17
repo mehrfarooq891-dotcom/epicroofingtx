@@ -136,6 +136,42 @@ async function startServer() {
     res.sendFile(roofRepairPath);
   });
 
+  // Serve Houston Roof Replacement landing page
+  const roofReplacementPath = path.join(process.cwd(), 'roof-replacement-houston.html');
+  app.get('/roof-replacement-houston', (req, res) => {
+    res.sendFile(roofReplacementPath);
+  });
+  app.get('/roof-replacement-houston.html', (req, res) => {
+    res.sendFile(roofReplacementPath);
+  });
+
+  // Serve Houston Storm Damage & Hail Damage landing page
+  const stormDamagePath = path.join(process.cwd(), 'storm-damage-roofing-houston.html');
+  app.get('/storm-damage-roofing-houston', (req, res) => {
+    res.sendFile(stormDamagePath);
+  });
+  app.get('/storm-damage-roofing-houston.html', (req, res) => {
+    res.sendFile(stormDamagePath);
+  });
+
+  // Serve Houston Insurance Claim Roofing landing page
+  const insuranceClaimPath = path.join(process.cwd(), 'insurance-claim-roofing-houston.html');
+  app.get('/insurance-claim-roofing-houston', (req, res) => {
+    res.sendFile(insuranceClaimPath);
+  });
+  app.get('/insurance-claim-roofing-houston.html', (req, res) => {
+    res.sendFile(insuranceClaimPath);
+  });
+
+  // Serve Houston Commercial Roofing landing page
+  const commercialPath = path.join(process.cwd(), 'commercial-roofing-houston.html');
+  app.get('/commercial-roofing-houston', (req, res) => {
+    res.sendFile(commercialPath);
+  });
+  app.get('/commercial-roofing-houston.html', (req, res) => {
+    res.sendFile(commercialPath);
+  });
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

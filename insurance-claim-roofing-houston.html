@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Epic Roofing TX handles your Houston roof insurance claim from start to finish. Free inspection, adjuster meetings, documentation & claim maximization. Call now.">
+  <title>Insurance Claim Roofing Houston TX | Claim Specialists | Epic Roofing TX</title>
+  
+  <!-- Barlow + Open Sans Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Styling overrides or enhancements specific to Insurance Claims */
+    .insurance-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      font-weight: 800;
+      font-family: var(--f-display);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      padding: 0.4rem 1.25rem;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .grid-4-custom {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .grid-4-custom {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .grid-4-custom {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--navy-light);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    @media (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+    }
+    
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    @media (max-width: 768px) {
+      .timeline-container {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+      }
+    }
+    
+    .timeline-container::after {
+      content: '✓';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: var(--orange);
+      border: 4px solid var(--navy-light);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+    @media (max-width: 768px) {
+      .timeline-container::after {
+        left: 8px;
+        right: auto;
+      }
+    }
+    
+    .left-container {
+      left: 0;
+    }
+    .right-container {
+      left: 50%;
+    }
+    @media (max-width: 768px) {
+      .right-container {
+        left: 0%;
+      }
+    }
+    
+    .left-container::after {
+      right: -12px;
+    }
+    .right-container::after {
+      left: -12px;
+    }
+    @media (max-width: 768px) {
+      .left-container::after, .right-container::after {
+        left: 8px;
+      }
+    }
+    
+    .timeline-card {
+      padding: 1.5rem;
+      background: var(--navy-light);
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid #1E293B;
+    }
+    .timeline-card h3 {
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-card .step-num {
+      position: absolute;
+      top: -12px;
+      left: 1rem;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 3px;
+    }
+    
+    .adjuster-card {
+      background: var(--navy-light);
+      border: 1px solid #1E293B;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+    .adjuster-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px);
+    }
+    
+    .check-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      color: #94A3B8;
+    }
+    .check-list li::before {
+      content: "🛡️";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .carrier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .carrier-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .carrier-card {
+      background: var(--navy);
+      border: 1px solid #2D3748;
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-family: var(--f-display);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #CBD5E1;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carrier-card:hover {
+      border-color: var(--orange);
+      color: var(--white);
+      background: var(--navy-light);
+    }
+  </style>
+
+  <!-- Google SEO Schema Blocks -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "Epic Roofing TX",
+    "url": "https://epicroofingtx.com/insurance-claim-roofing-houston",
+    "telephone": "(832) 555-0100",
+    "email": "info@epicroofingtx.com",
+    "priceRange": "$$$",
+    "image": "https://epicroofingtx.com/assets/og-hero.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77002",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.7604,
+      "longitude": -95.3698
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Houston" },
+      { "@type": "City", "name": "Katy" },
+      { "@type": "City", "name": "Sugar Land" },
+      { "@type": "City", "name": "Cypress" },
+      { "@type": "City", "name": "The Woodlands" },
+      { "@type": "City", "name": "Pearland" },
+      { "@type": "City", "name": "League City" },
+      { "@type": "City", "name": "Spring" },
+      { "@type": "City", "name": "Pasadena" },
+      { "@type": "City", "name": "Tomball" },
+      { "@type": "City", "name": "Conroe" },
+      { "@type": "City", "name": "Humble" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Roofing Insurance Claims Support",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Insurance Claim Roofing Contractor Houston",
+            "description": "Comprehensive water damage, wind, and hail claim assistance. We manage measurements, documentation, and on-site adjuster negotiations to secure optimal replacement funds."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I file a roof insurance claim in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Call Epic Roofing TX first. We run a free, forensic inspection mapping out exact storm dates, damage metrics, and structural proof. We help you submit the file to your carrier to guarantee details align perfectly before adjusters reach your lawn."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Texas state law forbid contractors from waiving deductibles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Texas HB 2102 strictly forbids roofing contractors from covering, absorbing, or waiving policy deductibles. It is a class-A misdemeanor. Contractors offering to pay your deductible are committing fraud and putting homeowners at legal risk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an insurance supplement and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An insurance supplement is an additional claim submitted when our crews discover hidden rot, rafter damage, or building code requirements once the old shingles are removed. We send photo proof directly to adjusters to cover these expenses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do I have to file a storm or hail claim in Texas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most Texas insurance policies limit storm claim files to 1 year (12 months) from the date of the weather event. Filing as quickly as possible ensures prompt processing and avoids claims being flatly rejected due to window expiration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my insurance premium increase if I file a roof claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Texas law prohibits carriers from raising premiums on an individual policy solely due to weather-related claims (Acts of God). However, broad insurance rates can fluctuate across zip codes after widespread hurricanes or hailstorms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my roof claim is denied by the insurance carrier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your claim is denied, you have an absolute legal right to a reinspection. We will accompany a secondary, senior adjuster on-site, providing HAAG-certified forensic evidence, weather tracking reports, and impact analysis to secure approvals."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://epicroofingtx.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://epicroofingtx.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Insurance Claim Roofing Houston Services",
+        "item": "https://epicroofingtx.com/insurance-claim-roofing-houston"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Insurance Help Line: Same-Day Adjuster Prep & Claim Assistance | <a href="tel:8325550100">📞 (832) 555-0100</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" id="site-logo">
+        EPIC ROOFING <span>TX</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Our Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/services/shingle-roof-replacement">Shingle Replacement</a>
+            <a class="dropdown-item" href="/services/metal-roofing-installation">Metal Roofing</a>
+            <a class="dropdown-item" href="/services/commercial-roof-coating">Commercial Coating</a>
+            <a class="dropdown-item" href="/services/hail-wind-storm-repair">Hail & Wind Damage</a>
+            <a class="dropdown-item" href="/services/emergency-tarping-leak-repair">Emergency Leak Tarp</a>
+            <a class="dropdown-item" href="/services/roof-inspection-haag">Certified Inspection</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Repairs</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/repairs/hail-damage">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/repairs/wind-damage">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/repairs/storm-damage">General Storm Damage</a>
+            <a class="dropdown-item" href="/repairs/emergency-tarp">Emergency Tarp Service</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <a class="dropdown-item" href="/cities/houston">Houston</a>
+            <a class="dropdown-item" href="/cities/katy">Katy</a>
+            <a class="dropdown-item" href="/cities/sugar-land">Sugar Land</a>
+            <a class="dropdown-item" href="/cities/cypress">Cypress</a>
+          </div>
+        </div>
+        <a href="/" class="nav-link">Interactive Center</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:8325550100" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 (832) 555-0100
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Slideout Menu -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/services/shingle-roof-replacement" class="mobile-nav-link">Shingle Replacement</a>
+    <a href="/repairs/storm-damage" class="mobile-nav-link">Storm Damage</a>
+    <a href="/cities/houston" class="mobile-nav-link">Houston Core</a>
+    <a href="tel:8325550100" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/">Home</a> <span>/</span> <a href="/services/hail-wind-storm-repair">Services</a> <span>/</span> <span style="color:#EA580C; font-weight:700;">Insurance Claims</span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero-main">
+    <div class="container">
+      <div class="insurance-badge">
+        📋 Houston's trusted Insurance Claim Specialist
+      </div>
+      <h1 class="hero-title" style="margin-bottom: 1.5rem; font-weight: 900; font-family: var(--f-display); line-height: 1.1;">
+        Experienced Insurance Claim Roofing Contractor in Houston, TX
+      </h1>
+      
+      <p class="hero-subtitle" style="max-width: 820px; font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.6; color: #E2E8F0;">
+        Confused about how to file a roof insurance claim in Houston? Epic Roofing TX is an <strong>insurance approved roofer houston</strong> team that coordinates directly with your carrier. From complete aerial forensic inspections to meeting the adjuster on your roof, we ensure your storm damage claim is approved in full.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem;">
+        <a href="tel:8325550100" class="btn btn-primary">📞 Talk to a Claim Specialist</a>
+        <a href="#quote" class="btn btn-secondary">📋 Request Free Pre-Claim Assessment</a>
+      </div>
+
+      <div class="stats-bar" id="stats-hero-row" style="margin-top: 1rem;">
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Claim Coordination</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">HAAG</span>
+          <span class="stat-label">Forensic Inspectors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">$0</span>
+          <span class="stat-label">Initial Assessment</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">HB 2102</span>
+          <span class="stat-label">Fully Compliant</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP-BY-STEP CLAIM TIMELINE -->
+  <section class="section-padding" id="how-it-works" style="background-color: var(--dark);">
+    <div class="container">
+      <h2>How Houston Roof Insurance Claims Work — Step by Step</h2>
+      <p style="text-align: center; max-width: 750px; margin: -1rem auto 3rem auto; color: #94A3B8; font-size: 0.95rem;">
+        Navigating the insurance claims cycle can seem daunting. We split it into 8 secure steps so you know exactly where your replacement stand.
+      </p>
+
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-container left-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 1</span>
+            <h3>Comprehensive Diagnostic Inspection</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              Our HAAG-certified experts run a forensic site assessment. We inspect shingles, gutters, chimney flashing, valleys, and vents to locate dynamic hail fractures and shingle liftoff.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-container right-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 2</span>
+            <h3>Forensic Damage Mapping</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              We compile high-resolution, scale-measured photo evidence, drone scans, moisture indices, and weather reports confirming exact storm calendar dates in Houston.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-container left-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 3</span>
+            <h3>Filing the Claims File</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              We help you compile the precise paperwork and weather records. You call your insurance carrier's claims hotline to initiate the file with flawless accuracy details.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-container right-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 4</span>
+            <h3>Adjuster On-Site Coordination</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              Our <strong>roof claim specialist houston</strong> team coordinates calendar dates to ensure we stand directly on your rooftop alongside the carrier's field adjuster.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-container left-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 5</span>
+            <h3>Present Forensic Findings</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              During the physical review, we walk the roof with the adjuster, showing exactly where shingles are bruised or lifted, ensuring no micro-fractures are overlooked.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-container right-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 6</span>
+            <h3>Estimate Scope Review (Xactimate)</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              Carriers generate building scopes using specialized software called Xactimate. We review every line item to verify current local labor rates and material structures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="timeline-container left-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 7</span>
+            <h3>Claim Supplement Submission</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              If hidden rot, rafter issues, or local building code updates (like drip edge or ice barriers) are found once the shingles are removed, we file supplemental claims for approval.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="timeline-container right-container">
+          <div class="timeline-card">
+            <span class="step-num">Step 8</span>
+            <h3>Flawless Shingle Replacement</h3>
+            <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+              Once approved, our experienced crews install dynamic GAF shingles and leak-proof barriers. We submit complete certificate files (COC) to release held back funds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASON 1: WHAT YOUR ADJUSTER IS LOOKING FOR -->
+  <section class="section-padding" id="adjuster-secrets" style="background-color: var(--navy-light);">
+    <div class="container">
+      <h2>What Your Insurance Adjuster Is Looking For</h2>
+      <p style="text-align: center; max-width: 750px; margin: -1rem auto 3rem auto; color: #94A3B8; font-size: 0.95rem;">
+        Understanding adjuster criteria will help ensure your claim succeeds. Here is the science behind insurance storm approvals in Texas.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="adjuster-card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📏</div>
+          <h3 style="font-size: 1.25rem; color: var(--orange);">1. The "Test Square" Impact Density</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Adjusters outline a standard 10ft x 10ft area (a "square") on various roof slopes. They require a specific density of verified hail impacts (typically 8 to 15 strikes depending on slope and manufacturer specs) to authorize a full slope replacement.
+          </p>
+        </div>
+
+        <div class="adjuster-card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">👁️</div>
+          <h3 style="font-size: 1.25rem; color: var(--orange);">2. Natural Wear vs. Acute Storm Bruising</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Adjusters verify if damage is a result of hail bruising or simple weathering. "Blistering" from poor attic ventilation leaves circular pits but is flatly denied. Natural hail bruises leave soft, fractured underlining impacts that our digital scopes map out.
+          </p>
+        </div>
+
+        <div class="adjuster-card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌪️</div>
+          <h3 style="font-size: 1.25rem; color: var(--orange);">3. Creased Shingles & Wind Shear</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Wind damage isn't just blown-off shingles. Adjusters look for horizontal creasing along the top of shingles, caused when high wind lifts the material and folds it upward. This creases the structural seal, destroying its waterproof barrier.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRITICAL SECTION: WHY YOU NEED A ROOFER BEFORE THE ADJUSTER -->
+  <section class="section-padding" id="before-adjuster" style="background-color: var(--dark);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr; md:grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; max-width: 1050px; margin: 0 auto;">
+        <div>
+          <h2 style="text-align: left; margin-bottom: 1.5rem;">Why You Need a Roofing Contractor BEFORE the Adjuster Visits</h2>
+          <p style="color: #E2E8F0; line-height: 1.7; margin-bottom: 1.25rem;">
+            When you file a claim, your insurance company dispatches an adjuster representing their financial interests. Their primary goal is to minimize claim payouts. If they inspect your roof alone, they may miss micro-fractures, overlook creepage damage, or deny full slope replacement.
+          </p>
+          <p style="color: #E2E8F0; line-height: 1.7; margin-bottom: 1.25rem;">
+            Our <strong>work with insurance adjuster roofing houston</strong> specialists work for you. We meet the adjuster on-site, align matching measurement profiles, outline structural code requirements, and highlight critical areas that must be addressed under the claim.
+          </p>
+          <ul class="check-list" style="margin-bottom: 2rem; font-size: 0.95rem;">
+            <li><strong>Equalize the Inspection:</strong> We make sure they don't rush through the evaluation.</li>
+            <li><strong>Expert Evidence:</strong> We present clear HAAG-certified forensic evidence directly.</li>
+            <li><strong>Code Upgrades Included:</strong> We ensure necessary code upgrades (drip edge, proper underlayment) are approved.</li>
+          </ul>
+        </div>
+        
+        <div style="background: var(--navy-light); border: 2px dashed var(--orange); padding: 2.5rem; border-radius: 12px; text-align: center;">
+          <h3 style="color: var(--orange); margin-bottom: 1rem;">Protect Your Claim</h3>
+          <p style="color: #E2E8F0; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            Don't let a rushed adjuster walk your roof alone. Protect your homeowner rights with our comprehensive claims support.
+          </p>
+          <div style="background: var(--dark); border-radius: 6px; padding: 1rem; border: 1px solid #1E293B;">
+            <div style="font-weight: 800; font-size: 0.8rem; color: var(--orange); text-transform: uppercase; margin-bottom: 0.25rem;">Average Approval Rate increase</div>
+            <div style="font-size: 1.5rem; font-weight: bold; color: #22C55E;">📈 Up to 72% More Approved Items</div>
+          </div>
+          <a href="tel:8325550100" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">
+            Schedule On-Site Adjuster Prep
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON MISTAKES SECTION -->
+  <section class="section-padding" id="common-mistakes" style="background-color: var(--navy-light);">
+    <div class="container" style="max-width: 1000px;">
+      <h2>Common Houston Insurance Claim Mistakes</h2>
+      <p style="text-align: center; max-width: 750px; margin: -1rem auto 3.5rem auto; color: #94A3B8; font-size: 0.95rem;">
+        Failing to navigate the claims process correctly can cost homeowners thousands of dollars out of pocket. Avoid these common industry mistakes:
+      </p>
+
+      <div class="grid grid-2" style="gap: 2rem;">
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <h3 style="font-size: 1.15rem; color: #EF4444; margin-bottom: 0.75rem;">❌ 1. Delaying the Claim Filing Date</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Waiting too long holds back approvals. Shingles degrade quickly under heat, and adjusters may blame wear rather than storm damage. Texas policies typically require claims to be filed within 1 year.
+          </p>
+        </div>
+
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <h3 style="font-size: 1.15rem; color: #EF4444; margin-bottom: 0.75rem;">❌ 2. Signing Over Full Contingency Agreements Early</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Be cautious of storm chasers demanding sign-overs before inspecting. Epic Roofing matches transparent scopes without aggressive tie-ins, keeping you fully in control of your policy.
+          </p>
+        </div>
+
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <h3 style="font-size: 1.15rem; color: #EF4444; margin-bottom: 0.75rem;">❌ 3. Attempting to "Pocket" or Split Deductibles</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Texas HB 2102 strictly prevents contractors from waiving deductibles. Homeowners are legally required to pay their specified deductible. Be cautious of contractors claiming otherwise.
+          </p>
+        </div>
+
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <h3 style="font-size: 1.15rem; color: #EF4444; margin-bottom: 0.75rem;">❌ 4. Relying Heavily on "Out-of-State" Storm Teams</h3>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            Storm-chasing crews move quickly between states. Choose a local, established firm that stands behind their workmanship and offers reliable multi-year physical warranties.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE INSURANCE SUPPLEMENT EXPLAINED -->
+  <section class="section-padding" id="supplements" style="background-color: var(--dark);">
+    <div class="container" style="max-width: 900px;">
+      <h2>Supplementing Your Insurance Claim — What It Means</h2>
+      <div style="color: #E2E8F0; line-height: 1.8; font-size: 1.05rem;">
+        <p style="margin-bottom: 1.5rem;">
+          When an adjuster reviews a roof from the ground, they can only see the outer shingles. Once our crews start construction and tear off the old shingles, we often find hidden structural issues:
+        </p>
+        <ul style="color: #94A3B8; list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; display: grid; gap: 0.5rem; font-size: 0.95rem;">
+          <li>Water-soaked plywood structural decking</li>
+          <li>Rotted structural rafters that require structural repair</li>
+          <li>Venting transitions that do not meet current city building codes</li>
+          <li>Damaged flashing inside metal valley areas</li>
+        </ul>
+        <p style="margin-bottom: 1.5rem;">
+          This is where <strong>claims supplementing</strong> comes in. We photograph these hidden issues, submit structural proof to your adjuster via Xactimate, and negotiate the cost coverage. This ensures your roof is rebuilt correctly without out-of-pocket stress.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLAIM DENIED / TIMELINE REINSCRIPTION -->
+  <section class="section-padding" id="claim-denied" style="background-color: var(--navy-light);">
+    <div class="container" style="max-width: 1000px;">
+      <h2>What If My Insurance Claim Is Denied?</h2>
+      <p style="text-align: center; max-width: 750px; margin: -1rem auto 3rem auto; color: #94A3B8; font-size: 0.95rem;">
+        A denial letter is not the final decision. You have clear, protected rights under Texas Department of Insurance guidelines.
+      </p>
+
+      <div class="grid grid-3" style="gap: 1.5rem;">
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">⚖️</div>
+          <h3 style="font-size: 1.15rem;">1. File an Appeal</h3>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.6;">
+            You can request a reinspection with a different, senior adjuster. We will provide HAAG damage reports, weather analyses, and historic maps to back up your appeal.
+          </p>
+        </div>
+
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">📝</div>
+          <h3 style="font-size: 1.15rem;">2. Code Requirement Checks</h3>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.6;">
+            Many denials focus solely on shingle wear. We check local building codes to ensure safety upgrades (such as drip edge or synthetic underlayment) are fully covered.
+          </p>
+        </div>
+
+        <div style="background: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🤝</div>
+          <h3 style="font-size: 1.15rem;">3. Free Adjuster Reinspection Prep</h3>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.6;">
+            Our specialists meet the senior adjuster on-site, walking the roof with them to present clear evidence and resolve disputes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEXAS HB 2102 SECTION -->
+  <section class="section-padding" id="texas-law" style="background-color: var(--dark);">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <h2 style="font-size: 2rem; color: var(--orange);">🚨 Important Compliance Notice: Texas law (HB 2102)</h2>
+      <p style="color: #CBD5E1; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        As of September 1, 2019, Texas state law <strong>strictly prohibits roofing contractors from waiving, absorbing, or discounting insurance deductibles</strong>. The homeowner is legally responsible for their specified policy deductible.
+      </p>
+      <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; max-width: 750px; margin: 0 auto;">
+        Contractors offering "free roof replacements" or promising to "split your deductible" are committing legal fraud under Texas state law, potentially exposing the homeowner to class-A misdemeanor charges. At Epic Roofing TX, we operate with 100% legal compliance and transparency.
+      </p>
+    </div>
+  </section>
+
+  <!-- INSURANCE COMPANIES WE WORK WITH -->
+  <section class="section-padding" id="carriers" style="background-color: var(--navy-light);">
+    <div class="container text-center">
+      <h2>We Coordinate Claims with All Major Insurance Carriers</h2>
+      <p style="max-width: 700px; margin: -1rem auto 2.5rem auto; color: #94A3B8; font-size: 0.95rem;">
+        We know the exact photo layouts, measurements, and weather history data required by each major underwriter.
+      </p>
+
+      <div class="carrier-grid" style="max-width: 900px; margin: 0 auto 2rem auto;">
+        <div class="carrier-card">State Farm</div>
+        <div class="carrier-card">Allstate</div>
+        <div class="carrier-card">USAA</div>
+        <div class="carrier-card">Farmers</div>
+        <div class="carrier-card">Travelers</div>
+        <div class="carrier-card">Nationwide</div>
+        <div class="carrier-card">Liberty Mutual</div>
+        <div class="carrier-card">Progressive</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (6 insurance-specific QA) -->
+  <section class="section-padding" id="faq" style="background-color: var(--dark);">
+    <div class="container">
+      <h2>Roofing Insurance Claim FAQs</h2>
+      <p style="text-align: center; max-width: 700px; margin: -1rem auto 3.5rem auto; color: #94A3B8; font-size: 0.95rem;">
+        Get direct answers regarding insurance guidelines, deductibles, and processing steps in the local Houston market.
+      </p>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-1" class="faq-input">
+          <label for="faq-item-1" class="faq-label">How do I file a roof insurance claim in Houston?</label>
+          <div class="faq-content">
+            <p>
+              Call Epic Roofing TX first. We run a free, forensic inspection mapping out exact storm dates, damage metrics, and structural proof. We help you submit the file to your carrier to guarantee details align perfectly before adjusters reach your lawn.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-2" class="faq-input">
+          <label for="faq-item-2" class="faq-label">Does Texas state law forbid contractors from waiving deductibles?</label>
+          <div class="faq-content">
+            <p>
+              Yes, Texas HB 2102 strictly forbids roofing contractors from covering, absorbing, or waiving policy deductibles. It is a class-A misdemeanor. Contractors offering to pay your deductible are committing fraud and putting homeowners at legal risk.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-3" class="faq-input">
+          <label for="faq-item-3" class="faq-label">What is an insurance supplement and why does it matter?</label>
+          <div class="faq-content">
+            <p>
+              An insurance supplement is an additional claim submitted when our crews discover hidden rot, rafter damage, or building code requirements once the old shingles are removed. We send photo proof directly to adjusters to cover these expenses.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-4" class="faq-input">
+          <label for="faq-item-4" class="faq-label">How long do I have to file a storm or hail claim in Texas?</label>
+          <div class="faq-content">
+            <p>
+              Most Texas insurance policies limit storm claim files to 1 year (12 months) from the date of the weather event. Filing as quickly as possible ensures prompt processing and avoids claims being flatly rejected due to window expiration.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-5" class="faq-input">
+          <label for="faq-item-5" class="faq-label">Will my insurance premium increase if I file a roof claim?</label>
+          <div class="faq-content">
+            <p>
+              Texas law prohibits carriers from raising premiums on an individual policy solely due to weather-related claims (Acts of God). However, broad insurance rates can fluctuate across zip codes after widespread hurricanes or hailstorms.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq-item-6" class="faq-input">
+          <label for="faq-item-6" class="faq-label">What happens if my roof claim is denied by the insurance carrier?</label>
+          <div class="faq-content">
+            <p>
+              If your claim is denied, you have an absolute legal right to a reinspection. We will accompany a secondary, senior adjuster on-site, providing HAAG-certified forensic evidence, weather tracking reports, and impact analysis to secure approvals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SPOTLIGHT (2 reviews, insurance-focused) -->
+  <section class="section-padding" id="testimonial-spotlight" style="background-color: var(--navy-light);">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center;">Success Stories from our clients</h2>
+      
+      <div class="grid grid-2" style="margin-top: 2.5rem; gap: 1.5rem;">
+        <div class="card" style="background-color: var(--navy); border-top: 5px solid var(--orange); padding: 2rem; border-radius: 8px;">
+          <div class="stars-rating" style="color: var(--orange); margin-bottom: 0.5rem;">★★★★★</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">"We Paid Only Our Deductible!"</h3>
+          <p style="font-size: 0.95rem; color: #E2E8F0; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
+            "After a major storm, other roofer groups offered illegal deductible discounts. Epic RoofingTX did everything by the book. They coordinated with State Farm, discovered rot under our old shingles, submitted supplements, and replaced our roof. We paid exactly our GAF warranty deductible and not a penny more!"
+          </p>
+          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.85rem; color: var(--orange);">
+            — Brandon S., Cypress, TX
+          </div>
+        </div>
+
+        <div class="card" style="background-color: var(--navy); border-top: 5px solid var(--orange); padding: 2rem; border-radius: 8px;">
+          <div class="stars-rating" style="color: var(--orange); margin-bottom: 0.5rem;">★★★★★</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">"Turned a Denied Claim into a Complete Approval"</h3>
+          <p style="font-size: 0.95rem; color: #E2E8F0; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
+            "My USAA claim was initially denied. Epic's rep showed up to assist on our secondary review, pointing out hidden damage and code updates missed by the first adjuster. They approved the full replacement. Epic is excellent!"
+          </p>
+          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.85rem; color: var(--orange);">
+            — Laura G., Pearland, TX
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA & FORM -->
+  <section class="section-padding" id="quote" style="background: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);">
+    <div class="container" style="max-width: 650px;">
+      <div class="card" style="border-top: 5px solid var(--orange); background: var(--navy-light); padding: 2rem; border-radius: 8px;">
+        <h3 style="text-align: center; font-family: var(--f-display); text-transform: uppercase;">Let Us Handle Your Claim</h3>
+        <p style="text-align: center; margin-bottom: 2rem; color: #94A3B8;">
+          Fill out the form below to initiate your physical roof claim assessment. Our team will coordinate with your insurance carrier from start to finish.
+        </p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-around; margin-bottom: 2rem;">
+          <a href="tel:8325550100" class="btn btn-primary" style="flex-grow: 1; text-align: center;">
+            📞 (832) 555-0100
+          </a>
+          <a href="sms:+18325550100" class="btn btn-navy-outline" style="flex-grow: 1; text-align: center; border:1px solid #38BDF8; color:#38BDF8; padding: 0.5rem; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+            💬 Text a Claim specialist
+          </a>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('📩 Insurance claim evaluation captured! Epic Roofing representative will call you inside 15 minutes to secure your slot');">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" style="display: block; margin-bottom: 0.35rem; color: #94A3B8;" for="form-name">Owner Name</label>
+            <input type="text" id="form-name" class="form-control" style="width:100%; padding:0.6rem; border-radius:4px; border:1px solid #1E293B; background:var(--navy); color:#FFF;" placeholder="John Doe" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-group">
+              <label class="form-label" style="display: block; margin-bottom: 0.35rem; color: #94A3B8;" for="form-phone">Phone Number</label>
+              <input type="tel" id="form-phone" class="form-control" style="width:100%; padding:0.6rem; border-radius:4px; border:1px solid #1E293B; background:var(--navy); color:#FFF;" placeholder="(832) 555-0100" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" style="display: block; margin-bottom: 0.35rem; color: #94A3B8;" for="form-email">Email Address</label>
+              <input type="email" id="form-email" class="form-control" style="width:100%; padding:0.6rem; border-radius:4px; border:1px solid #1E293B; background:var(--navy); color:#FFF;" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" style="display: block; margin-bottom: 0.35rem; color: #94A3B8;" for="form-insurance">Insurance Carrier</label>
+            <select id="form-insurance" class="form-control" style="width:100%; padding:0.6rem; border-radius:4px; border:1px solid #1E293B; background:var(--navy); color:#FFF;" required>
+              <option value="State Farm">State Farm</option>
+              <option value="Allstate">Allstate</option>
+              <option value="USAA">USAA</option>
+              <option value="Farmers">Farmers</option>
+              <option value="Travelers">Travelers</option>
+              <option value="Nationwide">Nationwide</option>
+              <option value="Liberty Mutual">Liberty Mutual</option>
+              <option value="Progressive">Progressive</option>
+              <option value="Other">Other Insurance Company</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px; font-size: 1rem; font-weight: bold; cursor: pointer; border: none; border-radius: 4px; background: var(--orange); color: white;">
+            📩 SUBMIT CLAIM ASSESSMENT REQUEST
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns" style="padding: 4rem 0 2rem 0;">
+        <div>
+          <a href="/" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            EPIC ROOFING <span>TX</span>
+          </a>
+          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
+            Premium weather-proof shingles, standing seam metals, protective attic vents, and prompt storm replacement. Backed by GAF guarantees.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem;">Replacement Options</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <li><a href="/services/shingle-roof-replacement" style="color:#94A3B8;">Architectural Asphalt</a></li>
+            <li><a href="/services/metal-roofing-installation" style="color:#94A3B8;">Standing Seam Metal</a></li>
+            <li><a href="/services/commercial-roof-coating" style="color:#94A3B8;">TPO Flat Coatings</a></li>
+            <li><a href="/services/hail-wind-storm-repair" style="color:#94A3B8;">Storm Hail Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem;">Submarkets Mapped</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <li><a href="/cities/houston" style="color:#94A3B8;">Houston Core</a></li>
+            <li><a href="/cities/katy" style="color:#94A3B8;">Katy Area</a></li>
+            <li><a href="/cities/sugar-land" style="color:#94A3B8;">Sugar Land</a></li>
+            <li><a href="/cities/cypress" style="color:#94A3B8;">Cypress Township</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem;">State Headquarters</h4>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            <strong>Assessor Hotline:</strong><br>
+            <a href="tel:8325550100" style="color: var(--white); font-weight: bold; font-size: 1.1rem; text-decoration: underline;">(832) 555-0100</a><br><br>
+            Houston, TX | GAF Lic ID #987251
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="border-top:1px solid #1E293B; padding:1.5rem 0;">
+      <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: #64748B;">
+        <div>
+          © 2026 Epic Roofing TX. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CALL ACTION -->
+  <div class="mobile-sticky-bar" onclick="window.location.href='tel:8325550100'" id="mobile-cta-bottom" style="position:fixed; bottom:0; left:0; right:0; background:var(--orange); color:white; text-align:center; padding:12px; font-weight:bold; cursor:pointer; z-index:1001; display:block;">
+    📞 Call Claim Rep — (832) 555-0100
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+  </script>
+
+</body>
+</html>
