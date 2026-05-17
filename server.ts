@@ -361,6 +361,15 @@ async function startServer() {
     res.sendFile(tomballPath);
   });
 
+  // Serve League City TX Roofing Contractor landing page
+  const leagueCityPath = path.join(process.cwd(), 'league-city-roofing-contractor.html');
+  app.get('/league-city-roofing-contractor', (req, res) => {
+    res.sendFile(leagueCityPath);
+  });
+  app.get('/league-city-roofing-contractor.html', (req, res) => {
+    res.sendFile(leagueCityPath);
+  });
+
   // Serve Privacy Policy page
   const privacyPath = path.join(process.cwd(), 'privacy-policy.html');
   app.get('/privacy-policy', (req, res) => {
