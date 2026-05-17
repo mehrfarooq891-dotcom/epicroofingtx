@@ -316,6 +316,83 @@ async function startServer() {
     res.sendFile(financingPath);
   });
 
+  // Serve Pasadena TX Roofing Contractor landing page
+  const pasadenaPath = path.join(process.cwd(), 'pasadena-tx-roofing-contractor.html');
+  app.get('/pasadena-tx-roofing-contractor', (req, res) => {
+    res.sendFile(pasadenaPath);
+  });
+  app.get('/pasadena-tx-roofing-contractor.html', (req, res) => {
+    res.sendFile(pasadenaPath);
+  });
+
+  // Serve Humble TX Roofing Contractor landing page
+  const humblePath = path.join(process.cwd(), 'humble-tx-roofing-contractor.html');
+  app.get('/humble-tx-roofing-contractor', (req, res) => {
+    res.sendFile(humblePath);
+  });
+  app.get('/humble-tx-roofing-contractor.html', (req, res) => {
+    res.sendFile(humblePath);
+  });
+
+  // Serve Richmond TX Roofing Contractor landing page
+  const richmondPath = path.join(process.cwd(), 'richmond-tx-roofing-contractor.html');
+  app.get('/richmond-tx-roofing-contractor', (req, res) => {
+    res.sendFile(richmondPath);
+  });
+  app.get('/richmond-tx-roofing-contractor.html', (req, res) => {
+    res.sendFile(richmondPath);
+  });
+
+  // Serve Missouri City TX Roofing Contractor landing page
+  const missouriCityPath = path.join(process.cwd(), 'missouri-city-roofing-contractor.html');
+  app.get('/missouri-city-roofing-contractor', (req, res) => {
+    res.sendFile(missouriCityPath);
+  });
+  app.get('/missouri-city-roofing-contractor.html', (req, res) => {
+    res.sendFile(missouriCityPath);
+  });
+
+  // Serve Tomball TX Roofing Contractor landing page
+  const tomballPath = path.join(process.cwd(), 'tomball-tx-roofing-contractor.html');
+  app.get('/tomball-tx-roofing-contractor', (req, res) => {
+    res.sendFile(tomballPath);
+  });
+  app.get('/tomball-tx-roofing-contractor.html', (req, res) => {
+    res.sendFile(tomballPath);
+  });
+
+  // Serve Privacy Policy page
+  const privacyPath = path.join(process.cwd(), 'privacy-policy.html');
+  app.get('/privacy-policy', (req, res) => {
+    res.sendFile(privacyPath);
+  });
+  app.get('/privacy-policy.html', (req, res) => {
+    res.sendFile(privacyPath);
+  });
+
+  // Serve human sitemap page
+  const sitemapHtmlPath = path.join(process.cwd(), 'sitemap.html');
+  app.get('/sitemap', (req, res) => {
+    res.sendFile(sitemapHtmlPath);
+  });
+  app.get('/sitemap.html', (req, res) => {
+    res.sendFile(sitemapHtmlPath);
+  });
+
+  // Serve XML Sitemap
+  const sitemapXmlPath = path.join(process.cwd(), 'sitemap.xml');
+  app.get('/sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.sendFile(sitemapXmlPath);
+  });
+
+  // Serve robots.txt
+  const robotsPath = path.join(process.cwd(), 'robots.txt');
+  app.get('/robots.txt', (req, res) => {
+    res.setHeader('Content-Type', 'text/plain');
+    res.sendFile(robotsPath);
+  });
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
