@@ -172,6 +172,69 @@ async function startServer() {
     res.sendFile(commercialPath);
   });
 
+  // Serve Houston Free Roof Inspection landing page
+  const freeInspectionPath = path.join(process.cwd(), 'free-roof-inspection-houston.html');
+  app.get('/free-roof-inspection-houston', (req, res) => {
+    res.sendFile(freeInspectionPath);
+  });
+  app.get('/free-roof-inspection-houston.html', (req, res) => {
+    res.sendFile(freeInspectionPath);
+  });
+
+  // Serve Houston Hail Damage Roof Repair landing page
+  const hailDamagePath = path.join(process.cwd(), 'hail-damage-roof-repair-houston.html');
+  app.get('/hail-damage-roof-repair-houston', (req, res) => {
+    res.sendFile(hailDamagePath);
+  });
+  app.get('/hail-damage-roof-repair-houston.html', (req, res) => {
+    res.sendFile(hailDamagePath);
+  });
+
+  // Serve Houston Wind Damage Roof Repair landing page
+  const windDamagePath = path.join(process.cwd(), 'wind-damage-roof-repair-houston.html');
+  app.get('/wind-damage-roof-repair-houston', (req, res) => {
+    res.sendFile(windDamagePath);
+  });
+  app.get('/wind-damage-roof-repair-houston.html', (req, res) => {
+    res.sendFile(windDamagePath);
+  });
+
+  // Serve Houston Emergency Roof Tarping landing page
+  const emergencyTarpingPath = path.join(process.cwd(), 'emergency-roof-tarping-houston.html');
+  app.get('/emergency-roof-tarping-houston', (req, res) => {
+    res.sendFile(emergencyTarpingPath);
+  });
+  app.get('/emergency-roof-tarping-houston.html', (req, res) => {
+    res.sendFile(emergencyTarpingPath);
+  });
+
+  // Serve Houston Metal Roofing landing page
+  const metalRoofingPath = path.join(process.cwd(), 'metal-roofing-houston.html');
+  app.get('/metal-roofing-houston', (req, res) => {
+    res.sendFile(metalRoofingPath);
+  });
+  app.get('/metal-roofing-houston.html', (req, res) => {
+    res.sendFile(metalRoofingPath);
+  });
+
+  // Serve Houston Tile Roofing landing page
+  const tileRoofingPath = path.join(process.cwd(), 'tile-roofing-houston.html');
+  app.get('/tile-roofing-houston', (req, res) => {
+    res.sendFile(tileRoofingPath);
+  });
+  app.get('/tile-roofing-houston.html', (req, res) => {
+    res.sendFile(tileRoofingPath);
+  });
+
+  // Serve Houston Roof Coating landing page
+  const roofCoatingPath = path.join(process.cwd(), 'roof-coating-houston.html');
+  app.get('/roof-coating-houston', (req, res) => {
+    res.sendFile(roofCoatingPath);
+  });
+  app.get('/roof-coating-houston.html', (req, res) => {
+    res.sendFile(roofCoatingPath);
+  });
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
