@@ -289,6 +289,33 @@ async function startServer() {
     res.sendFile(woodlandsPath);
   });
 
+  // Serve About Us page
+  const aboutPath = path.join(process.cwd(), 'about.html');
+  app.get('/about', (req, res) => {
+    res.sendFile(aboutPath);
+  });
+  app.get('/about.html', (req, res) => {
+    res.sendFile(aboutPath);
+  });
+
+  // Serve Contact Us page
+  const contactPath = path.join(process.cwd(), 'contact.html');
+  app.get('/contact', (req, res) => {
+    res.sendFile(contactPath);
+  });
+  app.get('/contact.html', (req, res) => {
+    res.sendFile(contactPath);
+  });
+
+  // Serve Financing page
+  const financingPath = path.join(process.cwd(), 'financing.html');
+  app.get('/financing', (req, res) => {
+    res.sendFile(financingPath);
+  });
+  app.get('/financing.html', (req, res) => {
+    res.sendFile(financingPath);
+  });
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
