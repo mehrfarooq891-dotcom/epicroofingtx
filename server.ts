@@ -235,6 +235,60 @@ async function startServer() {
     res.sendFile(roofCoatingPath);
   });
 
+  // Serve Katy TX Roofing Contractor landing page
+  const katyPath = path.join(process.cwd(), 'katy-roofing-contractor.html');
+  app.get('/katy-roofing-contractor', (req, res) => {
+    res.sendFile(katyPath);
+  });
+  app.get('/katy-roofing-contractor.html', (req, res) => {
+    res.sendFile(katyPath);
+  });
+
+  // Serve Sugar Land TX Roofing Contractor landing page
+  const sugarLandPath = path.join(process.cwd(), 'sugar-land-roofing-contractor.html');
+  app.get('/sugar-land-roofing-contractor', (req, res) => {
+    res.sendFile(sugarLandPath);
+  });
+  app.get('/sugar-land-roofing-contractor.html', (req, res) => {
+    res.sendFile(sugarLandPath);
+  });
+
+  // Serve Cypress TX Roofing Contractor landing page
+  const cypressPath = path.join(process.cwd(), 'cypress-roofing-contractor.html');
+  app.get('/cypress-roofing-contractor', (req, res) => {
+    res.sendFile(cypressPath);
+  });
+  app.get('/cypress-roofing-contractor.html', (req, res) => {
+    res.sendFile(cypressPath);
+  });
+
+  // Serve Pearland TX Roofing Contractor landing page
+  const pearlandPath = path.join(process.cwd(), 'pearland-roofing-contractor.html');
+  app.get('/pearland-roofing-contractor', (req, res) => {
+    res.sendFile(pearlandPath);
+  });
+  app.get('/pearland-roofing-contractor.html', (req, res) => {
+    res.sendFile(pearlandPath);
+  });
+
+  // Serve Spring TX Roofing Contractor landing page
+  const springPath = path.join(process.cwd(), 'spring-tx-roofing-contractor.html');
+  app.get('/spring-tx-roofing-contractor', (req, res) => {
+    res.sendFile(springPath);
+  });
+  app.get('/spring-tx-roofing-contractor.html', (req, res) => {
+    res.sendFile(springPath);
+  });
+
+  // Serve The Woodlands TX Roofing Contractor landing page
+  const woodlandsPath = path.join(process.cwd(), 'the-woodlands-roofing-contractor.html');
+  app.get('/the-woodlands-roofing-contractor', (req, res) => {
+    res.sendFile(woodlandsPath);
+  });
+  app.get('/the-woodlands-roofing-contractor.html', (req, res) => {
+    res.sendFile(woodlandsPath);
+  });
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
