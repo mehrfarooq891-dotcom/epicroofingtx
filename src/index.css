@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap");
+
+@theme {
+  --font-display: "Barlow", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
+  --color-navy: #0F172A;
+  --color-navy-light: #1E293B;
+  --color-orange: #EA580C;
+  --color-orange-hover: #C2410C;
+  --color-gray: #F8FAFC;
+  --color-dark: #020617;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #020617; /* Dark gorgeous cockpit background */
+  color: #F8FAFC;
+}
+
+/* Custom gorgeous repeating background overlay for bento grid dashboard */
+.bento-dashboard-bg {
+  background: radial-gradient(circle at 50% 30%, #0F172A 0%, #020617 100%);
+  position: relative;
+}
+
+.roof-grid-accent {
+  background-image: repeating-linear-gradient(45deg, #1e293b 0, #1e293b 1px, transparent 0, transparent 50%);
+  background-size: 24px 24px;
+}
+
+/* Star pulse effect */
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(234, 88, 12, 0.4)); }
+  50% { filter: drop-shadow(0 0 10px rgba(234, 88, 12, 1)); }
+}
+.glow-accent {
+  animation: pulseGlow 3s infinite;
+}

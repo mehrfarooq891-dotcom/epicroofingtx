@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epic Roofing TX - Shared Website Components</title>
+  
+  <!-- 1. THE SHARED CSS (Barlow + Open Sans, custom Bento Grid theme) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS SYSTEM VARIABLES */
+    :root {
+      --navy: #0F172A;
+      --navy-light: #1E293B;
+      --orange: #EA580C;
+      --orange-hover: #C2410C;
+      --white: #FFFFFF;
+      --gray: #F8FAFC;
+      --gray-border: #E2E8F0;
+      --gray-text: #64748B;
+      --dark: #020617;
+      --f-display: 'Barlow', sans-serif;
+      --f-body: 'Open Sans', sans-serif;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--f-body);
+      background-color: var(--gray);
+      color: var(--dark);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Flex / Grid Utilities */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* Responsive Spacing & Padding */
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    @media (max-width: 768px) {
+      .section-padding {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+    }
+
+    /* Typography Standards */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--f-display);
+      line-height: 1.15;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.022em;
+      color: var(--navy);
+    }
+
+    h1 { font-size: 2.75rem; }
+    h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.125rem; }
+
+    /* Emergency Strip Banner */
+    .emergency-strip {
+      background-color: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 8px 1rem;
+      font-family: var(--f-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1001;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .emergency-strip a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    /* Sticky Navy Header */
+    #site-header {
+      background-color: var(--navy);
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 75px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      border-bottom: 3px solid var(--orange);
+      transition: var(--transition);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .logo {
+      font-family: var(--f-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+    .logo span {
+      color: var(--orange);
+    }
+
+    /* Navigation Menu */
+    .desktop-nav {
+      display: none;
+      height: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+
+    .nav-link {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.25rem;
+      position: relative;
+      opacity: 0.9;
+    }
+    .nav-link:hover {
+      opacity: 1;
+      color: var(--orange);
+    }
+
+    /* Navigation Dropdowns */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    
+    .dropdown-toggle::after {
+      content: "▾";
+      font-size: 0.8rem;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background-color: var(--navy);
+      border-top: 3px solid var(--orange);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      min-width: 240px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      border-radius: 0 0 6px 6px;
+      padding: 0.5rem 0;
+      z-index: 1010;
+    }
+
+    .dropdown-menu-wide {
+      min-width: 320px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-item {
+      display: block;
+      padding: 0.6rem 1rem;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-left: 2px solid transparent;
+    }
+    .dropdown-item:hover {
+      background-color: var(--navy-light);
+      color: var(--orange);
+      border-left-color: var(--orange);
+      padding-left: 1.25rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--f-display);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      borderColor: var(--white);
+      color: var(--white);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-navy-outline {
+      background: transparent;
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+    .btn-navy-outline:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Hamburger Menu Trigger */
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.75rem;
+      cursor: pointer;
+      display: block;
+    }
+    @media (min-width: 1024px) {
+      .menu-toggle { display: none; }
+    }
+
+    /* Mobile Navigation Menu Slideout */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 290px;
+      max-width: 85vw;
+      background-color: var(--navy);
+      box-shadow: -5px 0 25px rgba(0,0,0,0.3);
+      z-index: 1100;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      overflow-y: auto;
+      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobile-menu.active {
+      right: 0;
+    }
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1050;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-link {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: block;
+    }
+    .mobile-nav-link:hover {
+      color: var(--orange);
+    }
+
+    .mobile-submenu {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .mobile-submenu-item {
+      color: var(--white);
+      opacity: 0.8;
+      font-size: 0.9rem;
+      display: block;
+    }
+    .mobile-submenu-item:hover {
+      opacity: 1;
+      color: var(--orange);
+    }
+
+    /* Bento Grid / Card Styles */
+    .bento-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .bento-col-12 { grid-column: span 12; }
+    .bento-col-8 { grid-column: span 12; }
+    .bento-col-6 { grid-column: span 12; }
+    .bento-col-4 { grid-column: span 12; }
+
+    @media (min-width: 768px) {
+      .bento-col-8 { grid-column: span 8; }
+      .bento-col-6 { grid-column: span 6; }
+      .bento-col-4 { grid-column: span 4; }
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2.25rem 2rem;
+      border-bottom: 4px solid var(--orange);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(234, 88, 12, 0.1);
+      color: var(--orange);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    /* City Cities Cards */
+    .city-card {
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: 8px;
+      border-left: 4px solid var(--orange);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .city-card:hover {
+      border-left-color: var(--navy);
+      background: rgba(15, 23, 42, 0.02);
+      transform: translateX(4px);
+    }
+    .city-name {
+      font-weight: 700;
+      color: var(--navy);
+      font-family: var(--f-display);
+      text-transform: uppercase;
+    }
+
+    /* Blog Card Section */
+    .blog-card {
+      flex-direction: column;
+      border-bottom: 4px solid var(--orange);
+    }
+    .blog-meta {
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Hero Section Base Styles */
+    .hero-section {
+      background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), 
+                  repeating-linear-gradient(45deg, #1e293b 0, #1e293b 10px, #0f172a 10px, #0f172a 20px);
+      color: var(--white);
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero-title {
+      font-size: 3rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    /* Trust Badge Strip Styles */
+    .trust-strip {
+      background: var(--white);
+      border-top: 1px solid var(--gray-border);
+      border-bottom: 4px solid var(--navy);
+      padding: 1.25rem 0;
+    }
+    .trust-badges-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--f-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy-light);
+    }
+    .trust-badge-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gray);
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 0.9rem;
+    }
+
+    /* Star Rating Component */
+    .stars-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #FBBF24; /* Yellow stars */
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* CSS FAQ Accordion (No JS) */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background-color: var(--white);
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+    .faq-input {
+      display: none;
+    }
+    .faq-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.75rem;
+      font-family: var(--f-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: var(--navy);
+      user-select: none;
+    }
+    .faq-label::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--orange);
+      transition: var(--transition);
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1.75rem;
+      color: var(--gray-text);
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+    }
+    .faq-input:checked ~ .faq-content {
+      max-height: 1000px;
+      padding-bottom: 1.25rem;
+    }
+    .faq-input:checked ~ .faq-label::after {
+      content: "-";
+      transform: rotate(180deg);
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background-color: var(--gray);
+      border: 2px solid var(--gray-border);
+      border-radius: 4px;
+      font-family: var(--f-body);
+      font-size: 0.95rem;
+      color: var(--navy);
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--orange);
+      background-color: var(--white);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      padding: 1rem 0;
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .breadcrumbs a:hover {
+      color: var(--orange);
+    }
+    .breadcrumbs span {
+      margin: 0 0.25rem;
+    }
+
+    /* CSS Icons (BBB & GAF Badges) */
+    .badge-css-bbb {
+      display: inline-flex;
+      align-items: center;
+      background: #005691;
+      color: #fff;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-family: var(--f-display);
+    }
+    .badge-css-gaf {
+      display: inline-flex;
+      align-items: center;
+      background: #D51E2B;
+      color: #fff;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-family: var(--f-display);
+    }
+
+    /* Responsive Footer */
+    footer {
+      background-color: var(--dark);
+      color: #94A3B8;
+      padding-top: 4rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #1E293B;
+    }
+    
+    footer h4 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-size: 1.15rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--orange);
+    }
+
+    footer a:hover {
+      color: var(--orange);
+    }
+
+    .footer-columns {
+      margin-bottom: 3rem;
+    }
+
+    .footer-bottom {
+      background-color: #010410;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    
+    .footer-bottom-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .footer-bottom-flex {
+        flex-direction: row;
+      }
+    }
+
+    /* Mobile Sticky Call Button (Fixed Bottom) */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: var(--orange);
+      color: var(--white);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--f-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .mobile-sticky-bar:hover {
+      background-color: var(--orange-hover);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-sticky-bar {
+        display: none !important;
+      }
+      body {
+        margin-bottom: 0 !important;
+      }
+    }
+    @media (max-width: 767px) {
+      body {
+        margin-bottom: 60px !important; /* reserve space for sticky bar */
+      }
+    }
+
+    /* Local Schema Invisible NAP class */
+    .epic-nap-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. EMERGENCY STRIP BANNER (Orange) -->
+  <div class="emergency-strip">
+    🚨 24/7 Emergency Storm Damage Restoration & Rapid Tarping | <a href="tel:8325550100">📞 (832) 555-0100</a>
+  </div>
+
+  <!-- 2. THE SHARED HEADER HTML -->
+  <header id="site-header">
+    <div class="header-container">
+      
+      <!-- Logo: Epic Roofing TX -->
+      <a href="/" class="logo">
+        EPIC ROOFING <span>TX</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        
+        <!-- Services Dropdown (All 6 core service pages) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Our Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/services/shingle-roof-replacement">Shingle Replacement</a>
+            <a class="dropdown-item" href="/services/metal-roofing-installation">Metal Roofing</a>
+            <a class="dropdown-item" href="/services/commercial-roof-coating">Commercial Coating</a>
+            <a class="dropdown-item" href="/services/hail-wind-storm-repair">Hail & Wind Damage</a>
+            <a class="dropdown-item" href="/services/emergency-tarping-leak-repair">Emergency Leak Tarp</a>
+            <a class="dropdown-item" href="/services/roof-inspection-haag">Certified Inspection</a>
+          </div>
+        </div>
+
+        <!-- Repairs Dropdown -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Repairs</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/repairs/hail-damage">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/repairs/wind-damage">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/repairs/storm-damage">General Storm Damage</a>
+            <a class="dropdown-item" href="/repairs/emergency-tarp">Emergency Tarp Service</a>
+          </div>
+        </div>
+
+        <!-- Materials Dropdown -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Materials</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/materials/metal-roofing">Premium Metal</a>
+            <a class="dropdown-item" href="/materials/tile-roofing">Spanish Tile</a>
+            <a class="dropdown-item" href="/materials/silicone-polyurethane-coatings">Coating & Silcone</a>
+            <a class="dropdown-item" href="/materials/asphalt-shingles">Premium Shingles</a>
+          </div>
+        </div>
+
+        <!-- Service Areas Dropdown (12 main cities) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <a class="dropdown-item" href="/cities/houston">Houston</a>
+            <a class="dropdown-item" href="/cities/katy">Katy</a>
+            <a class="dropdown-item" href="/cities/sugar-land">Sugar Land</a>
+            <a class="dropdown-item" href="/cities/cypress">Cypress</a>
+            <a class="dropdown-item" href="/cities/the-woodlands">The Woodlands</a>
+            <a class="dropdown-item" href="/cities/pearland">Pearland</a>
+            <a class="dropdown-item" href="/cities/league-city">League City</a>
+            <a class="dropdown-item" href="/cities/spring">Spring</a>
+            <a class="dropdown-item" href="/cities/pasadena">Pasadena</a>
+            <a class="dropdown-item" href="/cities/conroe">Conroe</a>
+            <a class="dropdown-item" href="/cities/kingwood">Kingwood</a>
+            <a class="dropdown-item" href="/cities/tomball">Tomball</a>
+          </div>
+        </div>
+
+        <!-- Core Pages -->
+        <a href="/blog" class="nav-link">Local Blog</a>
+        <a href="/about" class="nav-link">About Us</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header CTA Button -->
+      <a href="tel:8325550100" class="btn btn-primary" style="display-none md:inline-flex; padding: 0.6rem 1.25rem; font-size: 0.85rem;">
+        📞 (832) 555-0100
+      </a>
+
+      <!-- Hamburger Menu Button for Mobile -->
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Slide-out -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+    
+    <div class="mobile-nav-link">Our Services</div>
+    <div class="mobile-submenu">
+      <a class="mobile-submenu-item" href="/services/shingle-roof-replacement">Shingle Replacement</a>
+      <a class="mobile-submenu-item" href="/services/metal-roofing-installation">Metal Roofing</a>
+      <a class="mobile-submenu-item" href="/services/commercial-roof-coating">Commercial Coating</a>
+      <a class="mobile-submenu-item" href="/services/hail-wind-storm-repair">Hail & Wind Damage Repair</a>
+      <a class="mobile-submenu-item" href="/services/emergency-tarping-leak-repair">Emergency Leak Tarp</a>
+      <a class="mobile-submenu-item" href="/services/roof-inspection-haag">Certified Inspection</a>
+    </div>
+
+    <div class="mobile-nav-link">Storm Repairs</div>
+    <div class="mobile-submenu">
+      <a class="mobile-submenu-item" href="/repairs/hail-damage">Hail Restoration</a>
+      <a class="mobile-submenu-item" href="/repairs/wind-damage">Wind Restoration</a>
+      <a class="mobile-submenu-item" href="/repairs/emergency-tarp">Emergency Tarp</a>
+    </div>
+
+    <div class="mobile-nav-link">Service Areas (12 Cities)</div>
+    <div class="mobile-submenu" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+      <a class="mobile-submenu-item" href="/cities/houston">Houston</a>
+      <a class="mobile-submenu-item" href="/cities/katy">Katy</a>
+      <a class="mobile-submenu-item" href="/cities/sugar-land">Sugar Land</a>
+      <a class="mobile-submenu-item" href="/cities/cypress">Cypress</a>
+      <a class="mobile-submenu-item" href="/cities/the-woodlands">The Woodlands</a>
+      <a class="mobile-submenu-item" href="/cities/pearland">Pearland</a>
+      <a class="mobile-submenu-item" href="/cities/league-city">League City</a>
+      <a class="mobile-submenu-item" href="/cities/spring">Spring</a>
+      <a class="mobile-submenu-item" href="/cities/pasadena">Pasadena</a>
+      <a class="mobile-submenu-item" href="/cities/conroe">Conroe</a>
+      <a class="mobile-submenu-item" href="/cities/kingwood">Kingwood</a>
+      <a class="mobile-submenu-item" href="/cities/tomball">Tomball</a>
+    </div>
+
+    <a href="/blog" class="mobile-nav-link">Local Blog</a>
+    <a href="/about" class="mobile-nav-link">About Us</a>
+    <a href="/contact" class="mobile-nav-link">Contact</a>
+    
+    <a href="tel:8325550100" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">
+      📞 Call Free Inspection
+    </a>
+  </div>
+
+  <!-- Hero Section Mockup -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Texas Hardened Roofs Built To Last</h1>
+      <p class="hero-subtitle">Houston metro's premier GAF certified roofing contractor specialized in hurricane-grade shingle & custom metal installations, HAAG certified storm damage forensic inspections, and rapid insurance restoration.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#quote" class="btn btn-primary">📞 Free Roof Assessment</a>
+        <a href="/portfolio" class="btn btn-secondary">View Our Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip Mockup -->
+  <div class="trust-strip">
+    <div class="container trust-badges-wrapper">
+      <div class="trust-badge">
+        <div class="trust-badge-circle">★</div>
+        <span>4.8/5 Rated (200+ Reviews)</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-circle">🛡️</div>
+        <span>GAF Certified Installer</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-circle">🏆</div>
+        <span>BBB Accredited A+ Member</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-circle">✓</div>
+        <span>10-Yr Workmanship Warranty</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. THE SHARED FOOTER HTML -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns">
+        
+        <!-- Column 1: Logo + Tagline + Badges -->
+        <div>
+          <a href="/" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+            EPIC ROOFING <span>TX</span>
+          </a>
+          <p style="margin-bottom: 2rem; color: #94A3B8; font-size: 0.95rem;">
+            Houston's trusted roofing authority. Specializing in rapid storm repairs, high-end residential shingle and premium metal installations, and zero-defect insurance management.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span class="badge-css-gaf">GAF certified</span>
+            <span class="badge-css-bbb">BBB Accredited A+</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Our Services (6 main pages) -->
+        <div>
+          <h4>Our Services</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <li><a href="/services/shingle-roof-replacement">Asphalt Shingle Replacement</a></li>
+            <li><a href="/services/metal-roofing-installation">Premium Metal Roofing</a></li>
+            <li><a href="/services/commercial-roof-coating">Commercial Silicon Coatings</a></li>
+            <li><a href="/services/hail-wind-storm-repair">Hail & Wind Assessment</a></li>
+            <li><a href="/services/emergency-tarping-leak-repair">Emergency Leak Tarping</a></li>
+            <li><a href="/services/roof-inspection-haag">HAAG Forensic Inspections</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Service Areas (12 cities in 2 columns) -->
+        <div>
+          <h4>Our Service Areas</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="/cities/houston">Houston</a></li>
+              <li><a href="/cities/katy">Katy</a></li>
+              <li><a href="/cities/sugar-land">Sugar Land</a></li>
+              <li><a href="/cities/cypress">Cypress</a></li>
+              <li><a href="/cities/the-woodlands">Woodlands</a></li>
+              <li><a href="/cities/pearland">Pearland</a></li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="/cities/league-city">League City</a></li>
+              <li><a href="/cities/spring">Spring</a></li>
+              <li><a href="/cities/pasadena">Pasadena</a></li>
+              <li><a href="/cities/conroe">Conroe</a></li>
+              <li><a href="/cities/kingwood">Kingwood</a></li>
+              <li><a href="/cities/tomball">Tomball</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div>
+          <h4>Contact Info</h4>
+          <ul style="display: flex; flex-direction: column; gap: 1rem; color: #94A3B8;">
+            <li>
+              <strong>Phone:</strong><br>
+              <a href="tel:8325550100" style="color: var(--white); font-weight: bold; font-size: 1.15rem;">(832) 555-0100</a>
+            </li>
+            <li>
+              <strong>Email:</strong><br>
+              <a href="mailto:info@epicroofingtx.com" style="color: #94A3B8;">info@epicroofingtx.com</a>
+            </li>
+            <li>
+              <strong>Office / Area:</strong><br>
+              Houston, TX | Licensed, Bonded & Insured
+            </li>
+            <li>
+              <strong>Hours:</strong><br>
+              Mon–Sat 7AM–7PM | Emergency Response: 24/7
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2025 Epic Roofing TX. All rights reserved. Built for Texas Strength.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 4. MOBILE STICKY CALL BUTTON -->
+  <div class="mobile-sticky-bar" onclick="window.location.href='tel:8325550100'">
+    📞 Call Now — Free Inspection
+  </div>
+
+  <!-- Schema-invisible NAP class, ensuring search engines crawl correct business details -->
+  <div class="epic-nap-hidden">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing TX</span>
+      <span itemprop="telephone">(832) 555-0100</span>
+      <span itemprop="email">info@epicroofingtx.com</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Houston</span>,
+        <span itemprop="addressRegion">TX</span>
+        <span itemprop="addressCountry">US</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SCHEMA BLOCK (LocalBusiness JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "Epic Roofing TX",
+    "url": "https://epicroofingtx.com",
+    "telephone": "(832) 555-0100",
+    "email": "info@epicroofingtx.com",
+    "image": "https://epicroofingtx.com/assets/hero-banner.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.7604,
+      "longitude": -95.3698
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Houston" },
+      { "@type": "City", "name": "Katy" },
+      { "@type": "City", "name": "Sugar Land" },
+      { "@type": "City", "name": "Cypress" },
+      { "@type": "City", "name": "The Woodlands" },
+      { "@type": "City", "name": "Pearland" },
+      { "@type": "City", "name": "League City" },
+      { "@type": "City", "name": "Spring" },
+      { "@type": "City", "name": "Pasadena" },
+      { "@type": "City", "name": "Conroe" },
+      { "@type": "City", "name": "Kingwood" },
+      { "@type": "City", "name": "Tomball" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "200"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Emergency services available 24/7"
+      }
+    ],
+    "priceRange": "$$",
+    "hasMap": "https://maps.google.com/?q=Houston,TX"
+  }
+  </script>
+
+  <!-- Mobile Menu Helper Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+  </script>
+
+</body>
+</html>
