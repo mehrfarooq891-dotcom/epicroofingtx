@@ -1,10 +1,38 @@
 {
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/privacy",
-      "destination": "/privacy-policy",
-      "permanent": true
-    }
+  "rewrites": [
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/financing", "destination": "/financing.html" },
+    { "source": "/sitemap", "destination": "/sitemap.html" },
+    { "source": "/roof-repair-houston", "destination": "/roof-repair-houston.html" },
+    { "source": "/roof-replacement-houston", "destination": "/roof-replacement-houston.html" },
+    { "source": "/storm-damage-roofing-houston", "destination": "/storm-damage-roofing-houston.html" },
+    { "source": "/insurance-claim-roofing-houston", "destination": "/insurance-claim-roofing-houston.html" },
+    { "source": "/commercial-roofing-houston", "destination": "/commercial-roofing-houston.html" },
+    { "source": "/free-roof-inspection-houston", "destination": "/free-roof-inspection-houston.html" },
+    { "source": "/hail-damage-roof-repair-houston", "destination": "/hail-damage-roof-repair-houston.html" },
+    { "source": "/wind-damage-roof-repair-houston", "destination": "/wind-damage-roof-repair-houston.html" },
+    { "source": "/emergency-roof-tarping-houston", "destination": "/emergency-roof-tarping-houston.html" },
+    { "source": "/metal-roofing-houston", "destination": "/metal-roofing-houston.html" },
+    { "source": "/tile-roofing-houston", "destination": "/tile-roofing-houston.html" },
+    { "source": "/roof-coating-houston", "destination": "/roof-coating-houston.html" },
+    { "source": "/katy-roofing-contractor", "destination": "/katy-roofing-contractor.html" },
+    { "source": "/sugar-land-roofing-contractor", "destination": "/sugar-land-roofing-contractor.html" },
+    { "source": "/cypress-roofing-contractor", "destination": "/cypress-roofing-contractor.html" },
+    { "source": "/pearland-roofing-contractor", "destination": "/pearland-roofing-contractor.html" },
+    { "source": "/spring-tx-roofing-contractor", "destination": "/spring-tx-roofing-contractor.html" },
+    { "source": "/the-woodlands-roofing-contractor", "destination": "/the-woodlands-roofing-contractor.html" },
+    { "source": "/pasadena-tx-roofing-contractor", "destination": "/pasadena-tx-roofing-contractor.html" },
+    { "source": "/humble-tx-roofing-contractor", "destination": "/humble-tx-roofing-contractor.html" },
+    { "source": "/tomball-tx-roofing-contractor", "destination": "/tomball-tx-roofing-contractor.html" },
+    { "source": "/richmond-tx-roofing-contractor", "destination": "/richmond-tx-roofing-contractor.html" },
+    { "source": "/league-city-roofing-contractor", "destination": "/league-city-roofing-contractor.html" },
+    { "source": "/missouri-city-roofing-contractor", "destination": "/missouri-city-roofing-contractor.html" },
+    { "source": "/blog/signs-you-need-roof-replacement-houston", "destination": "/blog/signs-you-need-roof-replacement-houston.html" },
+    { "source": "/blog/houston-hail-damage-guide", "destination": "/blog/houston-hail-damage-guide.html" },
+    { "source": "/blog/how-insurance-roof-claims-work-texas", "destination": "/blog/how-insurance-roof-claims-work-texas.html" },
+    { "source": "/blog/roof-inspection-before-buying-home-houston", "destination": "/blog/roof-inspection-before-buying-home-houston.html" },
+    { "source": "/blog/roof-replacement-financing-houston", "destination": "/blog/roof-replacement-financing-houston.html" }
   ]
 }
