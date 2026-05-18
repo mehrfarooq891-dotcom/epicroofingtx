@@ -1,16 +1,16 @@
 /* Epic Roofing TX Bento Grid Colors & Variables */
 :root {
-  --navy: #0F172A;
-  --navy-light: #1E293B;
-  --orange: #EA580C;
-  --orange-hover: #C2410C;
+  --navy: #1B2B4B;
+  --navy-light: #25395f;
+  --orange: #E8600A;
+  --orange-hover: #D15409;
   --white: #FFFFFF;
   --gray: #F8FAFC;
   --gray-border: #E2E8F0;
-  --gray-text: #64748B;
-  --dark: #020617;
-  --f-display: 'Barlow', sans-serif;
-  --f-body: 'Open Sans', sans-serif;
+  --gray-text: #94A3B8;
+  --dark: #111d30;
+  --f-display: Arial, Helvetica, sans-serif;
+  --f-body: Arial, Helvetica, sans-serif;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
