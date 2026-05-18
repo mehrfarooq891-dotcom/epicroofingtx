@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/services/shingle-roof-replacement", "destination": "/roof-replacement-houston.html", "permanent": true },
     { "source": "/services/metal-roofing-installation", "destination": "/metal-roofing-houston.html", "permanent": true },
