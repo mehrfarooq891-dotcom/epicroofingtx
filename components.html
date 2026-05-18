@@ -787,24 +787,20 @@
 </head>
 <body>
 
-  <!-- 1. EMERGENCY STRIP BANNER (Orange) -->
-  <div class="emergency-strip">
-    🚨 24/7 Emergency Storm Damage Restoration & Rapid Tarping | <a href="tel:2817555448">📞 (281) 755-5448</a>
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Same Day Storm Response: Emergency Wind / Hail Leak Tarping | <a href="tel:2817555448">📞 (281) 755-5448</a>
   </div>
 
-  <!-- 2. THE SHARED HEADER HTML -->
+  <!-- STICKY NAVY HEADER -->
   <header id="site-header">
     <div class="header-container">
-      
-      <!-- Logo: Epic Roofing TX -->
-      <a href="/index.html" class="logo">
+      <a href="/index.html" class="logo" id="site-logo">
         EPIC ROOFING & CONSTRUCTION <span>LLC</span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="desktop-nav">
-        
-        <!-- Services Dropdown (All 6 core service pages) -->
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Our Services</span>
           <div class="dropdown-menu">
@@ -817,7 +813,6 @@
           </div>
         </div>
 
-        <!-- Repairs Dropdown -->
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Storm Repairs</span>
           <div class="dropdown-menu">
@@ -828,18 +823,6 @@
           </div>
         </div>
 
-        <!-- Materials Dropdown -->
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Materials</span>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/materials/metal-roofing">Premium Metal</a>
-            <a class="dropdown-item" href="/materials/tile-roofing">Spanish Tile</a>
-            <a class="dropdown-item" href="/materials/silicone-polyurethane-coatings">Coating & Silcone</a>
-            <a class="dropdown-item" href="/materials/asphalt-shingles">Premium Shingles</a>
-          </div>
-        </div>
-
-        <!-- Service Areas Dropdown (12 main cities) -->
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Service Areas</span>
           <div class="dropdown-menu dropdown-menu-wide">
@@ -847,83 +830,32 @@
             <a class="dropdown-item" href="/katy-roofing-contractor.html">Katy</a>
             <a class="dropdown-item" href="/sugar-land-roofing-contractor.html">Sugar Land</a>
             <a class="dropdown-item" href="/cypress-roofing-contractor.html">Cypress</a>
-            <a class="dropdown-item" href="/the-woodlands-roofing-contractor.html">The Woodlands</a>
-            <a class="dropdown-item" href="/pearland-roofing-contractor.html">Pearland</a>
-            <a class="dropdown-item" href="/league-city-roofing-contractor.html">League City</a>
-            <a class="dropdown-item" href="/spring-tx-roofing-contractor.html">Spring</a>
-            <a class="dropdown-item" href="/pasadena-tx-roofing-contractor.html">Pasadena</a>
-            <a class="dropdown-item" href="/index.html">Conroe</a>
-            <a class="dropdown-item" href="/index.html">Kingwood</a>
-            <a class="dropdown-item" href="/tomball-tx-roofing-contractor.html">Tomball</a>
           </div>
         </div>
-
-        <!-- Core Pages -->
-        <a href="/blog" class="nav-link">Local Blog</a>
-        <a href="/about.html" class="nav-link">About Us</a>
+        <a href="/index.html" class="nav-link">Interactive Center</a>
         <a href="/contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Header CTA Button -->
-      <a href="tel:2817555448" class="btn btn-primary" style="display-none md:inline-flex; padding: 0.6rem 1.25rem; font-size: 0.85rem;">
+      <a href="tel:2817555448" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
         📞 (281) 755-5448
       </a>
 
-      <!-- Hamburger Menu Button for Mobile -->
-      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">
-        ☰
-      </button>
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
 
-  <!-- Mobile Menu Slide-out -->
+  <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
   <div class="mobile-menu" id="mobile-menu">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
       <a href="/index.html" class="logo">EPIC ROOFING <span>TX</span></a>
       <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
     </div>
-    
-    <div class="mobile-nav-link">Our Services</div>
-    <div class="mobile-submenu">
-      <a class="mobile-submenu-item" href="/services/shingle-roof-replacement">Shingle Replacement</a>
-      <a class="mobile-submenu-item" href="/services/metal-roofing-installation">Metal Roofing</a>
-      <a class="mobile-submenu-item" href="/services/commercial-roof-coating">Commercial Coating</a>
-      <a class="mobile-submenu-item" href="/services/hail-wind-storm-repair">Hail & Wind Damage Repair</a>
-      <a class="mobile-submenu-item" href="/services/emergency-tarping-leak-repair">Emergency Leak Tarp</a>
-      <a class="mobile-submenu-item" href="/services/roof-inspection-haag">Certified Inspection</a>
-    </div>
-
-    <div class="mobile-nav-link">Storm Repairs</div>
-    <div class="mobile-submenu">
-      <a class="mobile-submenu-item" href="/repairs/hail-damage">Hail Restoration</a>
-      <a class="mobile-submenu-item" href="/repairs/wind-damage">Wind Restoration</a>
-      <a class="mobile-submenu-item" href="/repairs/emergency-tarp">Emergency Tarp</a>
-    </div>
-
-    <div class="mobile-nav-link">Service Areas (12 Cities)</div>
-    <div class="mobile-submenu" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-      <a class="mobile-submenu-item" href="/cities/houston">Houston</a>
-      <a class="mobile-submenu-item" href="/cities/katy">Katy</a>
-      <a class="mobile-submenu-item" href="/cities/sugar-land">Sugar Land</a>
-      <a class="mobile-submenu-item" href="/cities/cypress">Cypress</a>
-      <a class="mobile-submenu-item" href="/cities/the-woodlands">The Woodlands</a>
-      <a class="mobile-submenu-item" href="/cities/pearland">Pearland</a>
-      <a class="mobile-submenu-item" href="/cities/league-city">League City</a>
-      <a class="mobile-submenu-item" href="/cities/spring">Spring</a>
-      <a class="mobile-submenu-item" href="/cities/pasadena">Pasadena</a>
-      <a class="mobile-submenu-item" href="/cities/conroe">Conroe</a>
-      <a class="mobile-submenu-item" href="/cities/kingwood">Kingwood</a>
-      <a class="mobile-submenu-item" href="/cities/tomball">Tomball</a>
-    </div>
-
-    <a href="/blog" class="mobile-nav-link">Local Blog</a>
-    <a href="/about" class="mobile-nav-link">About Us</a>
-    <a href="/contact" class="mobile-nav-link">Contact</a>
-    
-    <a href="tel:8325550100" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">
-      📞 Call Free Inspection
-    </a>
+    <a href="/index.html" class="mobile-nav-link">Home</a>
+    <a href="/roof-replacement-houston.html" class="mobile-nav-link">Shingle Replacement</a>
+    <a href="/storm-damage-roofing-houston.html" class="mobile-nav-link">Storm Damage</a>
+    <a href="/index.html" class="mobile-nav-link">Houston Core</a>
+    <a href="tel:8325550100" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
   </div>
 
   <!-- Hero Section Mockup -->
