@@ -52,18 +52,13 @@ for (const entry of entries) {
       name === 'style.css' ||
       name === 'robots.txt' ||
       name === 'sitemap.xml' ||
-      name === 'metadata.json' ||
-      name.endsWith('.webp') ||
-      name.endsWith('.jpg') ||
-      name.endsWith('.jpeg') ||
-      name.endsWith('.png') ||
-      name.endsWith('.svg') ||
-      name.endsWith('.ico')
+      name === 'metadata.json'
     ) {
       copyFile(path.join(srcDir, name), path.join(distDir, name));
     }
   } else if (entry.isDirectory()) {
-    if (name === 'blog') {
+    if (name === 'blog' || name === 'images' || 
+        name === 'assets') {
       copyFolderRecursive(path.join(srcDir, name), path.join(distDir, name));
     }
   }
