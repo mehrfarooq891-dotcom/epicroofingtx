@@ -566,8 +566,7 @@ h4 { font-size: 1.125rem; }
 
 /* Hero Section Base Styles */
 .hero-section {
-  background: linear-gradient(rgba(10, 15, 30, 0.9), rgba(10, 15, 30, 0.95)), 
-              repeating-linear-gradient(45deg, #1e293b 0, #1e293b 10px, #0f172a 10px, #0f172a 20px);
+  background-color: var(--dark);
   color: var(--white);
   padding: 6rem 0;
   text-align: center;
