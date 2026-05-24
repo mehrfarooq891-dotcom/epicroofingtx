@@ -52,7 +52,8 @@ for (const entry of entries) {
       name === 'style.css' ||
       name === 'robots.txt' ||
       name === 'sitemap.xml' ||
-      name === 'metadata.json'
+      name === 'metadata.json' ||
+      name === 'favicon.ico'
     ) {
       copyFile(path.join(srcDir, name), path.join(distDir, name));
     }
