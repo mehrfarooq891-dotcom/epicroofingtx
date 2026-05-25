@@ -159,6 +159,56 @@
   "url": "https://epicroofingtx.com"
 }
 </script>
+
+  <!-- STEP 1 - LeadSmart Embed Script -->
+  <script type="text/javascript">
+  var po_host=(("https:"==document.location.protocol)?"https://":"http://");
+  document.write(unescape("%3Cscript src='"+po_host+"leads.leadsmartinc.com/js/embed/embed.js?apikey=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=mehrojhgdh1&buttons=btn-success' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  <style>
+    /* Custom Responsive Floating/Sticky Frame inside the Hero Stats Bar Area */
+    .hero-stats-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 1240px;
+      margin: 0 auto;
+      align-items: stretch;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .hero-sticky-form-container {
+      width: 100%;
+      max-width: 360px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 2.5px solid var(--orange);
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      height: 545px;
+    }
+    @media (min-width: 1024px) {
+      .hero-stats-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      #stats-hero-row {
+        flex: 1;
+        margin: 0 !important;
+        align-self: center;
+      }
+      .hero-sticky-form-container {
+        position: sticky;
+        top: 110px;
+        z-index: 10;
+        margin-top: -120px; /* Float up visually into the hero body space */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -262,22 +312,29 @@
       </div>
 
       <!-- Hero Stats Bar Row -->
-      <div class="stats-bar" id="stats-hero-row">
-        <div class="stat-item">
-          <span class="stat-number">200+</span>
-          <span class="stat-label">Verified local Reviews</span>
+      <div class="hero-stats-wrapper">
+        <div class="stats-bar" id="stats-hero-row">
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Verified local Reviews</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">GAF True Golden Pledge</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2 Hrs</span>
+            <span class="stat-label">Emergency tarp response</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10-Yr</span>
+            <span class="stat-label">Defect Workmanship Protection</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">GAF True Golden Pledge</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">2 Hrs</span>
-          <span class="stat-label">Emergency tarp response</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">10-Yr</span>
-          <span class="stat-label">Defect Workmanship Protection</span>
+
+        <!-- Floating/Sticky Iframe Card on Right -->
+        <div class="hero-sticky-form-container">
+          <iframe src="//leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=mehrojhgdh1&funnel=4&category=191&step=1&buttons=btn-success" width="100%" height="545" frameborder="0" style="border: 0; display: block;"></iframe>
         </div>
       </div>
 
@@ -705,63 +762,7 @@
           Get your customized moisture and wind status check from our high-performance Dallas/Houston crew.
         </p>
 
-        <form onsubmit="event.preventDefault(); alert('📩 Storm Lead Captured! Thank you. Epic Roofing TX team will call you within 15 minutes to secure your structural GAF assessment.');">
-          
-          <div class="form-group">
-            <label class="form-label" for="form-name">Full Property Owner Name</label>
-            <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
-          </div>
-
-          <div class="grid grid-2">
-            <div class="form-group">
-              <label class="form-label" for="form-phone">Local TX Contact Phone</label>
-              <input type="tel" id="form-phone" class="form-control" placeholder="(380) 300-1046" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-email">Email Address</label>
-              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
-            </div>
-          </div>
-
-          <div class="grid grid-2">
-            <div class="form-group">
-              <label class="form-label" for="form-city">Your TX Service City</label>
-              <select id="form-city" class="form-control" required style="cursor: pointer;">
-                <option value="Katy">Katy, TX</option>
-                <option value="Houston">Houston, TX</option>
-                <option value="Sugar Land">Sugar Land, TX</option>
-                <option value="Cypress">Cypress, TX</option>
-                <option value="The Woodlands">The Woodlands, TX</option>
-                <option value="Pearland">Pearland, TX</option>
-                <option value="League City">League City, TX</option>
-                <option value="Spring">Spring, TX</option>
-                <option value="Pasadena">Pasadena, TX</option>
-                <option value="Conroe">Conroe, TX</option>
-                <option value="Kingwood">Kingwood, TX</option>
-                <option value="Tomball">Tomball, TX</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-material">Current Roof Composition</label>
-              <select id="form-material" class="form-control" required style="cursor: pointer;">
-                <option value="Shingles">Asphalt Shingles</option>
-                <option value="Metal">Premium Metal Roofing</option>
-                <option value="Flat">Silicone & Polyurethane Coatings</option>
-                <option value="Tile">Spanish Slate or Clay Tiles</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 2rem;">
-            <label class="form-label" for="form-notes">Specific Roof Wind or Leak Details</label>
-            <textarea id="form-notes" class="form-control" rows="3" placeholder="Describe any leaks, lifting shingles, storm impacts from hail, or age of current roof."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width: 100%; height: 55px; font-size: 1.05rem;">
-            📩 SUBMIT ASSESSMENT REQUEST
-          </button>
-
-        </form>
+        <iframe src="//leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=mehrojhgdh1&funnel=4&category=191&step=1&buttons=btn-success" width="100%" height="545" frameborder="0"></iframe>
       </div>
     </div>
   </section>
