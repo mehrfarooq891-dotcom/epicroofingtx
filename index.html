@@ -166,49 +166,7 @@
   document.write(unescape("%3Cscript src='"+po_host+"leads.leadsmartinc.com/js/embed/embed.js?apikey=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=mehrojhgdh1&buttons=btn-success' type='text/javascript'%3E%3C/script%3E"));
   </script>
 
-  <style>
-    /* Custom Responsive Floating/Sticky Frame inside the Hero Stats Bar Area */
-    .hero-stats-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      max-width: 1240px;
-      margin: 0 auto;
-      align-items: stretch;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-    .hero-sticky-form-container {
-      width: 100%;
-      max-width: 360px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 2.5px solid var(--orange);
-      border-radius: 12px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-      overflow: hidden;
-      margin-left: auto;
-      margin-right: auto;
-      height: 545px;
-    }
-    @media (min-width: 1024px) {
-      .hero-stats-wrapper {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
-      #stats-hero-row {
-        flex: 1;
-        margin: 0 !important;
-        align-self: center;
-      }
-      .hero-sticky-form-container {
-        position: sticky;
-        top: 110px;
-        z-index: 10;
-        margin-top: -120px; /* Float up visually into the hero body space */
-      }
-    }
-  </style>
+
 </head>
 <body>
 
@@ -312,29 +270,22 @@
       </div>
 
       <!-- Hero Stats Bar Row -->
-      <div class="hero-stats-wrapper">
-        <div class="stats-bar" id="stats-hero-row">
-          <div class="stat-item">
-            <span class="stat-number">200+</span>
-            <span class="stat-label">Verified local Reviews</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">GAF True Golden Pledge</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">2 Hrs</span>
-            <span class="stat-label">Emergency tarp response</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">10-Yr</span>
-            <span class="stat-label">Defect Workmanship Protection</span>
-          </div>
+      <div class="stats-bar" id="stats-hero-row">
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Verified local Reviews</span>
         </div>
-
-        <!-- Floating/Sticky Iframe Card on Right -->
-        <div class="hero-sticky-form-container">
-          <iframe src="//leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=mehrojhgdh1&funnel=4&category=191&step=1&buttons=btn-success" width="100%" height="545" frameborder="0" style="border: 0; display: block;"></iframe>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">GAF True Golden Pledge</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">2 Hrs</span>
+          <span class="stat-label">Emergency tarp response</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10-Yr</span>
+          <span class="stat-label">Defect Workmanship Protection</span>
         </div>
       </div>
 
