@@ -2,6 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/index.html", "destination": "/" }
+    { "source": "/index.html", "destination": "/" },
+    { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },
+    { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" }
   ]
 }
