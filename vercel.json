@@ -3,6 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/index.html", "destination": "/" },
+    { "source": "/calculator", "destination": "/calculator.html" },
     { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },
     { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" },
     { "source": "/blog/roof-leak-detection-houston-guide", "destination": "/blog/roof-leak-detection-houston-guide.html" },

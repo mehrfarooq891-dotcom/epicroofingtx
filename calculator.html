@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23E8600A'/><text y='75' x='15' font-size='70' fill='white'>E</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Roof Cost Calculator Houston TX | Instant Estimate | Epic Roofing TX</title>
+  <meta name="description" content="Get an instant roof cost estimate for your Houston TX home. Enter your roof size and material — our free calculator shows average Houston roofing prices. Call for exact quote.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .badge-orange-light {
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid rgba(234, 88, 12, 0.3);
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 48px;
+      padding: 0 1rem;
+      background: var(--navy-light);
+      border: 1.5px solid #2A4372;
+      border-radius: 6px;
+      color: var(--white);
+      font-size: 1rem;
+      font-family: var(--f-body);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 96, 10, 0.2);
+    }
+
+    .calc-container {
+      background: var(--dark);
+      border: 1px solid #1E293B;
+      border-radius: 12px;
+      padding: 2.25rem 2rem;
+      border-bottom: 3px solid var(--orange);
+      max-width: 750px;
+      margin: 2rem auto 0 auto;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .faq-card {
+      background: var(--navy-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--orange);
+      text-align: left;
+    }
+
+    .faq-card h3 {
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      text-transform: none;
+    }
+
+    .faq-card p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .internal-links-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .internal-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .internal-links-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-link-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #1E293B;
+      padding: 1.25rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .service-link-card:hover {
+      border-color: var(--orange);
+      background: var(--navy-light);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- SEO Schema Blocks -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Epic Roofing & Construction LLC",
+  "alternateName": "Epic Roofing TX",
+  "url": "https://www.epicroofingtx.com",
+  "logo": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+  "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+  "description": "Licensed roofing contractor in Houston TX. Storm damage, roof repair, replacement & insurance claim specialists. Serving Greater Houston area.",
+  "telephone": "(380) 300-1046",
+  "email": "info@epicroofingtx.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9402 Spaulding St",
+    "addressLocality": "Houston",
+    "addressRegion": "TX",
+    "postalCode": "77016",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.847152,
+    "longitude": -95.305579
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Houston"},
+    {"@type": "City", "name": "Katy"},
+    {"@type": "City", "name": "Sugar Land"},
+    {"@type": "City", "name": "Cypress"},
+    {"@type": "City", "name": "Pearland"},
+    {"@type": "City", "name": "Spring"},
+    {"@type": "City", "name": "The Woodlands"},
+    {"@type": "City", "name": "Pasadena"},
+    {"@type": "City", "name": "Humble"},
+    {"@type": "City", "name": "Tomball"},
+    {"@type": "City", "name": "Richmond"},
+    {"@type": "City", "name": "League City"},
+    {"@type": "City", "name": "Missouri City"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "7",
+    "bestRating": "5"
+  },
+  "priceRange": "$$",
+  "paymentAccepted": "Cash, Credit Card, Insurance",
+  "hasMap": "https://maps.google.com/?q=Epic+Roofing+%26+Construction+LLC+Houston+TX",
+  "sameAs": [
+    "https://www.google.com/maps/place/Epic+Roofing+%26+Construction+LLC"
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Same Day Storm Response: Emergency Wind / Hail Leak Tarping | <a href="tel:3803001046">📞 (380) 300-1046</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/index.html" class="logo" id="site-logo">
+        EPIC ROOFING & CONSTRUCTION <span>LLC</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Our Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/roof-replacement-houston.html">Shingle Replacement</a>
+            <a class="dropdown-item" href="/metal-roofing-houston.html">Metal Roofing</a>
+            <a class="dropdown-item" href="/roof-coating-houston.html">Commercial Coating</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">Hail & Wind Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Leak Tarp</a>
+            <a class="dropdown-item" href="/free-roof-inspection-houston.html">Certified Inspection</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Repairs</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston.html">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston.html">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">General Storm Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Tarp Service</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <a class="dropdown-item" href="/index.html">Houston</a>
+            <a class="dropdown-item" href="/katy-roofing-contractor.html">Katy</a>
+            <a class="dropdown-item" href="/sugar-land-roofing-contractor.html">Sugar Land</a>
+            <a class="dropdown-item" href="/cypress-roofing-contractor.html">Cypress</a>
+          </div>
+        </div>
+        <a href="/index.html" class="nav-link">Interactive Center</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:3803001046" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 (380) 300-1046
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Slideout Menu -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/index.html" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+    <a href="/index.html" class="mobile-nav-link">Home</a>
+    <a href="/roof-replacement-houston.html" class="mobile-nav-link">Shingle Replacement</a>
+    <a href="/storm-damage-roofing-houston.html" class="mobile-nav-link">Storm Damage</a>
+    <a href="/index.html" class="mobile-nav-link">Houston Core</a>
+    <a href="tel:3803001046" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1.5rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/index.html">Home</a> <span>/</span> <span style="color:#EA580C; font-weight:700;">Houston Roof Cost Calculator</span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION / INTRO -->
+  <section class="hero-section" style="padding: 4rem 0 2rem 0; text-align: center;">
+    <div class="container" style="max-width: 900px;">
+      <div class="badge-orange-light" style="margin-bottom: 1.25rem;">
+        📊 100% Free Smart Estimate tool
+      </div>
+      <h1 class="hero-title" style="margin-bottom: 1.25rem; font-size: 2.5rem; line-height: 1.15;">
+        Free Houston Roof Cost Estimator — <br><span style="color: var(--orange);">Instant Estimate</span>
+      </h1>
+      <p class="hero-subtitle" style="font-size: 1.15rem; color: #94A3B8; max-width: 750px; margin: 0 auto;">
+        How much does a new roof cost in Houston TX? Use our free calculator to get an instant estimate based on your roof size and material choice.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="section-padding" style="background: var(--navy); padding-top: 0;">
+    <div class="container">
+      
+      <div class="calc-container" id="calculator-section">
+        <h2 style="font-size: 1.5rem; margin-bottom: 2rem; color: var(--white); font-family: var(--f-display); text-transform: uppercase; text-align: center;">
+          Calculate Your Estimations Inside 1 minute
+        </h2>
+
+        <!-- Size Selection -->
+        <div class="form-group" id="form-group-size">
+          <label for="calc-size">1. Home Square Footage (Footprint Size)</label>
+          <select id="calc-size" class="form-control">
+            <option value="under_1000">Under 1,000 Sq Ft</option>
+            <option value="1000_1500" selected>1,000 - 1,500 Sq Ft</option>
+            <option value="1500_2000">1,500 - 2,000 Sq Ft</option>
+            <option value="2000_2500">2,000 - 2,500 Sq Ft</option>
+            <option value="2500_3000">2,500 - 3,000 Sq Ft</option>
+            <option value="over_3000">Over 3,000 Sq Ft</option>
+          </select>
+        </div>
+
+        <!-- Material Selection -->
+        <div class="form-group" id="form-group-material">
+          <label for="calc-material">2. Select Premium Material Coating</label>
+          <select id="calc-material" class="form-control">
+            <option value="asphalt">Asphalt Shingles (Traditional & GAF Lifetime)</option>
+            <option value="metal">Metal Roofing (Structural Standing Seam)</option>
+            <option value="tile">Tile Roofing (Reinforced Slate / Concrete)</option>
+            <option value="flat_tpo">Flat / TPO Membrane System</option>
+          </select>
+        </div>
+
+        <!-- Service Needed -->
+        <div class="form-group" id="form-group-service">
+          <label for="calc-service">3. Select Action Requested</label>
+          <select id="calc-service" class="form-control">
+            <option value="replacement" selected>Full Roof Replacement</option>
+            <option value="repair">Minor to Moderate Leak Repair</option>
+            <option value="inspection">Full HAAG Certified Frame Inspection</option>
+          </select>
+        </div>
+
+        <!-- Action Button -->
+        <button onclick="calculateEstimate()" class="btn btn-primary" id="btn-calc-submit" style="width: 100%; height: 50px; font-weight: 800; font-family: var(--f-display); font-size: 1.1rem; text-transform: uppercase;">
+          Calculate My Estimate
+        </button>
+
+        <!-- Result Frame Placeholder -->
+        <div id="calc-results"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding" style="background: var(--navy-light);">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <h2 style="font-size: 2rem; font-family: var(--f-display); text-transform: uppercase; margin-bottom: 1rem;">
+        Houston Roofing Price Guide & FAQs
+      </h2>
+      <p style="color: #94A3B8; margin-bottom: 2rem;">
+        Everything you need to know about weather claims, replacement pricing, and material upgrades.
+      </p>
+
+      <div class="faq-grid" id="calculator-faq-accordion">
+        
+        <div class="faq-card">
+          <h3>How much is a roof replacement deductible in Houston?</h3>
+          <p>
+            Most homeowners policies in Texas carry a wind/hail deductible of 1% to 2% of the home's total insured value. On storm damage claims, Epic Roofing & Construction LLC works with you and your insurance provider to handle all line items so you only out-of-pocket the legal deductible.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Why are metal and tile roof costs higher than asphalt shingles in Houston?</h3>
+          <p>
+            Metal and tile roofs require specialized structural deck preparation, heavier sub-assemblies, and specialized expert labor. While asphalt lasts 15-25 years, standing seam metal and concrete tile regularly last over 50 years and offer superior hurricane/heat deflection, lowering utility bills.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Are there hidden costs in a Houston roof replacement quote?</h3>
+          <p>
+            Some storm chasing roofers omit rotting deck replacement (plywood), flashing re-runs, and trash disposal fees only to add them to the final bill. Epic Roofing & Construction LLC provides GAF-certified, itemized written contracts. Flat rate includes teardown, cleanup, disposal, and synthetic underlayments.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>How does the material of my roof affect my Texas homeowners insurance premiums?</h3>
+          <p>
+            Installing class 4 impact-rated shingles or steel standing seam metal systems can yield up to a 20-30% discount on your Texas homeowners insurance premium! Ask our HAAG forensic inspector for a certification form upon completion.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Can I finance my roof replacement in Houston?</h3>
+          <p>
+            Yes! We offer flexible payment plans and quick-approval roof financing option terms with low monthly payments for qualifying Greater Houston homeowners. This is perfect if you want a premium standing seam upgrade or need a sudden replacement.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Service Page Anchors -->
+      <h3 style="margin-top: 4rem; font-family: var(--f-display); text-transform: uppercase; font-size: 1.5rem; color: var(--white);">
+        Explore Specialized Weather Systems
+      </h3>
+      <div class="internal-links-grid" id="internal-service-anchors">
+        <div class="service-link-card">
+          <a href="/roof-replacement-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Asphalt Shingle Replacement
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">GAF Golden Pledge warranties with 50-year system blockouts.</p>
+        </div>
+        <div class="service-link-card">
+          <a href="/metal-roofing-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Standing Seam Metal Roofing
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">High-velocity hurricane wind defence up to 140 miles per hour.</p>
+        </div>
+        <div class="service-link-card">
+          <a href="/roof-coating-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Commercial Roof Coating
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">Silicone protective sealants mapping 100% UV reflection bounds.</p>
+        </div>
+        <div class="service-link-card">
+          <a href="/storm-damage-roofing-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Storm Damage & Wind Repair
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">Certified HAAG audits handling direct insurance claims.</p>
+        </div>
+        <div class="service-link-card">
+          <a href="/emergency-roof-tarping-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Emergency Joint Roof Tarping
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">2-hour rapid response dispatch preventing structural leaks.</p>
+        </div>
+        <div class="service-link-card">
+          <a href="/free-roof-inspection-houston.html" style="color: var(--white); font-weight: bold; font-size: 1.05rem;">
+            Get Forensic Inspection
+          </a>
+          <p style="color:#94A3B8; font-size:0.85rem; margin-top:0.5rem;">$0 Out-of-pocket certified moisture and structural analysis.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHADOW RESPONSIVE FOOTER -->
+  <footer>
+    <div class="container animate-fade-in">
+      <div class="grid grid-4 footer-columns">
+        
+        <div>
+          <a href="/index.html" style="margin-bottom: 1.25rem; display: inline-flex;">
+            <img src="/images/epic-roofing-logo.svg" 
+            alt="Epic Roofing logo for certified calculator | Epic Roofing TX | Houston TX"
+            style="height: 55px; width: auto;">
+          </a>
+          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
+            Premium high-velocity wind-resistant roofing assemblies, lifetime shingles, durable leak-protection systems and HAAG-certified evaluations.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="badge-css-gaf">GAF Certified</span>
+            <span class="badge-css-bbb">BBB Accredited A+</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Core Solutions</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
+            <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>
+            <li><a href="/roof-coating-houston.html">Commercial Coatings</a></li>
+            <li><a href="/hail-damage-roof-repair-houston.html">Storm Restoration</a></li>
+            <li><a href="/emergency-roof-tarping-houston.html">Rapid Roof Tarping</a></li>
+            <li><a href="/free-roof-inspection-houston.html">HAAG Forensic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Satellite Nodes</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/katy-roofing-contractor.html">Katy</a></li>
+              <li><a href="/sugar-land-roofing-contractor.html">Sugar Land</a></li>
+              <li><a href="/cypress-roofing-contractor.html">Cypress</a></li>
+              <li><a href="/the-woodlands-roofing-contractor.html">Woodlands</a></li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/pearland-roofing-contractor.html">Pearland</a></li>
+              <li><a href="/league-city-roofing-contractor.html">League City</a></li>
+              <li><a href="/spring-tx-roofing-contractor.html">Spring</a></li>
+              <li><a href="/tomball-tx-roofing-contractor.html">Tomball</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h4>State Headquarters</h4>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            <strong>Assessor Hotline:</strong><br>
+            <a href="tel:3803001046" style="color: var(--white); font-weight: bold; font-size: 1.1rem; text-decoration: underline;">(380) 300-1046</a><br><br>
+            Epic Roofing & Construction LLC<br>
+            9402 Spaulding St, Houston, TX 77016<br>
+            Phone: (380) 300-1046
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/index.html">Home</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BUTTON -->
+  <div class="mobile-sticky-bar" onclick="window.location.href='tel:3803001046'" id="mobile-cta-bottom">
+    📞 Call GAF Specialist — Free Assessment
+  </div>
+
+  <!-- INVISIBLE COMPLIANT LOCAL NAP SHELL -->
+  <div class="epic-nap-hidden">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing TX</span>
+      <span itemprop="telephone">(380) 300-1046</span>
+      <span itemprop="email">info@epicroofingconstruction.com</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Houston</span>,
+        <span itemprop="addressRegion">TX</span>
+        <span itemprop="addressCountry">US</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JS Calculator Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Setup Mobile slideout triggers
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+
+    function calculateEstimate() {
+      const size = document.getElementById('calc-size').value;
+      const material = document.getElementById('calc-material').value;
+      const service = document.getElementById('calc-service').value;
+      
+      let resultHtml = '';
+      
+      if (service === 'inspection') {
+        resultHtml = `
+          <div style="font-size: 2.25rem; color: #EA580C; font-weight: 800; margin-bottom: 0.5rem;" id="estimate-price-range">
+            $0 (100% FREE)
+          </div>
+          <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Epic Roofing TX provides completely free, no-obligation professional roof inspections with full photo documentation.
+          </p>
+        `;
+      } else if (service === 'repair') {
+        resultHtml = `
+          <div style="font-size: 2.25rem; color: #EA580C; font-weight: 800; margin-bottom: 0.5rem;" id="estimate-price-range">
+            $300 - $2,500
+          </div>
+          <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Texas roof repairs vary depending on structural damage, compromised valleys, and flashing requirements.
+          </p>
+        `;
+      } else {
+        // replacement
+        let low = 0;
+        let high = 0;
+        
+        if (size === 'under_1000') { low = 6000; high = 9000; }
+        else if (size === '1000_1500') { low = 8500; high = 13000; }
+        else if (size === '1500_2000') { low = 11000; high = 16000; }
+        else if (size === '2000_2500') { low = 14000; high = 19000; }
+        else if (size === '2500_3000') { low = 17000; high = 23000; }
+        else if (size === 'over_3000') { low = 20000; high = 28000; }
+        
+        let multiplier = 1.0;
+        if (material === 'metal') multiplier = 1.6;
+        else if (material === 'tile') multiplier = 1.8;
+        else if (material === 'flat_tpo') multiplier = 1.3;
+        
+        low = Math.round(low * multiplier);
+        high = Math.round(high * multiplier);
+        
+        resultHtml = `
+          <div style="font-size: 2.25rem; color: #EA580C; font-weight: 800; margin-bottom: 0.5rem;" id="estimate-price-range">
+            $${low.toLocaleString()} - $${high.toLocaleString()}
+          </div>
+          <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Estimated budget range for a full ${document.getElementById('calc-material').options[document.getElementById('calc-material').selectedIndex].text} replacement.
+          </p>
+        `;
+      }
+      
+      const resultsDiv = document.getElementById('calc-results');
+      resultsDiv.innerHTML = `
+        <div style="background: rgba(15, 23, 42, 0.9); border: 2px solid var(--orange); border-radius: 8px; padding: 2.25rem 2rem; margin-top: 2rem; text-align: center; animation: fadeIn 0.4s ease-out;" id="results-panel">
+          <h3 style="color: white; margin-bottom: 1rem; font-family: var(--f-display); font-size: 1.25rem; letter-spacing: 0.05em;">YOUR ESTIMATED HOUSTON ROOF BUDGET</h3>
+          ${resultHtml}
+          
+          <p style="color: #E2E8F0; font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            <strong>Storm damage?</strong> Insurance may cover 100% of your replacement cost. This is an estimate only. Get your exact free quote by calling (380) 300-1046.
+          </p>
+          
+          <a href="tel:3803001046" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; font-weight: 700; font-size: 1.1rem; width: 100%; max-width: 440px; text-decoration: none; border-radius: 4px;">
+             📞 GET EXACT QUOTE — CALL NOW
+          </a>
+          
+          <p style="color: #94A3B8; font-size: 0.8rem; margin-top: 1rem; margin-bottom: 0;">
+            ⚠️ $0 Out-of-Pocket possible on valid insurance storm/hail claims.
+          </p>
+        </div>
+      `;
+      
+      // Auto scroll to results
+      document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
