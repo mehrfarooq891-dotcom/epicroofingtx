@@ -4,6 +4,8 @@
   "rewrites": [
     { "source": "/index.html", "destination": "/" },
     { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },
-    { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" }
+    { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" },
+    { "source": "/blog/roof-leak-detection-houston-guide", "destination": "/blog/roof-leak-detection-houston-guide.html" },
+    { "source": "/blog/best-affordable-roofing-contractors-houston", "destination": "/blog/best-affordable-roofing-contractors-houston.html" }
   ]
 }
