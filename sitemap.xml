@@ -157,4 +157,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://epicroofingtx.com/blog/roofing-sugar-land-tx-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://epicroofingtx.com/blog/roofing-katy-tx-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://epicroofingtx.com/blog/roof-replacement-financing-houston.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://epicroofingtx.com/blog/roof-replacement-zero-cost-insurance-houston.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://epicroofingtx.com/blog/signs-you-need-roof-replacement-houston.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://epicroofingtx.com/blog/roof-leak-detection-houston-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
