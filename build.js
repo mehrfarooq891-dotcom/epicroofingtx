@@ -65,4 +65,39 @@ for (const entry of entries) {
   }
 }
 
+// Post-build link sanitization to resolve Google Search Console redirect index warnings
+function sanitizeHTMLFileLinks(dir) {
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      sanitizeHTMLFileLinks(fullPath);
+    } else if (file.endsWith('.html')) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      let changed = false;
+      
+      // Globally clean absolute index.html references
+      if (content.includes('href="/index.html"')) {
+        content = content.replace(/href="\/index.html"/g, 'href="/"');
+        changed = true;
+      }
+      
+      // Globally clean relative index.html references
+      if (content.includes('href="index.html"')) {
+        content = content.replace(/href="index.html"/g, 'href="/"');
+        changed = true;
+      }
+      
+      if (changed) {
+        fs.writeFileSync(fullPath, content, 'utf8');
+        console.log(`Sanitized Google indexing links in: ${path.relative(distDir, fullPath)}`);
+      }
+    }
+  });
+}
+
+console.log('Optimizing links for Google Search Console...');
+sanitizeHTMLFileLinks(distDir);
+
 console.log('Build completed successfully!');
