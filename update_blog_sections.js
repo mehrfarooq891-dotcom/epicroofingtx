@@ -51,23 +51,27 @@ files.forEach(file => {
   const lowerTitle = title.toLowerCase();
 
   if (lowerFile.includes('insurance') || lowerFile.includes('claim')) {
-    category = 'Insurance Guide';
+    category = 'Insurance';
     date = 'May 18, 2026';
     readTime = '9 Min Read';
-  } else if (lowerFile.includes('hail') || lowerFile.includes('storm') || lowerFile.includes('hurricane') || lowerFile.includes('wind') || lowerFile.includes('tarp')) {
-    category = 'Storm Repairs';
+  } else if (lowerFile.includes('hail')) {
+    category = 'Hail Damage';
     date = 'June 1, 2026';
+    readTime = '7 Min Read';
+  } else if (lowerFile.includes('inspection') || lowerFile.includes('leak') || lowerFile.includes('sign')) {
+    category = 'Roof Inspection';
+    date = 'May 5, 2026';
+    readTime = '8 Min Read';
+  } else if (lowerFile.includes('storm') || lowerFile.includes('hurricane') || lowerFile.includes('wind') || lowerFile.includes('tarp')) {
+    category = 'Storm Repair';
+    date = 'May 25, 2026';
     readTime = '7 Min Read';
   } else if (lowerFile.includes('affordable') || lowerFile.includes('financing')) {
     category = 'Roofing Costs';
     date = 'April 12, 2026';
     readTime = '6 Min Read';
-  } else if (lowerFile.includes('inspection') || lowerFile.includes('leak')) {
-    category = 'Inspections';
-    date = 'May 5, 2026';
-    readTime = '8 Min Read';
   } else if (lowerFile.includes('woodlands') || lowerFile.includes('pearland') || lowerFile.includes('katy') || lowerFile.includes('sugar-land')) {
-    category = 'Suburban Guides';
+    category = 'Local Guides';
     date = 'June 10, 2026';
     readTime = '11 Min Read';
   }
@@ -88,9 +92,8 @@ files.forEach(file => {
   }
 
   blogPosts.push({
-    file,
-    url: `/blog/${file}`,
     title,
+    filename: file,
     description,
     category,
     date,
@@ -165,8 +168,12 @@ let headPart = templateContent.split('</head>')[0];
 headPart = headPart.replace(/<title>.*?<\/title>/i, '<title>Roofing Resources, Guides & Storm Damage Advice | Epic Roofing & Construction LLC</title>');
 headPart = headPart.replace(/<meta\s+name=["']description["']\s+content=["'].*?["'][^>]*>/i, '<meta name="description" content="Explore Epic Roofing & Construction LLC blog guides. In-depth analysis on shingle replacement, storm wind assessment, hail repair, insurance claims, and local Houston HOA covenants.">');
 
-// Add head back
-let indexHTML = headPart + '</head>\n<body>\n';
+// Prepend the required template comments block and add head back
+let indexHTML = `<!--
+// TO ADD NEW BLOG: copy this object and add to blogPosts array:
+// { title: "Your Title", filename: "your-file.html", description: "Short description", category: "Category Name" }
+-->
+` + headPart + '</head>\n<body>\n';
 
 // Extract Banner, Header, and Mobile Slideout from template
 const navStartIndex = templateContent.indexOf('<!-- EMERGENCY TOP BANNER -->');
@@ -216,69 +223,26 @@ indexHTML += `
   </section>
 `;
 
-// Add main categories navigation (Visual Accents)
+// Add main categories navigation (Visual Accents & Actionable Filter Buttons)
 indexHTML += `
   <!-- BLOG INDEX LISTING -->
   <section class="section-padding" style="background: var(--navy); padding-top: 2rem;" id="blog-listings-container">
     <div class="container">
       
-      <!-- Category Filter Pills (Aesthetic) -->
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem;">
-        <span style="background: var(--orange); color: white; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; cursor: pointer;">All Guides</span>
-        <span style="background: var(--navy-light); color: #94A3B8; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B;">Storm Repairs</span>
-        <span style="background: var(--navy-light); color: #94A3B8; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B;">Insurance Guide</span>
-        <span style="background: var(--navy-light); color: #94A3B8; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B;">Suburban Guides</span>
-        <span style="background: var(--navy-light); color: #94A3B8; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B;">Roofing Costs</span>
+      <!-- Category Filter Pills (Interactive Buttons) -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem;" id="filter-container">
+        <button class="filter-btn active" data-category="All" style="background: var(--orange); color: white; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: 1px solid var(--orange); transition: all 0.3s ease;">All Guides</button>
+        <button class="filter-btn" data-category="Hail Damage" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Hail Damage</button>
+        <button class="filter-btn" data-category="Insurance" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Insurance</button>
+        <button class="filter-btn" data-category="Roof Inspection" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roof Inspection</button>
+        <button class="filter-btn" data-category="Storm Repair" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Storm Repair</button>
+        <button class="filter-btn" data-category="Roofing Costs" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roofing Costs</button>
+        <button class="filter-btn" data-category="Local Guides" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Local Guides</button>
       </div>
 
       <!-- Grid layout: 2-3 columns on desktop, 1 on mobile -->
-      <div class="grid grid-3" style="gap: 2rem;">
-`;
-
-// Render each blog card
-blogPosts.forEach(post => {
-  // Deduce badge styles for different categories to add rich handcrafted variation
-  let badgeStyle = "background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.3); color: var(--orange);";
-  if (post.category === 'Storm Repairs') {
-    badgeStyle = "background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3B82F6;";
-  } else if (post.category === 'Insurance Guide') {
-    badgeStyle = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981;";
-  } else if (post.category === 'Roofing Costs') {
-    badgeStyle = "background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #EAB308;";
-  } else if (post.category === 'Suburban Guides') {
-    badgeStyle = "background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #A855F7;";
-  }
-
-  indexHTML += `
-        <!-- Blog Card: ${post.title} -->
-        <div id="card-${post.file.replace('.html', '')}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-              <span style="${badgeStyle} font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;">${post.category}</span>
-              <span style="font-size: 0.8rem; color: #64748B; font-weight: 600;">${post.readTime}</span>
-            </div>
-            
-            <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 1rem; color: var(--white); text-transform: none; text-align: left; letter-spacing: normal;">
-              ${post.title}
-            </h3>
-            
-            <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-              ${post.description}
-            </p>
-          </div>
-
-          <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1E293B; padding-top: 1.25rem;">
-            <span style="font-size: 0.825rem; color: #64748B; font-weight: 500;">📅 ${post.date}</span>
-            <a href="${post.url}" style="color: var(--orange); font-weight: 700; font-size: 0.95rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 4px;" class="read-link">
-              Read Article <span style="font-size: 1.1rem; line-height: 1;">→</span>
-            </a>
-          </div>
-        </div>
-  `;
-});
-
-// Close layout
-indexHTML += `
+      <div class="grid grid-3" id="blog-grid" style="gap: 2rem;">
+        <!-- Blog Cards will be rendered dynamically here -->
       </div>
     </div>
   </section>
@@ -298,22 +262,114 @@ if (footerStartIndex !== -1) {
   console.log('WARNING: Footer slice index not found. Using safe footer fallback.');
 }
 
-// Add hover effect script to head/body
+// Add client-side dynamic rendering script
 indexHTML = indexHTML.replace('</body>', `
   <script>
-    // Add micro-interaction to blog cards
-    document.querySelectorAll('.sitemap-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-6px)';
-        card.style.borderColor = 'var(--orange)';
-        card.style.boxShadow = '0 12px 30px rgba(234, 88, 12, 0.1)';
+    // Blog Posts data catalog compiled automatically
+    const blogPosts = ${JSON.stringify(blogPosts, null, 2)};
+
+    // Dynamic rendering engine
+    function renderBlogs(filterCategory) {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = '';
+      
+      const filtered = filterCategory === 'All' 
+        ? blogPosts 
+        : blogPosts.filter(post => post.category === filterCategory);
+        
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #94A3B8; padding: 4rem 0;"><p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No active articles found under this category.</p><span style="font-size: 0.9rem; color: #64748B;">Please select a different resource tab above.</span></div>';
+        return;
+      }
+      
+      filtered.forEach(post => {
+        // Dynamic category badge colors
+        let badgeStyle = "background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.3); color: var(--orange);";
+        if (post.category === 'Storm Repair') {
+          badgeStyle = "background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3B82F6;";
+        } else if (post.category === 'Insurance') {
+          badgeStyle = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981;";
+        } else if (post.category === 'Roofing Costs') {
+          badgeStyle = "background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #EAB308;";
+        } else if (post.category === 'Local Guides') {
+          badgeStyle = "background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #A855F7;";
+        } else if (post.category === 'Hail Damage') {
+          badgeStyle = "background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #EF4444;";
+        } else if (post.category === 'Roof Inspection') {
+          badgeStyle = "background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #06B6D4;";
+        }
+        
+        const cardId = 'card-' + post.filename.replace('.html', '');
+        
+        const cardHTML = \`
+          <div id="\${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span style="\${badgeStyle} font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;">\${post.category}</span>
+                <span style="font-size: 0.8rem; color: #64748B; font-weight: 600;">\${post.readTime || '8 Min Read'}</span>
+              </div>
+              
+              <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 1rem; color: var(--white); text-transform: none; text-align: left; letter-spacing: normal;">
+                \${post.title}
+              </h3>
+              
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                \${post.description}
+              </p>
+            </div>
+
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1E293B; padding-top: 1.25rem;">
+              <span style="font-size: 0.825rem; color: #64748B; font-weight: 500;">📅 \${post.date || 'June 10, 2026'}</span>
+              <a href="/blog/\${post.filename}" style="color: var(--orange); font-weight: 700; font-size: 0.95rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 4px;" class="read-link">
+                Read Article <span style="font-size: 1.1rem; line-height: 1;">→</span>
+              </a>
+            </div>
+          </div>
+        \`;
+        
+        grid.insertAdjacentHTML('beforeend', cardHTML);
       });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-        card.style.borderColor = '#1E293B';
-        card.style.boxShadow = 'none';
+
+      // Add elegant micro-interactions on hover
+      document.querySelectorAll('.sitemap-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-6px)';
+          card.style.borderColor = 'var(--orange)';
+          card.style.boxShadow = '0 12px 30px rgba(234, 88, 12, 0.15)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0)';
+          card.style.borderColor = '#1E293B';
+          card.style.boxShadow = 'none';
+        });
+      });
+    }
+
+    // Interactive category filtering navigation
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active states
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.background = 'var(--navy-light)';
+          b.style.color = '#94A3B8';
+          b.style.border = '1px solid #1E293B';
+          b.style.fontWeight = '600';
+        });
+        
+        btn.classList.add('active');
+        btn.style.background = 'var(--orange)';
+        btn.style.color = 'white';
+        btn.style.border = '1px solid var(--orange)';
+        btn.style.fontWeight = '700';
+
+        // Trigger filtered render
+        renderBlogs(btn.getAttribute('data-category'));
       });
     });
+
+    // Initial load
+    renderBlogs('All');
   </script>
 </body>`);
 
