@@ -32,6 +32,9 @@ function copyFolderRecursive(src, dest) {
   }
 }
 
+// Run dynamic blog section and navigation compiler before file copy
+require('./update_blog_sections.js');
+
 // Start build
 console.log('Starting static build...');
 
