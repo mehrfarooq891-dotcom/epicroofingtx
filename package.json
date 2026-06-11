@@ -1,7 +1,7 @@
 {
   "name": "epic-roofing-tx-static",
-  "version": "1.0.0",
-  "description": "Static Epic Roofing TX website served with a zero-dependency local dev server",
+  "version": "1.1.0",
+  "description": "Static Epic Roofing TX website with active Woodlands and Pearland local blog guides served with a zero-dependency local dev server",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
