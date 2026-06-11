@@ -12,94 +12,28 @@ const files = fs.readdirSync(BLOG_DIR)
 
 console.log(`Found ${files.length} blog files to index and update.`);
 
-const blogPosts = [];
-
-// 2. Parse title, description and determine categories for each file
-files.forEach(file => {
-  const filePath = path.join(BLOG_DIR, file);
-  let content = fs.readFileSync(filePath, 'utf-8');
-
-  // Parse Title
-  let title = '';
-  const titleMatch = content.match(/<title>(.*?)<\/title>/i);
-  if (titleMatch) {
-    title = titleMatch[1]
-      .replace(/\s*\|\s*Epic Roofing & Construction LLC/gi, '')
-      .replace(/\s*\|\s*Epic Roofing TX.*/gi, '')
-      .trim();
-  } else {
-    title = file.replace(/-/g, ' ').replace('.html', '');
-    title = title.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-  }
-
-  // Parse Description
-  let description = '';
-  const descMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i) 
-                  || content.match(/<meta[^>]*content=["']([^"']*)["'][^>]*name=["']description["']/i);
-  if (descMatch) {
-    description = descMatch[1].trim();
-  } else {
-    description = "Read our expert roofing guide to protect your home. Local storm damage restoration & high-velocity wind solutions.";
-  }
-
-  // Deduce a realistic category & date for the article to look extremely hand-crafted and professional
-  let category = 'Local Guides';
-  let date = 'June 10, 2026';
-  let readTime = '8 Min Read';
-
-  const lowerFile = file.toLowerCase();
-  const lowerTitle = title.toLowerCase();
-
-  if (lowerFile.includes('insurance') || lowerFile.includes('claim')) {
-    category = 'Insurance';
-    date = 'May 18, 2026';
-    readTime = '9 Min Read';
-  } else if (lowerFile.includes('hail')) {
-    category = 'Hail Damage';
-    date = 'June 1, 2026';
-    readTime = '7 Min Read';
-  } else if (lowerFile.includes('inspection') || lowerFile.includes('leak') || lowerFile.includes('sign')) {
-    category = 'Roof Inspection';
-    date = 'May 5, 2026';
-    readTime = '8 Min Read';
-  } else if (lowerFile.includes('storm') || lowerFile.includes('hurricane') || lowerFile.includes('wind') || lowerFile.includes('tarp')) {
-    category = 'Storm Repair';
-    date = 'May 25, 2026';
-    readTime = '7 Min Read';
-  } else if (lowerFile.includes('affordable') || lowerFile.includes('financing')) {
-    category = 'Roofing Costs';
-    date = 'April 12, 2026';
-    readTime = '6 Min Read';
-  } else if (lowerFile.includes('woodlands') || lowerFile.includes('pearland') || lowerFile.includes('katy') || lowerFile.includes('sugar-land')) {
-    category = 'Local Guides';
-    date = 'June 10, 2026';
-    readTime = '11 Min Read';
-  }
-
-  // Custom fine-tuning for specific posts to make them feel highly authentic
-  if (lowerFile === 'hurricane-harvey-roof-lessons-houston.html') {
-    date = 'May 2, 2026';
-    readTime = '12 Min Read';
-  } else if (lowerFile === 'roof-leak-detection-houston-guide.html') {
-    date = 'May 20, 2026';
-    readTime = '10 Min Read';
-  } else if (lowerFile === 'roofing-the-woodlands-tx-guide.html') {
-    date = 'June 11, 2026';
-    readTime = '12 Min Read';
-  } else if (lowerFile === 'roofing-pearland-tx-guide.html') {
-    date = 'June 11, 2026';
-    readTime = '11 Min Read';
-  }
-
-  blogPosts.push({
-    title,
-    filename: file,
-    description,
-    category,
-    date,
-    readTime
-  });
-});
+const blogPosts = [
+  { title: "Houston Hail Season Roof Guide", filename: "houston-hail-season-roof-guide.html", description: "When hail season hits Houston and how to protect your roof.", category: "Hail Damage", date: "June 1, 2026", readTime: "7 Min Read" },
+  { title: "Hurricane Harvey Roof Lessons", filename: "hurricane-harvey-roof-lessons-houston.html", description: "What Houston homeowners learned about roofs after Harvey.", category: "Storm Repair", date: "May 2, 2026", readTime: "12 Min Read" },
+  { title: "Roof Insurance Claim Mistakes", filename: "roof-insurance-claim-mistakes-houston.html", description: "7 costly mistakes Houston homeowners make with roof claims.", category: "Insurance Claims", date: "May 18, 2026", readTime: "9 Min Read" },
+  { title: "Hidden Hail Damage Guide", filename: "hidden-hail-damage-roof-houston.html", description: "Why your roof may be damaged without you knowing.", category: "Hail Damage", date: "June 2, 2026", readTime: "8 Min Read" },
+  { title: "Emergency Roof Tarping Houston", filename: "emergency-roof-tarp-houston.html", description: "What emergency tarping is, when you need it, and cost.", category: "Storm Repair", date: "May 25, 2026", readTime: "7 Min Read" },
+  { title: "Wind Damage Roof Repair Houston", filename: "wind-damage-roof-repair-houston-guide.html", description: "Complete guide to wind damage roof repair in Houston.", category: "Storm Repair", date: "May 24, 2026", readTime: "8 Min Read" },
+  { title: "Free Roof Inspection Houston", filename: "free-roof-inspection-houston-guide.html", description: "What to expect from a free professional roof inspection.", category: "Roof Inspection", date: "May 5, 2026", readTime: "6 Min Read" },
+  { title: "Storm Chaser Roofers Warning", filename: "storm-chaser-roofers-houston-warning.html", description: "How to spot fake roofers after Houston storms.", category: "Roof Inspection", date: "May 8, 2026", readTime: "9 Min Read" },
+  { title: "Insurance Adjuster Roof Visit", filename: "roof-insurance-adjuster-visit-houston.html", description: "What to expect when adjuster inspects your Houston roof.", category: "Insurance Claims", date: "May 19, 2026", readTime: "8 Min Read" },
+  { title: "Zero Cost Roof Replacement", filename: "roof-replacement-zero-cost-insurance-houston.html", description: "How Houston homeowners get a new roof for $0 through insurance.", category: "Insurance Claims", date: "May 12, 2026", readTime: "7 Min Read" },
+  { title: "Roofing in Katy TX", filename: "roofing-katy-tx-guide.html", description: "What Katy homeowners need to know about their roofs.", category: "Local Guides", date: "June 10, 2026", readTime: "11 Min Read" },
+  { title: "Roofing in Sugar Land TX", filename: "roofing-sugar-land-tx-guide.html", description: "Roof repair and replacement guide for Sugar Land homeowners.", category: "Local Guides", date: "June 9, 2026", readTime: "10 Min Read" },
+  { title: "Roofing in The Woodlands TX", filename: "roofing-the-woodlands-tx-guide.html", description: "Tree damage, storms and roofing in The Woodlands.", category: "Local Guides", date: "June 11, 2026", readTime: "12 Min Read" },
+  { title: "Roofing in Pearland TX", filename: "roofing-pearland-tx-guide.html", description: "Why so many Pearland homes need roof replacement now.", category: "Local Guides", date: "June 11, 2026", readTime: "11 Min Read" },
+  { title: "Signs You Need Roof Replacement", filename: "signs-you-need-roof-replacement-houston.html", description: "10 signs you need a new roof in Houston TX.", category: "Cost & Materials", date: "April 15, 2026", readTime: "10 Min Read" },
+  { title: "Best Affordable Roofing Contractors", filename: "best-affordable-roofing-contractors-houston.html", description: "How to find the best affordable roofer in Houston.", category: "Cost & Materials", date: "April 12, 2026", readTime: "6 Min Read" },
+  { title: "Roof Insurance Claim Process", filename: "how-insurance-roof-claims-work-texas.html", description: "How insurance roof claims work in Texas.", category: "Insurance Claims", date: "May 22, 2026", readTime: "9 Min Read" },
+  { title: "Roof Leak Detection Houston", filename: "roof-leak-detection-houston-guide.html", description: "How to find and fix roof leaks in Houston homes.", category: "Roof Inspection", date: "May 20, 2026", readTime: "10 Min Read" },
+  { title: "Roof Replacement Financing", filename: "roof-replacement-financing-houston.html", description: "Financing options for roof replacement in Houston.", category: "Cost & Materials", date: "April 14, 2026", readTime: "8 Min Read" },
+  { title: "Roof Inspection Before Buying Home", filename: "roof-inspection-before-buying-home-houston.html", description: "Why you need a roof inspection before buying in Houston.", category: "Roof Inspection", date: "May 6, 2026", readTime: "7 Min Read" }
+];
 
 // Sort posts by date (newest first)
 const parseDate = (dStr) => {
@@ -231,12 +165,12 @@ indexHTML += `
       
       <!-- Category Filter Pills (Interactive Buttons) -->
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem;" id="filter-container">
-        <button class="filter-btn active" data-category="All" style="background: var(--orange); color: white; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: 1px solid var(--orange); transition: all 0.3s ease;">All Guides</button>
+        <button class="filter-btn active" data-category="All" style="background: var(--orange); color: white; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: 1px solid var(--orange); transition: all 0.3s ease;">All</button>
         <button class="filter-btn" data-category="Hail Damage" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Hail Damage</button>
-        <button class="filter-btn" data-category="Insurance" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Insurance</button>
-        <button class="filter-btn" data-category="Roof Inspection" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roof Inspection</button>
+        <button class="filter-btn" data-category="Insurance Claims" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Insurance Claims</button>
         <button class="filter-btn" data-category="Storm Repair" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Storm Repair</button>
-        <button class="filter-btn" data-category="Roofing Costs" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roofing Costs</button>
+        <button class="filter-btn" data-category="Roof Inspection" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roof Inspection</button>
+        <button class="filter-btn" data-category="Cost & Materials" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Cost & Materials</button>
         <button class="filter-btn" data-category="Local Guides" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Local Guides</button>
       </div>
 
@@ -287,9 +221,9 @@ indexHTML = indexHTML.replace('</body>', `
         let badgeStyle = "background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.3); color: var(--orange);";
         if (post.category === 'Storm Repair') {
           badgeStyle = "background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3B82F6;";
-        } else if (post.category === 'Insurance') {
+        } else if (post.category === 'Insurance Claims') {
           badgeStyle = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981;";
-        } else if (post.category === 'Roofing Costs') {
+        } else if (post.category === 'Cost & Materials') {
           badgeStyle = "background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #EAB308;";
         } else if (post.category === 'Local Guides') {
           badgeStyle = "background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #A855F7;";

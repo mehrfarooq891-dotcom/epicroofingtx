@@ -1,8 +1,7 @@
-feat: implement dedicated Blog index and interactive guides catalog
+feat: add blog index page and category filtering engine
 
-- Created a dynamically compiled, responsive `/blog/index.html` section landing page matching the dark royal navy (#0a1628) and bright orange (#E8600A) branding.
-- Programmed a custom build pipeline compiler `/update_blog_sections.js` that automatically scans the entire `/blog` subdirectory.
-- Dynamically extracts headers, metadata, titles, and excerpts for more than 21 high-quality SEO roofing guides and renders them onto professional bento card layouts organized by categories.
-- Unified header global elements across all blog articles, securely embedding the "Blog" primary link between "Interactive Center" and "Contact" tabs.
-- Re-routed and hardcoded all individual article breadcrumb hierarchies so that they link cleanly to the new `/blog/index.html` hub.
-- Standardized all sub-post footers and legal compliance clauses, fully compiling and validating active production builds with zero errors.
+- Added dedicated `/blog/index.html` blog landing page matching Epic Roofing navy/orange aesthetic.
+- Added Blog links into desktop nav, mobile slideout nav, and footer copyright area across `index.html`.
+- Implemented category filtering buttons (All, Hail Damage, Insurance Claims, Storm Repair, Roof Inspection, Cost & Materials, Local Guides).
+- Standardized all cards dynamically generated from the defined `blogPosts` array mapping containing 20 precise roofing guide articles.
+- Embedded reusable HTML comment guidelines for future post creation at the very top of `blog/index.html`.
