@@ -33,7 +33,8 @@ const blogPosts = [
   { title: "Roof Insurance Claim Process", filename: "how-insurance-roof-claims-work-texas.html", description: "How insurance roof claims work in Texas.", category: "Insurance Claims", date: "May 22, 2026", readTime: "9 Min Read" },
   { title: "Roof Leak Detection Houston", filename: "roof-leak-detection-houston-guide.html", description: "How to find and fix roof leaks in Houston homes.", category: "Roof Inspection", date: "May 20, 2026", readTime: "10 Min Read" },
   { title: "Roof Replacement Financing", filename: "roof-replacement-financing-houston.html", description: "Financing options for roof replacement in Houston.", category: "Cost & Materials", date: "April 14, 2026", readTime: "8 Min Read" },
-  { title: "Roof Inspection Before Buying Home", filename: "roof-inspection-before-buying-home-houston.html", description: "Why you need a roof inspection before buying in Houston.", category: "Roof Inspection", date: "May 6, 2026", readTime: "7 Min Read" }
+  { title: "Roof Inspection Before Buying Home", filename: "roof-inspection-before-buying-home-houston.html", description: "Why you need a roof inspection before buying in Houston.", category: "Roof Inspection", date: "May 6, 2026", readTime: "7 Min Read" },
+  { title: "Houston Hail Damage Guide", filename: "houston-hail-damage-guide.html", description: "Learn how to identify shingle bruising, metal dimples, and tile cracks.", category: "Hail Damage", date: "May 17, 2026", readTime: "7 Min Read" }
 ];
 
 // Sort posts by date (newest first)
