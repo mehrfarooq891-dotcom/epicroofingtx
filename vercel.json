@@ -1,14 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "epicroofingtx.com" }],
-      "destination": "https://www.epicroofingtx.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/index.html", "destination": "/" },
     { "source": "/calculator", "destination": "/calculator.html" },

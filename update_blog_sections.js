@@ -35,7 +35,8 @@ const blogPosts = [
   { title: "Roof Replacement Financing", filename: "roof-replacement-financing-houston.html", description: "Financing options for roof replacement in Houston.", category: "Cost & Materials", date: "April 14, 2026", readTime: "8 Min Read" },
   { title: "Roof Inspection Before Buying Home", filename: "roof-inspection-before-buying-home-houston.html", description: "Why you need a roof inspection before buying in Houston.", category: "Roof Inspection", date: "May 6, 2026", readTime: "7 Min Read" },
   { title: "Houston Hail Damage Guide", filename: "houston-hail-damage-guide.html", description: "Learn how to identify shingle bruising, metal dimples, and tile cracks.", category: "Hail Damage", date: "May 17, 2026", readTime: "7 Min Read" },
-  { title: "Roofing in Pasadena TX: Industrial Area, Humidity & Storm Damage Guide", filename: "roofing-pasadena-tx-guide.html", description: "Discover the specific challenges of roofing in Pasadena, TX. Learn about industrial weather exposure, Ship Channel humidity, and older roof care.", category: "Local Guides", date: "June 14, 2026", readTime: "9 Min Read" }
+  { title: "Roofing in Pasadena TX: Industrial Area, Humidity & Storm Damage Guide", filename: "roofing-pasadena-tx-guide.html", description: "Discover the specific challenges of roofing in Pasadena, TX. Learn about industrial weather exposure, Ship Channel humidity, and older roof care.", category: "Local Guides", date: "June 14, 2026", readTime: "9 Min Read" },
+  { title: "League City TX Roofing: Coastal Storms, Gulf Humidity & Homeowner Guide", filename: "roofing-league-city-tx-guide.html", description: "Discover the unique challenges of roofing in League City, TX. Learn about Galveston County coastal storms, Gulf humidity, Clear Lake wind patterns, and storm prep.", category: "Local Guides", date: "June 16, 2026", readTime: "9 Min Read" }
 ];
 
 // Sort posts by date (newest first)
