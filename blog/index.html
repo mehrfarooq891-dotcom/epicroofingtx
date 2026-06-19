@@ -1,0 +1,824 @@
+<!--
+// TO ADD NEW BLOG: copy this object and add to blogPosts array:
+// { title: "Your Title", filename: "your-file.html", description: "Short description", category: "Category Name" }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23E8600A'/><text y='75' x='15' font-size='70' fill='white'>E</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Epic Roofing & Construction LLC blog guides. In-depth analysis on shingle replacement, storm wind assessment, hail repair, insurance claims, and local Houston HOA covenants.">
+  <title>Roofing Resources, Guides & Storm Damage Advice | Epic Roofing & Construction LLC</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Custom Blog Elements */
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-container {
+        grid-template-columns: 8fr 4fr;
+      }
+    }
+
+    .blog-article {
+      background: var(--navy-light);
+      border: 1px solid #1E293B;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-bottom: 4px solid var(--orange);
+    }
+
+    .blog-article h2, .blog-article h3 {
+      text-align: left;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      text-transform: none;
+    }
+    .blog-article h2 {
+      font-size: 1.85rem;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 0.5rem;
+      color: var(--white);
+    }
+    .blog-article h3 {
+      font-size: 1.35rem;
+      color: var(--white);
+    }
+
+    .blog-article p {
+      color: #94A3B8;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .blog-article p strong {
+      color: var(--white);
+    }
+
+    .blog-article ul {
+      margin-bottom: 2rem;
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+    .blog-article ul li {
+      color: #94A3B8;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    .blog-article ul li strong {
+      color: var(--white);
+    }
+
+    .blog-article ol {
+      margin-bottom: 2rem;
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+    }
+    .blog-article ol li {
+      color: #94A3B8;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .blog-article ol li strong {
+      color: var(--white);
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta-strip {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #64748B;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-sidebar {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+      }
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(234, 88, 12, 0.15);
+    }
+    .sidebar-cta h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+    .sidebar-cta p {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .composite-aeo {
+      background: rgba(234, 88, 12, 0.08);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.75rem;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .aeo-box {
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-bottom: 1.25rem;
+    }
+    .aeo-box:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .aeo-box h4 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--f-display);
+      text-transform: uppercase;
+    }
+    .aeo-box p {
+      font-style: italic;
+      color: var(--white) !important;
+      margin-bottom: 0 !important;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1E293B;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .faq-item p {
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+
+  <!-- SEO Schema JSON-LD for Blog Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "Epic Roofing & Construction LLC",
+    "alternateName": "Epic Roofing TX",
+    "url": "https://www.epicroofingtx.com",
+    "logo": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "description": "Premium licensed roofing contractor serving The Woodlands, Texas. Residential storm damage repair, roof replacements, and certified inspections.",
+    "telephone": "+12813269905",
+    "email": "info@epicroofingtx.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9402 Spaulding St",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77016",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.847152,
+      "longitude": -95.305579
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Houston"},
+      {"@type": "City", "name": "Katy"},
+      {"@type": "City", "name": "Sugar Land"},
+      {"@type": "City", "name": "Cypress"},
+      {"@type": "City", "name": "Pearland"},
+      {"@type": "City", "name": "Spring"},
+      {"@type": "City", "name": "The Woodlands"},
+      {"@type": "City", "name": "Pasadena"},
+      {"@type": "City", "name": "Humble"},
+      {"@type": "City", "name": "Tomball"},
+      {"@type": "City", "name": "Richmond"},
+      {"@type": "City", "name": "League City"},
+      {"@type": "City", "name": "Missouri City"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "12",
+      "bestRating": "5"
+    },
+    "priceRange": "$$",
+    "paymentAccepted": "Cash, Credit Card, Insurance",
+    "hasMap": "https://maps.google.com/?q=Epic+Roofing+%26+Construction+LLC+Houston+TX",
+    "sameAs": [
+      "https://www.google.com/maps/place/Epic+Roofing+%26+Construction+LLC"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Active Roof Leak? Get Certified Same-Day Solutions & Water Isolation | <a href="tel:+12813269905">📞+1 (281) 326-9905</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/index.html" id="site-logo">
+        <img src="/images/epic-roofing-logo.svg" 
+        alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
+        style="height: 55px; width: auto;">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Our Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/roof-replacement-houston.html">Shingle Replacement</a>
+            <a class="dropdown-item" href="/metal-roofing-houston.html">Metal Roofing</a>
+            <a class="dropdown-item" href="/roof-coating-houston.html">Commercial Coating</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">Hail & Wind Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Leak Tarp</a>
+            <a class="dropdown-item" href="/free-roof-inspection-houston.html">Certified Inspection</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Repairs</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston.html">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston.html">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">General Storm Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Tarp Service</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <a class="dropdown-item" href="/index.html">Houston</a>
+            <a class="dropdown-item" href="/katy-roofing-contractor.html">Katy</a>
+            <a class="dropdown-item" href="/sugar-land-roofing-contractor.html">Sugar Land</a>
+            <a class="dropdown-item" href="/cypress-roofing-contractor.html">Cypress</a>
+          </div>
+        </div>
+        <a href="/index.html" class="nav-link">Interactive Center</a>
+        <a href="/blog/index.html" class="nav-link">Blog</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 +1 (281) 326-9905
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Slideout Menu -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/index.html" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+    <a href="/index.html" class="mobile-nav-link">Home</a>
+    <a href="/roof-replacement-houston.html" class="mobile-nav-link">Shingle Replacement</a>
+    <a href="/storm-damage-roofing-houston.html" class="mobile-nav-link">Storm Damage</a>
+    <a href="/blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="/index.html" class="mobile-nav-link">Houston Core</a>
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1.5rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/">Home</a> <span>/</span> <span style="color:#EA580C; font-weight:700;">Blog</span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" style="padding: 4.5rem 0 3.5rem 0;" id="hero-blog-index">
+    <div class="container" style="text-align: center;">
+      <div class="badge-orange-light" style="margin-bottom: 1.25rem; display: inline-flex;">
+        📋 Certified Roofer Advisory Board
+      </div>
+      <h1 class="hero-title" style="margin-bottom: 1.25rem; font-size: 2.75rem; line-height: 1.2;">
+        Roofing Resources <span style="color: var(--orange);">& Homeowner Guides</span>
+      </h1>
+      <p class="hero-subtitle" style="margin-bottom: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Expert technical advice, storm-damage assessments, Texas insurance claim playbooks, and localized suburban guidelines to help you make informed decisions about your home's roof investment.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOG INDEX LISTING -->
+  <section class="section-padding" style="background: var(--navy); padding-top: 2rem;" id="blog-listings-container">
+    <div class="container">
+      
+      <!-- Category Filter Pills (Interactive Buttons) -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem;" id="filter-container">
+        <button class="filter-btn active" data-category="All" style="background: var(--orange); color: white; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: 1px solid var(--orange); transition: all 0.3s ease;">All</button>
+        <button class="filter-btn" data-category="Hail Damage" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Hail Damage</button>
+        <button class="filter-btn" data-category="Insurance Claims" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Insurance Claims</button>
+        <button class="filter-btn" data-category="Storm Repair" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Storm Repair</button>
+        <button class="filter-btn" data-category="Roof Inspection" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Roof Inspection</button>
+        <button class="filter-btn" data-category="Cost & Materials" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Cost & Materials</button>
+        <button class="filter-btn" data-category="Local Guides" style="background: var(--navy-light); color: #94A3B8; padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1px solid #1E293B; transition: all 0.3s ease;">Local Guides</button>
+      </div>
+
+      <!-- Grid layout: 2-3 columns on desktop, 1 on mobile -->
+      <div class="grid grid-3" id="blog-grid" style="gap: 2rem;">
+        <!-- Blog Cards will be rendered dynamically here -->
+      </div>
+    </div>
+  </section>
+<!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns">
+        <div>
+          <a href="/" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            EPIC ROOFING & CONSTRUCTION <span>LLC</span>
+          </a>
+          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
+            Premium high-velocity wind-resistant roofing assemblies, lifetime shingles, durable leak-protection systems and HAAG-certified evaluations.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="badge-css-gaf">GAF Certified</span>
+            <span class="badge-css-bbb">BBB Accredited A+</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Core Solutions</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
+            <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>
+            <li><a href="/roof-coating-houston.html">Commercial Coatings</a></li>
+            <li><a href="/hail-damage-roof-repair-houston.html">Storm Restoration</a></li>
+            <li><a href="/emergency-roof-tarping-houston.html">Rapid Roof Tarping</a></li>
+            <li><a href="/free-roof-inspection-houston.html">HAAG Forensic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Satellite Nodes</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/katy-roofing-contractor.html">Katy</a></li>
+              <li><a href="/sugar-land-roofing-contractor.html">Sugar Land</a></li>
+              <li><a href="/cypress-roofing-contractor.html">Cypress</a></li>
+              <li><a href="/the-woodlands-roofing-contractor.html">Woodlands</a></li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/pearland-roofing-contractor.html">Pearland</a></li>
+              <li><a href="/league-city-roofing-contractor.html">League City</a></li>
+              <li><a href="/spring-tx-roofing-contractor.html">Spring</a></li>
+              <li><a href="/tomball-tx-roofing-contractor.html">Tomball</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h4>State Headquarters</h4>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            <strong>Assessor Hotline:</strong><br>
+            <a href="tel:+12813269905" style="color: var(--white); font-weight: bold; font-size: 1.1rem; text-decoration: underline;">+1 (281) 326-9905</a><br><br>
+            Epic Roofing & Construction LLC<br>
+            9402 Spaulding St, Houston, TX 77016<br>
+            Phone:+1 (281) 326-9905
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/">Home</a>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BUTTON -->
+  <div class="mobile-sticky-bar" onclick="window.location.href='tel:+12813269905'" id="mobile-cta-bottom">
+    📞 Call GAF Specialist — Free Estimate
+  </div>
+
+  <!-- INVISIBLE COMPLIANT LOCAL NAP SHELL -->
+  <div class="epic-nap-hidden">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing TX</span>
+      <span itemprop="telephone">+1 (281) 326-9905</span>
+      <span itemprop="email">info@epicroofingconstruction.com</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Houston</span>,
+        <span itemprop="addressRegion">TX</span>
+        <span itemprop="addressCountry">US</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+  </script>
+
+
+  <script>
+    // Blog Posts data catalog compiled automatically
+    const blogPosts = [
+  {
+    "title": "Friendswood TX Roofing: Storm Season Tips & Local Homeowner Guide",
+    "filename": "roofing-friendswood-tx-guide.html",
+    "description": "Discover the specific coastal storm, wind, and spring season hail hazards that local homeowners face when it comes to roofing in Friendswood, TX.",
+    "category": "Local Guides",
+    "date": "June 18, 2026",
+    "readTime": "10 Min Read"
+  },
+  {
+    "title": "Spring TX Roofing Guide: Storm Damage, Repairs & What Homeowners Need to Know",
+    "filename": "roofing-spring-tx-guide.html",
+    "description": "Discover the specific roofing challenges in Spring, TX. Learn about storm tracking across the Harris/Montgomery County border, mature tree debris risks, and essential repair guidelines.",
+    "category": "Local Guides",
+    "date": "June 17, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "League City TX Roofing: Coastal Storms, Gulf Humidity & Homeowner Guide",
+    "filename": "roofing-league-city-tx-guide.html",
+    "description": "Discover the unique challenges of roofing in League City, TX. Learn about Galveston County coastal storms, Gulf humidity, Clear Lake wind patterns, and storm prep.",
+    "category": "Local Guides",
+    "date": "June 16, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "Roofing in Pasadena TX: Industrial Area, Humidity & Storm Damage Guide",
+    "filename": "roofing-pasadena-tx-guide.html",
+    "description": "Discover the specific challenges of roofing in Pasadena, TX. Learn about industrial weather exposure, Ship Channel humidity, and older roof care.",
+    "category": "Local Guides",
+    "date": "June 14, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "Cypress TX Roofing: High Rainfall, Hail Season & What Local Homeowners Must Know",
+    "filename": "roofing-cypress-tx-guide.html",
+    "description": "Expert guide on Cypress TX roofing. Learn how heavy rainfall, sudden hailstorms, and neighborhood features impact your roof repair and replacement.",
+    "category": "Local Guides",
+    "date": "June 12, 2026",
+    "readTime": "11 Min Read"
+  },
+  {
+    "title": "Roofing in The Woodlands TX",
+    "filename": "roofing-the-woodlands-tx-guide.html",
+    "description": "Tree damage, storms and roofing in The Woodlands.",
+    "category": "Local Guides",
+    "date": "June 11, 2026",
+    "readTime": "12 Min Read"
+  },
+  {
+    "title": "Roofing in Pearland TX",
+    "filename": "roofing-pearland-tx-guide.html",
+    "description": "Why so many Pearland homes need roof replacement now.",
+    "category": "Local Guides",
+    "date": "June 11, 2026",
+    "readTime": "11 Min Read"
+  },
+  {
+    "title": "Roofing in Katy TX",
+    "filename": "roofing-katy-tx-guide.html",
+    "description": "What Katy homeowners need to know about their roofs.",
+    "category": "Local Guides",
+    "date": "June 10, 2026",
+    "readTime": "11 Min Read"
+  },
+  {
+    "title": "Roofing in Sugar Land TX",
+    "filename": "roofing-sugar-land-tx-guide.html",
+    "description": "Roof repair and replacement guide for Sugar Land homeowners.",
+    "category": "Local Guides",
+    "date": "June 9, 2026",
+    "readTime": "10 Min Read"
+  },
+  {
+    "title": "Hidden Hail Damage Guide",
+    "filename": "hidden-hail-damage-roof-houston.html",
+    "description": "Why your roof may be damaged without you knowing.",
+    "category": "Hail Damage",
+    "date": "June 2, 2026",
+    "readTime": "8 Min Read"
+  },
+  {
+    "title": "Houston Hail Season Roof Guide",
+    "filename": "houston-hail-season-roof-guide.html",
+    "description": "When hail season hits Houston and how to protect your roof.",
+    "category": "Hail Damage",
+    "date": "June 1, 2026",
+    "readTime": "7 Min Read"
+  },
+  {
+    "title": "Emergency Roof Tarping Houston",
+    "filename": "emergency-roof-tarp-houston.html",
+    "description": "What emergency tarping is, when you need it, and cost.",
+    "category": "Storm Repair",
+    "date": "May 25, 2026",
+    "readTime": "7 Min Read"
+  },
+  {
+    "title": "Wind Damage Roof Repair Houston",
+    "filename": "wind-damage-roof-repair-houston-guide.html",
+    "description": "Complete guide to wind damage roof repair in Houston.",
+    "category": "Storm Repair",
+    "date": "May 24, 2026",
+    "readTime": "8 Min Read"
+  },
+  {
+    "title": "Roof Insurance Claim Process",
+    "filename": "how-insurance-roof-claims-work-texas.html",
+    "description": "How insurance roof claims work in Texas.",
+    "category": "Insurance Claims",
+    "date": "May 22, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "Roof Leak Detection Houston",
+    "filename": "roof-leak-detection-houston-guide.html",
+    "description": "How to find and fix roof leaks in Houston homes.",
+    "category": "Roof Inspection",
+    "date": "May 20, 2026",
+    "readTime": "10 Min Read"
+  },
+  {
+    "title": "Insurance Adjuster Roof Visit",
+    "filename": "roof-insurance-adjuster-visit-houston.html",
+    "description": "What to expect when adjuster inspects your Houston roof.",
+    "category": "Insurance Claims",
+    "date": "May 19, 2026",
+    "readTime": "8 Min Read"
+  },
+  {
+    "title": "Roof Insurance Claim Mistakes",
+    "filename": "roof-insurance-claim-mistakes-houston.html",
+    "description": "7 costly mistakes Houston homeowners make with roof claims.",
+    "category": "Insurance Claims",
+    "date": "May 18, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "Houston Hail Damage Guide",
+    "filename": "houston-hail-damage-guide.html",
+    "description": "Learn how to identify shingle bruising, metal dimples, and tile cracks.",
+    "category": "Hail Damage",
+    "date": "May 17, 2026",
+    "readTime": "7 Min Read"
+  },
+  {
+    "title": "Zero Cost Roof Replacement",
+    "filename": "roof-replacement-zero-cost-insurance-houston.html",
+    "description": "How Houston homeowners get a new roof for $0 through insurance.",
+    "category": "Insurance Claims",
+    "date": "May 12, 2026",
+    "readTime": "7 Min Read"
+  },
+  {
+    "title": "Storm Chaser Roofers Warning",
+    "filename": "storm-chaser-roofers-houston-warning.html",
+    "description": "How to spot fake roofers after Houston storms.",
+    "category": "Roof Inspection",
+    "date": "May 8, 2026",
+    "readTime": "9 Min Read"
+  },
+  {
+    "title": "Roof Inspection Before Buying Home",
+    "filename": "roof-inspection-before-buying-home-houston.html",
+    "description": "Why you need a roof inspection before buying in Houston.",
+    "category": "Roof Inspection",
+    "date": "May 6, 2026",
+    "readTime": "7 Min Read"
+  },
+  {
+    "title": "Free Roof Inspection Houston",
+    "filename": "free-roof-inspection-houston-guide.html",
+    "description": "What to expect from a free professional roof inspection.",
+    "category": "Roof Inspection",
+    "date": "May 5, 2026",
+    "readTime": "6 Min Read"
+  },
+  {
+    "title": "Hurricane Harvey Roof Lessons",
+    "filename": "hurricane-harvey-roof-lessons-houston.html",
+    "description": "What Houston homeowners learned about roofs after Harvey.",
+    "category": "Storm Repair",
+    "date": "May 2, 2026",
+    "readTime": "12 Min Read"
+  },
+  {
+    "title": "Signs You Need Roof Replacement",
+    "filename": "signs-you-need-roof-replacement-houston.html",
+    "description": "10 signs you need a new roof in Houston TX.",
+    "category": "Cost & Materials",
+    "date": "April 15, 2026",
+    "readTime": "10 Min Read"
+  },
+  {
+    "title": "Roof Replacement Financing",
+    "filename": "roof-replacement-financing-houston.html",
+    "description": "Financing options for roof replacement in Houston.",
+    "category": "Cost & Materials",
+    "date": "April 14, 2026",
+    "readTime": "8 Min Read"
+  },
+  {
+    "title": "Best Affordable Roofing Contractors",
+    "filename": "best-affordable-roofing-contractors-houston.html",
+    "description": "How to find the best affordable roofer in Houston.",
+    "category": "Cost & Materials",
+    "date": "April 12, 2026",
+    "readTime": "6 Min Read"
+  }
+];
+
+    // Dynamic rendering engine
+    function renderBlogs(filterCategory) {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = '';
+      
+      const filtered = filterCategory === 'All' 
+        ? blogPosts 
+        : blogPosts.filter(post => post.category === filterCategory);
+        
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #94A3B8; padding: 4rem 0;"><p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No active articles found under this category.</p><span style="font-size: 0.9rem; color: #64748B;">Please select a different resource tab above.</span></div>';
+        return;
+      }
+      
+      filtered.forEach(post => {
+        // Dynamic category badge colors
+        let badgeStyle = "background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.3); color: var(--orange);";
+        if (post.category === 'Storm Repair') {
+          badgeStyle = "background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3B82F6;";
+        } else if (post.category === 'Insurance Claims') {
+          badgeStyle = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981;";
+        } else if (post.category === 'Cost & Materials') {
+          badgeStyle = "background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #EAB308;";
+        } else if (post.category === 'Local Guides') {
+          badgeStyle = "background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #A855F7;";
+        } else if (post.category === 'Hail Damage') {
+          badgeStyle = "background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #EF4444;";
+        } else if (post.category === 'Roof Inspection') {
+          badgeStyle = "background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #06B6D4;";
+        }
+        
+        const cardId = 'card-' + post.filename.replace('.html', '');
+        
+        const cardHTML = `
+          <div id="${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span style="${badgeStyle} font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;">${post.category}</span>
+                <span style="font-size: 0.8rem; color: #64748B; font-weight: 600;">${post.readTime || '8 Min Read'}</span>
+              </div>
+              
+              <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 1rem; color: var(--white); text-transform: none; text-align: left; letter-spacing: normal;">
+                ${post.title}
+              </h3>
+              
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                ${post.description}
+              </p>
+            </div>
+
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1E293B; padding-top: 1.25rem;">
+              <span style="font-size: 0.825rem; color: #64748B; font-weight: 500;">📅 ${post.date || 'June 10, 2026'}</span>
+              <a href="/blog/${post.filename}" style="color: var(--orange); font-weight: 700; font-size: 0.95rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 4px;" class="read-link">
+                Read Article <span style="font-size: 1.1rem; line-height: 1;">→</span>
+              </a>
+            </div>
+          </div>
+        `;
+        
+        grid.insertAdjacentHTML('beforeend', cardHTML);
+      });
+
+      // Add elegant micro-interactions on hover
+      document.querySelectorAll('.sitemap-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-6px)';
+          card.style.borderColor = 'var(--orange)';
+          card.style.boxShadow = '0 12px 30px rgba(234, 88, 12, 0.15)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0)';
+          card.style.borderColor = '#1E293B';
+          card.style.boxShadow = 'none';
+        });
+      });
+    }
+
+    // Interactive category filtering navigation
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active states
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.background = 'var(--navy-light)';
+          b.style.color = '#94A3B8';
+          b.style.border = '1px solid #1E293B';
+          b.style.fontWeight = '600';
+        });
+        
+        btn.classList.add('active');
+        btn.style.background = 'var(--orange)';
+        btn.style.color = 'white';
+        btn.style.border = '1px solid var(--orange)';
+        btn.style.fontWeight = '700';
+
+        // Trigger filtered render
+        renderBlogs(btn.getAttribute('data-category'));
+      });
+    });
+
+    // Initial load
+    renderBlogs('All');
+  </script>
+</body>
+</html>

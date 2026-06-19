@@ -37,7 +37,8 @@ const blogPosts = [
   { title: "Houston Hail Damage Guide", filename: "houston-hail-damage-guide.html", description: "Learn how to identify shingle bruising, metal dimples, and tile cracks.", category: "Hail Damage", date: "May 17, 2026", readTime: "7 Min Read" },
   { title: "Roofing in Pasadena TX: Industrial Area, Humidity & Storm Damage Guide", filename: "roofing-pasadena-tx-guide.html", description: "Discover the specific challenges of roofing in Pasadena, TX. Learn about industrial weather exposure, Ship Channel humidity, and older roof care.", category: "Local Guides", date: "June 14, 2026", readTime: "9 Min Read" },
   { title: "League City TX Roofing: Coastal Storms, Gulf Humidity & Homeowner Guide", filename: "roofing-league-city-tx-guide.html", description: "Discover the unique challenges of roofing in League City, TX. Learn about Galveston County coastal storms, Gulf humidity, Clear Lake wind patterns, and storm prep.", category: "Local Guides", date: "June 16, 2026", readTime: "9 Min Read" },
-  { title: "Spring TX Roofing Guide: Storm Damage, Repairs & What Homeowners Need to Know", filename: "roofing-spring-tx-guide.html", description: "Discover the specific roofing challenges in Spring, TX. Learn about storm tracking across the Harris/Montgomery County border, mature tree debris risks, and essential repair guidelines.", category: "Local Guides", date: "June 17, 2026", readTime: "9 Min Read" }
+  { title: "Spring TX Roofing Guide: Storm Damage, Repairs & What Homeowners Need to Know", filename: "roofing-spring-tx-guide.html", description: "Discover the specific roofing challenges in Spring, TX. Learn about storm tracking across the Harris/Montgomery County border, mature tree debris risks, and essential repair guidelines.", category: "Local Guides", date: "June 17, 2026", readTime: "9 Min Read" },
+  { title: "Friendswood TX Roofing: Storm Season Tips & Local Homeowner Guide", filename: "roofing-friendswood-tx-guide.html", description: "Discover the specific coastal storm, wind, and spring season hail hazards that local homeowners face when it comes to roofing in Friendswood, TX.", category: "Local Guides", date: "June 18, 2026", readTime: "10 Min Read" }
 ];
 
 // Sort posts by date (newest first)
@@ -122,7 +123,7 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
   let navHTML = `
   <!-- EMERGENCY TOP BANNER -->
   <div class="emergency-strip" id="emergency-banner">
-    🚨 Active Roof Leak? Get Certified Same-Day Solutions & Water Isolation | <a href="tel:+13803001046">📞 (380) 300-1046</a>
+    🚨 Active Roof Leak? Get Certified Same-Day Solutions & Water Isolation | <a href="tel:+12813269905">📞+1 (281) 326-9905</a>
   </div>
 
   <!-- STICKY NAVY HEADER -->
@@ -172,8 +173,8 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
         <a href="/contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <a href="tel:+13803001046" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
-        📞 +1 (380) 300-1046
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 +1 (281) 326-9905
       </a>
 
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
@@ -192,7 +193,7 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
     <a href="/storm-damage-roofing-houston.html" class="mobile-nav-link">Storm Damage</a>
     <a href="/blog/index.html" class="mobile-nav-link">Blog</a>
     <a href="/index.html" class="mobile-nav-link">Houston Core</a>
-    <a href="tel:+13803001046" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
   </div>
 `;
   indexHTML += navHTML;
