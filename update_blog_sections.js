@@ -47,12 +47,13 @@ const blogPosts = [
   { title: "Roof Leak Repair in Houston TX: Causes, Cost & When to Call a Pro", filename: "roof-leak-repair-houston-guide.html", description: "Ultimate local guide on roof leak repair houston. Discover the most common causes of roof leaks in Southeast Texas, local repair costs, how to find hidden leaks, and troubleshooting steps.", category: "Maintenance Guides", date: "June 25, 2026", readTime: "10 Min Read" },
   { title: "Houston Roof Maintenance Checklist: How to Make Your Roof Last Longer", filename: "houston-roof-maintenance-tips.html", description: "A tiny leak can cost you $15,000. Use our pro-grade roof maintenance houston tx checklist to spot damage early, prepare for hurricane season, and save thousands.", category: "Maintenance Guides", date: "June 27, 2026", readTime: "10 Min Read" },
   { title: "Asphalt Shingles vs Metal Roofing in Houston TX: Which is Better?", filename: "asphalt-vs-metal-roofing-houston.html", description: "Deciding between asphalt vs metal roofing houston? Read our comprehensive comparison on costs, 50-year lifespan, sub-tropical energy efficiency, and hurricane-force wind ratings.", category: "Cost & Materials", date: "June 28, 2026", readTime: "12 Min Read" },
-  { title: "How to Choose a Roofing Contractor in Houston TX (Ultimate Guide)", filename: "how-choose-roofing-contractor-houston.html", description: "Hiring a roofer? Learn how to choose roofing contractor houston with our checklist of licenses, insurance, local address, red flags, and essential questions.", category: "Local Guides", date: "June 29, 2026", readTime: "11 Min Read" }
+  { title: "How to Choose a Roofing Contractor in Houston TX (Ultimate Guide)", filename: "how-choose-roofing-contractor-houston.html", description: "Hiring a roofer? Learn how to choose roofing contractor houston with our checklist of licenses, insurance, local address, red flags, and essential questions.", category: "Local Guides", date: "June 29, 2026", readTime: "11 Min Read" },
+  { title: "Commercial Roofing in Houston TX: TPO, Metal & Flat Roof Guide for Business Owners", filename: "commercial-roofing-houston-guide.html", description: "Ultimate commercial roofing houston guide. Learn the key differences of commercial vs residential roofing, low-slope TPO roofing, flat roof repair, local cost per sq ft, and protective PM plans.", category: "Maintenance Guides", date: "July 1, 2026", readTime: "11 Min Read" }
 ];
 
 // Sort posts by date (newest first)
 const parseDate = (dStr) => {
-  return new Date(dStr.replace('June', '6').replace('May', '5').replace('April', '4').replace(', 2026', '/2026'));
+  return new Date(dStr.replace('July', '7').replace('June', '6').replace('May', '5').replace('April', '4').replace(', 2026', '/2026'));
 };
 blogPosts.sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
