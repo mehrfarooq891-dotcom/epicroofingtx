@@ -2,29 +2,29 @@
   <!-- Definitions for gradients and shadows -->
   <defs>
     <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#243962" />
-      <stop offset="100%" stop-color="#142037" />
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#0A0A0A" />
     </linearGradient>
     <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF7A29" />
-      <stop offset="100%" stop-color="#E8600A" />
+      <stop offset="0%" stop-color="#D32F2F" />
+      <stop offset="100%" stop-color="#B71C1C" />
     </linearGradient>
     <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Solid Dark Navy Background -->
-  <rect width="100%" height="100%" fill="#1B2B4B" />
+  <!-- Solid Dark Background -->
+  <rect width="100%" height="100%" fill="#0D0D0D" />
 
   <!-- Subtle structural circular decoration in bg -->
-  <circle cx="200" cy="130" r="110" fill="none" stroke="#233558" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <circle cx="200" cy="130" r="110" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
 
   <!-- Core Logo Icon Group -->
   <g filter="url(#dropShadow)" transform="translate(0, -5)">
     <!-- Polished Shield Body outer stroke -->
     <path d="M 145 65 L 255 65 L 255 125 C 255 160, 220 185, 200 195 C 180 185, 145 160, 145 125 Z" 
-          fill="url(#shieldGrad)" stroke="#E8600A" stroke-width="6" stroke-linejoin="round" />
+          fill="url(#shieldGrad)" stroke="#D32F2F" stroke-width="6" stroke-linejoin="round" />
     
     <!-- White Shield inner hairline accent -->
     <path d="M 152 72 L 248 72 L 248 123 C 248 152, 217 174, 200 183 C 183 174, 152 152, 152 123 Z" 
@@ -48,24 +48,24 @@
     <!-- EPIC in Barlow stylings -->
     <text font-family="'Barlow', 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif" 
           font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="4" text-anchor="middle">
-      EPIC <tspan fill="#E8600A">ROOFING</tspan>
+      EPIC <tspan fill="#D32F2F">ROOFING</tspan>
     </text>
     
     <!-- TX with a small divider or in a badge style -->
     <text y="28" font-family="'Barlow', 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif" 
           font-weight="800" font-size="18" fill="#FFFFFF" letter-spacing="8" text-anchor="middle" opacity="0.9">
-      TX
+       TX
     </text>
-
+ 
     <!-- Sleek Horizontal Accent Lines flanking 'TX' -->
-    <line x1="-120" y1="22" x2="-40" y2="22" stroke="#E8600A" stroke-width="2" opacity="0.8" />
-    <line x1="40" y1="22" x2="120" y2="22" stroke="#E8600A" stroke-width="2" opacity="0.8" />
+    <line x1="-120" y1="22" x2="-40" y2="22" stroke="#D32F2F" stroke-width="2" opacity="0.8" />
+    <line x1="40" y1="22" x2="120" y2="22" stroke="#D32F2F" stroke-width="2" opacity="0.8" />
   </g>
 
   <!-- Tagline: Houston's Storm Damage Specialists -->
   <g transform="translate(200, 360)" text-anchor="middle">
     <!-- Accent pill container for tagline -->
-    <rect x="-145" y="-18" width="290" height="26" rx="13" fill="#142037" stroke="#233558" stroke-width="1.5" />
+    <rect x="-145" y="-18" width="290" height="26" rx="13" fill="#111" stroke="#222" stroke-width="1.5" />
     <text font-family="'Open Sans', 'Inter', sans-serif" font-weight="700" font-size="10.5" fill="#FFFFFF" letter-spacing="1">
       HOUSTON'S STORM DAMAGE SPECIALISTS
     </text>
