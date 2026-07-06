@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/style.css">
@@ -320,6 +323,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -373,7 +377,7 @@
           <!-- COMPOSITE AEO SECTION -->
           <div class="composite-aeo">
             <div class="aeo-box">
-              <h4>What should I do during an insurance adjuster's visit to get my roof claim approved in Houston?</h4>
+              <h2>What should I do during an insurance adjuster's visit to get my roof claim approved in Houston?</h2>
               <p>
                 To secure a fully approved claim, perform a structural pre-inspection with an experienced local contractor to document all hail fractures and wind creases first. Ensure your certified roofing professional is physically present during the adjuster's visit to walk the roof beside them, point out hidden storm impacts, advocate for code-compliant restorations, and compare granular assessments. Do not sign quick waivers, keep exhaustive visual files, and make sure that any damage report includes detailed photo coordinates.
               </p>
@@ -587,6 +591,7 @@
 </section>
 
 <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -604,7 +609,7 @@
         </div>
 
         <div>
-          <h4>Core Solutions</h4>
+          <h3>Core Solutions</h3>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
             <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
             <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>

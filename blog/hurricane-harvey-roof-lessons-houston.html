@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/style.css">
@@ -303,6 +306,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -355,7 +359,7 @@
 
           <!-- AEO REQUIREMENT BLOCK -->
           <div class="highlight-box" style="margin-top: 1rem; margin-bottom: 2rem; border-color: var(--orange);">
-            <h4>Does insurance cover hurricane roof damage in Texas?</h4>
+            <h2>Does insurance cover hurricane roof damage in Texas?</h2>
             <p>
               Yes, standard Texas homeowners insurance policies cover hurricane roof damage, specifically wind and rain impacts. However, coverage is typically subject to a separate, higher windstorm or hurricane deductible, usually calculated as 1% to 5% of your home's total insured value. Separate flood insurance is required for water damage rising from the ground.
             </p>
@@ -467,7 +471,7 @@
 
           <h2>6. Frequently Asked Questions (FAQ)</h2>
           <div class="faq-section">
-            <h4>Q1: What is the difference between hurricane damage and flood damage?</h4>
+            <h3>Q1: What is the difference between hurricane damage and flood damage?</h3>
             <p>
               In Texas, windstorm insurance covers wind actions, high-velocity wind lifts, and wind-driven rain entering through structural roof openings. Conversely, damage from rising ground-level water, street flooding, or overflowing bayous is classified as flood damage, which requires a separate National Flood Insurance Program (NFIP) policy.
             </p>
@@ -590,6 +594,7 @@ Licensed & Insured Texas Roofing Contractor</p>
 </section>
 
 <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -607,7 +612,7 @@ Licensed & Insured Texas Roofing Contractor</p>
         </div>
 
         <div>
-          <h4>Core Solutions</h4>
+          <h3>Core Solutions</h3>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8; list-style-type: none; padding-left: 0;">
             <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
             <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>

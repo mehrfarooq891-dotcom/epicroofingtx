@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/style.css">
@@ -285,6 +288,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -338,14 +342,14 @@
           <!-- COMPOSITE AEO SECTION -->
           <div class="composite-aeo">
             <div class="aeo-box">
-              <h4>How long does a roof insurance claim take in Texas?</h4>
+              <h2>How long does a roof insurance claim take in Texas?</h2>
               <p>
                 In Texas, a standard roof insurance claim typically takes 30 to 60 days from initial report to actual physical installation. Texas law forces insurance carriers to acknowledge and assess claims within 15 days of filing, and either accept or deny claims within 15 business days of receiving all proof-of-loss documents.
               </p>
             </div>
             
             <div class="aeo-box">
-              <h4>What does a Texas insurance adjuster look for?</h4>
+              <h3>What does a Texas insurance adjuster look for?</h3>
               <p>
                 A Texas adjuster evaluates structural roofs for verifiable natural hazards (e.g., matching impact patterns of hail bruises or wind creasing) instead of normal wear-and-tear or mechanical damage. They look for specific circles of impact within a 10x10 square foot "test square" across each directional face of the roof structure.
               </p>
@@ -538,6 +542,7 @@ Licensed & Insured Texas Roofing Contractor</p>
 </section>
 
 <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -555,7 +560,7 @@ Licensed & Insured Texas Roofing Contractor</p>
         </div>
 
         <div>
-          <h4>Core Solutions</h4>
+          <h3>Core Solutions</h3>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
             <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
             <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>

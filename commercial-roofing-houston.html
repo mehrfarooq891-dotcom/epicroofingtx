@@ -11,7 +11,10 @@
   <!-- Barlow + Open Sans Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -229,6 +232,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -374,7 +378,7 @@
       <div class="grid grid-4" style="gap: 1.25rem;">
         <div class="who-serve-card" style="background: var(--navy);">
           <div style="font-size: 1.75rem; margin-bottom: 0.75rem;">📦</div>
-          <h4 style="color: var(--white); margin-bottom: 0.5rem;">Warehouses & Logistics</h4>
+          <h3 style="color: var(--white); margin-bottom: 0.5rem;">Warehouses & Logistics</h3>
           <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5;">Wide-span roofing systems built for continuous inventory protection, fire-rated underlayment, and safety skylights.</p>
         </div>
 
@@ -538,7 +542,7 @@
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
             <div style="background: rgba(14, 165, 233, 0.05); padding: 1.25rem; border-radius: 6px; border: 1px solid rgba(14, 165, 233, 0.15);">
-              <h4 style="color: #38BDF8; font-family: var(--f-display); margin-bottom: 0.5rem;">🔍 Semi-Annual Reviews</h4>
+              <h3 style="color: #38BDF8; font-family: var(--f-display); margin-bottom: 0.5rem;">🔍 Semi-Annual Reviews</h3>
               <p style="font-size: 0.8rem; color: #94A3B8; margin: 0; line-height: 1.5;">Physical inspections after major weather trends, mapping out membrane seams, drain pipelines, and roof penetrations.</p>
             </div>
             
@@ -589,7 +593,7 @@
 
       <div class="grid grid-3" style="gap: 1.25rem; margin-top: 2rem;">
         <div style="background: var(--navy); border: 1px solid #1E293B; padding: 1.5rem; border-radius: 8px;">
-          <h4 style="color: #38BDF8; margin-bottom: 0.5rem; font-family: var(--f-display);">Core Sampling</h4>
+          <h3 style="color: #38BDF8; margin-bottom: 0.5rem; font-family: var(--f-display);">Core Sampling</h3>
           <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5;">We extract physical samples to verify substrate conditions and check for hidden moisture under the membrane.</p>
         </div>
 
@@ -776,6 +780,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns" style="padding: 4rem 0 2rem 0;">

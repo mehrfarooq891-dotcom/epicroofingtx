@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
@@ -263,6 +266,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -312,7 +316,7 @@
           <div class="emergency-callout">
             <span style="font-size: 2rem; animation: pulseGlow 1.5s infinite;">🚨</span>
             <div>
-              <h3 style="color: #EF4444; font-size: 1.15rem; margin-bottom: 0.25rem; font-family: var(--f-display);">24/7 Red-Alert Storm Line</h3>
+              <h2 style="color: #EF4444; font-size: 1.15rem; margin-bottom: 0.25rem; font-family: var(--f-display);">24/7 Red-Alert Storm Line</h2>
               <p style="color: #FCA5A5; font-size: 0.9rem; line-height: 1.5; margin: 0;">
                 Active wind leaks, sliding shingles, or structural tarping emergencies? Call us instantly at <strong>+1 (281) 326-9905</strong>. We dispatch crew trucks day and night.
               </p>
@@ -328,7 +332,7 @@
           <div class="channel-card">
             <div class="channel-icon">📞</div>
             <div>
-              <h4 style="text-transform: uppercase; font-family: var(--f-display); margin-bottom: 0.15rem; font-weight: 800; font-size: 0.9rem; color: #FFF;">Assessor Hotline (Call & Text)</h4>
+              <h3 style="text-transform: uppercase; font-family: var(--f-display); margin-bottom: 0.15rem; font-weight: 800; font-size: 0.9rem; color: #FFF;">Assessor Hotline (Call & Text)</h3>
               <p style="margin: 0; font-size: 1.2rem; font-weight: 800; color: var(--orange);">
                 <a href="tel:+12813269905">+1 (281) 326-9905</a>
               </p>
@@ -369,7 +373,7 @@
 
           <!-- maps embed card -->
           <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.5935127918497!2d-95.30557982577608!3d29.847152827893822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1783351910440!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe title="Epic Roofing & Construction LLC location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.5935127918497!2d-95.30557982577608!3d29.847152827893822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1783351910440!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
 
         </div>
@@ -509,6 +513,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -526,7 +531,7 @@
         </div>
 
         <div>
-          <h4>Core Solutions</h4>
+          <h3>Core Solutions</h3>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
             <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
             <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>

@@ -11,7 +11,10 @@
   <!-- Barlow + Open Sans Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -230,6 +233,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -396,7 +400,7 @@
           </p>
           
           <div class="savings-callout">
-            <h4 style="color: #FFF; margin-bottom: 0.5rem;">☀️ Cool-Roof Utility Savings</h4>
+            <h3 style="color: #FFF; margin-bottom: 0.5rem;">☀️ Cool-Roof Utility Savings</h3>
             <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.6; margin: 0;">
               Brilliant white elastomeric and silicone coatings reflect up to 88% of raw solar UV. By keeping structural surfaces much cooler (reducing flat roof temperatures from 160°F to 90°F), commercial building owners see direct HVAC power savings of 20% to 35%!
             </p>
@@ -609,6 +613,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns" style="padding: 4rem 0 2rem 0;">

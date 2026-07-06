@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
@@ -268,6 +271,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -455,7 +459,7 @@
         
         <div class="problem-card">
           <div style="font-size: 1.5rem; color: var(--orange); margin-bottom: 0.75rem;">💨</div>
-          <h4 style="text-transform: uppercase;">1. Fastener Rust Streaking</h4>
+          <h3 style="text-transform: uppercase;">1. Fastener Rust Streaking</h3>
           <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6; margin-top: 0.5rem;">
             Salty air dissolves standard zinc coatings quickly. Rust eats nail shanks, causing shingles to lift and leak during severe hurricane shears.
           </p>
@@ -514,7 +518,7 @@
         </div>
 
         <div style="background-color: var(--navy-light); padding: 2rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
-          <h4 style="color: var(--orange); text-transform: uppercase; margin-bottom: 0.5rem;">The Clear Lake Storm Guard:</h4>
+          <h3 style="color: var(--orange); text-transform: uppercase; margin-bottom: 0.5rem;">The Clear Lake Storm Guard:</h3>
           <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6; margin-bottom: 1rem;">
             Includes certified polymer starter strips, water tight chimney flashing shields, and 50-year non-prorated system warranties.
           </p>
@@ -666,6 +670,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns" style="padding: 4rem 0 2rem 0;">

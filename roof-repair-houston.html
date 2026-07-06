@@ -11,7 +11,10 @@
   <!-- Barlow + Open Sans Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -220,6 +223,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -483,7 +487,7 @@
       <div class="grid grid-5 text-center" style="gap: 1.5rem;">
         <div>
           <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(56, 189, 248, 0.1); color: #38BDF8; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 800; font-family: var(--f-display); margin: 0 auto 1.25rem auto; border: 2px solid #38BDF8;">1</div>
-          <h4 style="color: var(--white); margin-bottom: 0.5rem;">1. Free Inspection</h4>
+          <h3 style="color: var(--white); margin-bottom: 0.5rem;">1. Free Inspection</h3>
           <p style="font-size: 0.85rem; color: #94A3B8;">We inspect your shingles, seal overlaps, chimney flashing, and attic joists.</p>
         </div>
 
@@ -525,7 +529,7 @@
       
       <div class="grid grid-3 text-left" style="margin-bottom: 3rem;">
         <div style="background-color: var(--navy-light); padding: 1.75rem; border-radius: 8px; border-left: 3px solid var(--orange);">
-          <h4 style="color: var(--white); margin-bottom: 0.5rem;">2-Hour Crew Dispatch</h4>
+          <h3 style="color: var(--white); margin-bottom: 0.5rem;">2-Hour Crew Dispatch</h3>
           <p style="font-size: 0.85rem; color: #94A3B8;">Our regional emergency units respond rapidly to shield your family and property.</p>
         </div>
         <div style="background-color: var(--navy-light); padding: 1.75rem; border-radius: 8px; border-left: 3px solid var(--orange);">
@@ -800,6 +804,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">

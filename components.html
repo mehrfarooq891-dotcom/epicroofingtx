@@ -10,7 +10,10 @@
   <!-- 1. THE SHARED CSS (Barlow + Open Sans, custom Bento Grid theme) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <style>
     /* CSS SYSTEM VARIABLES */
@@ -911,6 +914,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -961,6 +965,7 @@
   </div>
 
   <!-- 3. THE SHARED FOOTER HTML -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -981,7 +986,7 @@
 
         <!-- Column 2: Our Services (6 main pages) -->
         <div>
-          <h4>Our Services</h4>
+          <h2>Our Services</h2>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
             <li><a href="/services/shingle-roof-replacement">Asphalt Shingle Replacement</a></li>
             <li><a href="/services/metal-roofing-installation">Premium Metal Roofing</a></li>
@@ -994,7 +999,7 @@
 
         <!-- Column 3: Service Areas (12 cities in 2 columns) -->
         <div>
-          <h4>Our Service Areas</h4>
+          <h3>Our Service Areas</h3>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
             <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
               <li><a href="/cities/houston">Houston</a></li>

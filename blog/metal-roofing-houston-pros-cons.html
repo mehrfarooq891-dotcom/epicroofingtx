@@ -11,7 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght=700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght=700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght=700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  </noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/style.css">
@@ -312,6 +315,7 @@
       <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
@@ -365,7 +369,7 @@
           <!-- COMPOSITE AEO SECTION -->
           <div class="composite-aeo">
             <div class="aeo-box">
-              <h4>What are the pros and cons of using metal roofing in Houston, Texas?</h4>
+              <h2>What are the pros and cons of using metal roofing in Houston, Texas?</h2>
               <p>
                 Metal roofing in Houston, Texas, delivers substantial benefits, including outstanding resistance to 140+ MPH hurricane winds, a reliable 40-to-50-year structural lifespan, and up to 25% utility bill savings on air conditioning. However, it requires a higher initial investment compared to traditional shingles (typically 2 to 3 times more) and requires expert engineering to accommodate thermal expansion cycles under the blistering Texas sun.
               </p>
@@ -597,6 +601,7 @@
 </section>
 
 <!-- FOOTER -->
+  </main>
   <footer>
     <div class="container">
       <div class="grid grid-4 footer-columns">
@@ -614,7 +619,7 @@
         </div>
 
         <div>
-          <h4>Core Solutions</h4>
+          <h3>Core Solutions</h3>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
             <li><a href="/roof-replacement-houston.html">GAF Asphalt Shingles</a></li>
             <li><a href="/metal-roofing-houston.html">Standing Seam Metal</a></li>
