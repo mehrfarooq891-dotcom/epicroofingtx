@@ -1163,29 +1163,41 @@ div[style*="background:rgba(234, 88, 12"] p {
 /* 10. GLOBAL CONTRAST & LEGIBILITY ASSURANCE (ANTI-WHITE-ON-WHITE) */
 
 /* Card Specific legible overrides to guarantee high-contrast dark text on light backgrounds */
-.card, .city-card, .sitemap-card, .blog-card, .decision-card {
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]), 
+body .city-card, body .sitemap-card, body .blog-card, body .decision-card {
   background: var(--navy-light) !important;
   border: 1px solid var(--gray-border) !important;
 }
 
-.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
-.city-card h1, .city-card h2, .city-card h3, .city-card h4, .city-card h5, .city-card h6, .city-card .city-name,
-.sitemap-card h1, .sitemap-card h2, .sitemap-card h3, .sitemap-card h4, .sitemap-card h5, .sitemap-card h6,
-.blog-card h1, .blog-card h2, .blog-card h3, .blog-card h4, .blog-card h5, .blog-card h6,
-.decision-card h1, .decision-card h2, .decision-card h3, .decision-card h4, .decision-card h5, .decision-card h6, .decision-title-repair, .decision-title-replace {
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h1,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h2,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h3,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h4,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h5,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h6,
+body .city-card h1, body .city-card h2, body .city-card h3, body .city-card h4, body .city-card h5, body .city-card h6, body .city-card .city-name,
+body .sitemap-card h1, body .sitemap-card h2, body .sitemap-card h3, body .sitemap-card h4, body .sitemap-card h5, body .sitemap-card h6,
+body .blog-card h1, body .blog-card h2, body .blog-card h3, body .blog-card h4, body .blog-card h5, body .blog-card h6,
+body .decision-card h1, body .decision-card h2, body .decision-card h3, body .decision-card h4, body .decision-card h5, body .decision-card h6,
+body .decision-title-repair, body .decision-title-replace {
   color: #111827 !important;
   text-shadow: none !important;
 }
 
-.card p, .card li, .card span:not(.card-icon), .card a:not(.btn),
-.city-card p, .city-card li, .city-card span, .city-card a,
-.sitemap-card p, .sitemap-card li, .sitemap-card span, .sitemap-card a:not(.btn),
-.blog-card p, .blog-card li, .blog-card span, .blog-card a:not(.btn),
-.decision-card p, .decision-card li, .decision-card span, .decision-card a:not(.btn), .decision-list li, .decision-list li strong {
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) p,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) li,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) span:not(.card-icon):not([style*="color"]),
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) a:not(.btn),
+body .city-card p, body .city-card li, body .city-card span:not([style*="color"]), body .city-card a,
+body .sitemap-card p, body .sitemap-card li, body .sitemap-card span:not([style*="color"]), body .sitemap-card a:not(.btn),
+body .blog-card p, body .blog-card li, body .blog-card span:not([style*="color"]), body .blog-card a:not(.btn),
+body .decision-card p, body .decision-card li, body .decision-card span:not([style*="color"]), body .decision-card a:not(.btn),
+body .decision-list li, body .decision-list li strong {
   color: #374151 !important;
 }
 
-.card strong, .city-card strong, .sitemap-card strong, .blog-card strong, .decision-card strong {
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) strong,
+body .city-card strong, body .sitemap-card strong, body .blog-card strong, body .decision-card strong {
   color: #111827 !important;
 }
 
@@ -1197,44 +1209,72 @@ div[style*="background:rgba(234, 88, 12"] p {
   color: #111827 !important;
 }
 
-/* Section level readability overrides to enforce dark text inside light-colored sections */
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) p,
-[style*="background-color: var(--navy-light)"] p,
-[style*="background: var(--navy-light)"] p,
-[style*="background-color: var(--navy)"] p,
-[style*="background: var(--navy)"] p,
-[style*="background-color: #FFFFFF"] p,
-[style*="background: #FFFFFF"] p,
-[style*="background-color: #fff"] p,
-[style*="background: #fff"] p {
-  color: #374151 !important;
+/* Form inputs & labels: Guarantee high-contrast dark text and clean legible styles */
+.card .form-label, .form-label {
+  color: #374151 !important; /* Force high-contrast dark label text */
+}
+input.form-control, select.form-control, textarea.form-control, .form-control {
+  background-color: #FFFFFF !important;
+  color: #111827 !important; /* Force dark text in input fields */
+  border: 2px solid #D1D5DB !important; /* Force legible border */
+}
+input.form-control::placeholder {
+  color: #6B7280 !important; /* Readable dark grey placeholder */
 }
 
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) h1,
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) h2,
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) h3,
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) h4,
-[style*="background-color: var(--navy-light)"] h3,
-[style*="background: var(--navy-light)"] h3,
-[style*="background-color: var(--navy)"] h3,
-[style*="background: var(--navy)"] h3 {
-  color: #111827 !important;
+/* Automatic Color Overrides for Dark Background Containers (Sections, Heros, Footer, etc.) */
+.hero-section,
+[style*="background-color: var(--dark)"], 
+[style*="background: var(--dark)"],
+[style*="background-color: #0D0D0D"],
+[style*="background-color: #121212"],
+[style*="background-color: #1a1a1a"],
+[style*="background-color: #1A1A1A"],
+[style*="background: #1E1E1E"],
+[style*="background-color: #1E1E1E"],
+footer, 
+.trust-strip, 
+#site-header {
+  background-color: var(--dark) !important;
 }
 
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) li,
-[style*="background-color: var(--navy-light)"] li,
-[style*="background: var(--navy-light)"] li,
-[style*="background-color: var(--navy)"] li,
-[style*="background: var(--navy)"] li {
-  color: #374151 !important;
+/* Headings inside dark containers are forced to white */
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section h4, .hero-section h5, .hero-section h6,
+.hero-title,
+[style*="background-color: var(--dark)"] h1, [style*="background-color: var(--dark)"] h2, [style*="background-color: var(--dark)"] h3, [style*="background-color: var(--dark)"] h4, [style*="background-color: var(--dark)"] h5, [style*="background-color: var(--dark)"] h6,
+[style*="background: var(--dark)"] h1, [style*="background: var(--dark)"] h2, [style*="background: var(--dark)"] h3, [style*="background: var(--dark)"] h4, [style*="background: var(--dark)"] h5, [style*="background: var(--dark)"] h6,
+[style*="background-color: #0D0D0D"] h1, [style*="background-color: #0D0D0D"] h2, [style*="background-color: #0D0D0D"] h3, [style*="background-color: #0D0D0D"] h4, [style*="background-color: #0D0D0D"] h5, [style*="background-color: #0D0D0D"] h6,
+[style*="background-color: #121212"] h1, [style*="background-color: #121212"] h2, [style*="background-color: #121212"] h3, [style*="background-color: #121212"] h4,
+[style*="background-color: #1a1a1a"] h1, [style*="background-color: #1a1a1a"] h2, [style*="background-color: #1a1a1a"] h3, [style*="background-color: #1a1a1a"] h4,
+[style*="background-color: #1A1A1A"] h1, [style*="background-color: #1A1A1A"] h2, [style*="background-color: #1A1A1A"] h3, [style*="background-color: #1A1A1A"] h4,
+[style*="background: #1E1E1E"] h1, [style*="background: #1E1E1E"] h2, [style*="background: #1E1E1E"] h3, [style*="background: #1E1E1E"] h4,
+[style*="background-color: #1E1E1E"] h1, [style*="background-color: #1E1E1E"] h2, [style*="background-color: #1E1E1E"] h3, [style*="background-color: #1E1E1E"] h4,
+footer h1, footer h2, footer h3, footer h4,
+.trust-strip h1, .trust-strip h2, .trust-strip h3, .trust-strip h4,
+#site-header h1, #site-header h2, #site-header h3, #site-header h4 {
+  color: var(--white) !important;
 }
 
-section:not([style*="background-color: var(--dark)"]):not([style*="background: var(--dark)"]):not([style*="background-color: #0D0D0D"]):not([style*="background: #0D0D0D"]):not([style*="background-color: #1A1A1A"]):not([style*="background-color: #1a1a1a"]):not([style*="background-color: #121212"]):not([style*="background: #1E1E1E"]):not([style*="background-color: #1E1E1E"]) strong,
-[style*="background-color: var(--navy-light)"] strong,
-[style*="background: var(--navy-light)"] strong,
-[style*="background-color: var(--navy)"] strong,
-[style*="background: var(--navy)"] strong {
-  color: #111827 !important;
+/* Paragraphs & general text inside dark containers are soft white/light gray */
+.hero-section p, .hero-section li, .hero-section span:not([style*="color"]):not(.card-icon),
+.hero-subtitle,
+[style*="background-color: var(--dark)"] p, [style*="background-color: var(--dark)"] li, [style*="background-color: var(--dark)"] span:not([style*="color"]):not(.card-icon),
+[style*="background: var(--dark)"] p, [style*="background: var(--dark)"] li, [style*="background: var(--dark)"] span:not([style*="color"]):not(.card-icon),
+[style*="background-color: #0D0D0D"] p, [style*="background-color: #0D0D0D"] li, [style*="background-color: #0D0D0D"] span:not([style*="color"]):not(.card-icon),
+[style*="background-color: #121212"] p, [style*="background-color: #121212"] li, [style*="background-color: #121212"] span:not([style*="color"]):not(.card-icon),
+[style*="background-color: #1a1a1a"] p, [style*="background-color: #1a1a1a"] li, [style*="background-color: #1a1a1a"] span:not([style*="color"]):not(.card-icon),
+[style*="background-color: #1A1A1A"] p, [style*="background-color: #1A1A1A"] li, [style*="background-color: #1A1A1A"] span:not([style*="color"]):not(.card-icon),
+[style*="background: #1E1E1E"] p, [style*="background: #1E1E1E"] li, [style*="background: #1E1E1E"] span:not([style*="color"]):not(.card-icon),
+[style*="background-color: #1E1E1E"] p, [style*="background-color: #1E1E1E"] li, [style*="background-color: #1E1E1E"] span:not([style*="color"]):not(.card-icon) {
+  color: #D1D5DB !important; /* Soft white/gray text */
+}
+
+/* Ensure orange accented spans inside dark container headings/text remain orange */
+.hero-section span[style*="color"],
+[style*="background-color: var(--dark)"] span[style*="color"],
+[style*="background: var(--dark)"] span[style*="color"],
+[style*="background-color: #0D0D0D"] span[style*="color"] {
+  color: var(--orange) !important;
 }
 
 /* Table body cells: dark gray text on white/light backgrounds */
@@ -1275,3 +1315,132 @@ section:not([style*="background-color: var(--dark)"]):not([style*="background: v
 .hail-table tr:hover td, .pricing-table tr:hover td, .tech-table tr:hover td, .comparison-table tr:hover td, .styled-table tr:hover td, .cost-table tr:hover td, .data-table tr:hover td, .comp-table tr:hover td {
   background: var(--navy-light) !important;
 }
+
+/* 11. NESTED LIGHT-CONTAINER CONTRAST ENFORCEMENT */
+/* This block guarantees that any light-background container (cards, stats bars, forms, custom divs),
+   even when deeply nested inside dark or hero sections, retains clear, high-contrast dark text. */
+
+body .stats-bar,
+body .stats-bar *,
+body .hero-form,
+body .hero-form *,
+body form,
+body form *,
+body .form-container,
+body .form-container *,
+body [style*="background:rgba(255,255,255"],
+body [style*="background:rgba(255,255,255"] *,
+body [style*="background: rgba(255,255,255"],
+body [style*="background: rgba(255,255,255"] *,
+body [style*="background-color:rgba(255,255,255"],
+body [style*="background-color:rgba(255,255,255"] *,
+body [style*="background-color: rgba(255,255,255"],
+body [style*="background-color: rgba(255,255,255"] *,
+body [style*="background:#fff"],
+body [style*="background:#fff"] *,
+body [style*="background: #fff"],
+body [style*="background: #fff"] *,
+body [style*="background-color:#fff"],
+body [style*="background-color:#fff"] *,
+body [style*="background-color: #fff"],
+body [style*="background-color: #fff"] *,
+body [style*="background:#FFFFFF"],
+body [style*="background:#FFFFFF"] *,
+body [style*="background: #FFFFFF"],
+body [style*="background: #FFFFFF"] *,
+body [style*="background-color:#FFFFFF"],
+body [style*="background-color:#FFFFFF"] *,
+body [style*="background-color: #FFFFFF"],
+body [style*="background-color: #FFFFFF"] *,
+body [style*="background:var(--navy-light)"],
+body [style*="background:var(--navy-light)"] *,
+body [style*="background: var(--navy-light)"],
+body [style*="background: var(--navy-light)"] *,
+body [style*="background-color:var(--navy-light)"],
+body [style*="background-color:var(--navy-light)"] *,
+body [style*="background-color: var(--navy-light)"],
+body [style*="background-color: var(--navy-light)"] *,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]),
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) *,
+body .city-card,
+body .city-card *,
+body .sitemap-card,
+body .sitemap-card *,
+body .blog-card,
+body .blog-card *,
+body .decision-card,
+body .decision-card * {
+  color: #374151 !important;
+}
+
+/* Specific Heading High-Contrast Dark Overrides */
+body .stats-bar h1, body .stats-bar h2, body .stats-bar h3, body .stats-bar h4, body .stats-bar h5, body .stats-bar h6,
+body .hero-form h1, body .hero-form h2, body .hero-form h3, body .hero-form h4, body .hero-form h5, body .hero-form h6,
+body form h1, body form h2, body form h3, body form h4, body form h5, body form h6,
+body [style*="background:rgba(255,255,255"] h1, body [style*="background:rgba(255,255,255"] h2, body [style*="background:rgba(255,255,255"] h3, body [style*="background:rgba(255,255,255"] h4, body [style*="background:rgba(255,255,255"] h5, body [style*="background:rgba(255,255,255"] h6,
+body [style*="background: rgba(255,255,255"] h1, body [style*="background: rgba(255,255,255"] h2, body [style*="background: rgba(255,255,255"] h3, body [style*="background: rgba(255,255,255"] h4, body [style*="background: rgba(255,255,255"] h5, body [style*="background: rgba(255,255,255"] h6,
+body [style*="background-color:rgba(255,255,255"] h1, body [style*="background-color:rgba(255,255,255"] h2, body [style*="background-color:rgba(255,255,255"] h3, body [style*="background-color:rgba(255,255,255"] h4, body [style*="background-color:rgba(255,255,255"] h5, body [style*="background-color:rgba(255,255,255"] h6,
+body [style*="background-color: rgba(255,255,255"] h1, body [style*="background-color: rgba(255,255,255"] h2, body [style*="background-color: rgba(255,255,255"] h3, body [style*="background-color: rgba(255,255,255"] h4, body [style*="background-color: rgba(255,255,255"] h5, body [style*="background-color: rgba(255,255,255"] h6,
+body [style*="background:#fff"] h1, body [style*="background:#fff"] h2, body [style*="background:#fff"] h3, body [style*="background:#fff"] h4,
+body [style*="background: #fff"] h1, body [style*="background: #fff"] h2, body [style*="background: #fff"] h3, body [style*="background: #fff"] h4,
+body [style*="background-color:#fff"] h1, body [style*="background-color:#fff"] h2, body [style*="background-color:#fff"] h3, body [style*="background-color:#fff"] h4,
+body [style*="background-color: #fff"] h1, body [style*="background-color: #fff"] h2, body [style*="background-color: #fff"] h3, body [style*="background-color: #fff"] h4,
+body [style*="background:#FFFFFF"] h1, body [style*="background:#FFFFFF"] h2, body [style*="background:#FFFFFF"] h3, body [style*="background:#FFFFFF"] h4,
+body [style*="background: #FFFFFF"] h1, body [style*="background: #FFFFFF"] h2, body [style*="background: #FFFFFF"] h3, body [style*="background: #FFFFFF"] h4,
+body [style*="background-color:#FFFFFF"] h1, body [style*="background-color:#FFFFFF"] h2, body [style*="background-color:#FFFFFF"] h3, body [style*="background-color:#FFFFFF"] h4,
+body [style*="background-color: #FFFFFF"] h1, body [style*="background-color: #FFFFFF"] h2, body [style*="background-color: #FFFFFF"] h3, body [style*="background-color: #FFFFFF"] h4,
+body [style*="background:var(--navy-light)"] h1, body [style*="background:var(--navy-light)"] h2, body [style*="background:var(--navy-light)"] h3, body [style*="background:var(--navy-light)"] h4,
+body [style*="background: var(--navy-light)"] h1, body [style*="background: var(--navy-light)"] h2, body [style*="background: var(--navy-light)"] h3, body [style*="background: var(--navy-light)"] h4,
+body [style*="background-color:var(--navy-light)"] h1, body [style*="background-color:var(--navy-light)"] h2, body [style*="background-color:var(--navy-light)"] h3, body [style*="background-color:var(--navy-light)"] h4,
+body [style*="background-color: var(--navy-light)"] h1, body [style*="background-color: var(--navy-light)"] h2, body [style*="background-color: var(--navy-light)"] h3, body [style*="background-color: var(--navy-light)"] h4,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h1,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h2,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h3,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h4,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h5,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) h6,
+body .city-card h1, body .city-card h2, body .city-card h3, body .city-card h4, body .city-card h5, body .city-card h6, body .city-card .city-name,
+body .sitemap-card h1, body .sitemap-card h2, body .sitemap-card h3, body .sitemap-card h4, body .sitemap-card h5, body .sitemap-card h6,
+body .blog-card h1, body .blog-card h2, body .blog-card h3, body .blog-card h4, body .blog-card h5, body .blog-card h6,
+body .decision-card h1, body .decision-card h2, body .decision-card h3, body .decision-card h4, body .decision-card h5, body .decision-card h6,
+body .decision-title-repair, body .decision-title-replace {
+  color: #111827 !important;
+  text-shadow: none !important;
+}
+
+/* Specific Strong High-Contrast Dark Overrides */
+body .stats-bar strong,
+body .hero-form strong,
+body form strong,
+body [style*="background:rgba(255,255,255"] strong,
+body [style*="background: rgba(255,255,255"] strong,
+body [style*="background-color:rgba(255,255,255"] strong,
+body [style*="background-color: rgba(255,255,255"] strong,
+body [style*="background:#fff"] strong,
+body [style*="background: #fff"] strong,
+body [style*="background-color:#fff"] strong,
+body [style*="background-color: #fff"] strong,
+body [style*="background:#FFFFFF"] strong,
+body [style*="background: #FFFFFF"] strong,
+body [style*="background-color:#FFFFFF"] strong,
+body [style*="background-color: #FFFFFF"] strong,
+body [style*="background:var(--navy-light)"] strong,
+body [style*="background: var(--navy-light)"] strong,
+body [style*="background-color:var(--navy-light)"] strong,
+body [style*="background-color: var(--navy-light)"] strong,
+body .card:not([style*="background-color: var(--navy)"]):not([style*="background: var(--navy)"]):not([style*="background-color:var(--navy)"]):not([style*="background:var(--navy)"]) strong,
+body .city-card strong,
+body .sitemap-card strong,
+body .blog-card strong,
+body .decision-card strong {
+  color: #111827 !important;
+}
+
+/* Keep custom orange elements orange */
+body .stats-bar .stat-number,
+body [style*="color: var(--orange)"],
+body [style*="color:var(--orange)"],
+body span[style*="color"] {
+  color: var(--orange) !important;
+}
+
