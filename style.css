@@ -1444,3 +1444,88 @@ body span[style*="color"] {
   color: var(--orange) !important;
 }
 
+
+
+/* ==========================================
+   GLOBAL FLOATING/STICKY CALL WIDGET
+   ========================================== */
+.global-call-widget {
+  position: fixed;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.global-call-widget .sticky-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+  background-color: #D32F2F; /* Red accent matching var(--orange) */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #0D0D0D; /* Black border for contrast/branding */
+}
+
+/* DESKTOP STYLES (Default) */
+@media (min-width: 768px) {
+  .global-call-widget {
+    bottom: 24px;
+    right: 24px;
+  }
+  .global-call-widget .sticky-call-btn {
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+  .global-call-widget .sticky-call-btn .btn-text-mobile {
+    display: none;
+  }
+  .global-call-widget .sticky-call-btn .btn-text-desktop {
+    display: inline;
+    letter-spacing: 0.05em;
+  }
+  .global-call-widget .sticky-call-btn:hover {
+    background-color: #B71C1C; /* Darker red matching var(--orange-hover) */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+  }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .global-call-widget {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .global-call-widget .sticky-call-btn {
+    padding: 16px 20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-size: 1.05rem;
+    gap: 8px;
+    width: 100%;
+  }
+  .global-call-widget .sticky-call-btn .btn-text-desktop {
+    display: none;
+  }
+  .global-call-widget .sticky-call-btn .btn-text-mobile {
+    display: inline;
+    letter-spacing: 0.05em;
+  }
+  .global-call-widget .sticky-call-btn:hover {
+    background-color: #B71C1C;
+  }
+  /* Extra bottom padding for body content on mobile to ensure it doesn't get cut off by the call button */
+  body {
+    padding-bottom: 60px !important;
+  }
+}
