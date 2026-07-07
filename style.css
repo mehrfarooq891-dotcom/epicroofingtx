@@ -1526,6 +1526,19 @@ body span[style*="color"] {
   }
   /* Extra bottom padding for body content on mobile to ensure it doesn't get cut off by the call button */
   body {
-    padding-bottom: 60px !important;
+    padding-bottom: 90px !important;
+  }
+
+  /* Increase padding-bottom inside all cards and sections on mobile to prevent content from being overlapped */
+  .section-padding {
+    padding-bottom: 7.5rem !important;
+  }
+
+  #case-studies {
+    padding-bottom: 8.5rem !important;
+  }
+
+  .card, #case-studies .card {
+    padding-bottom: 3.5rem !important;
   }
 }
