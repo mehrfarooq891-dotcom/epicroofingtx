@@ -261,8 +261,13 @@
   </div>
 
   <!-- SECTION 1 — HERO (urgency-focused) -->
-  <section class="hero-section" id="hero-main" style="background: linear-gradient(rgba(15,23,42,0.45), rgba(15,23,42,0.45)), url('/images/storm-damage-roof-repair.webp') center top / cover no-repeat;">
-    <div class="container">
+  <section class="hero-section" id="hero-main" style="position: relative; overflow: hidden; background: #0f172a;">
+    <picture style="position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none;">
+      <source srcset="/images/storm-damage-roof-repair.webp" type="image/webp">
+      <img src="/images/storm-damage-roof-repair.jpg" alt="Storm Damage Roof Repair Houston" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="eager" width="1408" height="768">
+    </picture>
+    <div style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.45); z-index: 2; pointer-events: none;"></div>
+    <div class="container" style="position: relative; z-index: 3;">
       <div class="storm-badge">
         🌪️ Emergency Storm & Hail Damage Specialists
       </div>
