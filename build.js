@@ -68,6 +68,22 @@ for (const entry of entries) {
   }
 }
 
+// Copy contents of public folder to dist root if public exists
+const publicDir = path.join(srcDir, 'public');
+if (fs.existsSync(publicDir)) {
+  console.log('Copying public assets to dist root...');
+  const publicEntries = fs.readdirSync(publicDir, { withFileTypes: true });
+  for (const entry of publicEntries) {
+    const srcPath = path.join(publicDir, entry.name);
+    const destPath = path.join(distDir, entry.name);
+    if (entry.isDirectory()) {
+      copyFolderRecursive(srcPath, destPath);
+    } else {
+      copyFile(srcPath, destPath);
+    }
+  }
+}
+
 // Post-build link sanitization to resolve Google Search Console redirect index warnings
 function sanitizeHTMLFileLinks(dir) {
   const list = fs.readdirSync(dir);

@@ -144,7 +144,7 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
       <a href="/index.html" id="site-logo">
         <img src="/images/epic-roofing-logo.svg" 
         alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
-        style="height: 55px; width: auto;">
+        style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
       </a>
 
       <!-- Desktop Nav -->

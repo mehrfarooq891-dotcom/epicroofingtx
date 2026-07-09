@@ -40,6 +40,14 @@ const server = http.createServer((req, res) => {
     }
   }
 
+  // If file still doesn't exist, check inside public directory
+  if (!fs.existsSync(filePath)) {
+    const publicFilePath = path.join(process.cwd(), 'public', decodedUrl);
+    if (fs.existsSync(publicFilePath) && fs.statSync(publicFilePath).isFile()) {
+      filePath = publicFilePath;
+    }
+  }
+
   // Serve file if exists
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     const ext = path.extname(filePath).toLowerCase();
