@@ -61,7 +61,7 @@ for (const entry of entries) {
       copyFile(path.join(srcDir, name), path.join(distDir, name));
     }
   } else if (entry.isDirectory()) {
-    if (name === 'blog' || name === 'assets') {
+    if (name === 'blog' || name === 'images' || name === 'assets') {
       copyFolderRecursive(path.join(srcDir, name), path.join(distDir, name));
     }
   }
