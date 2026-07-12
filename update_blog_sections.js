@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "How to Get Your Houston Insurance Adjuster to Approve Your Full Roof Claim", filename: "houston-roof-adjuster-tips.html", description: "Filing an insurance claim after a major storm is only the first step. Learn how to get insurance to approve roof claim houston properties, prepare strategically, and maximize your claim.", category: "Insurance Claims", date: "July 12, 2026", readTime: "12 Min Read" },
   { title: "Houston Hail Season Roof Guide", filename: "houston-hail-season-roof-guide.html", description: "When hail season hits Houston and how to protect your roof.", category: "Hail Damage", date: "June 1, 2026", readTime: "7 Min Read" },
   { title: "Hurricane Harvey Roof Lessons", filename: "hurricane-harvey-roof-lessons-houston.html", description: "What Houston homeowners learned about roofs after Harvey.", category: "Storm Repair", date: "May 2, 2026", readTime: "12 Min Read" },
   { title: "Roof Insurance Claim Mistakes", filename: "roof-insurance-claim-mistakes-houston.html", description: "7 costly mistakes Houston homeowners make with roof claims.", category: "Insurance Claims", date: "May 18, 2026", readTime: "9 Min Read" },
