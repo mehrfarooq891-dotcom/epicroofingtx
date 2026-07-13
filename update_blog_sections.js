@@ -54,15 +54,63 @@ const blogPosts = [
   { title: "Hail Hit Your Houston Home? Here's Exactly What to Do in the Next 48 Hours", filename: "roof-damage-after-hail-houston-what-to-do.html", description: "Discover exactly what to do after hail damage in Houston. Follow our step-by-step pro checklist, learn how to handle insurance claims, avoid common scams, and secure a free professional inspection.", category: "Local Guides", date: "July 8, 2026", readTime: "11 Min Read" }
 ];
 
+// Unsplash photo mappings for each blog file
+const unsplashIdMap = {
+  "houston-roof-adjuster-tips.html": "photo-1454165804606-c3d57bc86b40",
+  "houston-hail-season-roof-guide.html": "photo-1549488344-1f9b8d2bd1f3",
+  "hurricane-harvey-roof-lessons-houston.html": "photo-1454789548928-9efd52dc4031",
+  "roof-insurance-claim-mistakes-houston.html": "photo-1554224155-8d04cb21cd6c",
+  "hidden-hail-damage-roof-houston.html": "photo-1518156677180-95a2893f3e9f",
+  "emergency-roof-tarp-houston.html": "photo-1504307651254-35680f356dfd",
+  "wind-damage-roof-repair-houston-guide.html": "photo-1527031083126-cbd321ff9224",
+  "free-roof-inspection-houston-guide.html": "photo-1508962914676-134849a727f0",
+  "storm-chaser-roofers-houston-warning.html": "photo-1589829545856-d10d557cf95f",
+  "roof-insurance-adjuster-visit-houston.html": "photo-1450133064473-71024230f91b",
+  "roof-replacement-zero-cost-insurance-houston.html": "photo-1628744448840-55bef34e5a0e",
+  "roofing-cypress-tx-guide.html": "photo-1600596542815-ffad4c1539a9",
+  "roofing-katy-tx-guide.html": "photo-1512917774080-9991f1c4c750",
+  "roofing-sugar-land-tx-guide.html": "photo-1600210492486-724fe5c67fb0",
+  "roofing-the-woodlands-tx-guide.html": "photo-1600607687939-ce8a6c25118c",
+  "roofing-pearland-tx-guide.html": "photo-1600585154340-be6161a56a0c",
+  "signs-you-need-roof-replacement-houston.html": "photo-1551818255-e6e10975bc17",
+  "best-affordable-roofing-contractors-houston.html": "photo-1541888946425-d81bb19240f5",
+  "how-insurance-roof-claims-work-texas.html": "photo-1454165804606-c3d57bc86b40",
+  "roof-leak-detection-houston-guide.html": "photo-1621905251189-08b45d6a269e",
+  "roof-replacement-financing-houston.html": "photo-1554224155-8d04cb21cd6c",
+  "roof-inspection-before-buying-home-houston.html": "photo-1508962914676-134849a727f0",
+  "houston-hail-damage-guide.html": "photo-1549488344-1f9b8d2bd1f3",
+  "roofing-pasadena-tx-guide.html": "photo-1600596542815-ffad4c1539a9",
+  "roofing-league-city-tx-guide.html": "photo-1512917774080-9991f1c4c750",
+  "roofing-spring-tx-guide.html": "photo-1600607687939-ce8a6c25118c",
+  "roofing-friendswood-tx-guide.html": "photo-1600210492486-724fe5c67fb0",
+  "roofing-tomball-tx-guide.html": "photo-1628744448840-55bef34e5a0e",
+  "how-long-roof-lasts-houston.html": "photo-1632759162443-aa95ef67e43a",
+  "roof-replacement-cost-houston-2025.html": "photo-1503387762-592deb58ef4e",
+  "metal-roofing-houston-pros-cons.html": "photo-1504307651254-35680f356dfd",
+  "signs-need-new-roof-houston.html": "photo-1551818255-e6e10975bc17",
+  "roof-leak-repair-houston-guide.html": "photo-1621905251189-08b45d6a269e",
+  "houston-roof-maintenance-tips.html": "photo-1508962914676-134849a727f0",
+  "asphalt-vs-metal-roofing-houston.html": "photo-1628744448840-55bef34e5a0e",
+  "how-choose-roofing-contractor-houston.html": "photo-1541888946425-d81bb19240f5",
+  "commercial-roofing-houston-guide.html": "photo-1504307651254-35680f356dfd",
+  "roof-financing-options-houston.html": "photo-1554224155-8d04cb21cd6c",
+  "roof-damage-after-hail-houston-what-to-do.html": "photo-1549488344-1f9b8d2bd1f3"
+};
+
+// Map Unsplash ID to blogPost list
+blogPosts.forEach(post => {
+  post.unsplashId = unsplashIdMap[post.filename] || "photo-1504307651254-35680f356dfd";
+});
+
 // Sort posts by date (newest first)
 const parseDate = (dStr) => {
   return new Date(dStr.replace('July', '7').replace('June', '6').replace('May', '5').replace('April', '4').replace(', 2026', '/2026'));
 };
 blogPosts.sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
-console.log('Dynamically compiled blog post metadata list. Count:', blogPosts.length);
+console.log('Dynamically compiled blog post metadata list with Unsplash IDs. Count:', blogPosts.length);
 
-// 3. Update headers, breadcrumbs, and footers in every individual blog file
+// 3. Update headers, breadcrumbs, footers, and insert hero image in every individual blog file
 files.forEach(file => {
   const filePath = path.join(BLOG_DIR, file);
   let content = fs.readFileSync(filePath, 'utf-8');
@@ -87,26 +135,42 @@ files.forEach(file => {
     `$1$2<a href="/blog/index.html">Blog</a>$2$3`
   );
 
+  // Fallback search to do it more manually if regex was strict
+  // E.g. check if "Blog" link is already present.
+  if (!content.includes('/blog/index.html') && content.includes('/contact.html')) {
+    console.log(`Applying robust fallback replacements to: ${file}`);
+    content = content.replace(/Interactive Center<\/a>\s*<a href="\/contact\.html"/, 
+      `Interactive Center</a>\n        <a href="/blog/index.html" class="nav-link">Blog</a>\n        <a href="/contact.html"`
+    );
+    content = content.replace(/Home<\/a>\s*<a href="\/privacy-policy\.html"/, 
+      `Home</a>\n          <a href="/blog/index.html">Blog</a>\n          <a href="/privacy-policy.html"`
+    );
+    content = content.replace(/>Blog<\/a>/gi, 
+      ` href="/blog/index.html">Blog</a>`
+    );
+  }
+
+  // Hero Image Insertion
+  const post = blogPosts.find(p => p.filename === file);
+  if (post && post.unsplashId) {
+    // Remove any existing injected blog hero image to keep it idempotent
+    content = content.replace(/<!-- Blog Hero Image -->[\s\S]*?<\/picture>\s*<\/div>/gi, '');
+
+    // Inject the new hero image after the closing tag of the hero-subtitle paragraph
+    const imageHTML = `<!-- Blog Hero Image -->
+      <div class="blog-hero-img-container" style="max-width: 1000px; margin: 2rem auto 0 auto; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+        <picture>
+          <source srcset="https://images.unsplash.com/${post.unsplashId}?w=800&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
+          <img width="800" height="450" loading="lazy" src="https://images.unsplash.com/${post.unsplashId}?w=800&auto=format&fit=crop&q=60&fm=jpg" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+        </picture>
+      </div>`;
+
+    content = content.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/i, `$1\n      ${imageHTML}`);
+  }
+
   if (content !== originalContent) {
     fs.writeFileSync(filePath, content, 'utf-8');
-    console.log(`Updated blog file elements inside: ${file}`);
-  } else {
-    console.log(`No changes needed or elements not found in: ${file}`);
-    // Fallback search to do it more manually if regex was strict
-    // E.g. check if "Blog" link is already present.
-    if (!content.includes('/blog/index.html') && content.includes('/contact.html')) {
-      console.log(`Applying robust fallback replacements to: ${file}`);
-      content = content.replace(/Interactive Center<\/a>\s*<a href="\/contact\.html"/, 
-        `Interactive Center</a>\n        <a href="/blog/index.html" class="nav-link">Blog</a>\n        <a href="/contact.html"`
-      );
-      content = content.replace(/Home<\/a>\s*<a href="\/privacy-policy\.html"/, 
-        `Home</a>\n          <a href="/blog/index.html">Blog</a>\n          <a href="/privacy-policy.html"`
-      );
-      content = content.replace(/>Blog<\/a>/gi, 
-        ` href="/blog/index.html">Blog</a>`
-      );
-      fs.writeFileSync(filePath, content, 'utf-8');
-    }
+    console.log(`Updated blog file elements and hero image inside: ${file}`);
   }
 });
 
@@ -323,8 +387,16 @@ indexHTML = indexHTML.replace('</body>', `
         const cardId = 'card-' + post.filename.replace('.html', '');
         
         const cardHTML = \`
-          <div id="\${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
+          <div id="\${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 1.75rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
             <div>
+              <!-- Blog Card Image Thumbnail -->
+              <div style="height: 180px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.05); position: relative;">
+                <picture>
+                  <source srcset="https://images.unsplash.com/\${post.unsplashId}?w=350&auto=format&fit=crop&q=50&fm=webp" type="image/webp">
+                  <img width="350" height="256" loading="lazy" src="https://images.unsplash.com/\${post.unsplashId}?w=350&auto=format&fit=crop&q=50&fm=jpg" alt="\${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=\${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+                </picture>
+              </div>
+
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
                 <span style="\${badgeStyle} font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;">\${post.category}</span>
                 <span style="font-size: 0.8rem; color: #64748B; font-weight: 600;">\${post.readTime || '8 Min Read'}</span>
