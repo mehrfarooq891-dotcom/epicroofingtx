@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.epicroofingtx.com/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.epicroofingtx.com/blog/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.epicroofingtx.com/service-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.epicroofingtx.com/location-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.epicroofingtx.com/page-sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>
