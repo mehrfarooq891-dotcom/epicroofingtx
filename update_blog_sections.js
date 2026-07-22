@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Signs of a Hidden Roof Leak Before It Becomes a Disaster", filename: "signs-of-hidden-roof-leak-houston.html", description: "Learn the subtle, early warning signs of a hidden roof leak in Houston TX before it turns into costly structural water damage or mold.", category: "Maintenance Guides", date: "July 22, 2026", readTime: "9 Min Read" },
   { title: "Emergency Roof Leak Repair Houston: What to Do in the First 24 Hours", filename: "emergency-roof-leak-repair-houston.html", description: "Active roof leak in Houston? Here is your step-by-step 24-hour action guide to minimize damage, stop the water, and secure expert emergency repair.", category: "Maintenance Guides", date: "July 15, 2026", readTime: "10 Min Read" },
   { title: "How to Get Your Houston Insurance Adjuster to Approve Your Full Roof Claim", filename: "houston-roof-adjuster-tips.html", description: "Filing an insurance claim after a major storm is only the first step. Learn how to get insurance to approve roof claim houston properties, prepare strategically, and maximize your claim.", category: "Insurance Claims", date: "July 12, 2026", readTime: "12 Min Read" },
   { title: "Houston Hail Season Roof Guide", filename: "houston-hail-season-roof-guide.html", description: "When hail season hits Houston and how to protect your roof.", category: "Hail Damage", date: "June 1, 2026", readTime: "7 Min Read" },
@@ -57,6 +58,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "signs-of-hidden-roof-leak-houston.html": "photo-1534274988757-a28bf1a57c17",
   "emergency-roof-leak-repair-houston.html": "photo-1582268611958-ebfd161ef9cf",
   "houston-roof-adjuster-tips.html": "photo-1584467541268-b040f83be3fd",
   "houston-hail-season-roof-guide.html": "photo-1527489377706-5bf97e608852",
