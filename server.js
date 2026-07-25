@@ -20,9 +20,46 @@ const MIME_TYPES = {
   '.txt': 'text/plain; charset=utf-8'
 };
 
+const REDIRECTS = {
+  '/blog/signs-need-new-roof-houston': '/blog/signs-you-need-roof-replacement-houston',
+  '/blog/signs-need-new-roof-houston.html': '/blog/signs-you-need-roof-replacement-houston',
+  '/blog/roof-replacement-financing-houston': '/blog/roof-financing-options-houston',
+  '/blog/roof-replacement-financing-houston.html': '/blog/roof-financing-options-houston',
+  '/blog/roof-replacement-cost-houston-2025': '/blog/roof-replacement-cost-houston',
+  '/blog/roof-replacement-cost-houston-2025.html': '/blog/roof-replacement-cost-houston',
+  '/services/shingle-roof-replacement': '/roof-replacement-houston',
+  '/services/metal-roofing-installation': '/metal-roofing-houston',
+  '/services/commercial-roof-coating': '/roof-coating-houston',
+  '/services/hail-wind-storm-repair': '/hail-damage-roof-repair-houston',
+  '/services/emergency-tarping-leak-repair': '/emergency-roof-tarping-houston',
+  '/services/roof-inspection-haag': '/free-roof-inspection-houston',
+  '/cities/houston': '/roof-replacement-houston',
+  '/cities/katy': '/katy-roofing-contractor',
+  '/cities/sugar-land': '/sugar-land-roofing-contractor',
+  '/cities/cypress': '/cypress-roofing-contractor',
+  '/cities/the-woodlands': '/the-woodlands-roofing-contractor',
+  '/cities/pearland': '/pearland-roofing-contractor',
+  '/cities/league-city': '/league-city-roofing-contractor',
+  '/cities/spring': '/spring-tx-roofing-contractor',
+  '/cities/pasadena': '/pasadena-tx-roofing-contractor',
+  '/cities/conroe': '/the-woodlands-roofing-contractor',
+  '/cities/kingwood': '/humble-tx-roofing-contractor',
+  '/cities/tomball': '/tomball-tx-roofing-contractor',
+  '/portfolio': '/sitemap',
+  '/privacy': '/privacy-policy',
+  '/terms': '/privacy-policy',
+  '/terms-of-service': '/privacy-policy',
+  '/roof-replacement-after-hurricane-houston': '/storm-damage-roofing-houston'
+};
+
 const server = http.createServer((req, res) => {
   // Decode URL in case of spaces/special characters
   const decodedUrl = decodeURIComponent(req.url.split('?')[0]);
+  
+  if (REDIRECTS[decodedUrl]) {
+    res.writeHead(301, { 'Location': REDIRECTS[decodedUrl] });
+    return res.end();
+  }
   
   // Clean path to prevent directory traversal
   let filePath = path.join(process.cwd(), decodedUrl);

@@ -35,7 +35,6 @@ const blogPosts = [
   { title: "Best Affordable Roofing Contractors", filename: "best-affordable-roofing-contractors-houston.html", description: "How to find the best affordable roofer in Houston.", category: "Cost & Materials", date: "April 12, 2026", readTime: "6 Min Read" },
   { title: "Roof Insurance Claim Process", filename: "how-insurance-roof-claims-work-texas.html", description: "How insurance roof claims work in Texas.", category: "Insurance Claims", date: "May 22, 2026", readTime: "9 Min Read" },
   { title: "Roof Leak Detection Houston", filename: "roof-leak-detection-houston-guide.html", description: "How to find and fix roof leaks in Houston homes.", category: "Roof Inspection", date: "May 20, 2026", readTime: "10 Min Read" },
-  { title: "Roof Replacement Financing", filename: "roof-replacement-financing-houston.html", description: "Financing options for roof replacement in Houston.", category: "Cost & Materials", date: "April 14, 2026", readTime: "8 Min Read" },
   { title: "Roof Inspection Before Buying Home", filename: "roof-inspection-before-buying-home-houston.html", description: "Why you need a roof inspection before buying in Houston.", category: "Roof Inspection", date: "May 6, 2026", readTime: "7 Min Read" },
   { title: "Houston Hail Damage Guide", filename: "houston-hail-damage-guide.html", description: "Learn how to identify shingle bruising, metal dimples, and tile cracks.", category: "Hail Damage", date: "May 17, 2026", readTime: "7 Min Read" },
   { title: "Roofing in Pasadena TX: Industrial Area, Humidity & Storm Damage Guide", filename: "roofing-pasadena-tx-guide.html", description: "Discover the specific challenges of roofing in Pasadena, TX. Learn about industrial weather exposure, Ship Channel humidity, and older roof care.", category: "Local Guides", date: "June 14, 2026", readTime: "9 Min Read" },
@@ -44,9 +43,8 @@ const blogPosts = [
   { title: "Friendswood TX Roofing: Storm Season Tips & Local Homeowner Guide", filename: "roofing-friendswood-tx-guide.html", description: "Discover the specific coastal storm, wind, and spring season hail hazards that local homeowners face when it comes to roofing in Friendswood, TX.", category: "Local Guides", date: "June 18, 2026", readTime: "10 Min Read" },
   { title: "Tomball TX Roofing: New Construction, Builder Roofs & Storm Season Guide", filename: "roofing-tomball-tx-guide.html", description: "Discover why the developer builder-grade shingles installed during the 2010–2020 Tomball suburban boom are failing, and when to upgrade your roof.", category: "Local Guides", date: "June 19, 2026", readTime: "10 Min Read" },
   { title: "How Long Does a Roof Last in Houston TX? (Climate Impact Guide)", filename: "how-long-roof-lasts-houston.html", description: "Learn how Southeast Texas heat domes, UV radiation, thermal shock, and Gulf storms govern the lifespan of asphalt, metal, and tile roofs.", category: "Local Guides", date: "June 20, 2026", readTime: "11 Min Read" },
-  { title: "Roof Replacement Cost in Houston TX 2025: Complete Price Guide", filename: "roof-replacement-cost-houston-2025.html", description: "Complete 2025 local pricing guide on roof replacement cost in Houston TX. View current cost tables by home size and material type (asphalt, metal, tile).", category: "Cost & Materials", date: "June 22, 2026", readTime: "13 Min Read" },
+  { title: "Roof Replacement Cost in Houston TX 2026: Complete Price Guide", filename: "roof-replacement-cost-houston.html", description: "Complete 2026 local pricing guide on roof replacement cost in Houston TX. View current cost tables by home size and material type (asphalt, metal, tile).", category: "Cost & Materials", date: "June 22, 2026", readTime: "13 Min Read" },
   { title: "Metal Roofing in Houston TX: Is It Worth It? Pros, Cons & Cost", filename: "metal-roofing-houston-pros-cons.html", description: "Discover if a metal roof is worth it in Southeast Texas. Read our comprehensive analysis of metal roofing houston pros cons, including costs, weather ratings, and lifespan comparisons.", category: "Local Guides", date: "June 23, 2026", readTime: "11 Min Read" },
-  { title: "10 Signs You Need a New Roof in Houston TX (Don't Ignore These)", filename: "signs-need-new-roof-houston.html", description: "Discover the top 10 warning signs you need new roof houston. Learn how Southeast Texas heat waves, UV radiation, high winds, and severe storms cause hidden roof decay.", category: "Local Guides", date: "June 24, 2026", readTime: "10 Min Read" },
   { title: "Roof Leak Repair in Houston TX: Causes, Cost & When to Call a Pro", filename: "roof-leak-repair-houston-guide.html", description: "Ultimate local guide on roof leak repair houston. Discover the most common causes of roof leaks in Southeast Texas, local repair costs, how to find hidden leaks, and troubleshooting steps.", category: "Maintenance Guides", date: "June 25, 2026", readTime: "10 Min Read" },
   { title: "Houston Roof Maintenance Checklist: How to Make Your Roof Last Longer", filename: "houston-roof-maintenance-tips.html", description: "A tiny leak can cost you $15,000. Use our pro-grade roof maintenance houston tx checklist to spot damage early, prepare for hurricane season, and save thousands.", category: "Maintenance Guides", date: "June 27, 2026", readTime: "10 Min Read" },
   { title: "Asphalt Shingles vs Metal Roofing in Houston TX: Which is Better?", filename: "asphalt-vs-metal-roofing-houston.html", description: "Deciding between asphalt vs metal roofing houston? Read our comprehensive comparison on costs, 50-year lifespan, sub-tropical energy efficiency, and hurricane-force wind ratings.", category: "Cost & Materials", date: "June 28, 2026", readTime: "12 Min Read" },
@@ -80,7 +78,6 @@ const unsplashIdMap = {
   "best-affordable-roofing-contractors-houston.html": "photo-1504307651254-35680f356dfd",
   "how-insurance-roof-claims-work-texas.html": "photo-1450133064473-71024230f91b",
   "roof-leak-detection-houston-guide.html": "photo-1534274988757-a28bf1a57c17",
-  "roof-replacement-financing-houston.html": "photo-1518495973542-4542c06a5843",
   "roof-inspection-before-buying-home-houston.html": "photo-1592595896551-12b371d546d5",
   "houston-hail-damage-guide.html": "photo-1518156677180-95a2893f3e9f",
   "roofing-pasadena-tx-guide.html": "photo-1416339306562-f3d12fefd36f",
@@ -89,9 +86,8 @@ const unsplashIdMap = {
   "roofing-friendswood-tx-guide.html": "photo-1600596542815-ffad4c1539a9",
   "roofing-tomball-tx-guide.html": "photo-1600585154340-be6161a56a0c",
   "how-long-roof-lasts-houston.html": "photo-1504384308090-c894fdcc538d",
-  "roof-replacement-cost-houston-2025.html": "photo-1563013544-824ae1d704d3",
+  "roof-replacement-cost-houston.html": "photo-1563013544-824ae1d704d3",
   "metal-roofing-houston-pros-cons.html": "photo-1512917774080-9991f1c4c750",
-  "signs-need-new-roof-houston.html": "photo-1513694203232-719a280e022f",
   "roof-leak-repair-houston-guide.html": "photo-1581094794329-c8112a89af12",
   "houston-roof-maintenance-tips.html": "photo-1510798831971-661eb04b3739",
   "asphalt-vs-metal-roofing-houston.html": "photo-1613665813446-82a78c468a1d",
@@ -188,6 +184,7 @@ let headPart = templateContent.split('</head>')[0];
 // Update title & description in headPart
 headPart = headPart.replace(/<title>.*?<\/title>/i, '<title>Roofing Resources, Guides & Storm Damage Advice | Epic Roofing & Construction LLC</title>');
 headPart = headPart.replace(/<meta\s+name=["']description["']\s+content=["'].*?["'][^>]*>/i, '<meta name="description" content="Explore Epic Roofing & Construction LLC blog guides. In-depth analysis on shingle replacement, storm wind assessment, hail repair, insurance claims, and local Houston HOA covenants.">');
+headPart = headPart.replace(/<link\s+rel=["']canonical["']\s+href=["'].*?["'][^>]*>/i, '<link rel="canonical" href="https://www.epicroofingtx.com/blog">');
 
 // Prepend the required template comments block and add head back
 let indexHTML = `<!--
@@ -311,6 +308,59 @@ indexHTML += `
   </section>
 `;
 
+// Generate static HTML for all blog post cards
+const staticCardsHTML = blogPosts.map(post => {
+  let badgeStyle = "background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.3); color: var(--orange);";
+  if (post.category === 'Storm Repair') {
+    badgeStyle = "background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3B82F6;";
+  } else if (post.category === 'Insurance Claims') {
+    badgeStyle = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981;";
+  } else if (post.category === 'Cost & Materials') {
+    badgeStyle = "background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #EAB308;";
+  } else if (post.category === 'Local Guides') {
+    badgeStyle = "background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #A855F7;";
+  } else if (post.category === 'Hail Damage') {
+    badgeStyle = "background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #EF4444;";
+  } else if (post.category === 'Roof Inspection') {
+    badgeStyle = "background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #06B6D4;";
+  }
+  
+  const cardId = 'card-' + post.filename.replace('.html', '');
+  const unsplashId = unsplashIdMap[post.filename] || 'photo-1504307651254-35680f356dfd';
+
+  return `
+          <div id="${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 1.75rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
+            <div>
+              <div style="height: 180px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.05); position: relative;">
+                <picture>
+                  <source srcset="https://images.unsplash.com/${unsplashId}?w=350&auto=format&fit=crop&q=50&fm=webp" type="image/webp">
+                  <img width="350" height="256" loading="lazy" src="https://images.unsplash.com/${unsplashId}?w=350&auto=format&fit=crop&q=50&fm=jpg" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+                </picture>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span style="${badgeStyle} font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;">${post.category}</span>
+                <span style="font-size: 0.8rem; color: #64748B; font-weight: 600;">${post.readTime || '8 Min Read'}</span>
+              </div>
+              
+              <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 1rem; color: var(--white); text-transform: none; text-align: left; letter-spacing: normal;">
+                ${post.title}
+              </h3>
+              
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                ${post.description}
+              </p>
+            </div>
+
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1E293B; padding-top: 1.25rem;">
+              <span style="font-size: 0.825rem; color: #64748B; font-weight: 500;">📅 ${post.date || 'June 10, 2026'}</span>
+              <a href="/blog/${post.filename}" style="color: var(--orange); font-weight: 700; font-size: 0.95rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 4px;" class="read-link">
+                Read Article <span style="font-size: 1.1rem; line-height: 1;">→</span>
+              </a>
+            </div>
+          </div>`;
+}).join('\n');
+
 // Add main categories navigation (Visual Accents & Actionable Filter Buttons)
 indexHTML += `
   <!-- BLOG INDEX LISTING -->
@@ -331,7 +381,7 @@ indexHTML += `
 
       <!-- Grid layout: 2-3 columns on desktop, 1 on mobile -->
       <div class="grid grid-3" id="blog-grid" style="gap: 2rem;">
-        <!-- Blog Cards will be rendered dynamically here -->
+${staticCardsHTML}
       </div>
     </div>
   </section>
