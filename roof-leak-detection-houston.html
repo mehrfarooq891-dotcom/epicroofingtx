@@ -5,10 +5,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231A1A1A'/><text y='75' x='15' font-size='70' fill='%23D32F2F' font-weight='bold'>E</text></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Expert roof leak detection in Houston TX. We find hidden leaks fast — thermal imaging, moisture testing & same-day repair. Free inspection. Call +1 (281) 326-9905.">
-  <title>Roof Leak Detection Houston TX | Find & Fix Any Leak | Epic Roofing TX</title>
+  <meta name="description" content="Expert non-invasive roof leak detection in Houston TX. FLIR thermal imaging, moisture meters & attic forensics to locate hidden leaks fast. Call +1 (281) 326-9905.">
+  <title>Roof Leak Detection Houston TX | Thermal & Forensic Leak Finder | Epic Roofing TX</title>
   
-  <!-- Fonts -->
+  <!-- Barlow + Open Sans Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -16,11 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   </noscript>
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Unique Page Styling */
+    /* Custom Page Enhancements */
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
@@ -53,7 +53,6 @@
     .pricing-table tr:hover {
       background-color: rgba(255, 255, 255, 0.02);
     }
-
     .process-flow {
       display: flex;
       flex-direction: column;
@@ -64,9 +63,9 @@
       background: var(--navy-light);
       border: 1px solid #1E293B;
       border-radius: 8px;
-      padding: 1.5rem;
+      padding: 1.75rem;
       display: flex;
-      gap: 1.25rem;
+      gap: 1.5rem;
       align-items: flex-start;
     }
     .step-badge {
@@ -74,16 +73,28 @@
       color: var(--white);
       font-family: var(--f-display);
       font-weight: 900;
-      width: 36px;
-      height: 36px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
-
+    .step-content h3 {
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+      font-family: var(--f-display);
+    }
+    .step-content p {
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0;
+      font-size: 0.95rem;
+    }
     .faq-container {
       max-width: 900px;
       margin: 0 auto;
@@ -93,27 +104,863 @@
       border-left: 4px solid var(--orange);
       border-radius: 4px;
       padding: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      border-top: 1px solid #1E293B;
+      border-right: 1px solid #1E293B;
+      border-bottom: 1px solid #1E293B;
     }
     .faq-item h3 {
       font-size: 1.15rem;
       color: var(--white);
       margin-bottom: 0.5rem;
       margin-top: 0;
+      font-family: var(--f-display);
     }
     .faq-item p {
       color: #94A3B8;
       line-height: 1.6;
       margin: 0;
+      font-size: 0.95rem;
+    }
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 768px) {
+      .signs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .signs-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .sign-card {
+      background: var(--navy-light);
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+    .sign-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+    .sign-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .sign-card h3 {
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-family: var(--f-display);
+    }
+    .sign-card p {
+      color: #94A3B8;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
     }
   </style>
 
   <!-- Google SEO Schema JSON-LD -->
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "Epic Roofing & Construction LLC",
+    "alternateName": "Epic Roofing TX",
+    "url": "https://www.epicroofingtx.com",
+    "logo": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "description": "Professional non-invasive roof leak detection services in Houston TX. FLIR thermal imaging, moisture meters, attic forensics & rapid leak repair. Call +1 (281) 326-9905.",
+    "telephone": "+12813269905",
+    "email": "info@epicroofingtx.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9402 Spaulding St",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77016",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.847152,
+      "longitude": -95.305579
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Houston"},
+      {"@type": "City", "name": "Katy"},
+      {"@type": "City", "name": "Sugar Land"},
+      {"@type": "City", "name": "Cypress"},
+      {"@type": "City", "name": "Pearland"},
+      {"@type": "City", "name": "Spring"},
+      {"@type": "City", "name": "The Woodlands"},
+      {"@type": "City", "name": "Pasadena"},
+      {"@type": "City", "name": "Humble"},
+      {"@type": "City", "name": "Tomball"},
+      {"@type": "City", "name": "Richmond"},
+      {"@type": "City", "name": "League City"},
+      {"@type": "City", "name": "Missouri City"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "7",
+      "bestRating": "5"
+    },
+    "priceRange": "$$",
+    "paymentAccepted": "Cash, Credit Card, Insurance",
+    "hasMap": "https://maps.google.com/?q=Epic+Roofing+%26+Construction+LLC+Houston+TX",
+    "sameAs": [
+      "https://www.google.com/maps/place/Epic+Roofing+%26+Construction+LLC"
+    ]
+  }
+  </script>
 
   <!-- FAQ Schema -->
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does professional roof leak detection cost in Houston, TX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basic roof leak evaluations by Epic Roofing TX are complimentary during our initial inspection. For complex, multi-level or hidden moisture migration tracing using FLIR thermal cameras and moisture meters, diagnostic fees generally range between $150 and $350, which is credited directly toward your total repair cost if you proceed with our repair service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my homeowners insurance cover roof leak detection and repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if the roof leak was caused by a covered sudden event, such as a severe hail storm, high wind shearing, or fallen tree limbs. However, leaks caused by gradual wear and tear or neglected maintenance are typically excluded. Our HAAG-certified inspectors assist you in documenting storm-related leaks for your insurance claim."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you locate a roof leak when there are no missing shingles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many severe leaks originate from cracked pipe boot gaskets, compromised valley flashing, step flashing near chimneys, or wind-lifted shingle seals that appear intact to the naked eye. We utilize FLIR infrared thermal imaging, electronic pin meters, and structured attic moisture tracing to pinpoint the exact entry source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a thermal roof leak detection inspection take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard residential roof leak detection inspection takes between 45 minutes and 90 minutes. Our certified technician conducts both an interior ceiling scan, an attic moisture crawl, and a full exterior roof envelope evaluation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a small roof leak cause toxic black mold in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Houston's high humidity and warm temperatures create the ideal environment for mold spores to colonize within 24 to 48 hours of water exposure inside dark attic spaces, drywall, and insulation batts."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
 
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Same Day Storm Response: Emergency Wind / Hail Leak Tarping | <a href="tel:+12813269905">📞 +1 (281) 326-9905</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" id="site-logo">
+        EPIC ROOFING & CONSTRUCTION <span>LLC</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Our Services</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/roof-replacement-houston">Shingle Replacement</a>
+            <a class="dropdown-item" href="/roof-repair-houston">Roof Repair</a>
+            <a class="dropdown-item" href="/metal-roofing-houston">Metal Roofing</a>
+            <a class="dropdown-item" href="/roof-coating-houston">Commercial Coating</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston">Hail & Wind Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Leak Tarp</a>
+            <a class="dropdown-item" href="/free-roof-inspection-houston">Certified Inspection</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Repairs</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston">General Storm Damage</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarp Service</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <a class="dropdown-item" href="/">Houston</a>
+            <a class="dropdown-item" href="/katy-roofing-contractor">Katy</a>
+            <a class="dropdown-item" href="/sugar-land-roofing-contractor">Sugar Land</a>
+            <a class="dropdown-item" href="/cypress-roofing-contractor">Cypress</a>
+          </div>
+        </div>
+        <a href="/calculator" class="nav-link">Cost Calculator</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: justify;">
+        📞 +1 (281) 326-9905
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+  
+  <main id="main-content">
+
+  <!-- Mobile Slideout Menu -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/roof-repair-houston" class="mobile-nav-link">Roof Repair</a>
+    <a href="/roof-replacement-houston" class="mobile-nav-link">Roof Replacement</a>
+    <a href="/storm-damage-roofing-houston" class="mobile-nav-link">Storm Damage</a>
+    <a href="/contact" class="mobile-nav-link">Contact</a>
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/">Home</a> <span>/</span> <a href="/roof-repair-houston">Services</a> <span>/</span> <span style="color:#D32F2F; font-weight:700;">Roof Leak Detection Houston TX</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1 — HERO -->
+  <section class="hero-section" id="hero-main" style="position: relative; overflow: hidden; background: #0f172a;">
+    <picture style="position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; display: block;">
+      <source srcset="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=1200&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
+      <img width="1200" height="600" loading="eager" src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=1200&auto=format&fit=crop&q=60&fm=jpg" alt="Roof Leak Detection Houston TX" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top;" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1e3a5f/ffffff?text=Roof+Leak+Detection';">
+    </picture>
+    <div style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.55); z-index: 2; pointer-events: none;"></div>
+    <div class="container" style="position: relative; z-index: 3;">
+      <div style="display: inline-block; background-color: rgba(234, 88, 12, 0.15); border: 1px solid var(--orange); padding: 0.4rem 1.25rem; border-radius: 99px; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--orange); margin-bottom: 1.25rem;">
+        🔍 Non-Invasive Thermal & Electronic Leak Detection
+      </div>
+      <h1 class="hero-title" style="margin-bottom: 1.25rem; font-weight: 900; font-family: var(--f-display); line-height: 1.1;">
+        Roof Leak Detection Services in Houston, TX
+      </h1>
+      
+      <p class="hero-subtitle" style="max-width: 820px; font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.6; color: #E2E8F0;">
+        Stop guessing where water is entering your home. Epic Roofing TX provides forensic <strong>roof leak detection houston</strong> homeowners trust to find hidden water leaks fast. Utilizing advanced FLIR thermal infrared imaging, electronic moisture meters, and structural attic scans, our certified roofers locate hard-to-find leaks before they destroy your ceiling, insulation, framing, and drywall.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem;">
+        <a href="tel:+12813269905" class="btn btn-primary">📞 Call Now — (281) 326-9905</a>
+        <a href="#quote" class="btn btn-secondary">📋 Book Leak Inspection</a>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="stats-bar" id="stats-hero-row" style="margin-top: 1rem;">
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Non-Invasive Scans</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">FLIR</span>
+          <span class="stat-label">Thermal Technology</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Same Day</span>
+          <span class="stat-label">Rapid Diagnosis</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">HAAG</span>
+          <span class="stat-label">Certified Forensic Roofers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — THE URGENCY / HOOK -->
+  <section class="section-padding" style="background-color: var(--dark);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+        <div>
+          <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+            ⚠️ Protect Your Property Value
+          </div>
+          <h2 style="text-align: left; margin-bottom: 1.25rem;">Why Early Leak Detection is Critical in Greater Houston</h2>
+          <p style="color: #94A3B8; line-height: 1.7; margin-bottom: 1rem; font-size: 0.98rem;">
+            A roof leak in Southeast Texas is rarely a minor annoyance — it is an active structural threat. Houston receives an average of over 50 inches of rainfall annually, accompanied by intense tropical downpours, severe storm fronts, and high heat. When rain water breaches your outer roof envelope, it doesn't always drip immediately through your ceiling. Instead, it travels along roof rafters, pooling silently inside your attic insulation, rotting plywood roof decking, and saturating wooden wall studs.
+          </p>
+          <p style="color: #94A3B8; line-height: 1.7; margin-bottom: 1.5rem; font-size: 0.98rem;">
+            Because Houston's sub-tropical climate maintains high relative humidity year-round, trapped roof moisture cannot evaporate naturally. Within 24 to 48 hours, standing attic moisture creates an ideal breeding ground for toxic black mold (Stachybotrys chartarum), structural wood rot, and electrical wiring corrosion. By the time a visible yellow water stain appears on your interior drywall, hundreds of dollars in hidden damage may have already accumulated beneath your shingles.
+          </p>
+          
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: #E2E8F0; font-size: 0.95rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--orange); font-weight: bold;">✓</span>
+              <span><strong>Prevents Catastrophic Ceiling Collapses:</strong> Water-soaked sheetrock loses structural integrity and can suddenly collapse under heavy weight.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--orange); font-weight: bold;">✓</span>
+              <span><strong>Stops Toxic Mold Growth:</strong> Protect indoor air quality and prevent costly mold remediation in ductwork and ceiling cavities.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--orange); font-weight: bold;">✓</span>
+              <span><strong>Saves Thousands in Repair Costs:</strong> Pinpointing and repairing a localized boot or flashing leak costs a fraction of full roof decking replacement.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          <h3 style="color: var(--white); font-family: var(--f-display); margin-top: 0; font-size: 1.35rem; margin-bottom: 1rem;">
+            🚨 Active Leak Warning Signs
+          </h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            If you notice any of these immediate symptoms, do not wait for the next storm front:
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="background: rgba(234, 88, 12, 0.08); border-left: 3px solid var(--orange); padding: 0.85rem 1rem; border-radius: 4px;">
+              <strong style="color: var(--white); display: block; font-size: 0.95rem;">Water Ring Stains on Ceilings</strong>
+              <span style="color: #94A3B8; font-size: 0.85rem;">Discolored brown, yellow, or dark rings expanding on drywall or plaster ceiling surfaces.</span>
+            </div>
+            <div style="background: rgba(234, 88, 12, 0.08); border-left: 3px solid var(--orange); padding: 0.85rem 1rem; border-radius: 4px;">
+              <strong style="color: var(--white); display: block; font-size: 0.95rem;">Damp, Musty Attic Smell</strong>
+              <span style="color: #94A3B8; font-size: 0.85rem;">Pungent humidity or mildew odor upstairs or near ceiling air conditioning registers.</span>
+            </div>
+            <div style="background: rgba(234, 88, 12, 0.08); border-left: 3px solid var(--orange); padding: 0.85rem 1rem; border-radius: 4px;">
+              <strong style="color: var(--white); display: block; font-size: 0.95rem;">Peeling Wall Paint & Drywall Bubbling</strong>
+              <span style="color: #94A3B8; font-size: 0.85rem;">Blistering wall paint or soft, soggy sheetrock along exterior wall boundaries.</span>
+            </div>
+          </div>
+          <a href="tel:+12813269905" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">
+            📞 Dispatch Leak Inspector Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — OUR PROCESS -->
+  <section class="section-padding" style="background-color: var(--navy);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          🔬 Forensic Diagnostic Methods
+        </div>
+        <h2>Our Advanced, Non-Invasive Leak Detection Process</h2>
+        <p style="color: #94A3B8; font-size: 1rem; line-height: 1.6;">
+          At Epic Roofing TX, we don't rely on guesswork or rip apart your ceiling to find a leak. We combine modern thermal imaging technology with forensic roofing methodology to trace leaks to their exact origin.
+        </p>
+      </div>
+
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-badge">1</div>
+          <div class="step-content">
+            <h3>FLIR Thermal Infrared Camera Inspection</h3>
+            <p>
+              Water trapped beneath shingles or inside insulation retains heat differently than dry building materials. Using high-resolution FLIR (Forward-Looking Infrared) thermal cameras, our inspectors scan interior ceilings and upper roof structures to locate cold moisture pockets invisible to the human eye. This non-invasive scanning map shows exact moisture migration patterns without cutting a single hole in your sheetrock.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">2</div>
+          <div class="step-content">
+            <h3>Electronic Pin & Pinless Moisture Metering</h3>
+            <p>
+              Once thermal anomalies are identified, we deploy digital pinless and deep-pin moisture meters to measure exact wood and drywall saturation percentages. This allows us to verify whether moisture is active or historical and determine the structural health of your roof sheathing, rafter timbers, and ceiling joists.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">3</div>
+          <div class="step-content">
+            <h3>Attic Cavity & Structural Decking Forensics</h3>
+            <p>
+              Our technicians climb directly into your attic space to trace water trails. We inspect roof deck plywood underside, valley seams, chimney step flashing intersections, wall counter-flashing, and attic ventilation penetrations. By following mineral deposits, water stains, and rust tracks on exposed roofing nails, we pinpoint precisely where water entered the outer roof deck.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">4</div>
+          <div class="step-content">
+            <h3>Targeted Hydro-Pressure & Water Dye Testing</h3>
+            <p>
+              For elusive leaks that only appear during torrential wind-driven rain, we perform controlled hydro-testing. Working systematically from lower roof slopes to higher ridges, we apply low-pressure water streams to isolated roof penetrations, pipe boots, sidewall flashing, and skylight curbs while a second technician monitors the interior attic with moisture meters to confirm the exact failure point.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-badge">5</div>
+          <div class="step-content">
+            <h3>Comprehensive Exterior Roof Envelope Inspection</h3>
+            <p>
+              Finally, we conduct a meticulous rooftop examination. We inspect shingle seals for wind uplift, examine pipe boot rubber neoprene collars for UV dry-rot cracks, audit valley metal sealants, check ridge cap integrity, and verify gutter flashing drip edge positioning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — COMMON SIGNS YOU NEED LEAK DETECTION -->
+  <section class="section-padding" style="background-color: var(--dark);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          🔍 Symptom Checklist
+        </div>
+        <h2>Common Signs You Need Professional Leak Detection</h2>
+        <p style="color: #94A3B8; font-size: 1rem;">
+          Roof leaks manifest in many forms beyond obvious water drips. Look out for these 6 subtle indicators in your Houston home:
+        </p>
+      </div>
+
+      <div class="signs-grid">
+        <div class="sign-card">
+          <span class="sign-icon">💧</span>
+          <h3>Discolored Ceiling & Wall Stains</h3>
+          <p>
+            Yellow, tan, or dark brown ringed stains on sheetrock ceilings or upper wall sections indicate water pooling above your ceiling drywall.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <span class="sign-icon">💨</span>
+          <h3>Musty Odors & Damp Air</h3>
+          <p>
+            A persistent damp smell in upper bedrooms, closets, or near HVAC vents signals hidden mold or mildew growing inside saturated insulation.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <span class="sign-icon">📈</span>
+          <h3>Unexplained Rising Energy Bills</h3>
+          <p>
+            Wet attic insulation loses virtually all R-value thermal resistance, forcing your air conditioner to run constantly during hot Houston summers.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <span class="sign-icon">🧱</span>
+          <h3>Exterior Brick / Siding Efflorescence</h3>
+          <p>
+            White, chalky mineral deposits on exterior brick masonry or siding joints often stem from water leaking behind roof wall flashing.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <span class="sign-icon">🍄</span>
+          <h3>Visible Mold Along Roof Line</h3>
+          <p>
+            Black or green fungal growth appearing near ceiling corners, crown molding, or roof rafter tails indicates chronic moisture intrusion.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <span class="sign-icon">🛠️</span>
+          <h3>Granule Loss & Shingle Blistering</h3>
+          <p>
+            Excessive shingle granules washing down downspouts combined with cupped shingles often exposes bare underlayment to water penetration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — WHY DIY LEAK DETECTION FAILS -->
+  <section class="section-padding" style="background-color: var(--navy-light);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+        <div>
+          <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+            🚫 Avoid Costly DIY Mistakes
+          </div>
+          <h2 style="text-align: left; margin-bottom: 1.25rem;">Why DIY Roof Leak Detection Often Fails</h2>
+          <p style="color: #94A3B8; line-height: 1.7; margin-bottom: 1rem; font-size: 0.98rem;">
+            When homeowners discover a ceiling water stain, the natural reaction is to look directly above the stain on the roof and apply a generous coating of roofing caulk or silicone tar. Unfortunately, this DIY approach almost never works — and often worsens the damage.
+          </p>
+          <p style="color: #94A3B8; line-height: 1.7; margin-bottom: 1rem; font-size: 0.98rem;">
+            Due to gravity and surface tension, <strong>water travels along the path of least resistance</strong>. Rainwater entering through a cracked pipe boot high on your roof can travel 15 to 20 feet down an angled rafter timber, cross a horizontal ceiling joist, and finally drip through your drywall in a completely different room.
+          </p>
+          <p style="color: #94A3B8; line-height: 1.7; font-size: 0.98rem;">
+            Smearing caulk over a random shingle without finding the true entry point traps moisture inside the roof assembly. Trapped water accelerates plywood rot, destroys shingle adhesive bonds, and forces water sideways into undamaged decking areas. Professional leak detection requires trained eyes, specialized moisture diagnostic tools, and complete understanding of roof physics.
+          </p>
+        </div>
+
+        <div style="background: var(--dark); border: 1px solid #1E293B; border-radius: 12px; padding: 2rem;">
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.3rem; margin-top: 0; margin-bottom: 1.25rem;">
+            Comparative Leak Detection Matrix
+          </h3>
+          <table class="pricing-table" style="margin-top: 0;">
+            <thead>
+              <tr>
+                <th>Factor</th>
+                <th>DIY Patching</th>
+                <th>Epic Thermal Scans</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Finds Origin</strong></td>
+                <td style="color: #EF4444;">15-20% Accuracy</td>
+                <td style="color: #10B981;">100% Verified Origin</td>
+              </tr>
+              <tr>
+                <td><strong>Attic Inspection</strong></td>
+                <td style="color: #EF4444;">Visual Only</td>
+                <td style="color: #10B981;">Pinpoint Digital Metering</td>
+              </tr>
+              <tr>
+                <td><strong>Decking Health</strong></td>
+                <td style="color: #EF4444;">Unknown</td>
+                <td style="color: #10B981;">Full Moisture Diagnostic</td>
+              </tr>
+              <tr>
+                <td><strong>Long-Term Result</strong></td>
+                <td style="color: #EF4444;">Recurring Leaks / Rot</td>
+                <td style="color: #10B981;">Permanent Solution</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — HOUSTON CLIMATE & ARCHITECTURE EXPERTISE -->
+  <section class="section-padding" style="background-color: var(--dark);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          🏛️ Local Knowledge
+        </div>
+        <h2>Houston-Specific Roof Leak Challenges We Solve</h2>
+        <p style="color: #94A3B8; font-size: 1rem; line-height: 1.6;">
+          Houston's unique climate and varied architectural styles demand specialized roof leak diagnostic expertise. Here is how local building factors cause specific leak failures:
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 1.5rem;">
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 1.75rem;">
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.15rem; margin-top: 0; margin-bottom: 0.75rem;">
+            🌡️ Intense Thermal Shock & UV Radiation
+          </h3>
+          <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+            Summer roof surface temperatures in Houston frequently exceed 150°F. When sudden afternoon thunderstorms hit, rapid thermal contraction causes rubber plumbing boots to split, sealant joints to snap, and flashing to pull away from brick chimneys.
+          </p>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 1.75rem;">
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.15rem; margin-top: 0; margin-bottom: 0.75rem;">
+            💨 Tropical Storms & High Wind Shearing
+          </h3>
+          <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+            Gusts from tropical storms and severe cold fronts lift shingle tabs, breaking the factory sealant strip. Wind-driven rain forces water upward beneath shingle courses and behind fascia drip edges.
+          </p>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 1.75rem;">
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.15rem; margin-top: 0; margin-bottom: 0.75rem;">
+            🏘️ Aging Shingle Stock & Builder Grade Boots
+          </h3>
+          <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+            Thousands of homes built during Houston's suburban expansion booms feature standard 3-tab shingles and cheap plastic pipe boots that fail around year 8-12, leading to sudden, widespread attic leaks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — WHAT HAPPENS AFTER LEAK DETECTION -->
+  <section class="section-padding" style="background-color: var(--navy);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          📋 Transparent Action Plan
+        </div>
+        <h2>What Happens After We Locate Your Roof Leak?</h2>
+        <p style="color: #94A3B8; font-size: 1rem;">
+          Once our leak detection technology confirms the exact source and scope of water intrusion, we provide immediate, transparent next steps:
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 1.5rem;">
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 2rem; border-top: 4px solid var(--orange);">
+          <span style="color: var(--orange); font-weight: 900; font-family: var(--f-display); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">01</span>
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.2rem; margin-bottom: 0.75rem;">Digital Photographic Report</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+            You receive a comprehensive digital report complete with thermal camera imagery, moisture readings, rooftop photos, and clear explanations of the failure point.
+          </p>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 2rem; border-top: 4px solid var(--orange);">
+          <span style="color: var(--orange); font-weight: 900; font-family: var(--f-display); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">02</span>
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.2rem; margin-bottom: 0.75rem;">Upfront Itemized Quote</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+            We outline exact repair solutions with fixed upfront pricing — whether it requires a bulletproof lead pipe boot, step-flashing rebuild, valley re-sealing, or shingle replacement.
+          </p>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 8px; padding: 2rem; border-top: 4px solid var(--orange);">
+          <span style="color: var(--orange); font-weight: 900; font-family: var(--f-display); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">03</span>
+          <h3 style="color: var(--white); font-family: var(--f-display); font-size: 1.2rem; margin-bottom: 0.75rem;">Same-Day Tarping / Repairs</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+            If rain is imminent, our crew instantly installs heavy-duty emergency synthetic tarping to seal your roof while permanent repair materials are prepped.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — SERVICE AREAS -->
+  <section class="section-padding" style="background-color: var(--dark);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          📍 Service Coverage
+        </div>
+        <h2>Serving All of Greater Houston & Surrounding Suburbs</h2>
+        <p style="color: #94A3B8; font-size: 0.98rem; line-height: 1.6;">
+          Epic Roofing TX dispatches certified leak detection specialists throughout Harris, Fort Bend, Montgomery, and Galveston counties:
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; text-align: center;">
+        <a href="/" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Central Houston</a>
+        <a href="/katy-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Katy, TX</a>
+        <a href="/sugar-land-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Sugar Land, TX</a>
+        <a href="/cypress-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Cypress, TX</a>
+        <a href="/the-woodlands-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">The Woodlands, TX</a>
+        <a href="/pearland-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Pearland, TX</a>
+        <a href="/spring-tx-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Spring, TX</a>
+        <a href="/league-city-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">League City, TX</a>
+        <a href="/pasadena-tx-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Pasadena, TX</a>
+        <a href="/humble-tx-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Humble & Atascocita</a>
+        <a href="/tomball-tx-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Tomball, TX</a>
+        <a href="/richmond-tx-roofing-contractor" style="background: var(--navy-light); border: 1px solid #1E293B; padding: 1rem; border-radius: 6px; color: var(--white); font-weight: 600; text-decoration: none; display: block; transition: var(--transition);">Richmond, TX</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — LEAD CAPTURE FORM / CTA -->
+  <section class="section-padding" id="quote" style="background-color: var(--navy-light);">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; background: var(--dark); border: 1px solid #1E293B; border-radius: 12px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="display: inline-block; background: rgba(234, 88, 12, 0.15); border: 1px solid var(--orange); color: var(--orange); padding: 0.35rem 1rem; border-radius: 99px; font-weight: 800; font-family: var(--f-display); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.75rem;">
+            📞 Schedule Thermal Leak Inspection
+          </div>
+          <h2 style="margin-bottom: 0.5rem;">Schedule Your Roof Leak Detection Today</h2>
+          <p style="color: #94A3B8; font-size: 0.95rem; margin: 0;">
+            Fill out the form below or call <a href="tel:+12813269905" style="color: var(--orange); font-weight: bold; text-decoration: underline;">+1 (281) 326-9905</a> for immediate response.
+          </p>
+        </div>
+
+        <form id="leak-detection-form" onsubmit="event.preventDefault(); alert('Thank you! Your leak detection inquiry has been received. Our team will contact you within 15 minutes.');">
+          <div class="grid grid-2" style="gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div>
+              <label for="form-name" style="display: block; color: var(--white); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Full Name *</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required style="width: 100%; padding: 0.85rem; background: var(--navy-light); border: 1px solid #1E293B; border-radius: 6px; color: var(--white);">
+            </div>
+            <div>
+              <label for="form-phone" style="display: block; color: var(--white); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Phone Number *</label>
+              <input type="tel" id="form-phone" class="form-control" placeholder="(281) 000-0000" required style="width: 100%; padding: 0.85rem; background: var(--navy-light); border: 1px solid #1E293B; border-radius: 6px; color: var(--white);">
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div>
+              <label for="form-email" style="display: block; color: var(--white); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Email Address *</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required style="width: 100%; padding: 0.85rem; background: var(--navy-light); border: 1px solid #1E293B; border-radius: 6px; color: var(--white);">
+            </div>
+            <div>
+              <label for="form-address" style="display: block; color: var(--white); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Property Address / City *</label>
+              <input type="text" id="form-address" class="form-control" placeholder="Houston, TX" required style="width: 100%; padding: 0.85rem; background: var(--navy-light); border: 1px solid #1E293B; border-radius: 6px; color: var(--white);">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label for="form-notes" style="display: block; color: var(--white); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Describe Your Leak Symptoms</label>
+            <textarea id="form-notes" class="form-control" rows="4" placeholder="Ceiling stains in master bedroom, water dripping during heavy rain, musty attic odor..." style="width: 100%; padding: 0.85rem; background: var(--navy-light); border: 1px solid #1E293B; border-radius: 6px; color: var(--white); font-family: inherit;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; height: 55px; font-size: 1.05rem; font-weight: bold; cursor: pointer;">
+            📩 SUBMIT LEAK DETECTION INQUIRY
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10 — FAQ SECTION -->
+  <section class="section-padding" style="background-color: var(--dark);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <div style="display: inline-block; color: var(--orange); font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+          ❓ FAQ
+        </div>
+        <h2>Frequently Asked Questions About Roof Leak Detection</h2>
+        <p style="color: #94A3B8; font-size: 0.98rem;">
+          Get quick answers to common questions about finding and fixing roof leaks in Houston, TX:
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>How much does professional roof leak detection cost in Houston, TX?</h3>
+          <p>
+            Basic visual roof leak evaluations by Epic Roofing TX are complimentary during our initial site visit. For complex, multi-level homes or hidden leaks requiring FLIR infrared thermal cameras and digital moisture metering, diagnostic fees range from $150 to $350. Best of all, 100% of this diagnostic fee is credited directly toward your total repair cost when you choose us for your repair service.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Will my homeowners insurance cover roof leak detection and repair?</h3>
+          <p>
+            If your leak was caused by a covered storm event — such as wind-blown shingle damage, hail impacts, or fallen tree branches — your Texas homeowners insurance policy typically covers leak detection, emergency tarping, structural repairs, and interior drywall restoration. However, leaks resulting from age or neglected routine maintenance are excluded. Our HAAG-certified inspectors assist with full insurance documentation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do you find a leak when no shingles are missing on the roof?</h3>
+          <p>
+            Over 60% of roof leaks occur around flashing intersections, pipe boots, valley seams, or skylight gaskets where shingles look completely intact from the ground. We use FLIR thermal imaging to locate cold moisture pockets inside your ceilings, crawl through attic spaces to trace water stains along rafters, and deploy moisture meters to pinpoint the water entry point.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How long does a thermal leak detection inspection take?</h3>
+          <p>
+            A thorough residential thermal leak detection inspection generally takes between 45 and 90 minutes. This includes interior thermal scanning, attic structural moisture testing, and a comprehensive rooftop envelope evaluation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can a small, slow roof leak cause toxic black mold in Houston?</h3>
+          <p>
+            Yes. Due to Houston's high humidity and heat, mold spores can colonize wet drywall, attic insulation, and plywood decking within 24 to 48 hours of water exposure. Addressing slow leaks promptly is critical to maintaining safe indoor air quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns">
+        <div>
+          <a href="/" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            EPIC ROOFING <span>TX</span>
+          </a>
+          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
+            Premium weather-proof shingles, structural standing seam metals, protective attic vents, and prompt storm solutions. Built to safeguard Texas roofs.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="badge-css-gaf">GAF Certified</span>
+            <span class="badge-css-bbb">BBB Accredited A+</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Core Services</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <li><a href="/roof-replacement-houston">Shingle Replacement</a></li>
+            <li><a href="/roof-repair-houston">Roof Repair Houston</a></li>
+            <li><a href="/metal-roofing-houston">Metal Roofing Systems</a></li>
+            <li><a href="/roof-coating-houston">Commercial Silicone Coatings</a></li>
+            <li><a href="/storm-damage-roofing-houston">Hail & Storm Damage</a></li>
+            <li><a href="/emergency-roof-tarping-houston">Emergency Rapid Tarping</a></li>
+            <li><a href="/free-roof-inspection-houston">Free Roof Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Local Service Areas</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="/">Houston</a></li>
+              <li><a href="/katy-roofing-contractor">Katy</a></li>
+              <li><a href="/sugar-land-roofing-contractor">Sugar Land</a></li>
+              <li><a href="/cypress-roofing-contractor">Cypress</a></li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="/the-woodlands-roofing-contractor">Woodlands</a></li>
+              <li><a href="/pearland-roofing-contractor">Pearland</a></li>
+              <li><a href="/spring-tx-roofing-contractor">Spring</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h4>State HQ Address</h4>
+          <ul style="display: flex; flex-direction: column; gap: 1rem; color: #94A3B8; font-size: 0.9rem;">
+            <li>
+              <strong>Assessor Hotline:</strong><br>
+              <a href="tel:+12813269905" style="color: var(--white); font-weight: bold; font-size: 1.15rem; text-decoration: underline;">+1 (281) 326-9905</a>
+            </li>
+            <li>
+              <strong>Houston Headquarters:</strong><br>
+              Epic Roofing & Construction LLC<br>
+              9402 Spaulding St, Houston, TX 77016<br>
+              Phone: +1 (281) 326-9905
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/">Home</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- GLOBAL FLOATING/STICKY CALL ACTION -->
   <div class="global-call-widget" id="global-call-widget">
@@ -123,5 +970,39 @@
       <span class="btn-text-mobile">Call Now: (281) 326-9905</span>
     </a>
   </div>
+
+  <!-- INVISIBLE SCHEMA NAP SHELL -->
+  <div class="epic-nap-hidden" style="display:none;">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing TX</span>
+      <span itemprop="telephone">+1 (281) 326-9905</span>
+      <span itemprop="email">info@epicroofingtx.com</span>
+    </div>
+  </div>
+
+  <!-- Script for Hamburger Mobile Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+  </script>
+
 </body>
 </html>
