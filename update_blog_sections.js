@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Ceiling Water Stains: Is It a Roof Emergency?", filename: "ceiling-water-stains-roof-emergency-houston.html", description: "Spotted a ceiling water stain in your Houston home? Learn how to assess stain severity, spot active leak danger, and decide if you need emergency roof repair.", category: "Maintenance Guides", date: "July 29, 2026", readTime: "9 Min Read" },
   { title: "Roof Leak After Heavy Rain: Houston Homeowner's Guide", filename: "roof-leak-after-heavy-rain-houston.html", description: "Discovered a ceiling leak after a heavy Houston downpour? Learn how to trace water origin, limit interior damage, and secure rapid repairs.", category: "Maintenance Guides", date: "July 27, 2026", readTime: "10 Min Read" },
   { title: "Signs of a Hidden Roof Leak Before It Becomes a Disaster", filename: "signs-of-hidden-roof-leak-houston.html", description: "Learn the subtle, early warning signs of a hidden roof leak in Houston TX before it turns into costly structural water damage or mold.", category: "Maintenance Guides", date: "July 22, 2026", readTime: "9 Min Read" },
   { title: "Emergency Roof Leak Repair Houston: What to Do in the First 24 Hours", filename: "emergency-roof-leak-repair-houston.html", description: "Active roof leak in Houston? Here is your step-by-step 24-hour action guide to minimize damage, stop the water, and secure expert emergency repair.", category: "Maintenance Guides", date: "July 15, 2026", readTime: "10 Min Read" },
@@ -57,6 +58,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "ceiling-water-stains-roof-emergency-houston.html": "photo-1513694203232-719a280e022f",
   "roof-leak-after-heavy-rain-houston.html": "photo-1515694346937-94d85e41e6f0",
   "signs-of-hidden-roof-leak-houston.html": "photo-1534274988757-a28bf1a57c17",
   "emergency-roof-leak-repair-houston.html": "photo-1582268611958-ebfd161ef9cf",
