@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "How Much Does Emergency Roof Leak Repair Cost in Houston?", filename: "emergency-roof-leak-repair-cost-houston.html", description: "Wondering what emergency roof leak repair costs in Houston? Get clear facts on after-hours dispatch fees, night and weekend surcharges, and emergency tarping pricing.", category: "Insurance & Costs", date: "July 30, 2026", readTime: "10 Min Read" },
   { title: "Ceiling Water Stains: Is It a Roof Emergency?", filename: "ceiling-water-stains-roof-emergency-houston.html", description: "Spotted a ceiling water stain in your Houston home? Learn how to assess stain severity, spot active leak danger, and decide if you need emergency roof repair.", category: "Maintenance Guides", date: "July 29, 2026", readTime: "9 Min Read" },
   { title: "Roof Leak After Heavy Rain: Houston Homeowner's Guide", filename: "roof-leak-after-heavy-rain-houston.html", description: "Discovered a ceiling leak after a heavy Houston downpour? Learn how to trace water origin, limit interior damage, and secure rapid repairs.", category: "Maintenance Guides", date: "July 27, 2026", readTime: "10 Min Read" },
   { title: "Signs of a Hidden Roof Leak Before It Becomes a Disaster", filename: "signs-of-hidden-roof-leak-houston.html", description: "Learn the subtle, early warning signs of a hidden roof leak in Houston TX before it turns into costly structural water damage or mold.", category: "Maintenance Guides", date: "July 22, 2026", readTime: "9 Min Read" },
@@ -58,6 +59,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "emergency-roof-leak-repair-cost-houston.html": "photo-1600585154526-990dced4db0d",
   "ceiling-water-stains-roof-emergency-houston.html": "photo-1513694203232-719a280e022f",
   "roof-leak-after-heavy-rain-houston.html": "photo-1515694346937-94d85e41e6f0",
   "signs-of-hidden-roof-leak-houston.html": "photo-1534274988757-a28bf1a57c17",
