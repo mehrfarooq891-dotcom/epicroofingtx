@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Roof Leak Near Chimney: Causes and Fast Fixes", filename: "roof-leak-near-chimney-causes-fixes-houston.html", description: "Discover why roof leaks happen near chimneys in Houston homes. Learn about step flashing failure, mortar decay, counter-flashing leaks, and fast repair fixes.", category: "Maintenance Guides", date: "August 1, 2026", readTime: "9 Min Read" },
   { title: "How Much Does Emergency Roof Leak Repair Cost in Houston?", filename: "emergency-roof-leak-repair-cost-houston.html", description: "Wondering what emergency roof leak repair costs in Houston? Get clear facts on after-hours dispatch fees, night and weekend surcharges, and emergency tarping pricing.", category: "Insurance & Costs", date: "July 30, 2026", readTime: "10 Min Read" },
   { title: "Ceiling Water Stains: Is It a Roof Emergency?", filename: "ceiling-water-stains-roof-emergency-houston.html", description: "Spotted a ceiling water stain in your Houston home? Learn how to assess stain severity, spot active leak danger, and decide if you need emergency roof repair.", category: "Maintenance Guides", date: "July 29, 2026", readTime: "9 Min Read" },
   { title: "Roof Leak After Heavy Rain: Houston Homeowner's Guide", filename: "roof-leak-after-heavy-rain-houston.html", description: "Discovered a ceiling leak after a heavy Houston downpour? Learn how to trace water origin, limit interior damage, and secure rapid repairs.", category: "Maintenance Guides", date: "July 27, 2026", readTime: "10 Min Read" },
@@ -59,6 +60,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "roof-leak-near-chimney-causes-fixes-houston.html": "photo-1513694203232-719a280e022f",
   "emergency-roof-leak-repair-cost-houston.html": "photo-1600585154526-990dced4db0d",
   "ceiling-water-stains-roof-emergency-houston.html": "photo-1513694203232-719a280e022f",
   "roof-leak-after-heavy-rain-houston.html": "photo-1515694346937-94d85e41e6f0",
