@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "How to Spot Storm Damage on Your Roof After a Texas Storm", filename: "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html", description: "Learn how to spot storm damage on your roof after a Texas storm. Check missing shingles, dented gutters, downspout granules & yard debris safely from ground level.", category: "Storm Repair", date: "August 7, 2026", readTime: "11 Min Read" },
   { title: "Hail Damage Roof Inspection Checklist for Houston Homes", filename: "hail-damage-roof-inspection-checklist-houston.html", description: "Use this step-by-step hail damage roof inspection checklist for Houston homes. Spot shingle impact marks, dented soft metals, and gutter granule loss safely.", category: "Storm & Hail Damage", date: "August 3, 2026", readTime: "10 Min Read" },
   { title: "Roof Leak Near Chimney: Causes and Fast Fixes", filename: "roof-leak-near-chimney-causes-fixes-houston.html", description: "Discover why roof leaks happen near chimneys in Houston homes. Learn about step flashing failure, mortar decay, counter-flashing leaks, and fast repair fixes.", category: "Maintenance Guides", date: "August 1, 2026", readTime: "9 Min Read" },
   { title: "How Much Does Emergency Roof Leak Repair Cost in Houston?", filename: "emergency-roof-leak-repair-cost-houston.html", description: "Wondering what emergency roof leak repair costs in Houston? Get clear facts on after-hours dispatch fees, night and weekend surcharges, and emergency tarping pricing.", category: "Insurance & Costs", date: "July 30, 2026", readTime: "10 Min Read" },
@@ -61,6 +62,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html": "photo-1527030280862-64139fba04ca",
   "hail-damage-roof-inspection-checklist-houston.html": "photo-1504307651254-35680f356dfd",
   "roof-leak-near-chimney-causes-fixes-houston.html": "photo-1513694203232-719a280e022f",
   "emergency-roof-leak-repair-cost-houston.html": "photo-1600585154526-990dced4db0d",
