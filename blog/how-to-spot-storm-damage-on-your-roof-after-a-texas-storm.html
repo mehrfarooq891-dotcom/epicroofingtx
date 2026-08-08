@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn how to spot storm damage on your roof after a Texas storm. Check missing shingles, dented gutters, downspout granules & yard debris safely from ground level.">
   <title>How to Spot Storm Damage on Your Roof After a Texas Storm</title>
-
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   </noscript>
-
+  
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/style.css">
 
@@ -77,11 +77,11 @@
       font-size: 1.05rem;
       padding-left: 1.5rem;
     }
-
+    
     .blog-article ul {
       list-style-type: disc;
     }
-
+    
     .blog-article ol {
       list-style-type: decimal;
     }
@@ -150,102 +150,58 @@
       flex-direction: column;
       gap: 2rem;
     }
-    @media (min-width: 1024px) {
-      .blog-sidebar {
-        position: sticky;
-        top: 100px;
-        height: fit-content;
-      }
-    }
 
     .sidebar-cta {
-      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-      border: 2px solid var(--orange);
+      background: linear-gradient(135deg, rgba(211, 47, 47, 0.15) 0%, rgba(26, 26, 26, 0.95) 100%);
+      border: 1px solid var(--orange);
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(234, 88, 12, 0.15);
     }
+
     .sidebar-cta h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
       color: var(--white);
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
     }
+
     .sidebar-cta p {
-      font-size: 0.95rem;
       color: #94A3B8;
+      font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
 
     .faq-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #1E293B;
-    }
-    .faq-item:last-child {
-      border-bottom: none;
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
     }
     .faq-item h3 {
-      font-size: 1.2rem;
-      color: var(--white);
+      font-size: 1.15rem;
       margin-top: 0;
       margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+    .faq-item p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
     }
 
-    .internal-link-table-container {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 2px dashed #1E293B;
+    /* Hidden schema container */
+    .epic-nap-hidden {
+      display: none;
     }
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can I spot storm damage on my roof without climbing onto it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. By using your smartphone camera's optical zoom or binoculars from ground level, you can safely spot missing shingle tabs, dented soft metals, blown-out soffits, and heavy granule piles at downspout exits without risking a dangerous fall."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the most obvious ground-level sign that high winds damaged my roof?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most obvious sign is finding torn shingle fragments on your lawn or spotting exposed, dark rectangular patches along your roof slopes where wind gusts lifted and snapped shingle tabs cleanly at the nail line."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why are there large piles of dark sand or granules at my downspout splash pads?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Hail impacts and intense wind turbulence dislodge the protective mineral granules bonded to asphalt shingles. When heavy rain washes these granules down into your gutters, they collect in thick piles at downspout exits, signaling severe shingle degradation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How quickly should I request a ground-based roof assessment after a Houston storm?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You should request a professional evaluation within 24 to 48 hours after severe weather passes. Prompt inspections document fresh storm evidence before subsequent rains cause interior water leaks or secondary mold growth."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 
   <!-- EMERGENCY TOP BANNER -->
   <div class="emergency-strip">
-    ⛈️ Just Experienced a Texas Storm? Get a Free Ground-Level Damage Assessment |
-    <a href="tel:+13803001046">📞 (380) 300-1046</a>
+    🌩️ Severe Texas Storm Hit Your Roof? Get a Free Professional Inspection | 
+    <a href="tel:+12813269905">📞 +1 (281) 326-9905</a>
   </div>
 
   <!-- STICKY NAVY HEADER -->
@@ -277,10 +233,11 @@
         <a href="/blog" class="nav-link">Blog</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
-      <a href="tel:+13803001046" class="btn btn-primary">📞 (380) 300-1046</a>
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header">📞 +1 (281) 326-9905</a>
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
     </div>
   </header>
-
+  
   <main id="main-content">
 
   <!-- Mobile Slideout Menu -->
@@ -296,14 +253,14 @@
     <a href="/#case-studies" class="mobile-nav-link">Case Studies</a>
     <a href="/blog" class="mobile-nav-link">Blog</a>
     <a href="/" class="mobile-nav-link">Houston Core</a>
-    <a href="tel:+13803001046" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
   </div>
 
   <!-- BREADCRUMBS STRIP -->
   <div class="container" style="padding-top: 1.5rem; padding-bottom: 0.25rem;">
     <div class="breadcrumbs" id="top-breadcrumbs">
       <a href="/#case-studies">Case Studies</a>
-      <a href="/blog">Blog</a> <span>/</span> <span style="color:#D32F2F; font-weight:700;">Spotting Storm Damage</span>
+      <a href="/blog">Blog</a> <span>/</span> <span style="color:#D32F2F; font-weight:700;">Spot Storm Damage Guide</span>
     </div>
   </div>
 
@@ -311,19 +268,19 @@
   <section class="hero-section" style="padding: 4rem 0 3rem 0;" id="hero-blog-comparison">
     <div class="container">
       <div class="badge-orange-light" style="margin-bottom: 1.25rem;">
-        ⛈️ Emergency Ground-Level Homeowner Guide
+        🌪️ Post-Storm Roof Safety & Visual Guide
       </div>
       <h1 class="hero-title" style="margin-bottom: 1rem; font-size: 2.5rem; line-height: 1.2;">
         How to Spot Storm Damage on Your Roof <br><span style="color: var(--orange);">After a Texas Storm</span>
       </h1>
       <p class="hero-subtitle" style="margin-bottom: 0;">
-        The storm just passed and your nerves are still on edge. Here's how to safely check your roof for damage from the ground — no ladder, no risk — using visual cues any Houston homeowner can spot.
+        Learn how to spot storm damage on your roof after a Texas storm. Check missing shingles, dented gutters, downspout granules & yard debris safely from ground level.
       </p>
       <!-- Blog Hero Image -->
       <div class="blog-hero-img-container" style="max-width: 1000px; margin: 2rem auto 0 auto; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
         <picture>
-          <source srcset="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
-          <img width="800" height="450" loading="lazy" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&auto=format&fit=crop&q=60&fm=jpg" alt="How to Spot Storm Damage on Your Roof After a Texas Storm" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=Storm+%26+Hail+Damage';">
+          <source srcset="https://images.unsplash.com/photo-1527030280862-64139fba04ca?w=800&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
+          <img width="800" height="450" loading="lazy" src="https://images.unsplash.com/photo-1527030280862-64139fba04ca?w=800&auto=format&fit=crop&q=60&fm=jpg" alt="How to Spot Storm Damage on Your Roof After a Texas Storm" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=Storm+Repair';">
         </picture>
       </div>
     </div>
@@ -333,9 +290,10 @@
   <section class="section-padding" style="background: var(--navy); padding-top: 1.5rem;" id="main-content-comparison">
     <div class="container">
       <div class="blog-container">
-
+        
         <!-- ARTICLE COLUMN -->
         <article class="blog-article">
+          
           <div class="meta-strip">
             <span>📅 Published: August 7, 2026</span>
             <span>⏱️ 11 Min Read</span>
@@ -343,7 +301,7 @@
           </div>
 
           <p>
-            The sky clears, the thunder fades into the distance, and the immediate downpour stops—but your heart is still pounding. Severe Texas weather, from sudden 70 MPH microbursts in Katy to quarter-sized hail strikes across North Houston, leaves homeowners reeling in a state of sudden anxiety. You hear water dripping near your soffits, or you step outside onto your driveway only to see torn asphalt shingle pieces strewn across the grass. Your first instinct might be panic. Your second might be pulling out an extension ladder to climb onto the roof yourself.
+            The sky clears, the thunder fades into the distance, and the immediate downpour stops—but your heart is still pounding. Severe Texas weather, from sudden 70 MPH microbursts in Katy to quarter-sized hail strikes across North Houston, leaves homeowners reeling in a state of sudden anxiety. You hear water dripping near your soffits, or you step outside onto your driveway only to see torn asphalt shingle pieces strewn across the grass. Your first instinct might be panic. Your second might be pulling out a extension ladder to climb onto the roof yourself.
           </p>
 
           <p>
@@ -523,7 +481,7 @@
           </p>
 
           <p>
-            Call us right now at <strong>(380) 300-1046</strong> or <a href="/free-roof-inspection-houston.html">request a complimentary roof evaluation</a> to speak with our local storm response team.
+            Call us right now at <strong>+1 (281) 326-9905</strong> or <a href="/free-roof-inspection-houston.html">request a complimentary roof evaluation</a> to speak with our local storm response team.
           </p>
 
           <!-- INTERNAL LINKS SUMMARY TABLE (PER STRICT GUIDELINES) -->
@@ -578,7 +536,7 @@
 
         <!-- SIDEBAR COLUMN -->
         <aside class="blog-sidebar">
-
+          
           <div class="sidebar-cta">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌪️</div>
             <h3>Free Storm Damage Inspection</h3>
@@ -586,8 +544,8 @@
             <a href="/free-roof-inspection-houston.html" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem 1.5rem;">
               Get a Free Inspection
             </a>
-            <a href="tel:+13803001046" style="display: block; margin-top: 1rem; color: var(--orange); font-weight: 700; text-decoration: none;">
-              📞 Call Now: (380) 300-1046
+            <a href="tel:+12813269905" style="display: block; margin-top: 1rem; color: var(--orange); font-weight: 700; text-decoration: none;">
+              📞 Call Now: +1 (281) 326-9905
             </a>
           </div>
 
@@ -627,8 +585,8 @@
     <h2 style="color:#fff;font-size:28px;font-weight:800;margin-bottom:12px;">Need a Houston Roofing Expert?</h2>
     <p style="color:#aac4e8;font-size:16px;margin-bottom:8px;">Free inspection. No obligation. Same-day response.</p>
     <p style="color:#aac4e8;font-size:15px;margin-bottom:28px;">Serving Houston, Katy, Sugar Land, Cypress, Pearland & all surrounding areas.</p>
-    <a href="tel:+13803001046" style="display:inline-block;background: #D32F2F; color: #111111;padding:16px 40px;font-size:18px;font-weight:800;border-radius:4px;text-decoration:none;margin-bottom:16px;">
-      📞 Call (380) 300-1046 — Free Inspection
+    <a href="tel:+12813269905" style="display:inline-block;background: #D32F2F; color: #111111;padding:16px 40px;font-size:18px;font-weight:800;border-radius:4px;text-decoration:none;margin-bottom:16px;">
+      📞 Call +1 (281) 326-9905 — Free Inspection
     </a>
     <br>
     <a href="/contact" style="display:inline-block;background:transparent;color: #D32F2F;padding:12px 32px;font-size:15px;font-weight:600;border: 2px solid #FFC107;border-radius:4px;text-decoration:none;margin-top:8px;">
@@ -669,7 +627,7 @@
         <div>
           <h4>Contact</h4>
           <p>
-            <a href="tel:+13803001046">(380) 300-1046</a><br>
+            <a href="tel:+12813269905">+1 (281) 326-9905</a><br>
             Epic Roofing & Construction LLC<br>
             9402 Spaulding St, Houston, TX 77016
           </p>
@@ -691,10 +649,10 @@
 
   <!-- GLOBAL FLOATING/STICKY CALL ACTION -->
   <div class="global-call-widget" id="global-call-widget">
-    <a href="tel:+13803001046" class="sticky-call-btn">
+    <a href="tel:+12813269905" class="sticky-call-btn">
       <span class="phone-icon">📞</span>
-      <span class="btn-text-desktop">Call (380) 300-1046</span>
-      <span class="btn-text-mobile">Call Now: (380) 300-1046</span>
+      <span class="btn-text-desktop">Call +1 (281) 326-9905</span>
+      <span class="btn-text-mobile">Call Now: +1 (281) 326-9905</span>
     </a>
   </div>
 
@@ -702,7 +660,7 @@
   <div class="epic-nap-hidden">
     <div itemscope itemtype="https://schema.org/RoofingContractor">
       <span itemprop="name">Epic Roofing TX</span>
-      <span itemprop="telephone">(380) 300-1046</span>
+      <span itemprop="telephone">+1 (281) 326-9905</span>
       <span itemprop="email">info@epicroofingconstruction.com</span>
       <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="addressLocality">Houston</span>,
