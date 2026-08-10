@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Storm Damage Insurance Claim Timeline: What Happens After You File in Houston", filename: "storm-damage-insurance-claim-timeline-houston.html", description: "Follow the step-by-step Houston storm damage insurance claim timeline from initial filing and adjuster inspection to final payout and roof restoration.", category: "Insurance Claims", date: "August 9, 2026", readTime: "11 Min Read" },
   { title: "How to Spot Storm Damage on Your Roof After a Texas Storm", filename: "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html", description: "Learn how to spot storm damage on your roof after a Texas storm. Check missing shingles, dented gutters, downspout granules & yard debris safely from ground level.", category: "Storm Repair", date: "August 7, 2026", readTime: "11 Min Read" },
   { title: "Hail Damage Roof Inspection Checklist for Houston Homes", filename: "hail-damage-roof-inspection-checklist-houston.html", description: "Use this step-by-step hail damage roof inspection checklist for Houston homes. Spot shingle impact marks, dented soft metals, and gutter granule loss safely.", category: "Storm & Hail Damage", date: "August 3, 2026", readTime: "10 Min Read" },
   { title: "Roof Leak Near Chimney: Causes and Fast Fixes", filename: "roof-leak-near-chimney-causes-fixes-houston.html", description: "Discover why roof leaks happen near chimneys in Houston homes. Learn about step flashing failure, mortar decay, counter-flashing leaks, and fast repair fixes.", category: "Maintenance Guides", date: "August 1, 2026", readTime: "9 Min Read" },
@@ -62,6 +63,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "storm-damage-insurance-claim-timeline-houston.html": "photo-1554224155-8d04cb21cd6c",
   "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html": "photo-1527030280862-64139fba04ca",
   "hail-damage-roof-inspection-checklist-houston.html": "photo-1504307651254-35680f356dfd",
   "roof-leak-near-chimney-causes-fixes-houston.html": "photo-1513694203232-719a280e022f",
