@@ -9,6 +9,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231A1A1A'/><text y='75' x='15' font-size='70' fill='%23D32F2F' font-weight='bold'>E</text></svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
   <meta name="description" content="Explore Epic Roofing & Construction LLC blog guides. In-depth analysis on shingle replacement, storm wind assessment, hail repair, insurance claims, and local Houston HOA covenants.">
   <title>Roofing Resources, Guides & Storm Damage Advice | Epic Roofing & Construction LLC</title>
   
@@ -1928,6 +1930,7 @@
   </div>
 
   <!-- Scripts -->
+      <!-- Navigation Helper Toggle scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuBtn = document.getElementById('menu-btn');
@@ -1948,6 +1951,18 @@
       if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
       if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
       if (overlay) overlay.addEventListener('click', toggleMenu);
+
+      // Mobile Accordions
+      const accordionBtns = document.querySelectorAll('.mobile-accordion-btn');
+      accordionBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const content = this.nextElementSibling;
+          if (content) {
+            content.classList.toggle('active');
+          }
+        });
+      });
     });
   </script>
 
