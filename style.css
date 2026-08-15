@@ -306,6 +306,50 @@ h4 { font-size: 1.125rem; }
   gap: 0.5rem 1rem;
 }
 
+.dropdown-menu-scrollable {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.nav-utility-strip {
+  background-color: #0A0D14;
+  border-bottom: 1px solid #1E293B;
+  font-size: 0.75rem;
+  padding: 4px 0;
+  color: #94A3B8;
+  z-index: 1000;
+  position: relative;
+}
+
+.nav-utility-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-utility-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-utility-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.nav-utility-links a:hover {
+  color: var(--white);
+}
+
+.nav-utility-divider {
+  color: #334155;
+  font-size: 0.7rem;
+}
+
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -460,6 +504,69 @@ h4 { font-size: 1.125rem; }
 .mobile-submenu-item:hover {
   opacity: 1;
   color: var(--orange);
+}
+
+/* Mobile Accordion Structure */
+.mobile-accordion {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.mobile-accordion-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.85rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: inherit;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+.mobile-accordion-btn:hover {
+  color: var(--orange);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.mobile-accordion-btn .accordion-icon {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.mobile-accordion-btn.active .accordion-icon {
+  transform: rotate(180deg);
+  color: var(--orange);
+}
+.mobile-accordion-content {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem 0.75rem 1.25rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.mobile-accordion-content.active {
+  display: flex;
+}
+.mobile-accordion-link {
+  color: #CBD5E1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.5rem;
+  display: block;
+  text-decoration: none;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+.mobile-accordion-link:hover {
+  color: var(--orange);
+  background-color: rgba(255, 255, 255, 0.04);
+  padding-left: 0.75rem;
 }
 
 /* Bento Grid / Card Styles */
