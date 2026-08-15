@@ -47,8 +47,8 @@ const REDIRECTS = {
   '/cities/tomball': '/tomball-tx-roofing-contractor',
   '/portfolio': '/sitemap',
   '/privacy': '/privacy-policy',
-  '/terms': '/privacy-policy',
-  '/terms-of-service': '/privacy-policy',
+  '/terms': '/terms-and-conditions',
+  '/terms-of-service': '/terms-and-conditions',
   '/roof-replacement-after-hurricane-houston': '/storm-damage-roofing-houston'
 };
 

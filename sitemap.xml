@@ -125,8 +125,13 @@
   </url>
   <url>
     <loc>https://www.epicroofingtx.com/privacy-policy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.epicroofingtx.com/terms-and-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.epicroofingtx.com/richmond-tx-roofing-contractor</loc>
