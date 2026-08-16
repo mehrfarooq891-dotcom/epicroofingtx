@@ -57,7 +57,10 @@ for (const entry of entries) {
       name === 'robots.txt' ||
       name.endsWith('.xml') ||
       name === 'metadata.json' ||
-      name === 'favicon.ico'
+      name === 'favicon.ico' ||
+      name.endsWith('.svg') ||
+      name.endsWith('.png') ||
+      name.endsWith('.webp')
     ) {
       copyFile(path.join(srcDir, name), path.join(distDir, name));
     }

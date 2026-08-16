@@ -2,71 +2,70 @@
   <!-- Definitions for gradients and shadows -->
   <defs>
     <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1A1A1A" />
-      <stop offset="100%" stop-color="#0A0A0A" />
+      <stop offset="0%" stop-color="#161B22" />
+      <stop offset="100%" stop-color="#0E1217" />
     </linearGradient>
-    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D32F2F" />
-      <stop offset="100%" stop-color="#B71C1C" />
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2900F" />
+      <stop offset="100%" stop-color="#B96F08" />
     </linearGradient>
     <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
     </filter>
   </defs>
 
-  <!-- Solid Dark Background -->
-  <rect width="100%" height="100%" fill="#0D0D0D" />
+  <!-- Solid Dark Background (Storm Charcoal) -->
+  <rect width="100%" height="100%" fill="#161B22" />
 
   <!-- Subtle structural circular decoration in bg -->
-  <circle cx="200" cy="130" r="110" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <circle cx="200" cy="130" r="110" fill="none" stroke="#28374A" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
 
   <!-- Core Logo Icon Group -->
   <g filter="url(#dropShadow)" transform="translate(0, -5)">
     <!-- Polished Shield Body outer stroke -->
     <path d="M 145 65 L 255 65 L 255 125 C 255 160, 220 185, 200 195 C 180 185, 145 160, 145 125 Z" 
-          fill="url(#shieldGrad)" stroke="#D32F2F" stroke-width="6" stroke-linejoin="round" />
+          fill="url(#shieldGrad)" stroke="#E2900F" stroke-width="6" stroke-linejoin="round" />
     
     <!-- White Shield inner hairline accent -->
     <path d="M 152 72 L 248 72 L 248 123 C 248 152, 217 174, 200 183 C 183 174, 152 152, 152 123 Z" 
           fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
 
-    <!-- Highly Stylized Double Roof -->
+    <!-- Highly Stylized Double Roof in Hazard Amber -->
     <!-- Outer roof slope -->
-    <path d="M 160 115 L 200 80 L 240 115" fill="none" stroke="url(#orangeGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 160 115 L 200 80 L 240 115" fill="none" stroke="url(#amberGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
     <!-- Inner space & secondary shield-roof or home outline -->
     <path d="M 175 128 L 200 106 L 225 128" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
     
     <!-- Heavy Chimney detail -->
-    <rect x="222" y="85" width="10" height="15" fill="url(#orangeGrad)" />
+    <rect x="222" y="85" width="10" height="15" fill="url(#amberGrad)" />
     
-    <!-- Star accent in under-roof or a mini shield cross -->
-    <path d="M 200 128 L 203 135 L 210 135 L 205 139 L 207 146 L 200 142 L 193 146 L 195 139 L 190 135 L 197 135 Z" fill="#FFFFFF" />
+    <!-- Star accent in under-roof -->
+    <path d="M 200 128 L 203 135 L 210 135 L 205 139 L 207 146 L 200 142 L 193 146 L 195 139 L 190 135 L 197 135 Z" fill="#E2900F" />
   </g>
 
-  <!-- Typography: EPIC ROOFING TX -->
+  <!-- Typography: EPIC ROOFING TX in Oswald -->
   <g transform="translate(200, 275)" text-anchor="middle">
-    <!-- EPIC in Barlow stylings -->
-    <text font-family="'Barlow', 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif" 
-          font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="4" text-anchor="middle">
-      EPIC <tspan fill="#D32F2F">ROOFING</tspan>
+    <text font-family="'Oswald', sans-serif" 
+          font-weight="700" font-size="34" fill="#FFFFFF" letter-spacing="3" text-anchor="middle">
+      EPIC <tspan fill="#E2900F">ROOFING</tspan>
     </text>
     
-    <!-- TX with a small divider or in a badge style -->
-    <text y="28" font-family="'Barlow', 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif" 
-          font-weight="800" font-size="18" fill="#FFFFFF" letter-spacing="8" text-anchor="middle" opacity="0.9">
+    <!-- TX with a small divider -->
+    <text y="28" font-family="'Oswald', sans-serif" 
+          font-weight="600" font-size="20" fill="#E6EDF3" letter-spacing="6" text-anchor="middle" opacity="0.9">
        TX
     </text>
  
     <!-- Sleek Horizontal Accent Lines flanking 'TX' -->
-    <line x1="-120" y1="22" x2="-40" y2="22" stroke="#D32F2F" stroke-width="2" opacity="0.8" />
-    <line x1="40" y1="22" x2="120" y2="22" stroke="#D32F2F" stroke-width="2" opacity="0.8" />
+    <line x1="-120" y1="22" x2="-40" y2="22" stroke="#E2900F" stroke-width="2" opacity="0.9" />
+    <line x1="40" y1="22" x2="120" y2="22" stroke="#E2900F" stroke-width="2" opacity="0.9" />
   </g>
 
   <!-- Tagline: Houston's Storm Damage Specialists -->
   <g transform="translate(200, 360)" text-anchor="middle">
     <!-- Accent pill container for tagline -->
-    <rect x="-145" y="-18" width="290" height="26" rx="13" fill="#111" stroke="#222" stroke-width="1.5" />
-    <text font-family="'Open Sans', 'Inter', sans-serif" font-weight="700" font-size="10.5" fill="#FFFFFF" letter-spacing="1">
+    <rect x="-155" y="-18" width="310" height="28" rx="14" fill="#0E1217" stroke="#28374A" stroke-width="1.5" />
+    <text font-family="'IBM Plex Mono', 'Source Sans 3', monospace" font-weight="600" font-size="10.5" fill="#CBD5E1" letter-spacing="1.5">
       HOUSTON'S STORM DAMAGE SPECIALISTS
     </text>
   </g>
