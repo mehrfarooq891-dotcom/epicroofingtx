@@ -1,18 +1,19 @@
 /**
- * Epic Roofing TX - Google Analytics 4 (GA4) Base & Event Tracking
+ * Epic Roofing & Construction LLC - Google Analytics 4 (GA4) Base & Event Tracking
+ * Measurement ID: G-QLS1YWM2RP
  * 
- * STEP 1: Replace 'G-XXXXXXXXXX' on line 8 below with your actual
- * Google Analytics Measurement ID (format: G-XXXXXXXXXX).
+ * Compatible with Ringba pay-per-call tracking / dynamic number insertion (DNI).
+ * Loads asynchronously without blocking rendering or Core Web Vitals.
  */
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+var GA_MEASUREMENT_ID = 'G-QLS1YWM2RP';
 
 (function() {
   // Prevent duplicate execution if script is loaded multiple times
   if (window.__GA4_INITIALIZED__) return;
   window.__GA4_INITIALIZED__ = true;
 
-  // Only load gtag if measurement ID is provided and not empty
-  if (GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== '') {
+  // STEP 1 — ASYNCHRONOUSLY INITIALIZE GA4 (gtag.js)
+  if (GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
     // 1. Asynchronously load standard gtag.js library from Google Tag Manager
     var gaScript = document.createElement('script');
     gaScript.async = true;
@@ -27,12 +28,14 @@ const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
     window.gtag = window.gtag || gtag;
 
     gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID);
+    gtag('config', GA_MEASUREMENT_ID, {
+      send_page_view: true
+    });
   }
 
   // STEP 2 — TRACK PHONE NUMBER CLICKS AS A GA4 EVENT (tel: links)
   // Intercepts all clickable tel: links dynamically across header, footer,
-  // sticky call buttons, hero CTAs, and content blocks.
+  // sticky call buttons, hero CTAs, lead forms, and blog posts.
   // Compatible with Ringba dynamic number insertion: dynamically reads the current
   // href and visible text at click time without modifying Ringba or hardcoding phone numbers.
   document.addEventListener('click', function(e) {
