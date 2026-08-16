@@ -1,1390 +1,2607 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231A1A1A'/><text y='75' x='15' font-size='70' fill='%23D32F2F' font-weight='bold'>E</text></svg>">
-  <meta name="google-site-verification" content="E-WZ7SwB3KxWT7RQ9sChYhXS7ebgayErDf92W_-ENHE" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161B22'/><path d='M15 65 L50 25 L85 65 Z' fill='%23E2900F'/></svg>">
+  <meta name="google-site-verification" content="E-WZ7SwB3KxWT7RQ9sChYhXS7ebgayErDf92W_-ENHE" />
   <meta name="description" content="Houston's trusted roofing contractor. Storm damage, roof repair & replacement specialists. Licensed & insured. Free inspections. Call (281) 326-9905.">
   <title>Roofing Contractor Houston TX | Epic Roofing TX</title>
   <link rel="canonical" href="https://www.epicroofingtx.com/">
-  <meta name="theme-color" content="#D32F2F">
-  
-  <!-- Barlow + Open Sans Fonts -->
+  <meta name="theme-color" content="#161B22">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roofing Contractor Houston TX | Epic Roofing TX">
+  <meta property="og:description" content="GAF Master Elite & HAAG Certified roof replacement and storm damage repair in Houston, TX. Call (281) 326-9905 for same-day free inspections.">
+  <meta property="og:url" content="https://www.epicroofingtx.com/">
+  <meta property="og:image" content="https://www.epicroofingtx.com/images/epic-roofing-logo.svg">
+
+  <!-- Typography: Oswald (Headlines), Source Sans 3 (Body), IBM Plex Mono (Inspection Data & Numbers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  </noscript>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
-  <!-- SEO Schema Blocks -->
-  <!-- 1. LocalBusiness / RoofingContractor JSON-LD -->
-  
+  <style>
+    /* Epic Roofing Design System Variables */
+    :root {
+      --storm-charcoal: #161B22;
+      --slate-surface: #28374A;
+      --cloud-white: #F5F3EE;
+      --cloud-grey: #EBE7DE;
+      --hazard-amber: #E2900F;
+      --amber-dark: #B96F08;
+      --alert-red: #B23A2E;
+      --success-green: #3E7A4C;
+      --text-dark: #1F242D;
+      --text-muted: #5A6270;
+      --text-light: #E6EDF3;
+      --text-dim: #8B949E;
+      --border-dark: rgba(255, 255, 255, 0.1);
+      --border-light: rgba(0, 0, 0, 0.08);
+      --font-display: 'Oswald', sans-serif;
+      --font-body: 'Source Sans 3', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+    }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--cloud-white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who is the best roofing company near me in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Epic Roofing & Construction LLC is one of the top-rated roofing companies in the Greater Houston area. We are factory-certified GAF installers, locally owned, fully licensed, and insured. We serve all surrounding suburbs—including Katy, Sugar Land, Cypress, Pearland, Spring, and The Woodlands—with premium craftsmanship and honest, upfront customer service."
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .mono-badge {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* Tactile Amber Button with Solid Offset Shadow */
+    .btn-tactile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--hazard-amber);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.9rem 1.8rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 0 var(--amber-dark);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-tactile:hover {
+      background-color: #EC9A18;
+      transform: translateY(1px);
+      box-shadow: 0 3px 0 var(--amber-dark);
+    }
+
+    .btn-tactile:active {
+      transform: translateY(4px);
+      box-shadow: 0 0 0 var(--amber-dark);
+    }
+
+    /* Outline Button */
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.85rem 1.75rem;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
+
+    /* Signature Shingle-Course Divider SVG */
+    .shingle-divider {
+      width: 100%;
+      height: 24px;
+      display: block;
+      line-height: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .shingle-divider svg {
+      width: 100%;
+      height: 24px;
+      display: block;
+    }
+
+    /* Top Info Bar */
+    .top-info-bar {
+      background-color: #0E1217;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.45rem 0;
+    }
+
+    .top-info-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .top-info-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+
+    .top-info-phone {
+      color: var(--hazard-amber);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .top-info-phone:hover {
+      text-decoration: underline;
+    }
+
+    /* Sticky Header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--storm-charcoal);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      gap: 1.5rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      max-width: 200px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-light);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      transition: color 0.15s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--hazard-amber);
+    }
+
+    .header-cta-phone {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: rgba(226, 144, 15, 0.15);
+      border: 1px solid var(--hazard-amber);
+      padding: 0.45rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color 0.2s ease;
+    }
+
+    .header-cta-phone:hover {
+      background-color: var(--hazard-amber);
+      color: #FFFFFF;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 1.75rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: var(--storm-charcoal);
+      color: #FFFFFF;
+      padding: 4.5rem 0 3.5rem 0;
+      position: relative;
+      background-image: radial-gradient(circle at 80% 20%, rgba(40, 55, 74, 0.5) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-left h1 {
+      color: #FFFFFF;
+      font-size: 3rem;
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-left h1 .highlight-amber {
+      color: var(--hazard-amber);
+    }
+
+    .hero-subhead {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      margin-bottom: 2rem;
+      line-height: 1.55;
+      max-width: 620px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.75rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 1.75rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .trust-icon {
+      width: 34px;
+      height: 34px;
+      background-color: rgba(226, 144, 15, 0.15);
+      border: 1px solid var(--hazard-amber);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--hazard-amber);
+      font-size: 1.1rem;
+    }
+
+    .trust-label {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    /* Lead Form Card */
+    .lead-form-card {
+      background-color: #FFFFFF;
+      color: var(--text-dark);
+      padding: 2.25rem;
+      border-radius: 6px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      border-top: 5px solid var(--hazard-amber);
+      position: relative;
+    }
+
+    .storm-tag {
+      position: absolute;
+      top: -14px;
+      right: 20px;
+      background-color: var(--alert-red);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 6px rgba(178, 58, 46, 0.4);
+    }
+
+    .lead-form-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.35rem;
+    }
+
+    .lead-form-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.8rem 0.95rem;
+      border: 1px solid #CBD5E1;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-dark);
+      background-color: #F8FAFC;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--hazard-amber);
+      background-color: #FFFFFF;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .form-privacy-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* Alert Banner */
+    .alert-banner-section {
+      background-color: #1F2733;
+      border-top: 2px solid var(--alert-red);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.1rem 0;
+    }
+
+    .alert-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .alert-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      color: #FFFFFF;
+    }
+
+    .alert-pulse-badge {
+      background-color: var(--alert-red);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .alert-text {
+      font-size: 1rem;
+      color: #E2E8F0;
+    }
+
+    .alert-link {
+      color: var(--hazard-amber);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: underline;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .alert-link:hover {
+      color: #FFFFFF;
+    }
+
+    /* Section General */
+    .section-light {
+      background-color: var(--cloud-white);
+      padding: 4.5rem 0;
+    }
+
+    .section-grey {
+      background-color: var(--cloud-grey);
+      padding: 4.5rem 0;
+    }
+
+    .section-dark {
+      background-color: var(--storm-charcoal);
+      color: #FFFFFF;
+      padding: 4.5rem 0;
+    }
+
+    .section-slate {
+      background-color: var(--slate-surface);
+      color: #FFFFFF;
+      padding: 4.5rem 0;
+    }
+
+    /* Why Houston Homeowners Choose Us */
+    .qa-box-climate {
+      background-color: #FFFFFF;
+      border-left: 5px solid var(--hazard-amber);
+      padding: 1.75rem 2rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .qa-box-climate h3 {
+      color: var(--storm-charcoal);
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .qa-box-climate p {
+      color: #374151;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .why-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .why-card {
+      background-color: #FFFFFF;
+      padding: 1.75rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 3px solid var(--slate-surface);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .why-card-icon {
+      width: 44px;
+      height: 44px;
+      background-color: rgba(40, 55, 74, 0.08);
+      color: var(--slate-surface);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .why-card h4 {
+      font-size: 1.2rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .why-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Hidden Damage Section */
+    .hidden-damage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .damage-card {
+      background-color: var(--slate-surface);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 1.85rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .damage-card-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--hazard-amber);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .damage-card h3 {
+      color: #FFFFFF;
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .damage-card p {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .forensic-tip-box {
+      background-color: rgba(226, 144, 15, 0.1);
+      border: 1px solid var(--hazard-amber);
+      border-left: 6px solid var(--hazard-amber);
+      padding: 1.5rem 1.75rem;
+      border-radius: 4px;
+    }
+
+    .forensic-tip-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--hazard-amber);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .forensic-tip-text {
+      color: #F1F5F9;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    /* Standalone Q&A Cards (Amber Left Border) */
+    .qa-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .standalone-qa-card {
+      background-color: #FFFFFF;
+      border-left: 6px solid var(--hazard-amber);
+      padding: 2rem 2.25rem;
+      border-radius: 0 6px 6px 0;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .standalone-qa-card h2 {
+      font-size: 1.45rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.85rem;
+      text-align: left;
+    }
+
+    .standalone-qa-card p {
+      font-size: 1.05rem;
+      color: #334155;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Comparison Table */
+    .comparison-wrapper {
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1.15rem 1.25rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .comparison-table th {
+      background-color: var(--storm-charcoal);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .comparison-table tr.epic-row {
+      background-color: rgba(226, 144, 15, 0.08);
+      font-weight: 600;
+    }
+
+    .comparison-table tr.epic-row td {
+      border-bottom: 2px solid var(--hazard-amber);
+      color: var(--storm-charcoal);
+    }
+
+    .check-yes {
+      color: var(--success-green);
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    .check-no {
+      color: var(--alert-red);
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    /* 6-Step Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .process-card {
+      background-color: #FFFFFF;
+      padding: 1.85rem;
+      border-radius: 6px;
+      border-top: 4px solid var(--slate-surface);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .process-number {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--hazard-amber);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .process-card h3 {
+      font-size: 1.25rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .process-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Case Studies Cards */
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .case-card {
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 1.85rem;
+    }
+
+    .case-top {
+      margin-bottom: 1.25rem;
+    }
+
+    .case-location-badge {
+      display: inline-block;
+      background-color: rgba(40, 55, 74, 0.08);
+      color: var(--slate-surface);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-card h3 {
+      font-size: 1.35rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 1rem;
+    }
+
+    .case-block {
+      margin-bottom: 0.9rem;
+    }
+
+    .case-block-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--slate-surface);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .case-block-text {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .case-bottom-meta {
+      border-top: 1px dashed #CBD5E1;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .case-meta-timeline {
+      color: #64748B;
+    }
+
+    .case-meta-outcome {
+      color: var(--success-green);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    /* Testimonials Grid */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .review-card {
+      background-color: #FFFFFF;
+      padding: 1.75rem;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .review-stars {
+      color: #F59E0B;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #1A73E8;
+      background-color: rgba(26, 115, 232, 0.08);
+      padding: 2px 7px;
+      border-radius: 12px;
+      border: 1px solid rgba(26, 115, 232, 0.2);
+    }
+
+    .review-quote {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--storm-charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    /* Standalone Cost Q&A */
+    .cost-qa-box {
+      background-color: #FFFFFF;
+      border-left: 6px solid var(--hazard-amber);
+      padding: 2.25rem;
+      border-radius: 0 6px 6px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .cost-qa-box h2 {
+      font-size: 1.6rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .cost-pill-card {
+      background-color: var(--cloud-grey);
+      padding: 1.25rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--slate-surface);
+    }
+
+    .cost-pill-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.25rem;
+    }
+
+    .cost-pill-val {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--hazard-amber);
+      margin-bottom: 0.35rem;
+    }
+
+    .cost-pill-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Service Area Grid */
+    .service-area-pills {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .area-pill {
+      background-color: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      padding: 1rem 1.15rem;
+      border-radius: 4px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--storm-charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      transition: all 0.15s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .area-pill:hover {
+      border-color: var(--hazard-amber);
+      background-color: #FFFDF8;
+      color: var(--hazard-amber);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .area-arrow {
+      color: var(--hazard-amber);
+      font-weight: 700;
+    }
+
+    /* Roof-Risk Calendar */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.25rem;
+    }
+
+    .calendar-card {
+      background-color: var(--slate-surface);
+      border-radius: 6px;
+      padding: 1.75rem;
+      border-top: 4px solid var(--hazard-amber);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top-width: 4px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .calendar-card.highlight-best {
+      border-top-color: var(--success-green);
+    }
+
+    .calendar-months {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--hazard-amber);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .calendar-card.highlight-best .calendar-months {
+      color: #4ADE80;
+    }
+
+    .calendar-card h3 {
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      margin-bottom: 0.65rem;
+    }
+
+    .calendar-card p {
+      color: #CBD5E1;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    /* FAQ List */
+    .faq-list {
+      max-width: 880px;
+      margin: 2rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .faq-item {
+      background-color: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-left: 5px solid var(--hazard-amber);
+      border-radius: 0 6px 6px 0;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-item h3 {
+      font-size: 1.25rem;
+      color: var(--storm-charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-item p {
+      color: #334155;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Final CTA Band */
+    .final-cta-section {
+      background: linear-gradient(135deg, #161B22 0%, #28374A 100%);
+      color: #FFFFFF;
+      padding: 5rem 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .final-cta-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .final-cta-inner h2 {
+      font-size: 2.75rem;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .final-cta-inner p {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      margin-bottom: 2.25rem;
+      line-height: 1.55;
+    }
+
+    .final-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #0E1217;
+      color: #8B949E;
+      font-size: 0.92rem;
+      padding: 4.5rem 0 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1.2fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-col a {
+      color: #8B949E;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--hazard-amber);
+    }
+
+    .footer-nap {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #8B949E;
+    }
+
+    .footer-nap a {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .footer-legal-links a {
+      color: #8B949E;
+      text-decoration: none;
+    }
+
+    .footer-legal-links a:hover {
+      color: #FFFFFF;
+    }
+
+    /* Mobile Sticky Bottom Call Bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--hazard-amber);
+      color: #FFFFFF;
+      z-index: 9999;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .mobile-sticky-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    /* Mobile Nav Overlay */
+    .mobile-nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--storm-charcoal);
+      z-index: 10000;
+      padding: 2rem 1.5rem;
+      overflow-y: auto;
+    }
+
+    .mobile-nav-overlay.active {
+      display: block;
+    }
+
+    .mobile-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .mobile-nav-close {
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mobile-nav-list a {
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer free roof inspections near me in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we offer 100% free, no-obligation roof inspections for homeowners and commercial property owners across the Houston metro area. A HAAG-certified inspector will climb onto your roof, thoroughly document its condition with photos, check your attic for signs of leaks, and provide a clear, honest assessment of any repairs or maintenance needed."
+      .why-cards-grid,
+      .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the best time of year to replace a roof in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fall (October–November) and early spring are ideal for roof replacement in Houston, avoiding peak hurricane season (June–November) and extreme summer heat, which can affect shingle installation and adhesive curing."
+      .service-area-pills {
+        grid-template-columns: repeat(3, 1fr);
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a roof last in Houston's climate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Asphalt shingle roofs in Houston typically last 15–20 years due to intense UV exposure and humidity, shorter than the national average of 20–25 years. Metal roofs last 40–50 years and better resist Houston's hail and wind events."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does homeowners insurance cover roof replacement in Texas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Texas homeowners insurance typically covers roof replacement if damage is caused by a covered peril like hail or wind — common in Houston. It does not cover damage from normal wear, age, or lack of maintenance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know if I need roof repair or full replacement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If your roof is under 15 years old and only has a small, localized leak or a few damaged shingles, a simple repair is usually all you need. However, if your roof is over 15 to 20 years old, has extensive storm damage across more than 30% of its surface, or has active leaks in multiple areas, a full replacement is generally the more cost-effective, long-term solution. Our free inspection will give you a clear recommendation with zero high-pressure sales tactics."
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
-  ]
-}
-</script>
 
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 50px;
+      }
+      .top-info-bar {
+        display: none;
+      }
+      .nav-links,
+      .header-cta-phone {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .hero-left h1 {
+        font-size: 2.25rem;
+      }
+      .hidden-damage-grid,
+      .process-grid,
+      .case-studies-grid,
+      .reviews-grid,
+      .cost-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-cards-grid,
+      .calendar-grid {
+        grid-template-columns: 1fr;
+      }
+      .service-area-pills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+      .mobile-sticky-bar {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-area-pills {
+        grid-template-columns: 1fr;
+      }
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+      .hero-cta-row {
+        flex-direction: column;
+      }
+      .btn-tactile,
+      .btn-outline {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data: FAQPage -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "LocalBusiness",
-    "RoofingContractor"
-  ],
-  "name": "Epic Roofing & Construction LLC",
-  "alternateName": "Epic Roofing TX",
-  "url": "https://www.epicroofingtx.com",
-  "logo": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
-  "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
-  "description": "Licensed roofing contractor in Houston TX. Storm damage, roof repair, replacement & insurance claim specialists. Serving Greater Houston area.",
-  "telephone": "(281) 326-9905",
-  "email": "info@epicroofingtx.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "9402 Spaulding St",
-    "addressLocality": "Houston",
-    "addressRegion": "TX",
-    "postalCode": "77016",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 29.847152,
-    "longitude": -95.305579
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "07:00",
-      "closes": "19:00"
-    }
-  ],
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Houston"
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if my roof has hail damage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hail damage on asphalt shingles appears as dark, bruised circular indentations where protective mineral granules were knocked away, exposing the fragile fiberglass mat beneath. On metal vents, flashing, and gutters, hail leaves distinct dings and dents. Because granule loss and micro-fractures are difficult to spot from the ground, a physical roof-level inspection within 12 months of a storm is essential to document evidence before carrier filing deadlines pass."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my insurance cover roof damage in Texas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard Texas homeowners insurance policies cover sudden, accidental storm damage caused by hail, hurricane-force wind, and falling tree limbs. Policies do not cover normal wear and tear, cosmetic aging, or pre-existing leaks caused by neglected maintenance. If damage covers a significant portion of your roof slope, your insurer is generally required to pay for the complete replacement of that slope or the entire roof structure minus your deductible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between ACV and RCV on my roof policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An Actual Cash Value (ACV) policy only pays what your roof is worth at the time of the storm, deducting years of depreciation from your payout and leaving you to cover the gap out of pocket. A Replacement Cost Value (RCV) policy pays the full current cost to replace your roof with new materials of like kind and quality once the contractor completes the work, holding back recoverable depreciation until final invoice submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a roof replacement cost in Houston in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2026, replacing a standard 2,000-square-foot architectural asphalt shingle roof in Houston typically costs between $9,500 and $16,000, depending on roof pitch, decking condition, and ventilation upgrades. Impact-resistant Class 4 shingles run between $13,500 and $19,500 but qualify for Texas homeowner insurance premium discounts up to 25% to 35%. Standing seam metal roofs range from $18,000 to $28,000+ for long-term hurricane defense."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is the best roofer near me in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Epic Roofing & Construction LLC is a top-rated Houston roofing contractor with GAF Master Elite certification and HAAG forensic certified inspection credentials. Headquartered at 9402 Spaulding St in Houston, we provide 10-year workmanship warranties, 2-hour emergency storm dispatch, and full insurance claims assistance across Houston, Katy, Sugar Land, Cypress, The Woodlands, Pearland, League City, Spring, Pasadena, and Tomball."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if I need roof repair or full replacement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your roof is under 12 to 15 years old and the damage is confined to a single localized area (such as a loose pipe boot or isolated flashing issue), a targeted repair is appropriate. If the roof is over 15 years old, shows widespread granule depletion, has brittle shingles that crack when lifted, or suffered hail impacts across more than 25% to 30% of its surface, a complete replacement provides long-term protection and meets Texas windstorm building codes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a roof replacement take in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most standard residential roof replacements in the Greater Houston area are completed in 1 to 2 days. Our crew removes the old shingles down to the plywood decking, replaces any rotted decking boards, installs synthetic underlayment and ice/water barrier in valleys, nails down the new shingle system, and completes magnetic sweeps of your yard to collect every stray nail."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a permit to replace my roof in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The City of Houston and surrounding municipal jurisdictions require a building permit for complete residential re-roofing projects. Epic Roofing & Construction LLC manages the entire permitting filing, fee coordination, and final code inspection schedule on your behalf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best time of year to replace a roof in Houston?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "October through January offers the most stable installation window in Southeast Texas, featuring milder temperatures and lower storm frequency. Shingle thermal adhesive strips seal properly in mild weather without suffering from the blistering 100°F+ attic heat of midsummer or the volatile convective thunderstorms of spring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a roof last in Houston's climate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Due to extreme UV radiation, 90%+ summer humidity, severe thermal expansion cycling, and periodic tropical storms, asphalt shingle roofs in Houston average a 15 to 20 year lifespan compared to the 20 to 25 year national average. Standing seam metal roofs routinely last 40 to 50+ years in the Houston coastal climate."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data: LocalBusiness & RoofingContractor -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "RoofingContractor"],
+    "name": "Epic Roofing & Construction LLC",
+    "alternateName": "Epic Roofing TX",
+    "url": "https://www.epicroofingtx.com",
+    "logo": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
+    "description": "GAF Master Elite & HAAG Certified roofing contractor in Houston TX. Storm damage restoration, roof replacement, emergency tarping, and insurance claim support.",
+    "telephone": "(281) 326-9905",
+    "email": "info@epicroofingtx.com",
+    "priceRange": "$$",
+    "paymentAccepted": "Cash, Credit Card, Check, Insurance Payout, Financing",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9402 Spaulding St",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77016",
+      "addressCountry": "US"
     },
-    {
-      "@type": "City",
-      "name": "Katy"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.847152,
+      "longitude": -95.305579
     },
-    {
-      "@type": "City",
-      "name": "Sugar Land"
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Houston" },
+      { "@type": "City", "name": "Katy" },
+      { "@type": "City", "name": "Sugar Land" },
+      { "@type": "City", "name": "Cypress" },
+      { "@type": "City", "name": "The Woodlands" },
+      { "@type": "City", "name": "Pearland" },
+      { "@type": "City", "name": "League City" },
+      { "@type": "City", "name": "Spring" },
+      { "@type": "City", "name": "Pasadena" },
+      { "@type": "City", "name": "Tomball" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "7",
+      "bestRating": "5"
     },
-    {
-      "@type": "City",
-      "name": "Cypress"
-    },
-    {
-      "@type": "City",
-      "name": "The Woodlands"
-    },
-    {
-      "@type": "City",
-      "name": "Pearland"
-    },
-    {
-      "@type": "City",
-      "name": "League City"
-    },
-    {
-      "@type": "City",
-      "name": "Spring"
-    },
-    {
-      "@type": "City",
-      "name": "Pasadena"
-    },
-    {
-      "@type": "City",
-      "name": "Tomball"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "7",
-    "bestRating": "5"
-  },
-  "priceRange": "$",
-  "paymentAccepted": "Cash, Credit Card, Insurance",
-  "hasMap": "https://maps.google.com/?q=Epic+Roofing+%26+Construction+LLC+Houston+TX",
-  "sameAs": [
-    "https://www.google.com/maps/place/Epic+Roofing+%26+Construction+LLC"
-  ]
-}
-</script>
+    "hasMap": "https://maps.google.com/?q=Epic+Roofing+%26+Construction+LLC+Houston+TX"
+  }
+  </script>
 </head>
 <body>
 
-      <!-- EMERGENCY TOP BANNER -->
-  <div class="emergency-strip" id="emergency-banner">
-    🚨 Houston Storm Season: Free Same-Day Roof Inspection | Call Now <a href="tel:+12813269905">📞 (281) 326-9905</a>
+  <!-- 1. TOP INFO BAR -->
+  <div class="top-info-bar" id="top-bar">
+    <div class="container top-info-content">
+      <div class="top-info-left">
+        <span>Mon–Sat 7AM–7PM | Emergency Dispatch 24/7</span>
+        <span>9402 Spaulding St, Houston, TX 77016</span>
+      </div>
+      <div>
+        <a href="tel:+12813269905" class="top-info-phone" aria-label="Call Epic Roofing directly at 281-326-9905">
+          <span>CALL 24/7:</span> (281) 326-9905
+        </a>
+      </div>
+    </div>
   </div>
 
-  <!-- STICKY NAVY HEADER -->
-  <header id="site-header">
-    <div class="header-container">
-      <a href="/" class="logo" id="site-logo">
-        <img src="/images/epic-roofing-logo.svg" 
-        alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
-        style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
+  <!-- 2. STICKY HEADER -->
+  <header class="sticky-header" id="main-header">
+    <div class="container header-inner">
+      <a href="/" class="logo-link" id="header-logo" aria-label="Epic Roofing TX Homepage">
+        <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing & Construction LLC Logo" class="logo-img" width="200" height="48">
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="desktop-nav" id="desktop-navbar">
-        <!-- 1. Services (dropdown) -->
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Services</span>
-          <div class="dropdown-menu dropdown-menu-wide">
-            <div>
-              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Replacement</a>
-              <a class="dropdown-item" href="/metal-roofing-houston">Metal Roofing</a>
-              <a class="dropdown-item" href="/roof-coating-houston">Commercial Coating</a>
-              <a class="dropdown-item" href="/free-roof-inspection-houston">Free Inspection</a>
-              <a class="dropdown-item" href="/tile-roofing-houston">Tile &amp; Slate Roofing</a>
-            </div>
-            <div>
-              <a class="dropdown-item" href="/gutter-installation-houston">Seamless Gutters</a>
-              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Flashing &amp; Chimney</a>
-              <a class="dropdown-item" href="/roof-repair-houston">Roof Repairs &amp; Sealing</a>
-              <a class="dropdown-item" href="/affordable-roofing-houston">Affordable Roofing</a>
-              <a class="dropdown-item" href="/roof-leak-detection-houston">Leak Detection</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Storm Damage (dropdown) -->
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Storm Damage</span>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Restoration</a>
-            <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Damage Restoration</a>
-            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
-            <a class="dropdown-item" href="/storm-damage-roofing-houston">General Storm Damage</a>
-            <a class="dropdown-item" href="/insurance-claim-roofing-houston">Insurance Claim Help</a>
-          </div>
-        </div>
-
-        <!-- 3. Service Areas (dropdown) -->
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Service Areas</span>
-          <div class="dropdown-menu dropdown-menu-wide dropdown-menu-scrollable">
-            <div>
-              <a class="dropdown-item" href="/">Houston Core</a>
-              <a class="dropdown-item" href="/katy-roofing-contractor">Katy</a>
-              <a class="dropdown-item" href="/the-woodlands-roofing-contractor">The Woodlands</a>
-              <a class="dropdown-item" href="/sugar-land-roofing-contractor">Sugar Land</a>
-              <a class="dropdown-item" href="/cypress-roofing-contractor">Cypress</a>
-              <a class="dropdown-item" href="/pearland-roofing-contractor">Pearland</a>
-              <a class="dropdown-item" href="/league-city-roofing-contractor">League City</a>
-              <a class="dropdown-item" href="/spring-tx-roofing-contractor">Spring</a>
-            </div>
-            <div>
-              <a class="dropdown-item" href="/pasadena-tx-roofing-contractor">Pasadena</a>
-              <a class="dropdown-item" href="/tomball-tx-roofing-contractor">Tomball</a>
-              <a class="dropdown-item" href="/baytown-tx-roofing-contractor">Baytown</a>
-              <a class="dropdown-item" href="/conroe-tx-roofing-contractor">Conroe</a>
-              <a class="dropdown-item" href="/galveston-tx-roofing-contractor">Galveston</a>
-              <a class="dropdown-item" href="/humble-tx-roofing-contractor">Humble / Kingwood</a>
-              <a class="dropdown-item" href="/richmond-tx-roofing-contractor">Richmond</a>
-              <a class="dropdown-item" href="/missouri-city-roofing-contractor">Missouri City</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Resources (dropdown) -->
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Resources</span>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
-            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
-            <a class="dropdown-item" href="/financing">Financing</a>
-            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
-          </div>
-        </div>
-
-        <!-- 5. Contact Direct Link -->
-        <a href="/contact" class="nav-link">Contact</a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#storm-damage" class="nav-link">Storm Damage</a></li>
+          <li><a href="#why-epic" class="nav-link">Why Epic</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="#service-areas" class="nav-link">Service Areas</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
       </nav>
 
-      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
-        📞 (281) 326-9905
-      </a>
-
-      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
-    </div>
-
-    <!-- Slim Secondary Utility Line -->
-    <div class="nav-utility-strip">
-      <div class="container nav-utility-flex">
-        <div class="nav-utility-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <span class="nav-utility-divider">|</span>
-          <a href="/terms-and-conditions">Terms &amp; Conditions</a>
-        </div>
+      <div>
+        <a href="tel:+12813269905" class="header-cta-phone" id="header-call-btn">
+          (281) 326-9905
+        </a>
       </div>
+
+      <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
     </div>
   </header>
+
+  <!-- MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-overlay">
+    <div class="mobile-nav-header">
+      <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" width="180" height="42">
+      <button class="mobile-nav-close" id="mobile-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#storm-damage" class="mobile-link">Storm Damage</a></li>
+      <li><a href="#why-epic" class="mobile-link">Why Epic</a></li>
+      <li><a href="#case-studies" class="mobile-link">Case Studies</a></li>
+      <li><a href="#service-areas" class="mobile-link">Service Areas</a></li>
+      <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      <li><a href="/financing" class="mobile-link">Financing Options</a></li>
+      <li><a href="/calculator" class="mobile-link">Cost Calculator</a></li>
+      <li style="margin-top: 1.5rem;">
+        <a href="tel:+12813269905" class="btn-tactile" style="width: 100%;">Call (281) 326-9905</a>
+      </li>
+    </ul>
+  </div>
+
   <main id="main-content">
-
-      <!-- Mobile Slideout Menu -->
-  <div class="mobile-menu-overlay" id="menu-overlay"></div>
-  <div class="mobile-menu" id="mobile-menu">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
-      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
-      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
-    </div>
-
-    <a href="/" class="mobile-nav-link">Home</a>
-
-    <!-- Accordion 1: Services -->
-    <div class="mobile-accordion">
-      <button class="mobile-accordion-btn" type="button">
-        <span>Services</span>
-        <span class="accordion-icon">▼</span>
-      </button>
-      <div class="mobile-accordion-content">
-        <a href="/roof-replacement-houston" class="mobile-accordion-link">Shingle Replacement</a>
-        <a href="/metal-roofing-houston" class="mobile-accordion-link">Metal Roofing</a>
-        <a href="/roof-coating-houston" class="mobile-accordion-link">Commercial Coating</a>
-        <a href="/free-roof-inspection-houston" class="mobile-accordion-link">Free Inspection</a>
-        <a href="/gutter-installation-houston" class="mobile-accordion-link">Seamless Gutters</a>
-        <a href="/chimney-flashing-repair-houston" class="mobile-accordion-link">Flashing &amp; Chimney</a>
-        <a href="/roof-repair-houston" class="mobile-accordion-link">Roof Repairs &amp; Sealing</a>
-        <a href="/tile-roofing-houston" class="mobile-accordion-link">Tile Roofing</a>
-        <a href="/affordable-roofing-houston" class="mobile-accordion-link">Affordable Roofing</a>
-        <a href="/roof-leak-detection-houston" class="mobile-accordion-link">Leak Detection</a>
-      </div>
-    </div>
-
-    <!-- Accordion 2: Storm Damage -->
-    <div class="mobile-accordion">
-      <button class="mobile-accordion-btn" type="button">
-        <span>Storm Damage</span>
-        <span class="accordion-icon">▼</span>
-      </button>
-      <div class="mobile-accordion-content">
-        <a href="/hail-damage-roof-repair-houston" class="mobile-accordion-link">Hail Damage Restoration</a>
-        <a href="/wind-damage-roof-repair-houston" class="mobile-accordion-link">Wind Damage Restoration</a>
-        <a href="/emergency-roof-tarping-houston" class="mobile-accordion-link">Emergency Tarping</a>
-        <a href="/storm-damage-roofing-houston" class="mobile-accordion-link">General Storm Damage</a>
-        <a href="/insurance-claim-roofing-houston" class="mobile-accordion-link">Insurance Claim Help</a>
-      </div>
-    </div>
-
-    <!-- Accordion 3: Service Areas -->
-    <div class="mobile-accordion">
-      <button class="mobile-accordion-btn" type="button">
-        <span>Service Areas</span>
-        <span class="accordion-icon">▼</span>
-      </button>
-      <div class="mobile-accordion-content">
-        <a href="/" class="mobile-accordion-link">Houston Core</a>
-        <a href="/katy-roofing-contractor" class="mobile-accordion-link">Katy</a>
-        <a href="/the-woodlands-roofing-contractor" class="mobile-accordion-link">The Woodlands</a>
-        <a href="/sugar-land-roofing-contractor" class="mobile-accordion-link">Sugar Land</a>
-        <a href="/cypress-roofing-contractor" class="mobile-accordion-link">Cypress</a>
-        <a href="/pearland-roofing-contractor" class="mobile-accordion-link">Pearland</a>
-        <a href="/league-city-roofing-contractor" class="mobile-accordion-link">League City</a>
-        <a href="/spring-tx-roofing-contractor" class="mobile-accordion-link">Spring</a>
-        <a href="/pasadena-tx-roofing-contractor" class="mobile-accordion-link">Pasadena</a>
-        <a href="/tomball-tx-roofing-contractor" class="mobile-accordion-link">Tomball</a>
-        <a href="/baytown-tx-roofing-contractor" class="mobile-accordion-link">Baytown</a>
-        <a href="/conroe-tx-roofing-contractor" class="mobile-accordion-link">Conroe</a>
-        <a href="/galveston-tx-roofing-contractor" class="mobile-accordion-link">Galveston</a>
-        <a href="/humble-tx-roofing-contractor" class="mobile-accordion-link">Humble</a>
-        <a href="/richmond-tx-roofing-contractor" class="mobile-accordion-link">Richmond</a>
-        <a href="/missouri-city-roofing-contractor" class="mobile-accordion-link">Missouri City</a>
-      </div>
-    </div>
-
-    <!-- Accordion 4: Resources -->
-    <div class="mobile-accordion">
-      <button class="mobile-accordion-btn" type="button">
-        <span>Resources</span>
-        <span class="accordion-icon">▼</span>
-      </button>
-      <div class="mobile-accordion-content">
-        <a href="/blog" class="mobile-accordion-link">Blog &amp; Guides</a>
-        <a href="/calculator" class="mobile-accordion-link">Cost Calculator</a>
-        <a href="/financing" class="mobile-accordion-link">Financing</a>
-        <a href="/#case-studies" class="mobile-accordion-link">Case Studies</a>
-      </div>
-    </div>
-
-    <a href="/contact" class="mobile-nav-link">Contact</a>
-
-    <div style="display:flex; gap:0.75rem; justify-content:center; padding-top:0.5rem; font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.06);">
-      <a href="/privacy-policy" style="color:#94A3B8;">Privacy Policy</a>
-      <span style="color:#334155;">|</span>
-      <a href="/terms-and-conditions" style="color:#94A3B8;">Terms &amp; Conditions</a>
-    </div>
-
-    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:0.75rem; width:100%;">📞 Call (281) 326-9905</a>
-  </div>
-
-  <!-- BREADCRUMBS STRIP -->
-  <div class="container" style="padding-top: 1rem; padding-bottom: 0.25rem;">
-    <div class="breadcrumbs" id="top-breadcrumbs">
-      <a href="/">Home</a> <span>/</span> <a href="/sitemap">Cities</a> <span>/</span> <span style="color: var(--orange); font-weight:700;">Houston Metro Area Roofing</span>
-    </div>
-  </div>
-
-  <!-- SECTION 3: HERO SECTION WITH METRIC ACCENTS -->
-  <section class="hero-section" id="hero-main" style="position: relative; min-height: 500px; display: flex; align-items: center; padding: 4rem 0; overflow: hidden; background: #0f172a;">
-    <picture style="position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; display: block;">
-      <source srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
-      <img width="1200" height="600" loading="eager" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=60&fm=jpg" alt="Houston Roofing Contractor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top;" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1e3a5f/ffffff?text=Houston+Roofing+Contractor';">
-    </picture>
-    <div style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.75); z-index: 2; pointer-events: none;"></div>
-    <div class="container" style="position: relative; z-index: 3; width: 100%;">
-      <div class="grid grid-2" style="align-items: center; gap: 2.5rem;">
-        
-        <!-- Left Column -->
-        <div>
-          <div style="display: inline-block; background-color: rgba(211, 47, 47, 0.15); border: 1px solid var(--orange); padding: 0.4rem 1.25rem; border-radius: 99px; font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--orange); margin-bottom: 1.25rem;">
-            🛡️ Houston & Katy GAF Certified Master Elite Standard Roofers
-          </div>
-          <h1 class="hero-title" style="margin-bottom: 1.25rem; font-weight: 900; font-family: var(--f-display); line-height: 1.1; font-size: 2.75rem;">
-            Houston Roofing Contractor — <br class="hidden md:inline"><span style="color: var(--orange);">Storm Damage, Hail & Roof Replacement Specialists</span>
-          </h1>
-          <p class="hero-subtitle" style="font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6; color: #94A3B8;">
-            Hail damage? Storm leak? Missing shingles? Epic Roofing TX serves Houston homeowners with honest inspections, insurance claim support, and quality roof repairs and replacements. Licensed, insured, and locally based. We answer the phone.
-          </p>
+    <!-- 3. HERO SECTION (Dark Storm-Charcoal) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
           
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
-            <a href="/free-roof-inspection-houston" class="btn btn-primary">📞 Free Storm Assessment</a>
-            <a href="#services-block" class="btn btn-secondary">Our 6 Core Services</a>
+          <!-- Hero Left Column -->
+          <div class="hero-left">
+            <h1>
+              Hail or wind damage to your roof? <span class="highlight-amber">Get a free inspection the same day you call.</span>
+            </h1>
+            <p class="hero-subhead">
+              We are GAF Master Elite and HAAG Certified roofing inspectors based in Houston. We document damage with date-stamped high-resolution photos, meet your insurance adjuster on the roof, and manage your claim from inspection through final build.
+            </p>
+            <div class="hero-cta-row">
+              <a href="tel:+12813269905" class="btn-tactile" id="hero-primary-call">
+                Call (281) 326-9905
+              </a>
+              <a href="#inspection-form" class="btn-outline" id="hero-secondary-inspect">
+                Request Free Inspection
+              </a>
+            </div>
+
+            <!-- Trust Row -->
+            <div class="trust-row">
+              <div class="trust-item">
+                <div class="trust-icon">&#10003;</div>
+                <span class="trust-label">GAF Certified Installer</span>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">&#10003;</div>
+                <span class="trust-label">HAAG Certified Inspectors</span>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">&#10003;</div>
+                <span class="trust-label">10-Year Workmanship Warranty</span>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">&#10003;</div>
+                <span class="trust-label">2-Hour Emergency Response</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Hero Right Column: Lead Form Card -->
+          <div class="hero-right" id="inspection-form">
+            <div class="lead-form-card">
+              <div class="storm-tag">Storm Response Active</div>
+              <h2 class="lead-form-title">Free Same-Day Inspection</h2>
+              <p class="lead-form-desc">Complete the details below to schedule an on-site physical roof assessment with an inspector.</p>
+              
+              <form action="/contact" method="GET" onsubmit="window.location.href='/contact?name='+encodeURIComponent(this.name.value)+'&phone='+encodeURIComponent(this.phone.value)+'&zip='+encodeURIComponent(this.zip.value); return false;">
+                <div class="form-group">
+                  <label for="lead-name" class="form-label">Full Name</label>
+                  <input type="text" id="lead-name" name="name" class="form-input" placeholder="e.g. Michael Scott" required>
+                </div>
+                <div class="form-group">
+                  <label for="lead-phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="lead-phone" name="phone" class="form-input" placeholder="(281) 555-0199" required>
+                </div>
+                <div class="form-group">
+                  <label for="lead-zip" class="form-label">Houston Area ZIP Code</label>
+                  <input type="text" id="lead-zip" name="zip" class="form-input" placeholder="77016" pattern="[0-9]{5}" required>
+                </div>
+                <button type="submit" class="btn-tactile form-submit-btn" id="lead-submit-btn">
+                  Schedule My Free Inspection
+                </button>
+                <p class="form-privacy-note">
+                  No obligation. We dispatch local crews Mon–Sat 7AM–7PM with 24/7 emergency leak coverage.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Dark to Alert/Light) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#161B22">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 4. ALERT BANNER -->
+    <section class="alert-banner-section" id="alert-strip">
+      <div class="container alert-banner-inner">
+        <div class="alert-left">
+          <span class="alert-pulse-badge">Houston Alert</span>
+          <span class="alert-text">
+            <strong>2026 Storm Tracking:</strong> Harris County averages 4 to 7 severe hail and straight-line wind events each season. Unrepaired shingle bruising voids manufacturer warranties.
+          </span>
+        </div>
+        <div>
+          <a href="/storm-damage-roofing-houston" class="alert-link" id="alert-action-link">
+            Check Your Storm Risk &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY HOUSTON HOMEOWNERS CHOOSE US -->
+    <section class="section-light" id="why-epic">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Built For Texas Weather</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Why Houston Homeowners Choose Us</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Houston roofs take more abuse than almost anywhere else in North America. Here is why local construction standards matter.
+          </p>
         </div>
 
-        <!-- Right Column -->
-        <div class="hero-form" style="width: 100%; max-width: 480px; margin-left: auto; margin-right: auto; display: flex; justify-content: center;">
-          <div style="background:rgba(255,255,255,0.95); padding:24px; border-radius:8px; max-width:320px; width:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            <h2 style="color:#1E1E1E; font-size:18px; font-weight:800; margin-bottom:6px; text-transform:none !important; margin-top:0;">
-              Free Inspection — 2 Hour Response
-            </h2>
-            <p style="color:#666; font-size:13px; margin-bottom:16px;">
-              No obligation. Licensed Houston roofers.
+        <!-- Standalone Climate Q&A Block -->
+        <div class="qa-box-climate">
+          <h3>Why do Houston roofs fail faster than the national average?</h3>
+          <p>
+            The national average lifespan for an architectural asphalt shingle roof is 20 to 25 years. In the Greater Houston area, that same roof lasts only 15 to 20 years. The cause is Houston's extreme climate stack: six straight months of 95°F+ heat, intense UV radiation breaking down petroleum binders, 90% humidity causing deck rot, severe daily thermal expansion cycling, and recurring severe weather from Gulf hurricanes and spring hailstorms. Without proper attic baffle ventilation and storm-grade synthetic underlayment, shingles blister and lose granular protection years ahead of schedule.
+          </p>
+        </div>
+
+        <!-- 4-Card Grid -->
+        <div class="why-cards-grid" id="services">
+          
+          <div class="why-card">
+            <div class="why-card-icon">&#9650;</div>
+            <h4>GAF Certified Roofing</h4>
+            <p>
+              Factory-trained installation crews using genuine GAF Timberline HDZ shingles with LayerLock technology and WindProven infinite-wind-speed warranty coverage.
             </p>
-            <input type="text" placeholder="Your Name" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:4px; font-size:14px; box-sizing:border-box; color: #111827; background:#fff;">
-            <input type="tel" placeholder="Phone Number" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:4px; font-size:14px; box-sizing:border-box; color: #111827; background:#fff;">
-            <input type="text" placeholder="ZIP Code" style="width:100%; padding:12px; margin-bottom:14px; border:1px solid #ddd; border-radius:4px; font-size:14px; box-sizing:border-box; color: #111827; background:#fff;">
-            <a href="/free-roof-inspection-houston" style="display:block; background: var(--orange); color: var(--white); padding:14px; text-align:center; font-size:15px; font-weight:800; border-radius:4px; text-decoration:none; transition: background 0.2s;">
-              📞 Get Free Inspection Now
+            <a href="/roof-replacement-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+              Replacement Options &rarr;
             </a>
-            <p style="color: #475569; font-size:11px; text-align:center; margin-top:8px; margin-bottom:0;">
-              🔒 Your info is private & secure
-            </p>
           </div>
+
+          <div class="why-card">
+            <div class="why-card-icon">&#128269;</div>
+            <h4>HAAG Certified Inspectors</h4>
+            <p>
+              We inspect shingles and soft metals using forensic test squares, identifying granule fracture patterns and wind crease lines that untrained adjusters miss.
+            </p>
+            <a href="/free-roof-inspection-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+              Inspection Details &rarr;
+            </a>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card-icon">&#128737;</div>
+            <h4>10-Year Workmanship Warranty</h4>
+            <p>
+              Every full replacement includes our written 10-year contractor workmanship guarantee covering flashings, valleys, ridge caps, and pipe boots against leaks.
+            </p>
+            <a href="/roof-repair-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+              Warranty Coverage &rarr;
+            </a>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card-icon">&#128196;</div>
+            <h4>We Handle Your Insurance Claim</h4>
+            <p>
+              We produce itemized Xactimate estimates with dated photos, file supplemental requests, and meet your insurance adjuster directly on your roof to advocate for full coverage.
+            </p>
+            <a href="/insurance-claim-roofing-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+              Claim Process &rarr;
+            </a>
+          </div>
+
         </div>
 
       </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Light to Dark) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#F5F3EE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
     </div>
-  </section>
 
-  <!-- TRUST STRIP BANNER -->
-  <div class="trust-strip" id="trust-banner-strip">
-    <div class="container trust-badges-wrapper">
-      <div class="trust-badge">
-        <div class="trust-badge-circle">⭐</div>
-        <span>5.0 Stars on Google</span>
-      </div>
-      <div class="trust-badge">
-        <div class="trust-badge-circle">🛡️</div>
-        <span>GAF Certified Installer</span>
-      </div>
-      <div class="trust-badge">
-        <div class="trust-badge-circle">⏱️</div>
-        <span>2-Hour Emergency Response</span>
-      </div>
-      <div class="trust-badge">
-        <div class="trust-badge-circle">✅</div>
-        <span>10-Year Workmanship Warranty</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION 4: WHY CHOOSE US (BENTO COMPARISON GRID) -->
-  <section class="section-padding" id="why-choose-us" style="background-color: var(--dark);">
-    <div class="container">
-      <h2 style="color: var(--white);">Why Houston Homeowners Choose Epic Roofing TX</h2>
-      <p style="text-align: center; max-width: 700px; margin: -1rem auto 3rem auto; color: #94A3B8; font-size: 0.95rem;">
-        We show up on time, explain everything clearly, and never pressure you. If your roof only needs a repair, we'll tell you that. If it needs full replacement, we'll prove it with photos.
-      </p>
-
-      <div class="bento-grid">
+    <!-- 6. HIDDEN DAMAGE SECTION (Dark Storm-Charcoal Background) -->
+    <section class="section-dark" id="storm-damage">
+      <div class="container">
         
-        <!-- Bento Card 1: GAF Certified Roofing -->
-        <div class="card bento-col-6" id="bento-gaf">
-          <div class="card-icon">👑</div>
-          <h3>GAF Certified Roofing</h3>
-          <p>
-            We're factory-certified to install GAF Lifetime Roofing Systems — giving you access to the best manufacturer warranty available, including the Golden Pledge that covers both materials and labor.
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Forensic Diagnostics</span>
+          <h2 style="color: #FFFFFF; margin-top: 0.5rem;">Hidden Damage You Cannot See From The Ground</h2>
+          <p style="color: #CBD5E1; font-size: 1.05rem;">
+            Most storm damage never produces an immediate water drip inside your living room. The structural degradation happens quietly under the surface.
           </p>
         </div>
 
-        <!-- Bento Card 2: HAAG Certified Inspectors -->
-        <div class="card bento-col-6" id="bento-haag">
-          <div class="card-icon">🔍</div>
-          <h3>HAAG Certified Inspectors</h3>
-          <p>
-            Our inspectors are HAAG certified to identify hail bruising, wind fractures, and hidden damage that a standard home inspection misses. This matters when you file an insurance claim.
-          </p>
-        </div>
-
-        <!-- Bento Card 3: 10-Year Workmanship Warranty -->
-        <div class="card bento-col-6" id="bento-warranty">
-          <div class="card-icon">🛡️</div>
-          <h3>10-Year Workmanship Warranty</h3>
-          <p>
-            Every roof we install is backed by a 10-year workmanship guarantee. If anything fails due to installation error, we come back and fix it — no argument, no charge.
-          </p>
-        </div>
-
-        <!-- Bento Card 4: We Handle Your Insurance Claim -->
-        <div class="card bento-col-6" id="bento-claim">
-          <div class="card-icon">📋</div>
-          <h3>We Handle Your Insurance Claim</h3>
-          <p>
-            We document the damage, work alongside your adjuster, and help make sure your claim reflects the true cost of repairs. Most of our clients pay only their deductible.
-          </p>
-          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed rgba(0,0,0,0.1);">
-            <h2 style="font-size: 1.15rem; color: #111827; margin-bottom: 0.5rem; font-family: var(--f-display); font-weight: 800; text-transform: uppercase;">Will my insurance cover roof damage?</h2>
-            <p style="font-size: 0.9rem; color: #4B5563; line-height: 1.5; margin: 0;">
-              Yes, if your roof has suffered sudden damage from storm events like high winds, hail, or a fallen tree limb, your homeowner's insurance policy will typically cover the cost of repair or replacement. You will only be responsible for paying your policy deductible. Epic Roofing & Construction LLC is highly experienced in documenting storm damage and working with insurance adjusters to make sure your claim is filed correctly.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: STORM DAMAGE SPOTLIGHT & Visual Steps -->
-  <section class="section-padding" id="storm-spotlight" style="background-color: var(--navy-light);">
-    <div class="container">
-      <h2 style="text-align: center; color: var(--white); margin-bottom: 1rem;">Houston Storms Cause More Roof Damage Than You Can See</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto; color: #94A3B8; font-size: 0.95rem;">
-        After hail or high winds, the visible damage is only part of the picture. Hidden damage to underlayment and decking can cause leaks and mold months later. Here's what we look for:
-      </p>
-
-      <div class="grid grid-3" style="margin-bottom: 3.5rem;">
-        
-        <!-- Step 1: Hail Bruising -->
-        <div style="background-color: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
-          <div style="font-size: 1.15rem; font-weight: 800; font-family: var(--f-display); color: var(--orange); margin-bottom: 0.75rem;">HAIL BRUISING</div>
-          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.5;">
-            Large hail knocks granules loose from your shingles. Even when not visible from the ground, this damage shortens your roof's lifespan and gives water a path in.
-          </p>
-        </div>
-
-        <!-- Step 2: Wind Uplift Damage -->
-        <div style="background-color: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
-          <div style="font-size: 1.15rem; font-weight: 800; font-family: var(--f-display); color: var(--orange); margin-bottom: 0.75rem;">WIND UPLIFT DAMAGE</div>
-          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.5;">
-            High winds get under shingle edges and peel back underlayment. The damage isn't always obvious — but one rain storm later, you'll have a leak.
-          </p>
-        </div>
-
-        <!-- Step 3: Moisture and Rot -->
-        <div style="background-color: var(--navy); border: 1px solid #1E293B; padding: 2rem; border-radius: 8px;">
-          <div style="font-size: 1.15rem; font-weight: 800; font-family: var(--f-display); color: var(--orange); margin-bottom: 0.75rem;">MOISTURE AND ROT</div>
-          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.5;">
-            Water past damaged shingles sits in your decking and attic framing. Left unrepaired, it causes rot, mold, and structural damage that costs far more to fix.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Quick Tip Box -->
-      <div style="background: rgba(234, 88, 12, 0.08); border-left: 5px solid var(--orange); padding: 1.5rem; border-radius: 4px; max-width: 900px; margin: 0 auto;">
-        <h3 style="color: var(--white); text-transform: uppercase; font-family: var(--f-display); margin-bottom: 0.5rem; font-size: 1rem;">🔍 GAF HAAG Forensic Tip</h3>
-        <p style="color: #94A3B8; font-size: 0.9rem; margin: 0;">
-          Texas homeowners have the right to choose their own roofing contractor — even for insurance claims. Getting a free inspection from a licensed roofer before your adjuster visits helps ensure you get the full value of your claim.
-        </p>
-      </div>
-
-      <!-- Hail Damage FAQ Box -->
-      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 8px; max-width: 900px; margin: 2rem auto 0 auto;">
-        <h2 style="color: var(--white); font-family: var(--f-display); margin-bottom: 0.75rem; font-size: 1.25rem;">How do I know if my roof has hail damage?</h2>
-        <p style="color: #94A3B8; font-size: 0.95rem; margin: 0; line-height: 1.6;">
-          Signs of hail damage include dented or bruised shingles, granule loss visible in gutters, cracked shingle mats, and dented metal flashing or vents. A professional inspection within 12 months of a hailstorm is recommended for insurance claims.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="leads-estimator" style="background: #1E1E1E;padding:50px 20px;
-text-align:center;">
-<h2 style="color:#fff;font-size:28px;margin-bottom:10px;">
-Get Your Free Houston Roof Estimate</h2>
-<p style="color:#aac4e8;margin-bottom:24px;">
-Same-day response. No pressure. No obligation.</p>
-<a href="tel:+12813269905" 
-style="background: #D32F2F; color: #111111;padding:16px 40px;
-font-size:20px;font-weight:700;border-radius:4px;
-text-decoration:none;display:inline-block;">
-📞 (281) 326-9905 — Call for Free Estimate
-</a>
-<p style="color:#aac4e8;margin-top:16px;font-size:14px;">
-Or <a href="/contact" style="color: #D32F2F;">
-fill out our contact form</a> and we call you back 
-within 1 hour.</p>
-
-<div style="max-width: 800px; margin: 2.5rem auto 0 auto; padding: 2rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-align: left;">
-  <h2 style="color: #fff; font-family: var(--f-display); font-size: 1.5rem; margin-bottom: 0.75rem;">How much does a roof replacement cost in Houston in 2026?</h2>
-  <p style="color: #aac4e8; font-size: 0.95rem; line-height: 1.6; margin: 0;">
-    In Houston, a full asphalt shingle roof replacement typically costs $9,500–$16,000 for an average 2,000 sq ft home, depending on material grade and roof pitch. Metal roofing runs $18,000–$28,000. Storm damage claims can offset most of this if approved.
-  </p>
-</div>
-</section>
-
-  <!-- SECTION 7: SOCIAL PROOF REVIEWS (Aggregate Rating & Local Details) -->
-  <section class="section-padding" id="social-proof-reviews" style="background-color: var(--navy-light);">
-    <div class="container">
-      <h2 style="color: #111827; text-align: center; font-family: var(--f-display); font-weight: 800; font-size: 2.25rem; margin-bottom: 0.5rem; text-transform: uppercase;">Real Reviews from Houston Homeowners</h2>
-      <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #4B5563; font-size: 1rem; line-height: 1.6;">
-        See why Houston families trust Josh and Epic Roofing for emergency tarping, storm recovery, and professional roof replacements.
-      </p>
-      
-      <div class="grid grid-3" style="margin-top: 3rem;">
-        
-        <!-- Review Card 1 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"Immediate help after Beryl"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "Josh has been my go to for all roofing questions for years! He came over immediately after Beryl, patched my roof where a pine tree branch went through, and made sure to explain the process every step of the way."
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Stephanie Bourke, Local Guide
-          </div>
-        </div>
-
-        <!-- Review Card 2 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"Actually showed up & got it done"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "After Hurricane Beryl we really struggled to find a contractor to help us with our roof damage. We called over a dozen companies — most either blew us off or missed appointments. Josh actually showed up and got it done."
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Anthony Hranitzky
-          </div>
-        </div>
-
-        <!-- Review Card 3 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"Expert in dealing with insurance"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "Josh has done several roofs for me, friends, and family over the years. He is an expert in dealing with insurance companies and hands-down among the very best in the business."
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Susan Strong
-          </div>
-        </div>
-
-        <!-- Review Card 4 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"Served as roofer & GC"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "We used Josh for an insurance claim after storm damage to our home. He served as our roofer and general contractor, coordinating repairs across fencing, roofing, and interior painting."
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Beth Lane
-          </div>
-        </div>
-
-        <!-- Review Card 5 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"No pressure tactics"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "No pressure tactics combined with a commitment to quality service. Highly recommend Epic. Call Josh!"
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Orlando Martinez, Local Guide
-          </div>
-        </div>
-
-        <!-- Review Card 6 -->
-        <div class="card" style="background: var(--navy); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-              <div class="stars-rating" style="margin: 0; color: #FBBC05;">★★★★★</div>
-              <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; background: rgba(66, 133, 244, 0.08); padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(66, 133, 244, 0.2);">
-                <svg style="width: 12px; height: 12px; fill: #4285F4;" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                </svg>
-                <span style="color: #4285F4; font-weight: 600;">Google Verified</span>
-              </div>
-            </div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem; color: #111827;">"Great work & reliable"</h3>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic;">
-              "Josh has done several jobs for us. Great work, reliable, and very knowledgeable and experienced. Highly recommended."
-            </p>
-          </div>
-          <div style="font-weight: 800; text-transform: uppercase; font-family: var(--f-display); font-size: 0.8rem; color: var(--orange); margin-top: auto;">
-            — Joseph Montgomery
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8: THE SIMPLE 4-STEP PROCESS -->
-  <section class="section-padding" id="how-it-works" style="background-color: var(--dark);">
-    <div class="container">
-      <h2 style="color: var(--white);">How We Work — Simple, Transparent, No Surprises</h2>
-      <p style="text-align: center; max-width: 600px; margin: -1rem auto 3.5rem auto; color: #94A3B8; font-size: 0.95rem;">
-        How we transform leaking shingles into Class 4 storm protection rapidly, with minimal household disruption.
-      </p>
-
-      <div class="grid grid-4 text-center">
-        
-        <!-- Step 1 -->
-        <div>
-          <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(234, 88, 12, 0.1); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 800; font-family: var(--f-display); margin: 0 auto 1.25rem auto; border: 2px solid var(--orange);">1</div>
-          <h3 style="color: var(--white); margin-bottom: 0.5rem; font-size: 1.15rem; font-family: var(--f-display);">FREE INSPECTION</h3>
-          <p style="font-size: 0.85rem; color: #94A3B8;">Free Inspection — We inspect your roof, document all damage with photos, and give you a written estimate. No obligation.</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div>
-          <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(234, 88, 12, 0.1); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 800; font-family: var(--f-display); margin: 0 auto 1.25rem auto; border: 2px solid var(--orange);">2</div>
-          <h3 style="color: var(--white); margin-bottom: 0.5rem; font-size: 1.15rem; font-family: var(--f-display);">EMERGENCY TARPING</h3>
-          <p style="font-size: 0.85rem; color: #94A3B8;">Emergency Tarping — If you have active storm damage, we tarp the affected area the same day to prevent further water damage.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div>
-          <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(234, 88, 12, 0.1); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 800; font-family: var(--f-display); margin: 0 auto 1.25rem auto; border: 2px solid var(--orange);">3</div>
-          <h3 style="color: var(--white); margin-bottom: 0.5rem; font-size: 1.15rem; font-family: var(--f-display);">CLAIM SUPPORT</h3>
-          <p style="font-size: 0.85rem; color: #94A3B8;">Insurance Claim Support — We prepare documentation for your adjuster and work directly with your insurer to maximize your approved claim.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div>
-          <div style="width: 50px; height: 50px; border-radius: 50%; background-color: rgba(234, 88, 12, 0.1); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 800; font-family: var(--f-display); margin: 0 auto 1.25rem auto; border: 2px solid var(--orange);">4</div>
-          <h3 style="color: var(--white); margin-bottom: 0.5rem; font-size: 1.15rem; font-family: var(--f-display);">PROFESSIONAL INSTALL</h3>
-          <p style="font-size: 0.85rem; color: #94A3B8;">Professional Installation — Your new roof is installed in 1-2 days. We clean up completely before we leave, and you get a 10-year warranty in writing.</p>
-        </div>
-
-      </div>
-
-      <!-- Process FAQs -->
-      <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.08); max-width: 900px; margin-left: auto; margin-right: auto;">
-        
-        <div style="margin-bottom: 3rem;">
-          <h2 style="color: var(--white); font-family: var(--f-display); font-size: 1.75rem; margin-bottom: 1rem; border-left: 4px solid var(--orange); padding-left: 1rem; line-height: 1.2; text-align: left;">How do I prepare my home for a roof replacement?</h2>
-          <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: left; padding-left: 1.25rem;">
-            To prepare for our crew, we recommend clearing your driveway and yard of vehicles, outdoor furniture, toys, and potted plants to keep them safe from any falling debris. It is also a good idea to remove fragile items or loose wall hangings inside your home, as the hammering will create vibrations. We will handle all the heavy lifting, tarping, and complete clean-up afterward!
-          </p>
-        </div>
-
-        <div style="margin-bottom: 3rem;">
-          <h2 style="color: var(--white); font-family: var(--f-display); font-size: 1.75rem; margin-bottom: 1rem; border-left: 4px solid var(--orange); padding-left: 1rem; line-height: 1.2; text-align: left;">How long does a roof replacement take?</h2>
-          <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: left; padding-left: 1.25rem;">
-            Most standard residential roof replacements in the Houston area can be completed in just 1 to 2 days! Our experienced crews work efficiently to tear off the old shingles, repair any damaged decking, install new underlayment, and lay down the new roof. We also perform a meticulous cleanup using magnetic sweeps to make sure zero nails or debris are left behind in your yard.
-          </p>
-        </div>
-
-        <div>
-          <h2 style="color: var(--white); font-family: var(--f-display); font-size: 1.75rem; margin-bottom: 1rem; border-left: 4px solid var(--orange); padding-left: 1rem; line-height: 1.2; text-align: left;">Do I need a permit to replace my roof in Houston?</h2>
-          <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: left; padding-left: 1.25rem;">
-            Yes, the City of Houston and most surrounding municipalities (like Katy, Sugar Land, and Pearland) require a building permit for a full roof replacement. At Epic Roofing & Construction LLC, we handle the entire permitting process for you, ensuring that your new roof meets all local building codes and successfully passes any required post-installation inspections.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 9B: CASE STUDIES & PROJECT EXAMPLES -->
-  <section class="section-padding" id="case-studies" style="background-color: var(--navy); border-top: 1px solid var(--gray-border);">
-    <div class="container">
-      <h2 style="color: var(--dark); text-align: center; margin-bottom: 0.5rem; font-size: 2.25rem;">Houston Area Project Examples & Case Studies</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; color: #4B5563; font-size: 0.95rem; line-height: 1.6;">
-        <strong style="color: var(--orange);">Disclaimer:</strong> The following are illustrative examples of typical projects we handle, based on common scenarios in the Houston area. To protect client confidentiality under our corporate covenants, specific customer names, exact addresses, and direct quotes have been omitted or genericized.
-      </p>
-
-      <div class="grid grid-2" style="gap: 2rem;">
-        
-        <!-- Case Study 1 -->
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--gray-border); padding-bottom: 0.75rem;">
-              <span style="background-color: rgba(211, 47, 47, 0.08); color: var(--orange); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Storm Claim</span>
-              <span style="color: #4B5563; font-size: 0.85rem; font-weight: 600;">📍 Katy, TX area</span>
-            </div>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #111827; margin-bottom: 1rem; line-height: 1.3;">Hail Damage Insurance Claim</h3>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">The Situation:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">Homeowner in Katy, TX noticed granule loss and soft spots after a spring hailstorm, but the insurance adjuster's initial assessment underestimated the damage.</p>
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">Our Process & Solution:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">Our HAAG-certified inspectors conducted a detailed physical analysis revealing hidden fracture damage across 60% of the roof's shingle surface. We provided extensive high-resolution photo documentation and met directly with the insurance carrier to support a full, certified replacement claim.</p>
-            </div>
-          </div>
+        <!-- 3 Cards Grid -->
+        <div class="hidden-damage-grid">
           
-          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--gray-border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem;">
-            <div>
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Timeline</span>
-              <strong style="color: #111827; font-weight: 700;">2 Weeks (3-Day Build)</strong>
-            </div>
-            <div style="text-align: right;">
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Outcome</span>
-              <strong style="color: var(--orange); font-weight: 700;">Fully Covered (Deductible Only)</strong>
-            </div>
+          <div class="damage-card">
+            <span class="damage-card-tag">Defect 01</span>
+            <h3>Hail Bruising</h3>
+            <p>
+              Hail impacts crush the shingle's asphalt matrix without punching a visible hole. The crushed area loses its protective granules over the next 6 to 18 months, leaving the fiberglass mat exposed to UV rot and leaks long after storm filing deadlines expire.
+            </p>
           </div>
+
+          <div class="damage-card">
+            <span class="damage-card-tag">Defect 02</span>
+            <h3>Wind Uplift Damage</h3>
+            <p>
+              Straight-line gusts break the factory sealant strip bonding shingle tabs together. The shingles flap in the breeze and crease along the top edge. When rain follows, water tracks backwards under the unsealed tabs directly onto the wood decking.
+            </p>
+          </div>
+
+          <div class="damage-card">
+            <span class="damage-card-tag">Defect 03</span>
+            <h3>Moisture & Rot</h3>
+            <p>
+              Slow leaks around chimney step flashing, plumbing vent collars, or valley seams saturate attic insulation and plywood sheathing. Wood rot softens the roof deck and breeds mold before a ceiling drywall stain ever appears.
+            </p>
+          </div>
+
         </div>
 
-        <!-- Case Study 2 -->
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--gray-border); padding-bottom: 0.75rem;">
-              <span style="background-color: rgba(211, 47, 47, 0.08); color: var(--orange); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Emergency Service</span>
-              <span style="color: #4B5563; font-size: 0.85rem; font-weight: 600;">📍 Houston, TX area</span>
-            </div>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #111827; margin-bottom: 1rem; line-height: 1.3;">Emergency Storm Leak Repair</h3>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">The Situation:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">A Houston homeowner discovered an active ceiling leak during an overnight storm, threatening drywall, insulation, and interior finishes.</p>
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">Our Process & Solution:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">Dispatched our 24/7 rapid response team. Arrived on-site to implement emergency tarping and isolate the leak. Once weather cleared, performed a diagnostic assessment, pinpointing damaged chimney flashing as the culprit, and executed a permanent, durable repair.</p>
-            </div>
+        <!-- GAF / HAAG Forensic Tip Box -->
+        <div class="forensic-tip-box">
+          <div class="forensic-tip-header">
+            <span>&#9888;</span> GAF / HAAG Forensic Tip For Homeowners
           </div>
-          
-          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--gray-border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem;">
-            <div>
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Timeline</span>
-              <strong style="color: #111827; font-weight: 700;">2-Hour Dispatch, 48h Repair</strong>
-            </div>
-            <div style="text-align: right;">
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Outcome</span>
-              <strong style="color: var(--orange); font-weight: 700;">Interior Saved, No More Leaks</strong>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 3 -->
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--gray-border); padding-bottom: 0.75rem;">
-              <span style="background-color: rgba(211, 47, 47, 0.08); color: var(--orange); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Roof Replacement</span>
-              <span style="color: #4B5563; font-size: 0.85rem; font-weight: 600;">📍 Houston suburbs</span>
-            </div>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #111827; margin-bottom: 1rem; line-height: 1.3;">Full Roof Replacement (Aging Roof)</h3>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">The Situation:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">A 22-year-old asphalt shingle roof was showing widespread curling, dramatic granule loss, and multiple early soft spots, well past its expected functional lifespan.</p>
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">Our Process & Solution:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">Executed a clean, meticulous tear-off of old materials down to the decking. Repaired deteriorated sheathing, installed premium synthetic underlayment, and replaced the roof using high-velocity, wind-rated GAF Timberline HDZ shingles paired with comprehensive Ridge Vent upgrades.</p>
-            </div>
-          </div>
-          
-          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--gray-border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem;">
-            <div>
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Timeline</span>
-              <strong style="color: #111827; font-weight: 700;">3-Day Complete Replacement</strong>
-            </div>
-            <div style="text-align: right;">
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Outcome</span>
-              <strong style="color: var(--orange); font-weight: 700;">New Roof & 10-Yr Workmanship</strong>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 4 -->
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--gray-border); padding-bottom: 0.75rem;">
-              <span style="background-color: rgba(211, 47, 47, 0.08); color: var(--orange); font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Commercial Coating</span>
-              <span style="color: #4B5563; font-size: 0.85rem; font-weight: 600;">📍 Houston, TX area</span>
-            </div>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #111827; margin-bottom: 1rem; line-height: 1.3;">Commercial Roof Coating</h3>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">The Situation:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">A commercial retail center had an aging low-slope TPO roof starting to show minor ponding water, joint separation, and escalating HVAC/energy costs.</p>
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-              <strong style="color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.25rem;">Our Process & Solution:</strong>
-              <p style="font-size: 0.95rem; color: #4B5563; line-height: 1.5; margin: 0;">Thoroughly power washed the existing roof surface, reinforced all seam points and penetrations with heavy polyester fabric, and applied a high-solids, 100% reflective silicone fluid-applied restoration coating system to seal everything without a heavy tear-off cost.</p>
-            </div>
-          </div>
-          
-          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--gray-border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem;">
-            <div>
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Timeline</span>
-              <strong style="color: #111827; font-weight: 700;">5 Business Days</strong>
-            </div>
-            <div style="text-align: right;">
-              <span style="color: #6B7280; display: block; font-size: 0.75rem; text-transform: uppercase;">Outcome</span>
-              <strong style="color: var(--orange); font-weight: 700;">Extended Lifespan & Lower HVAC Costs</strong>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Call to Action Box -->
-      <div style="margin-top: 4rem; background-color: var(--dark); border-radius: 12px; padding: 3rem 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-        <h3 style="color: var(--white); font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem;">Facing a similar issue with your property's roof?</h3>
-        <p style="color: #94A3B8; max-width: 600px; margin: 0 auto 1.75rem auto; font-size: 1rem;">
-          Get HAAG-certified experts to assess your roof's condition. We provide full documentation to ensure accurate diagnosis and seamless insurance support.
-        </p>
-        <a href="/contact" class="btn btn-primary" style="font-weight: 800; letter-spacing: 0.05em; font-size: 1rem; padding: 1rem 2.5rem; display: inline-flex; align-items: center; gap: 8px;">
-          Get Your Free Inspection <span style="font-size: 1.2rem;">→</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SECTION 9: RESPONSIVE 12-CITY BADGE SELECTOR -->
-  <section class="section-padding" id="services-block" style="background-color: var(--navy-light);">
-    <div class="container">
-      <h2 style="color: var(--white); text-align: center;">OUR HOUSTON METRO REGION SUB-MARKETS</h2>
-      <p style="text-align: center; max-width: 700px; margin: -1rem auto 3rem auto; color: #94A3B8; font-size: 0.95rem;">
-        Click to explore specific service warranties and storm protection blueprints for your local community district lines.
-      </p>
-
-      <div class="grid grid-4" style="gap: 1.25rem;">
-        
-        <a href="/" class="city-card">
-          <span class="city-name">Houston Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/katy-roofing-contractor" class="city-card">
-          <span class="city-name">Katy Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/sugar-land-roofing-contractor" class="city-card">
-          <span class="city-name">Sugar Land Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/cypress-roofing-contractor" class="city-card">
-          <span class="city-name">Cypress Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/the-woodlands-roofing-contractor" class="city-card">
-          <span class="city-name">The Woodlands Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/pearland-roofing-contractor" class="city-card">
-          <span class="city-name">Pearland Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/league-city-roofing-contractor" class="city-card">
-          <span class="city-name">League City Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/spring-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Spring Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/pasadena-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Pasadena Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/tomball-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Tomball Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/humble-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Humble Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/missouri-city-roofing-contractor" class="city-card">
-          <span class="city-name">Missouri City Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/richmond-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Richmond Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/baytown-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Baytown Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/conroe-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Conroe Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-        <a href="/galveston-tx-roofing-contractor" class="city-card">
-          <span class="city-name">Galveston Roofing</span>
-          <span style="color: var(--orange); font-weight: bold;">→</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10: PRE-STYLED BLOG SUMMARY SECTION -->
-  <section class="section-padding" id="blog" style="background-color: var(--dark);">
-    <div class="container">
-      <h2 style="color: var(--white); text-align: center;">Houston Roofing Guides — Helpful Articles for Homeowners</h2>
-      
-      <div class="grid grid-3" style="margin-top: 3rem;">
-        
-        <!-- Post 1 -->
-        <div class="card blog-card">
-          <span class="blog-meta">Storm & hail damage</span>
-          <h3>Katy Hail Storm Evaluation Practices</h3>
-          <p>
-            Learn how to spot hidden hail damage on your shingles after a major Katy storm, and discover the best ways to document the damage so your insurance claim gets approved.
+          <p class="forensic-tip-text">
+            Under Texas insurance law, homeowners have the absolute legal right to select their own independent roofing contractor. You are never obligated to use the carrier's preferred vendor list. Having a certified HAAG forensic roofing inspector present during the adjuster's walkthrough ensures damaged test squares and collateral metal impacts are correctly recorded in the initial scope.
           </p>
-          <a href="/blog/houston-hail-damage-guide" style="margin-top: 1.5rem; color: var(--orange); font-weight: bold; font-family: var(--f-display); text-transform: uppercase; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
-            Read article <span>→</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Dark to Light) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#161B22">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 7. THREE STANDALONE Q&A BLOCKS (Amber Left-Border Cards) -->
+    <section class="section-grey" id="insurance-knowledge">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Direct Answers</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Texas Insurance & Storm Damage Facts</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Plain facts on hail detection, claim eligibility, and policy terms without sales speak.
+          </p>
+        </div>
+
+        <div class="qa-stack">
+          
+          <div class="standalone-qa-card">
+            <h2>How do I know if my roof has hail damage?</h2>
+            <p>
+              Hail damage on asphalt shingles appears as dark, bruised circular indentations where protective mineral granules were knocked away, exposing the fragile fiberglass mat beneath. On metal vents, flashing, and gutters, hail leaves distinct dings and dents. Because granule loss and micro-fractures are difficult to spot from the ground, a physical roof-level inspection within 12 months of a storm is essential to document evidence before carrier filing deadlines pass.
+            </p>
+          </div>
+
+          <div class="standalone-qa-card">
+            <h2>Will my insurance cover roof damage in Texas?</h2>
+            <p>
+              Standard Texas homeowners insurance policies cover sudden, accidental storm damage caused by hail, hurricane-force wind, and falling tree limbs. Policies do not cover normal wear and tear, cosmetic aging, or pre-existing leaks caused by neglected maintenance. If damage covers a significant portion of your roof slope, your insurer is generally required to pay for the complete replacement of that slope or the entire roof structure minus your deductible.
+            </p>
+          </div>
+
+          <div class="standalone-qa-card">
+            <h2>What's the difference between ACV and RCV on my roof policy?</h2>
+            <p>
+              An Actual Cash Value (ACV) policy only pays what your roof is worth at the time of the storm, deducting years of depreciation from your payout and leaving you to cover the gap out of pocket. A Replacement Cost Value (RCV) policy pays the full current cost to replace your roof with new materials of like kind and quality once the contractor completes the work, holding back recoverable depreciation until final invoice submission.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Grey to Light) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#EBE7DE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 8. COMPARISON TABLE: HOW WE COMPARE -->
+    <section class="section-light" id="comparison">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Consumer Protection</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">How We Compare</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Texas is one of the few states that does not require a state roofing license. Anyone with a ladder and a magnetic sign can market themselves as a roofer. Here is how Epic Roofing stands apart.
+          </p>
+        </div>
+
+        <div class="comparison-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Standard</th>
+                <th style="width: 26%;">Storm-Chaser Crews</th>
+                <th style="width: 26%;">Corporate Franchises</th>
+                <th style="width: 26%; background-color: var(--slate-surface); color: var(--hazard-amber);">Epic Roofing & Construction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="epic-row">
+                <td>Certifications</td>
+                <td><span class="check-no">&#10007;</span> None or unverified</td>
+                <td>Basic manufacturer tier</td>
+                <td><span class="check-yes">&#10003;</span> GAF Master Elite & HAAG Forensic Certified</td>
+              </tr>
+              <tr>
+                <td>Local Houston Address</td>
+                <td><span class="check-no">&#10007;</span> Out-of-state plates / PO Box</td>
+                <td>Regional branch office</td>
+                <td><span class="check-yes">&#10003;</span> 9402 Spaulding St, Houston (Permanent HQ)</td>
+              </tr>
+              <tr class="epic-row">
+                <td>Insurance Support</td>
+                <td>Signs contingency, then vanishes</td>
+                <td>Third-party call center</td>
+                <td><span class="check-yes">&#10003;</span> On-roof adjuster meeting & Xactimate billing</td>
+              </tr>
+              <tr>
+                <td>Written Warranty</td>
+                <td><span class="check-no">&#10007;</span> 1-Year verbal tailgate guarantee</td>
+                <td>Manufacturer materials only</td>
+                <td><span class="check-yes">&#10003;</span> 10-Year Workmanship + GAF System Guarantee</td>
+              </tr>
+              <tr class="epic-row">
+                <td>Sales Tactics</td>
+                <td><span class="check-no">&#10007;</span> High-pressure same-day contract push</td>
+                <td>Scripted corporate sales quota</td>
+                <td><span class="check-yes">&#10003;</span> Zero pressure; itemized photos & written estimates</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Light to Dark) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#F5F3EE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 9. HOW WE WORK (6-Step Process) -->
+    <section class="section-dark" id="how-we-work">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Step-By-Step Workflow</span>
+          <h2 style="color: #FFFFFF; margin-top: 0.5rem;">How We Work</h2>
+          <p style="color: #CBD5E1; font-size: 1.05rem;">
+            From initial call to clean yard and final paperwork, here is our six-step operating procedure.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Phone Triage</h3>
+            <p>
+              We take down your address, assess whether active water is entering your living area, and dispatch an inspector for a same-day or next-day appointment.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Inspection & Photos</h3>
+            <p>
+              A HAAG-certified inspector mounts your roof, checks pipe boots, valley flashings, and test squares, and photographs all damage for your records.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Written Estimate</h3>
+            <p>
+              You receive an itemized proposal with clear material tiers, scope of work, warranty options, and zero hidden price escalations.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Emergency Tarping</h3>
+            <p>
+              If a storm tore shingles away or tree limbs pierced your deck, we install heavy-duty anchored tarps immediately to stop interior water intrusion.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">05</div>
+            <h3>Claim Support</h3>
+            <p>
+              We compile photo-backed damage packets, coordinate line items with your insurance adjuster, and ensure code-required items like drip edge are included.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">06</div>
+            <h3>Install & Cleanup</h3>
+            <p>
+              Crews tear off old layers, replace rotted decking, nail down your new GAF roof in 1 to 2 days, and run magnetic sweeps across your driveway and lawn.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Dark to Light) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#161B22">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 10. THREE CASE STUDIES -->
+    <section class="section-light" id="case-studies">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Field Results</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Recent Houston Case Studies</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Real scenarios showing how our forensic inspections and rapid repairs protect homeowners.
+          </p>
+        </div>
+
+        <div class="case-studies-grid">
+          
+          <!-- Case 1: Katy -->
+          <div class="case-card">
+            <div class="case-top">
+              <span class="case-location-badge">Katy, TX</span>
+              <h3>Denied Hail Claim Overturned</h3>
+              
+              <div class="case-block">
+                <span class="case-block-label">Situation</span>
+                <p class="case-block-text">Carrier adjuster initially denied the homeowner's hail claim, attributing loose granules to cosmetic aging.</p>
+              </div>
+              <div class="case-block">
+                <span class="case-block-label">What We Did</span>
+                <p class="case-block-text">Performed a forensic 100 sq ft test-square analysis showing 60% shingle mat fracture across windward slopes, submitted high-res macro photos, and requested a re-inspection.</p>
+              </div>
+            </div>
+            <div class="case-bottom-meta">
+              <span class="case-meta-timeline">Timeline: 2 Weeks</span>
+              <span class="case-meta-outcome">Outcome: 100% Full Replacement Approved</span>
+            </div>
+          </div>
+
+          <!-- Case 2: Houston -->
+          <div class="case-card">
+            <div class="case-top">
+              <span class="case-location-badge">Houston, TX (Heights Area)</span>
+              <h3>Overnight Emergency Storm Leak</h3>
+              
+              <div class="case-block">
+                <span class="case-block-label">Situation</span>
+                <p class="case-block-text">Active midnight ceiling leak directly above a bedroom during a sudden convective thunderstorm.</p>
+              </div>
+              <div class="case-block">
+                <span class="case-block-label">What We Did</span>
+                <p class="case-block-text">Dispatched on-call emergency team within 2 hours. Stabilized the roof with a temporary tarp, returned next morning to replace decayed chimney counter-flashing and re-seal step flashings.</p>
+              </div>
+            </div>
+            <div class="case-bottom-meta">
+              <span class="case-meta-timeline">Timeline: 2-Hr Dispatch, 24h Repair</span>
+              <span class="case-meta-outcome">Outcome: Interior Drywall Saved</span>
+            </div>
+          </div>
+
+          <!-- Case 3: Houston Suburbs -->
+          <div class="case-card">
+            <div class="case-top">
+              <span class="case-location-badge">Houston Suburbs (Spring, TX)</span>
+              <h3>22-Year-Old Roof Full Replacement</h3>
+              
+              <div class="case-block">
+                <span class="case-block-label">Situation</span>
+                <p class="case-block-text">Original 3-tab builder shingles were brittle, curling, and leaking into the attic soffits.</p>
+              </div>
+              <div class="case-block">
+                <span class="case-block-label">What We Did</span>
+                <p class="case-block-text">Tear-off down to bare sheathing, replaced 8 rotted plywood decking sheets, installed synthetic underlayment, GAF Timberline HDZ architectural shingles, and continuous ridge vent ventilation.</p>
+              </div>
+            </div>
+            <div class="case-bottom-meta">
+              <span class="case-meta-timeline">Timeline: 2-Day Build</span>
+              <span class="case-meta-outcome">Outcome: 10-Yr Workmanship Warranty</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Light to Grey) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#F5F3EE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 11. TESTIMONIALS GRID (6 Google Verified Reviews) -->
+    <section class="section-grey" id="reviews">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Verified Homeowner Feedback</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Google Reviews from Houston Clients</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Real customer experiences with Josh and the Epic Roofing crew across Houston and surrounding counties.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1: Stephanie Bourke -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "Josh has been my go to for all roofing questions for years! He came over immediately after Beryl, patched my roof where a pine tree branch went through, and made sure to explain the process every step of the way."
+              </p>
+            </div>
+            <div class="review-author">&mdash; Stephanie Bourke, Local Guide</div>
+          </div>
+
+          <!-- Review 2: Anthony Hranitzky -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "After Hurricane Beryl we really struggled to find a contractor to help us with our roof damage. We called over a dozen companies — most either blew us off or missed appointments. Josh actually showed up and got it done."
+              </p>
+            </div>
+            <div class="review-author">&mdash; Anthony Hranitzky</div>
+          </div>
+
+          <!-- Review 3: Susan Strong -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "Josh has done several roofs for me, friends, and family over the years. He is an expert in dealing with insurance companies and hands-down among the very best in the business."
+              </p>
+            </div>
+            <div class="review-author">&mdash; Susan Strong</div>
+          </div>
+
+          <!-- Review 4: Beth Lane -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "We used Josh for an insurance claim after storm damage to our home. He served as our roofer and general contractor, coordinating repairs across fencing, roofing, and interior painting."
+              </p>
+            </div>
+            <div class="review-author">&mdash; Beth Lane</div>
+          </div>
+
+          <!-- Review 5: Orlando Martinez -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "No pressure tactics combined with a commitment to quality service. Highly recommend Epic. Call Josh!"
+              </p>
+            </div>
+            <div class="review-author">&mdash; Orlando Martinez, Local Guide</div>
+          </div>
+
+          <!-- Review 6: Joseph Montgomery -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="google-badge">&#10003; Google Verified</span>
+              </div>
+              <p class="review-quote">
+                "Josh has done several jobs for us. Great work, reliable, and very knowledgeable and experienced. Highly recommended."
+              </p>
+            </div>
+            <div class="review-author">&mdash; Joseph Montgomery</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. STANDALONE COST Q&A BLOCK -->
+    <section class="section-light" id="cost-guide">
+      <div class="container">
+        
+        <div class="cost-qa-box">
+          <h2>How much does a roof replacement cost in Houston in 2026?</h2>
+          <p style="font-size: 1.05rem; color: #334155; line-height: 1.6;">
+            In 2026, replacing a standard 2,000-square-foot roof on a single-family home in the Greater Houston area ranges between $9,500 and $28,000+, depending on the material type, roof pitch, number of valleys, and whether deteriorated decking boards need replacement:
+          </p>
+
+          <div class="cost-grid">
+            
+            <div class="cost-pill-card">
+              <div class="cost-pill-title">Architectural Asphalt</div>
+              <div class="cost-pill-val">$9,500 &ndash; $16,000</div>
+              <p class="cost-pill-desc">GAF Timberline HDZ with 130 mph wind rating. Most common choice for Houston residential homes.</p>
+            </div>
+
+            <div class="cost-pill-card" style="border-left-color: var(--hazard-amber);">
+              <div class="cost-pill-title">Class 4 Impact Resistant</div>
+              <div class="cost-pill-val">$13,500 &ndash; $19,500</div>
+              <p class="cost-pill-desc">Withstands up to 2-inch hail. Qualifies for 25% to 35% annual discounts on Texas homeowners insurance.</p>
+            </div>
+
+            <div class="cost-pill-card" style="border-left-color: var(--storm-charcoal);">
+              <div class="cost-pill-title">Standing Seam Metal</div>
+              <div class="cost-pill-val">$18,000 &ndash; $28,000+</div>
+              <p class="cost-pill-desc">24-gauge commercial steel with concealed fasteners. 50+ year lifespan and maximum hurricane resistance.</p>
+            </div>
+
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; margin-top: 1rem;">
+            When replacing a roof due to a covered windstorm or hail event, your insurance claim pays for the replacement scope minus your policy deductible.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Light to Grey) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#F5F3EE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 13. SERVICE AREA GRID -->
+    <section class="section-grey" id="service-areas">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Greater Houston Metro</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Areas We Serve Daily</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Click your city below to see local roof codes, recent storm history, and dedicated crews.
+          </p>
+        </div>
+
+        <div class="service-area-pills">
+          <a href="/" class="area-pill">
+            <span>Houston</span>
+            <span class="area-arrow">&rarr;</span>
           </a>
-        </div>
-
-        <!-- Post 2 -->
-        <div class="card blog-card">
-          <span class="blog-meta">Moisture defense</span>
-          <h3>Continuous Baffle Venting for Cooling</h3>
-          <p>
-            With Houston attic temperatures easily topping 150°F, proper roof ventilation is critical. See how a well-vented attic keeps your home cool and prevents wood rot and mold.
-          </p>
-          <a href="/blog/how-long-roof-lasts-houston" style="margin-top: 1.5rem; color: var(--orange); font-weight: bold; font-family: var(--f-display); text-transform: uppercase; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
-            Read article <span>→</span>
+          <a href="/katy-roofing-contractor" class="area-pill">
+            <span>Katy</span>
+            <span class="area-arrow">&rarr;</span>
           </a>
-        </div>
-
-        <!-- Post 3 -->
-        <div class="card blog-card">
-          <span class="blog-meta">Metal materials</span>
-          <h3>Is Standing Seam Metal Worth It in Cypress?</h3>
-          <p>
-            Are you considering a metal roof for your Cypress home? Learn how standing seam metal roofs protect against hurricane-force winds and lower your summer electric bills.
-          </p>
-          <a href="/blog/metal-roofing-houston-pros-cons" style="margin-top: 1.5rem; color: var(--orange); font-weight: bold; font-family: var(--f-display); text-transform: uppercase; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
-            Read article <span>→</span>
+          <a href="/sugar-land-roofing-contractor" class="area-pill">
+            <span>Sugar Land</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/cypress-roofing-contractor" class="area-pill">
+            <span>Cypress</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/the-woodlands-roofing-contractor" class="area-pill">
+            <span>The Woodlands</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/pearland-roofing-contractor" class="area-pill">
+            <span>Pearland</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/league-city-roofing-contractor" class="area-pill">
+            <span>League City</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/spring-tx-roofing-contractor" class="area-pill">
+            <span>Spring</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/pasadena-tx-roofing-contractor" class="area-pill">
+            <span>Pasadena</span>
+            <span class="area-arrow">&rarr;</span>
+          </a>
+          <a href="/tomball-tx-roofing-contractor" class="area-pill">
+            <span>Tomball</span>
+            <span class="area-arrow">&rarr;</span>
           </a>
         </div>
 
       </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Grey to Dark) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#EBE7DE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
     </div>
-  </section>
 
+    <!-- 14. HOUSTON ROOF-RISK CALENDAR -->
+    <section class="section-dark" id="roof-calendar">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Seasonal Maintenance</span>
+          <h2 style="color: #FFFFFF; margin-top: 0.5rem;">Houston Roof-Risk Calendar</h2>
+          <p style="color: #CBD5E1; font-size: 1.05rem;">
+            Plan your roof inspections and replacements around Southeast Texas weather patterns.
+          </p>
+        </div>
 
+        <div class="calendar-grid">
+          
+          <div class="calendar-card">
+            <span class="calendar-months">Feb &ndash; May</span>
+            <h3>Spring Hail Season</h3>
+            <p>
+              Supercell thunderstorm fronts track through Katy, Cypress, and Spring, bringing golf-ball hail and 60+ mph wind gusts. Time for post-storm inspections.
+            </p>
+          </div>
 
-  <!-- SECTION 12: LEAD CAPTURE REQUEST FORM -->
-  <section class="section-padding" id="quote" style="background: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);">
-    <div class="container" style="max-width: 650px;">
-      <div class="card" style="border-top: 5px solid var(--orange);">
-        <h3 style="text-align: center; font-family: var(--f-display); text-transform: uppercase;">REQUEST FREE GAF STRUCTURAL ROOF DIAGNOSIS</h3>
-        <p style="text-align: center; margin-bottom: 2rem;">
-          Get your customized moisture and wind status check from our high-performance Houston Metro Area crew.
-        </p>
+          <div class="calendar-card">
+            <span class="calendar-months">Jun &ndash; Nov</span>
+            <h3>Hurricane Season</h3>
+            <p>
+              Tropical depressions, named storms, and heavy rain bands test roof flashing seals, chimney boots, and valley drainage. High risk for uplift leaks.
+            </p>
+          </div>
 
-        <a href="/free-roof-inspection-houston" class="btn btn-primary" 
-        style="width: 100%; height: 55px; font-size: 1.05rem; 
-        display: flex; align-items: center; 
-        justify-content: center;">
-          📩 GET FREE ESTIMATE NOW
-        </a>
+          <div class="calendar-card">
+            <span class="calendar-months">Jun &ndash; Sep</span>
+            <h3>Peak Heat & Cycling</h3>
+            <p>
+              Attic temperatures exceed 150°F. Unvented shingles bake, blister, and suffer thermal shock from afternoon thunderstorms, accelerating shingle dry-rot.
+            </p>
+          </div>
+
+          <div class="calendar-card highlight-best">
+            <span class="calendar-months">&#10003; Oct &ndash; Jan</span>
+            <h3>Best Window for Build</h3>
+            <p>
+              Mild weather and low rainfall provide optimal conditions for tear-offs. Shingle adhesive strips cure cleanly without extreme summer heat distortion.
+            </p>
+          </div>
+
+        </div>
+
       </div>
+    </section>
+
+    <!-- SHINGLE DIVIDER (Dark to Light) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#161B22">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
     </div>
-  </section>
 
-<section style="width:100%; margin:0; padding:0;">
-  <div style="position: relative; padding-bottom: 35%; height: 0; min-height: 350px; overflow: hidden; width: 100%;">
-    <iframe title="Epic Roofing & Construction LLC Houston Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.5935127918497!2d-95.30557982577608!3d29.847152827893822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1783351910440!5m2!1sen!2s" 
-      style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display:block;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-  </div>
-</section>
+    <!-- 15. FAQ ACCORDION / LIST SECTION -->
+    <section class="section-light" id="faq">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Houston Roofing Answers</span>
+          <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Frequently Asked Questions</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Clear answers to common questions about inspections, permits, and replacements.
+          </p>
+        </div>
 
-<!-- FAQ SECTION BEFORE FOOTER -->
-<section id="faq" style="background: #1E1E1E;padding:60px 20px;border-top: 1px solid #333333;">
-<div style="max-width:900px;margin:0 auto;">
-<h2 style="text-align:center;color: #FFFFFF; font-size: 32px;margin-bottom:40px;">
-Frequently Asked Questions — Houston Roofing</h2>
+        <div class="faq-list">
+          
+          <div class="faq-item">
+            <h3>Who is the best roofer near me in Houston?</h3>
+            <p>
+              Epic Roofing & Construction LLC is a top-rated Houston roofing contractor with GAF Master Elite certification and HAAG forensic certified inspection credentials. Headquartered at 9402 Spaulding St in Houston, we provide 10-year workmanship warranties, 2-hour emergency storm dispatch, and full insurance claims assistance across Houston, Katy, Sugar Land, Cypress, The Woodlands, Pearland, League City, Spring, Pasadena, and Tomball.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-Who is the best roofing company near me in Houston?</h3>
-<p style="color: #FFFFFF;">Epic Roofing & Construction LLC is one of the top-rated roofing companies in the Greater Houston area. We are factory-certified GAF installers, locally owned, fully licensed, and insured. We serve all surrounding suburbs—including Katy, Sugar Land, Cypress, Pearland, Spring, and The Woodlands—with premium craftsmanship and honest, upfront customer service.</p></div>
+          <div class="faq-item">
+            <h3>How do I know if I need roof repair or full replacement?</h3>
+            <p>
+              If your roof is under 12 to 15 years old and the damage is confined to a single localized area (such as a loose pipe boot or isolated flashing issue), a targeted repair is appropriate. If the roof is over 15 years old, shows widespread granule depletion, has brittle shingles that crack when lifted, or suffered hail impacts across more than 25% to 30% of its surface, a complete replacement provides long-term protection and meets Texas windstorm building codes.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-Do you offer free roof inspections near me in Houston?</h3>
-<p style="color: #FFFFFF;">Yes, we offer 100% free, no-obligation roof inspections for homeowners and commercial property owners across the Houston metro area. A HAAG-certified inspector will climb onto your roof, thoroughly document its condition with photos, check your attic for signs of leaks, and provide a clear, honest assessment of any repairs or maintenance needed.</p></div>
+          <div class="faq-item">
+            <h3>How long does a roof replacement take?</h3>
+            <p>
+              Most standard residential roof replacements in the Greater Houston area are completed in 1 to 2 days. Our crew removes the old shingles down to the plywood decking, replaces any rotted decking boards, installs synthetic underlayment and ice/water barrier in valleys, nails down the new shingle system, and completes magnetic sweeps of your yard to collect every stray nail.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-What's the best time of year to replace a roof in Houston?</h3>
-<p style="color: #FFFFFF;">Fall (October–November) and early spring are ideal for roof replacement in Houston, avoiding peak hurricane season (June–November) and extreme summer heat, which can affect shingle installation and adhesive curing.</p></div>
+          <div class="faq-item">
+            <h3>Do I need a permit to replace my roof in Houston?</h3>
+            <p>
+              Yes. The City of Houston and surrounding municipal jurisdictions require a building permit for complete residential re-roofing projects. Epic Roofing & Construction LLC manages the entire permitting filing, fee coordination, and final code inspection schedule on your behalf.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-How long does a roof last in Houston's climate?</h3>
-<p style="color: #FFFFFF;">Asphalt shingle roofs in Houston typically last 15–20 years due to intense UV exposure and humidity, shorter than the national average of 20–25 years. Metal roofs last 40–50 years and better resist Houston's hail and wind events.</p></div>
+          <div class="faq-item">
+            <h3>What's the best time of year to replace a roof in Houston?</h3>
+            <p>
+              October through January offers the most stable installation window in Southeast Texas, featuring milder temperatures and lower storm frequency. Shingle thermal adhesive strips seal properly in mild weather without suffering from the blistering 100°F+ attic heat of midsummer or the volatile convective thunderstorms of spring.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-Does homeowners insurance cover roof replacement in Texas?</h3>
-<p style="color: #FFFFFF;">Texas homeowners insurance typically covers roof replacement if damage is caused by a covered peril like hail or wind — common in Houston. It does not cover damage from normal wear, age, or lack of maintenance.</p></div>
+          <div class="faq-item">
+            <h3>How long does a roof last in Houston's climate?</h3>
+            <p>
+              Due to extreme UV radiation, 90%+ summer humidity, severe thermal expansion cycling, and periodic tropical storms, asphalt shingle roofs in Houston average a 15 to 20 year lifespan compared to the 20 to 25 year national average. Standing seam metal roofs routinely last 40 to 50+ years in the Houston coastal climate.
+            </p>
+          </div>
 
-<div style="background: #333333; padding: 20px; margin-bottom: 12px; border-radius: 4px; border-left: 4px solid #FFC107;">
-<h3 style="color: #FFFFFF; margin-bottom: 8px;">
-How do I know if I need roof repair or full replacement?</h3>
-<p style="color: #FFFFFF;">If your roof is under 15 years old and only has a small, localized leak or a few damaged shingles, a simple repair is usually all you need. However, if your roof is over 15 to 20 years old, has extensive storm damage across more than 30% of its surface, or has active leaks in multiple areas, a full replacement is generally the more cost-effective, long-term solution. Our free inspection will give you a clear recommendation with zero high-pressure sales tactics.</p></div>
+        </div>
 
-</div>
-</section>
+      </div>
+    </section>
 
-  <!-- SHADOW RESPONSIVE FOOTER -->
+    <!-- SHINGLE DIVIDER (Light to Dark) -->
+    <div class="shingle-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 24" preserveAspectRatio="none" fill="#F5F3EE">
+        <path d="M0,0 L50,18 L100,0 L150,18 L200,0 L250,18 L300,0 L350,18 L400,0 L450,18 L500,0 L550,18 L600,0 L650,18 L700,0 L750,18 L800,0 L850,18 L900,0 L950,18 L1000,0 L1050,18 L1100,0 L1150,18 L1200,0 L1200,24 L0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- 16. FINAL CTA BAND (Dark Gradient) -->
+    <section class="final-cta-section" id="final-cta">
+      <div class="container final-cta-inner">
+        <h2>Get Your Houston Roof Inspected Today</h2>
+        <p>
+          Same-day inspection dispatch across Houston, Katy, Cypress, Sugar Land, and The Woodlands. 100% free, zero sales pressure, and complete high-resolution photo documentation.
+        </p>
+        <div class="final-cta-btns">
+          <a href="tel:+12813269905" class="btn-tactile" id="final-call-btn">
+            Call (281) 326-9905
+          </a>
+          <a href="#inspection-form" class="btn-outline" id="final-inspect-btn">
+            Request Free Inspection
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <div class="container animate-fade-in">
-      <div class="grid grid-4 footer-columns">
+
+  <!-- 17. FOOTER -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
         
-        <!-- Column 1: GAF & BBB badges and logo text -->
-        <div>
-          <a href="/" style="margin-bottom: 1.25rem; display: inline-flex;">
-            <img src="/images/epic-roofing-logo.svg" 
-            alt="Epic Roofing logo for certified storm damage roofing | Epic Roofing TX | Houston TX"
-            style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55" loading="lazy">
+        <!-- Col 1: Brand & Trust -->
+        <div class="footer-col">
+          <a href="/" style="display: inline-block; margin-bottom: 1.25rem;">
+            <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" width="200" height="48" loading="lazy">
           </a>
-          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
-            Premium high-velocity shingles, structural standing seam metals, silicone protective coatings, and storm inspections. Built to last for Texas homes.
+          <p style="margin-bottom: 1.25rem; line-height: 1.55; color: #8B949E;">
+            Epic Roofing & Construction LLC is a GAF Master Elite and HAAG Forensic Certified roofing contractor headquartered in Houston, Texas.
           </p>
-          <div style="display: flex; gap: 8px;">
-            <span class="badge-css-gaf">GAF Certified</span>
-            <span class="badge-css-bbb">BBB Accredited A+</span>
+          <div class="footer-nap">
+            <strong>Headquarters:</strong><br>
+            9402 Spaulding St, Houston, TX 77016<br>
+            Direct: <a href="tel:+12813269905">(281) 326-9905</a><br>
+            Hours: Mon–Sat 7AM–7PM | Emergency 24/7
           </div>
         </div>
 
-        <!-- Column 2: Our core service pages list -->
-        <div>
-          <h4>Core Roof Solutions</h4>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <li><a href="/roof-replacement-houston">Premium Shingle Replacement</a></li>
-            <li><a href="/metal-roofing-houston">Standing Seam Metal Roofing</a></li>
-            <li><a href="/gutter-installation-houston">Seamless Gutter Installation</a></li>
-            <li><a href="/chimney-flashing-repair-houston">Chimney & Roof Flashing Repair</a></li>
-            <li><a href="/roof-coating-houston">Silicone TPO Roof Coatings</a></li>
-            <li><a href="/storm-damage-roofing-houston">Storm Damage Hail Restoration</a></li>
+        <!-- Col 2: Services List -->
+        <div class="footer-col">
+          <h4>Roofing Services</h4>
+          <ul>
+            <li><a href="/roof-replacement-houston">Shingle Roof Replacement</a></li>
+            <li><a href="/metal-roofing-houston">Standing Seam Metal</a></li>
+            <li><a href="/free-roof-inspection-houston">HAAG Forensic Inspection</a></li>
+            <li><a href="/roof-repair-houston">Roof Leak Repair & Sealing</a></li>
             <li><a href="/emergency-roof-tarping-houston">Emergency Rapid Tarping</a></li>
-            <li><a href="/free-roof-inspection-houston">HAAG Forensic Inspections</a></li>
-            <li><a href="/financing">Roof Replacement Financing</a></li>
-            <li><a href="/calculator">Instant Roof Cost Calculator</a></li>
+            <li><a href="/storm-damage-roofing-houston">Storm Damage Restoration</a></li>
+            <li><a href="/hail-damage-roof-repair-houston">Hail Damage Assessment</a></li>
+            <li><a href="/wind-damage-roof-repair-houston">Wind Uplift Repair</a></li>
+            <li><a href="/gutter-installation-houston">Seamless Gutters</a></li>
+            <li><a href="/chimney-flashing-repair-houston">Chimney & Flashing Repair</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: 13-Cities Service Area Map list -->
-        <div>
-          <h4>Metro Service Areas</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <!-- Col 3: Service Areas List -->
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+            <ul>
               <li><a href="/">Houston</a></li>
-              <li><a href="/galveston-tx-roofing-contractor">Galveston</a></li>
-              <li><a href="/conroe-tx-roofing-contractor">Conroe</a></li>
-              <li><a href="/baytown-tx-roofing-contractor">Baytown</a></li>
               <li><a href="/katy-roofing-contractor">Katy</a></li>
               <li><a href="/sugar-land-roofing-contractor">Sugar Land</a></li>
               <li><a href="/cypress-roofing-contractor">Cypress</a></li>
-              <li><a href="/the-woodlands-roofing-contractor">Woodlands</a></li>
-              <li><a href="/pearland-roofing-contractor">Pearland</a></li>
+              <li><a href="/the-woodlands-roofing-contractor">The Woodlands</a></li>
             </ul>
-            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <li><a href="/humble-tx-roofing-contractor">Humble</a></li>
+            <ul>
+              <li><a href="/pearland-roofing-contractor">Pearland</a></li>
               <li><a href="/league-city-roofing-contractor">League City</a></li>
               <li><a href="/spring-tx-roofing-contractor">Spring</a></li>
               <li><a href="/pasadena-tx-roofing-contractor">Pasadena</a></li>
               <li><a href="/tomball-tx-roofing-contractor">Tomball</a></li>
-              <li><a href="/missouri-city-roofing-contractor">Missouri City</a></li>
-              <li><a href="/richmond-tx-roofing-contractor">Richmond</a></li>
             </ul>
           </div>
         </div>
 
-        <!-- Column 4: Phone Links and local address metadata -->
-        <div>
-          <h4>Primary Texas HQ</h4>
-          <ul style="display: flex; flex-direction: column; gap: 1rem; color: #94A3B8; font-size: 0.9rem;">
-            <li>
-              <strong>Assessor Hotline:</strong><br>
-              <a href="tel:+12813269905" style="color: var(--white); font-weight: bold; font-size: 1.15rem; text-decoration: underline;">(281) 326-9905</a>
-            </li>
-            <li>
-              <strong>Corporate Headquarters:</strong><br>
-              Epic Roofing & Construction LLC<br>
-9402 Spaulding St, Houston, TX 77016<br>
-Phone: (281) 326-9905
-            </li>
-            <li>
-              <strong>Operational Status:</strong><br>
-              Mon–Sat 7AM–7PM | Emergency dispatch: 24/7
-            </li>
+        <!-- Col 4: Company & Resources -->
+        <div class="footer-col">
+          <h4>Company Links</h4>
+          <ul>
+            <li><a href="/about">About Epic Roofing</a></li>
+            <li><a href="/financing">Roof Financing Options</a></li>
+            <li><a href="/calculator">Instant Cost Calculator</a></li>
+            <li><a href="/blog">Roofing Knowledge Blog</a></li>
+            <li><a href="/contact">Contact Our Team</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
           </ul>
         </div>
 
       </div>
-    </div>
 
-    <!-- Footer Copyright Bottom & legal notices -->
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
         <div>
-          © 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+          &copy; 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
         </div>
-        <div style="display: flex; gap: 1.25rem;">
+        <div class="footer-legal-links">
           <a href="/#case-studies">Case Studies</a>
           <a href="/financing">Financing</a>
           <a href="/calculator">Calculator</a>
           <a href="/blog">Blog</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-and-conditions">Terms & Covenants</a>
-          <a href="/sitemap.xml">XML Sitemap</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-and-conditions">Terms</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- MOBILE STICKY CALL ACTION -->
-  
-  <!-- GLOBAL FLOATING/STICKY CALL ACTION -->
-  <div class="global-call-widget" id="global-call-widget">
-    <a href="tel:+12813269905" class="sticky-call-btn">
-      <span class="phone-icon">📞</span>
-      <span class="btn-text-desktop">Call (281) 326-9905</span>
-      <span class="btn-text-mobile">Call Now: (281) 326-9905</span>
+  <!-- 18. MOBILE-ONLY STICKY BOTTOM CALL BAR -->
+  <div class="mobile-sticky-bar" id="mobile-call-bar">
+    <a href="tel:+12813269905" class="mobile-sticky-link">
+      <span>&#128222;</span> Call (281) 326-9905 &mdash; Free Inspection
     </a>
   </div>
 
-  <!-- INVISIBLE COMPLIANT LOCAL NAP SHELL -->
-  <div class="epic-nap-hidden">
-    <div itemscope itemtype="https://schema.org/RoofingContractor">
-      <span itemprop="name">Epic Roofing & Construction LLC</span>
-      <span itemprop="telephone">(281) 326-9905</span>
-      <span itemprop="email">info@epicroofingconstruction.com</span>
-      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="streetAddress">9402 Spaulding St</span>,
-        <span itemprop="addressLocality">Houston</span>,
-        <span itemprop="addressRegion">TX</span>,
-        <span itemprop="postalCode">77016</span>
-        <span itemprop="addressCountry">US</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- THE REACT APP HYDRATION SCRIPT AND MOUNT (Removed for static hosting) -->
-
-  <!-- Navigation Helper Toggle scripts -->
-      <!-- Navigation Helper Toggle scripts -->
+  <!-- Mobile Menu Toggle Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const menuBtn = document.getElementById('menu-btn');
-      const menuCloseBtn = document.getElementById('menu-close-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const overlay = document.getElementById('menu-overlay');
+      const toggleBtn = document.getElementById('mobile-toggle-btn');
+      const closeBtn = document.getElementById('mobile-close-btn');
+      const overlay = document.getElementById('mobile-overlay');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
 
-      function toggleMenu() {
-        mobileMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        if (mobileMenu.classList.contains('active')) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = '';
-        }
+      function openMenu() {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
 
-      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
-      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
-      if (overlay) overlay.addEventListener('click', toggleMenu);
+      function closeMenu() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
 
-      // Mobile Accordions
-      const accordionBtns = document.querySelectorAll('.mobile-accordion-btn');
-      accordionBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          this.classList.toggle('active');
-          const content = this.nextElementSibling;
-          if (content) {
-            content.classList.toggle('active');
-          }
-        });
+      if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
       });
     });
   </script>
