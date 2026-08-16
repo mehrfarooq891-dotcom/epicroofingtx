@@ -53,6 +53,7 @@ for (const entry of entries) {
     if (
       name.endsWith('.html') ||
       name === 'style.css' ||
+      name === 'analytics.js' ||
       name === 'robots.txt' ||
       name.endsWith('.xml') ||
       name === 'metadata.json' ||
