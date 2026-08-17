@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Metal Roof vs Shingle Roof in Houston: Which Wins in Texas Heat and Hurricane Season?", filename: "metal-roof-vs-shingle-roof-houston.html", description: "Compare metal roof vs shingle in Houston TX: cost per sq ft, 50-year lifespan, Class 4 impact resistance, Texas windstorm ratings, and cooling bill reductions.", category: "Cost & Materials", date: "August 17, 2026", readTime: "13 Min Read" },
   { title: "Lifted Shingles After a Windstorm: Emergency Repair or Wait It Out?", filename: "lifted-shingles-after-windstorm-emergency-repair-or-wait.html", description: "Noticed lifted shingles on your roof after a Houston windstorm? Discover if loose asphalt shingles need emergency repair or if waiting causes costly leaks.", category: "Storm Repair", date: "August 13, 2026", readTime: "10 Min Read" },
   { title: "Storm Damage Insurance Claim Timeline: What Happens After You File in Houston", filename: "storm-damage-insurance-claim-timeline-houston.html", description: "Follow the step-by-step Houston storm damage insurance claim timeline from initial filing and adjuster inspection to final payout and roof restoration.", category: "Insurance Claims", date: "August 9, 2026", readTime: "11 Min Read" },
   { title: "How to Spot Storm Damage on Your Roof After a Texas Storm", filename: "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html", description: "Learn how to spot storm damage on your roof after a Texas storm. Check missing shingles, dented gutters, downspout granules & yard debris safely from ground level.", category: "Storm Repair", date: "August 7, 2026", readTime: "11 Min Read" },
@@ -64,6 +65,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "metal-roof-vs-shingle-roof-houston.html": "photo-1613665813446-82a78c468a1d",
   "lifted-shingles-after-windstorm-emergency-repair-or-wait.html": "photo-1628744876497-eb30460be9f6",
   "storm-damage-insurance-claim-timeline-houston.html": "photo-1554224155-8d04cb21cd6c",
   "how-to-spot-storm-damage-on-your-roof-after-a-texas-storm.html": "photo-1527030280862-64139fba04ca",
