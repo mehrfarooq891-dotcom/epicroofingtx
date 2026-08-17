@@ -40,7 +40,7 @@ htmlFiles.forEach(file => {
 
   // 1. Update Favicon
   if (content.includes('<link rel="icon"') || content.includes("<link rel='icon'")) {
-    const newContent = content.replace(/<link rel=["']icon["'][^>]*>/i, UNIFIED_FAVICON);
+    const newContent = content.replace(/<link rel=["']icon["'][^>]*?(?:>.*?<\/svg>|)>["']?>/is, UNIFIED_FAVICON);
     if (newContent !== content) {
       content = newContent;
       changed = true;
