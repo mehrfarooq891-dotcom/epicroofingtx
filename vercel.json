@@ -138,19 +138,10 @@
     { "source": "/roof-replacement-after-hurricane-houston", "destination": "/storm-damage-roofing-houston", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/index.html", "destination": "/" },
     { "source": "/calculator", "destination": "/calculator.html" },
     { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },
     { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" },
     { "source": "/blog/roof-leak-detection-houston-guide", "destination": "/blog/roof-leak-detection-houston-guide.html" },
-    { "source": "/blog/best-affordable-roofing-contractors-houston", "destination": "/blog/best-affordable-roofing-contractors-houston.html" },
-    { "source": "/friendswood-tx-roofing-contractor", "destination": "/friendswood-tx-roofing-contractor.html" },
-    { "source": "/channelview-tx-roofing-contractor", "destination": "/channelview-tx-roofing-contractor.html" },
-    { "source": "/deer-park-tx-roofing-contractor", "destination": "/deer-park-tx-roofing-contractor.html" },
-    { "source": "/la-porte-tx-roofing-contractor", "destination": "/la-porte-tx-roofing-contractor.html" },
-    { "source": "/rosenberg-tx-roofing-contractor", "destination": "/rosenberg-tx-roofing-contractor.html" },
-    { "source": "/manvel-tx-roofing-contractor", "destination": "/manvel-tx-roofing-contractor.html" },
-    { "source": "/atascocita-kingwood-tx-roofing-contractor", "destination": "/atascocita-kingwood-tx-roofing-contractor.html" },
-    { "source": "/webster-clear-lake-tx-roofing-contractor", "destination": "/webster-clear-lake-tx-roofing-contractor.html" }
+    { "source": "/blog/best-affordable-roofing-contractors-houston", "destination": "/blog/best-affordable-roofing-contractors-houston.html" }
   ]
 }
