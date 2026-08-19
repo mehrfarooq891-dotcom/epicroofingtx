@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161B22'/><path d='M15 65 L50 25 L85 65 Z' fill='%23E2900F'/></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="description" content="Understand how insurance calculates roof payouts in Houston. Xactimate unit pricing, ACV vs RCV, depreciation schedules, and 30% surface rules.">
+  <title>How Adjusters Calculate Roof Payouts in Houston | Epic</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Custom Blog Elements */
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-container {
+        grid-template-columns: 8fr 4fr;
+      }
+    }
+
+    .blog-article {
+      background: var(--navy-light);
+      border: 1px solid #1E293B;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-bottom: 4px solid var(--orange);
+    }
+
+    .blog-article h2, .blog-article h3 {
+      text-align: left;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .blog-article h2 {
+      font-size: 1.85rem;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 0.5rem;
+      color: var(--white);
+    }
+    .blog-article h3 {
+      font-size: 1.35rem;
+      color: var(--white);
+    }
+
+    .blog-article p {
+      color: #94A3B8;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .blog-article p strong {
+      color: var(--white);
+    }
+
+    .blog-article ul, .blog-article ol {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+    .blog-article ul {
+      list-style-type: square;
+    }
+    .blog-article ol {
+      list-style-type: decimal;
+    }
+    .blog-article li {
+      color: #94A3B8;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    .blog-article li strong {
+      color: var(--white);
+    }
+
+    /* Comparison Table Styling */
+    .comp-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: 8px;
+      border: 1px solid #1E293B;
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .comp-table th {
+      background: #1E293B;
+      color: var(--white);
+      padding: 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--orange);
+    }
+    .comp-table td {
+      padding: 1rem;
+      color: #94A3B8;
+      border-bottom: 1px solid #1E293B;
+      background: rgba(30, 41, 59, 0.3);
+    }
+    .comp-table tr:hover td {
+      background: rgba(30, 41, 59, 0.6);
+    }
+    .comp-table td strong {
+      color: var(--white);
+    }
+
+    .meta-strip {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #64748B;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-sidebar {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+      }
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(234, 88, 12, 0.15);
+    }
+    .sidebar-cta h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+    .sidebar-cta p {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1E293B;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do insurance adjusters calculate the depreciation on an asphalt shingle roof?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adjusters calculate shingle depreciation by dividing your roof's current age by its expected lifespan, which in Houston's harsh climate is 15 to 20 years. A 10-year-old architectural roof has roughly 50% depreciation deducted from the gross replacement cost value (RCV) to produce your initial actual cash value (ACV) check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What software do insurance adjusters use to estimate roof repairs in Texas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost all major Texas insurance carriers use Xactimate software. Xactimate updates monthly regional pricing databases for Houston labor rates, tear-off disposal fees, GAF shingle bundle prices, underlayment rolls, and metal flashing costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I receive the withheld depreciation check from my insurance company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have an RCV policy, your carrier releases the recoverable depreciation check after your roofing contractor completes the work, submits a final invoice, and provides photographic proof that all specified materials were installed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to pay my roof deductible if insurance pays for the replacement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Under Texas House Bill 2102, Texas law strictly requires homeowners to pay their full property insurance deductible. It is a criminal offense for contractors to waive, absorb, or rebate any portion of an insurance deductible."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- Google Analytics 4 (GA4) Tracking -->
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Houston Storm Season: Free Same-Day Roof Inspection | Call Now <a href="tel:2813269905">📞 (281) 326-9905</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" id="site-logo">
+        <img src="/images/epic-roofing-logo.svg" 
+        alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
+        style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <!-- 1. Services (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Services</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <div>
+              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Replacement</a>
+              <a class="dropdown-item" href="/metal-roofing-houston">Metal Roofing</a>
+              <a class="dropdown-item" href="/roof-coating-houston">Commercial Coating</a>
+              <a class="dropdown-item" href="/free-roof-inspection-houston">Free Inspection</a>
+              <a class="dropdown-item" href="/tile-roofing-houston">Tile &amp; Slate Roofing</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/gutter-installation-houston">Gutters &amp; Downspouts</a>
+              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Flashing &amp; Chimney</a>
+              <a class="dropdown-item" href="/roof-repair-houston">Roof Repairs &amp; Sealing</a>
+              <a class="dropdown-item" href="/affordable-roofing-houston">Affordable Roofing</a>
+              <a class="dropdown-item" href="/roof-leak-detection-houston">Leak Detection</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Storm Damage (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Damage</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston">General Storm Damage</a>
+            <a class="dropdown-item" href="/insurance-claim-roofing-houston">Insurance Claim Help</a>
+          </div>
+        </div>
+
+        <!-- 3. Service Areas (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide dropdown-menu-scrollable">
+            <div>
+              <a class="dropdown-item" href="/">Houston Core</a>
+              <a class="dropdown-item" href="/katy-roofing-contractor">Katy</a>
+              <a class="dropdown-item" href="/the-woodlands-roofing-contractor">The Woodlands</a>
+              <a class="dropdown-item" href="/sugar-land-roofing-contractor">Sugar Land</a>
+              <a class="dropdown-item" href="/cypress-roofing-contractor">Cypress</a>
+              <a class="dropdown-item" href="/pearland-roofing-contractor">Pearland</a>
+              <a class="dropdown-item" href="/league-city-roofing-contractor">League City</a>
+              <a class="dropdown-item" href="/spring-tx-roofing-contractor">Spring</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/pasadena-tx-roofing-contractor">Pasadena</a>
+              <a class="dropdown-item" href="/tomball-tx-roofing-contractor">Tomball</a>
+              <a class="dropdown-item" href="/baytown-tx-roofing-contractor">Baytown</a>
+              <a class="dropdown-item" href="/conroe-tx-roofing-contractor">Conroe</a>
+              <a class="dropdown-item" href="/galveston-tx-roofing-contractor">Galveston</a>
+              <a class="dropdown-item" href="/humble-tx-roofing-contractor">Humble / Kingwood</a>
+              <a class="dropdown-item" href="/richmond-tx-roofing-contractor">Richmond</a>
+              <a class="dropdown-item" href="/missouri-city-roofing-contractor">Missouri City</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Resources (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Resources</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
+            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
+            <a class="dropdown-item" href="/financing">Financing</a>
+            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
+          </div>
+        </div>
+
+        <!-- 5. Contact Direct Link -->
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:2813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        <span style="margin-right: 6px;">📞</span> (281) 326-9905
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" id="menu-btn" aria-label="Toggle Navigation Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OUT OVERLAY -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-nav-slide" id="mobile-menu">
+    <div class="mobile-nav-header">
+      <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX" style="height: 40px; width: auto;" width="160" height="40">
+      <button class="mobile-close-btn" id="menu-close-btn">&times;</button>
+    </div>
+    <div class="mobile-nav-content">
+      <a href="tel:2813269905" class="btn btn-primary btn-block mb-3">📞 Call (281) 326-9905</a>
+      <a href="/" class="mobile-nav-item">Home</a>
+      <a href="/about" class="mobile-nav-item">About Us</a>
+      <a href="/roof-replacement-houston" class="mobile-nav-item">Roof Replacement</a>
+      <a href="/roof-repair-houston" class="mobile-nav-item">Roof Repair</a>
+      <a href="/storm-damage-roofing-houston" class="mobile-nav-item">Storm Restoration</a>
+      <a href="/blog" class="mobile-nav-item">Blog &amp; Resources</a>
+      <a href="/contact" class="mobile-nav-item">Contact Us</a>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Breadcrumb Component -->
+    <nav class="breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #64748B;">
+      <a href="/" style="color: #94A3B8; text-decoration: none;">Home</a> &gt;
+      <a href="/blog" style="color: #94A3B8; text-decoration: none;">Blog</a> &gt;
+      <span style="color: var(--orange);">How Insurance Adjusters Calculate Emergency Roof Repair Payouts</span>
+    </nav>
+
+    <!-- Post Title & Meta -->
+    <h1 style="font-size: 2.35rem; line-height: 1.25; margin-bottom: 1rem; color: var(--white); text-align: left;">
+      How Insurance Adjusters Calculate Emergency Roof Repair Payouts
+    </h1>
+    <div class="meta-strip">
+      <span>By Josh, Lead Inspector</span>
+      <span>•</span>
+      <span>Published: August 19, 2026</span>
+      <span>•</span>
+      <span>10 Min Read</span>
+      <span>•</span>
+      <span style="color: var(--orange);">Insurance Claims</span>
+    </div>
+
+    <!-- Layout Grid -->
+    <div class="blog-container">
+      <!-- Article Content -->
+      <article class="blog-article">
+        <!-- Hero Image -->
+        <div style="height: 380px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.05); position: relative;">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?w=900&auto=format&fit=crop&q=75&fm=webp" type="image/webp">
+            <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?w=900&auto=format&fit=crop&q=75&fm=jpg" alt="How Insurance Adjusters Calculate Emergency Roof Repair Payouts" class="w-full h-full object-cover" width="900" height="380" loading="eager" referrerpolicy="no-referrer">
+          </picture>
+        </div>
+
+        
+      <p class="lead" style="font-size: 1.15rem; color: #F1F5F9; font-weight: 500; margin-bottom: 1.5rem;">
+        Insurance claims adjusters do not guess what your roof repair costs; they plug line items into Xactimate pricing software configured specifically for the Houston construction market.
+      </p>
+
+      <p>
+        When you open your first insurance claim summary after a major hail or windstorm, the document looks like complex accounting. You see terms like RCV, ACV, Depreciation, Overhead &amp; Profit, and Net Claim Payout. If you do not understand the math behind these numbers, you could leave thousands of dollars of entitled repair funds on the table.
+      </p>
+
+      <p>
+        I have sat across kitchen tables with adjusters from State Farm, Allstate, USAA, and Texas Windstorm Insurance Association (TWIA) on hundreds of storm claims across Houston. Here is exactly how insurance adjusters calculate emergency roof repair payouts, step by step.
+      </p>
+
+      <h2>The Core Formula: RCV vs. ACV Explained</h2>
+      <p>
+        Every roof claim calculation begins with three fundamental numbers:
+      </p>
+
+      <div class="comp-table-wrapper">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Term</th>
+              <th>What It Means in Texas</th>
+              <th>Example (2,000 Sq Ft Home)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>RCV (Replacement Cost Value)</strong></td>
+              <td>The total dollar amount required to tear off and rebuild your roof today using current materials and labor rates.</td>
+              <td>$14,000</td>
+            </tr>
+            <tr>
+              <td><strong>Depreciation</strong></td>
+              <td>The value lost due to roof age, wear, and weather exposure before the storm date.</td>
+              <td>-$4,200 (30% on 6-year-old roof)</td>
+            </tr>
+            <tr>
+              <td><strong>ACV (Actual Cash Value)</strong></td>
+              <td>The current market value of your roof immediately prior to the storm (RCV minus Depreciation).</td>
+              <td>$9,800</td>
+            </tr>
+            <tr>
+              <td><strong>Policy Deductible</strong></td>
+              <td>Your out-of-pocket obligation under Texas law (typically 1% to 2% of home insured value).</td>
+              <td>-$3,500 (1% on $350k home)</td>
+            </tr>
+            <tr>
+              <td><strong>First Check Issued (Net ACV)</strong></td>
+              <td>The initial payment check the insurer sends you to begin construction work.</td>
+              <td>$6,300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aeo-qa-box" style="background: rgba(234, 88, 12, 0.1); border-left: 4px solid var(--orange); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+        <h2 style="font-size: 1.35rem; color: var(--white); margin-top: 0; margin-bottom: 0.75rem;">How do insurance adjusters calculate the depreciation on an asphalt shingle roof?</h2>
+        <p style="color: #E2E8F0; margin-bottom: 0; font-size: 1.05rem;">
+          Adjusters calculate shingle depreciation by dividing your roof's current age by its expected lifespan, which in Houston's harsh climate is 15 to 20 years. A 10-year-old architectural roof has roughly 50% depreciation deducted from the gross replacement cost value (RCV) to produce your initial actual cash value (ACV) check.
+        </p>
+      </div>
+
+      <h2>How Adjusters Build Line Items in Xactimate</h2>
+      <p>
+        Insurance adjusters build their scope of work using standardized line items. Every single physical action required to replace your roof has a unit price code:
+      </p>
+
+      <ul>
+        <li><strong>RFG RMV (Tear-off Labor):</strong> Cost per square (100 sq ft) to strip existing asphalt shingles and haul debris to local Houston landfills.</li>
+        <li><strong>RFG 300 (Shingle Installation):</strong> Cost per square to install new 30-year architectural shingles (such as GAF Timberline HDZ), including pneumatic nails and starter strips.</li>
+        <li><strong>RFG FELT (Underlayment):</strong> Cost to roll out synthetic underlayment or asphalt felt over bare decking.</li>
+        <li><strong>RFG DRIP (Drip Edge):</strong> Linear footage cost for painted aluminum drip edge flashing installed along eaves and rakes.</li>
+        <li><strong>RFG VNT (Ventilation):</strong> Unit cost to replace turtle vents, ridge vents, or motorized attic exhaust fans.</li>
+        <li><strong>RFG FLPIPE (Plumbing Boots):</strong> Unit cost to replace lead or neoprene pipe jacks on plumbing vent stacks.</li>
+      </ul>
+
+      <h2>General Contractor Overhead and Profit (10 &amp; 10 Rule)</h2>
+      <p>
+        When a severe weather event causes damage across multiple trades (for example, shingles, gutters, broken window screens, and ceiling drywall water stains), Texas insurance guidelines permit General Contractor Overhead and Profit (O&amp;P).
+      </p>
+
+      <p>
+        This standard adds 10% for overhead and 10% for profit to the entire estimate. On a $14,000 roof and gutter claim, O&amp;P adds roughly $2,800 to the total claim value, ensuring the general contractor has the resources to coordinate specialized trade crews and maintain liability insurance.
+      </p>
+
+      <h2>What Adjusters Often Leave Off Initial Estimates</h2>
+      <p>
+        Adjusters are often overworked after major Houston weather events and miss critical building code items. Here is what we regularly supplement to ensure your roof meets current City of Houston and Texas building codes:
+      </p>
+
+      <ul>
+        <li><strong>Drip Edge Flashing:</strong> Required by 2021 IRC building code in Harris County, but often omitted by out-of-town catastrophe adjusters.</li>
+        <li><strong>Starter Strip Shingles:</strong> Required by shingle manufacturers for high-wind warranties, but sometimes left off as an assumed material.</li>
+        <li><strong>Ice &amp; Water Shield in Valleys:</strong> Critical leak defense along closed valleys that must be included as a separate material line item.</li>
+        <li><strong>Rotted Decking Replacement:</strong> When decking is rotted by storm water intrusion, the wood sheets must be supplemented per 4x8 sheet.</li>
+        <li><strong>High-Pitch Surcharges:</strong> Roofs steeper than 7/12 pitch require extra safety rigging and staging labor that adjusters frequently forget to check.</li>
+      </ul>
+
+      <p>
+        If your roof only suffered localized damage, your carrier might pay for <a href="/roof-repair-houston" style="color: var(--orange); font-weight: 700;">itemized emergency repair scopes</a>. But if more than 30% of the roof surface has storm damage, Texas insurance standards mandate that the carrier pay for a complete replacement.
+      </p>
+
+      <h2>Recoverable vs. Non-Recoverable Depreciation</h2>
+      <p>
+        Check your policy declaration page carefully:
+      </p>
+
+      <ul>
+        <li><strong>RCV Policy (Replacement Cost):</strong> The depreciation deducted from your first check is <em>recoverable</em>. Once our team finishes installing your new roof, we send a certificate of completion to your carrier, and they issue a second check for the full $4,200 depreciation balance. In this scenario, most homeowners pay only their insurance deductible.</li>
+        <li><strong>ACV-Only Policy (Actual Cash Value):</strong> The depreciation is <em>non-recoverable</em>. The insurer will only ever pay you the depreciated cash value, and you must pay both your deductible and the depreciation difference out of pocket.</li>
+      </ul>
+
+      <h2>The Critical Role of Contractor Code Supplements</h2>
+      <p>
+        When adjusters prepare an initial scope from a quick 20-minute ladder inspection, they frequently leave off required municipal code upgrades. Under Texas law and City of Houston building codes, roofs must be brought up to current residential code during a full re-roofing project.
+      </p>
+
+      <p>
+        If your policy includes Ordinance or Law coverage (also known as Code Upgrade coverage), your roofer can submit supplemental line items for items like additional intake ventilation, upgraded ice barrier membranes, and high-wind fastener schedules. Your insurance company is required by policy contract to pay for these mandated items once photographic proof and code citations are submitted.
+      </p>
+
+      <h2>Deadlines for Filing Depreciation Holdback Proof</h2>
+      <p>
+        Most Texas homeowners policies give you 180 to 365 days from the loss date to complete roof construction and claim your recoverable depreciation funds. If you fail to complete the project within that window, the insurance carrier closes the file and keeps the withheld depreciation balance permanently.
+      </p>
+
+      <p>
+        On an average 2,000 sq ft single-family home in Houston, full replacement runs between $9,500 and $16,000. Managing supplements and adjuster scopes takes experienced eyes. Let <a href="/" style="color: var(--orange); font-weight: 700;">Epic Roofing & Construction LLC</a> help you with <a href="/insurance-claim-roofing-houston" style="color: var(--orange); font-weight: 700;">navigating RCV depreciation recovery</a> or getting accurate <a href="/roof-replacement-houston" style="color: var(--orange); font-weight: 700;">full roof replacement cost estimates</a>.
+      </p>
+    
+
+        <hr style="border: 0; border-top: 1px solid #1E293B; margin: 3rem 0;">
+
+        <!-- FAQ SECTION -->
+        <section class="blog-faq">
+          <h2 style="font-size: 1.85rem; color: var(--white); margin-bottom: 1.5rem; border-bottom: 1px solid #1E293B; padding-bottom: 0.5rem;">
+            Frequently Asked Questions
+          </h2>
+          
+    <div class="faq-item">
+      <h3>How do insurance adjusters calculate the depreciation on an asphalt shingle roof?</h3>
+      <p>Adjusters calculate shingle depreciation by dividing your roof's current age by its expected lifespan, which in Houston's harsh climate is 15 to 20 years. A 10-year-old architectural roof has roughly 50% depreciation deducted from the gross replacement cost value (RCV) to produce your initial actual cash value (ACV) check.</p>
+    </div>
+  
+
+    <div class="faq-item">
+      <h3>What software do insurance adjusters use to estimate roof repairs in Texas?</h3>
+      <p>Almost all major Texas insurance carriers use Xactimate software. Xactimate updates monthly regional pricing databases for Houston labor rates, tear-off disposal fees, GAF shingle bundle prices, underlayment rolls, and metal flashing costs.</p>
+    </div>
+  
+
+    <div class="faq-item">
+      <h3>When do I receive the withheld depreciation check from my insurance company?</h3>
+      <p>If you have an RCV policy, your carrier releases the recoverable depreciation check after your roofing contractor completes the work, submits a final invoice, and provides photographic proof that all specified materials were installed.</p>
+    </div>
+  
+
+    <div class="faq-item">
+      <h3>Do I have to pay my roof deductible if insurance pays for the replacement?</h3>
+      <p>Yes. Under Texas House Bill 2102, Texas law strictly requires homeowners to pay their full property insurance deductible. It is a criminal offense for contractors to waive, absorb, or rebate any portion of an insurance deductible.</p>
+    </div>
+  
+        </section>
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-cta">
+          <h3>Confused by Your Insurance Adjuster's Roof Estimate?</h3>
+          <p>
+            Get an honest, HAAG-certified evaluation from Epic Roofing &amp; Construction LLC. No pressure, no storm-chaser games.
+          </p>
+          <a href="tel:2813269905" class="btn btn-primary btn-block mb-3" style="font-size: 1rem; padding: 0.9rem;">
+            📞 Call (281) 326-9905
+          </a>
+          <a href="/contact" class="btn btn-secondary btn-block" style="font-size: 0.95rem;">
+            Let Us Review Your Adjuster's Scope of Work
+          </a>
+        </div>
+
+        <div style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 1.5rem;">
+          <h4 style="color: var(--white); font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 1px solid #1E293B; padding-bottom: 0.5rem;">
+            Why Houston Trusts Epic Roofing
+          </h4>
+          <ul style="padding-left: 1.25rem; margin-bottom: 0; font-size: 0.95rem; color: #94A3B8;">
+            <li style="margin-bottom: 0.5rem;">GAF Master Elite Certified</li>
+            <li style="margin-bottom: 0.5rem;">HAAG Certified Inspectors</li>
+            <li style="margin-bottom: 0.5rem;">15–20 Year Realistic Shingle Lifespan</li>
+            <li style="margin-bottom: 0.5rem;">Local Office: 9402 Spaulding St</li>
+            <li>Zero Deductible Waiving Scams</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns">
+        <div>
+          <a href="/" class="logo">EPIC ROOFING &amp; CONSTRUCTION <span>LLC</span></a>
+          <p>Premium roofing assemblies, lifetime shingles, and HAAG-certified evaluations.</p>
+        </div>
+        <div>
+          <h3>Core Solutions</h3>
+          <ul>
+            <li><a href="/roof-replacement-houston">GAF Asphalt Shingles</a></li>
+            <li><a href="/metal-roofing-houston">Standing Seam Metal</a></li>
+            <li><a href="/storm-damage-roofing-houston">Storm Restoration</a></li>
+            <li><a href="/free-roof-inspection-houston">Free Inspection</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="/katy-roofing-contractor">Katy</a></li>
+            <li><a href="/sugar-land-roofing-contractor">Sugar Land</a></li>
+            <li><a href="/cypress-roofing-contractor">Cypress</a></li>
+            <li><a href="/pearland-roofing-contractor">Pearland</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>
+            <a href="tel:2813269905">(281) 326-9905</a><br>
+            Epic Roofing &amp; Construction LLC<br>
+            9402 Spaulding St, Houston, TX 77016
+          </p>
+          <div class="footer-map-container" style="margin-top: 1rem; width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); height: 180px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.593673179513!2d-95.30300489999999!3d29.8471482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1786888441852!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Epic Roofing &amp; Construction LLC Location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>© 2026 Epic Roofing &amp; Construction LLC. All rights reserved.</div>
+        <div>
+          <a href="/">Home</a>
+          <a href="/#case-studies">Case Studies</a>
+          <a href="/blog">Blog</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GLOBAL FLOATING/STICKY CALL ACTION -->
+  <div class="global-call-widget" id="global-call-widget">
+    <a href="tel:2813269905" class="sticky-call-btn">
+      <span class="phone-icon">📞</span>
+      <span class="btn-text-desktop">Call (281) 326-9905</span>
+      <span class="btn-text-mobile">Call Now: (281) 326-9905</span>
+    </a>
+  </div>
+
+  <!-- INVISIBLE COMPLIANT LOCAL NAP SHELL -->
+  <div class="epic-nap-hidden">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing &amp; Construction LLC</span>
+      <span itemprop="telephone">(281) 326-9905</span>
+      <span itemprop="email">info@epicroofingconstruction.com</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">9402 Spaulding St</span>
+        <span itemprop="addressLocality">Houston</span>,
+        <span itemprop="addressRegion">TX</span>
+        <span itemprop="postalCode">77016</span>
+        <span itemprop="addressCountry">US</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+    });
+  </script>
+</body>
+</html>
