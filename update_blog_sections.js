@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Roof-to-Wall Flashing Leaks: Why They're Often Missed", filename: "roof-to-wall-flashing-leaks-houston.html", description: "Discover why roof-to-wall flashing leaks are easily missed in Houston. Learn step flashing flaws, kickout flashing gaps, wall staining, and repair costs.", category: "Roof Inspection", date: "August 27, 2026", readTime: "10 Min Read" },
   { title: "Roof Decking Rot: The Hidden Structural Emergency", filename: "roof-decking-rot-hidden-emergency-houston.html", description: "Identify soft, rotting roof decking in Houston before sheathing collapses. Warning signs, attic checks, CDX plywood replacement costs & repair steps.", category: "Roof Inspection", date: "August 23, 2026", readTime: "10 Min Read" },
   { title: "Post-Hurricane Roof Damage Assessment in Houston", filename: "post-hurricane-roof-damage-assessment-houston.html", description: "How to assess your Houston roof after a hurricane. Ground checks, attic water spotting, missing shingles & insurance steps from a local roofer.", category: "Storm Repair", date: "August 19, 2026", readTime: "10 Min Read" },
   { title: "Hail Damage vs Normal Wear: How to Tell the Difference", filename: "hail-damage-vs-normal-wear-houston.html", description: "Learn how to spot real hail strikes versus normal roof aging in Houston. Hail bruise patterns, thermal cracking, test squares, and insurance rules.", category: "Hail Damage", date: "August 19, 2026", readTime: "10 Min Read" },
@@ -72,6 +73,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "roof-to-wall-flashing-leaks-houston.html": "photo-1513694203232-719a280e022f",
   "roof-decking-rot-hidden-emergency-houston.html": "photo-1513694203232-719a280e022f",
   "class-4-impact-resistant-shingles-houston.html": "photo-1613665813446-82a78c468a1d",
   "how-adjusters-calculate-roof-repair-payouts-houston.html": "photo-1584467541268-b040f83be3fd",
