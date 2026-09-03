@@ -804,6 +804,47 @@ footer a:hover, .site-footer a:hover {
   color: var(--text-light);
 }
 
+/* Footer Social Media Icons */
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-social-link,
+footer a.footer-social-link,
+.site-footer a.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #0E1217;
+  border: 1px solid rgba(226, 144, 15, 0.45);
+  color: var(--hazard-amber) !important;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link:hover,
+footer a.footer-social-link:hover,
+.site-footer a.footer-social-link:hover {
+  background-color: var(--hazard-amber);
+  color: #161B22 !important;
+  border-color: var(--hazard-amber);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(226, 144, 15, 0.35);
+}
+
+.footer-social-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
 .footer-map-container {
   width: 100%;
   height: 180px;
