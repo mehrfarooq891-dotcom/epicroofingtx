@@ -13,6 +13,7 @@ const files = fs.readdirSync(BLOG_DIR)
 console.log(`Found ${files.length} blog files to index and update.`);
 
 const blogPosts = [
+  { title: "Same-Day Roof Repair Houston: What's Actually Possible", filename: "same-day-roof-repair-houston.html", description: "Discover what emergency roof repairs can be completed same-day in Houston. Learn when pipe jacks, shingles, or tarping can stop leaks immediately.", category: "Emergency Roofing", date: "September 6, 2026", readTime: "10 Min Read" },
   { title: "Roof Truss Damage: When a Repair Isn't Enough", filename: "roof-truss-damage-when-repair-isnt-enough-houston.html", description: "Learn when damaged roof trusses in Houston can be repaired or require engineered replacement. Signs of cracked webs, sag, storm impacts, and costs.", category: "Roof Inspection", date: "August 31, 2026", readTime: "10 Min Read" },
   { title: "Roof-to-Wall Flashing Leaks: Why They're Often Missed", filename: "roof-to-wall-flashing-leaks-houston.html", description: "Discover why roof-to-wall flashing leaks are easily missed in Houston. Learn step flashing flaws, kickout flashing gaps, wall staining, and repair costs.", category: "Roof Inspection", date: "August 27, 2026", readTime: "10 Min Read" },
   { title: "Roof Decking Rot: The Hidden Structural Emergency", filename: "roof-decking-rot-hidden-emergency-houston.html", description: "Identify soft, rotting roof decking in Houston before sheathing collapses. Warning signs, attic checks, CDX plywood replacement costs & repair steps.", category: "Roof Inspection", date: "August 23, 2026", readTime: "10 Min Read" },
@@ -74,6 +75,7 @@ const blogPosts = [
 
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
+  "same-day-roof-repair-houston.html": "photo-1513694203232-719a280e022f",
   "roof-truss-damage-when-repair-isnt-enough-houston.html": "photo-1513694203232-719a280e022f",
   "roof-to-wall-flashing-leaks-houston.html": "photo-1513694203232-719a280e022f",
   "roof-decking-rot-hidden-emergency-houston.html": "photo-1513694203232-719a280e022f",
