@@ -863,7 +863,7 @@ ${JSON.stringify(localBusinessSchema, null, 2)}
                 </div>
                 <div>
                   <label for="lead-phone" class="form-label">Phone Number</label>
-                  <input type="tel" id="lead-phone" name="phone" class="form-input" placeholder="(281) 555-0199" required>
+                  <input type="tel" id="lead-phone" name="phone" class="form-input" placeholder="(281) 326-9905" required>
                 </div>
                 <div>
                   <label for="lead-zip" class="form-label">${city} Area ZIP Code</label>
