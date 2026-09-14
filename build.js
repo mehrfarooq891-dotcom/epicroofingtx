@@ -57,6 +57,7 @@ for (const entry of entries) {
       name === 'robots.txt' ||
       name.endsWith('.xml') ||
       name === 'metadata.json' ||
+      name === 'vercel.json' ||
       name === 'favicon.ico' ||
       name.endsWith('.svg') ||
       name.endsWith('.png') ||
