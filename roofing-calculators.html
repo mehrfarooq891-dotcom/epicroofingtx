@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161B22'/><path d='M15 65 L50 25 L85 65 Z' fill='%23E2900F'/></svg>">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <title>Roofing Calculators | Area & Squares, Pitch & Slope | Epic Roofing TX</title>
+  <meta name="description" content="Free interactive roofing calculators for Houston TX homeowners and contractors. Calculate total roof area and squares, pitch ratio, roof angle, and slope percentage instantly.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --dark-card: #161B22;
+      --dark-card-border: #30363D;
+      --navy-input: #0D1117;
+      --hazard-amber: #E2900F;
+      --orange-accent: #FF6B00;
+    }
+
+    body {
+      background-color: #0B1118;
+      color: #E6EDF3;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    .badge-orange-light {
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid rgba(234, 88, 12, 0.3);
+      color: var(--orange-accent);
+      font-weight: bold;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .calc-hero {
+      padding: 3.5rem 0 2rem 0;
+      text-align: center;
+      background: radial-gradient(circle at 50% 10%, rgba(226, 144, 15, 0.12) 0%, transparent 70%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .calc-hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin: 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .calc-hero-title span {
+      color: var(--hazard-amber);
+    }
+
+    .calc-hero-sub {
+      font-size: 1.15rem;
+      color: #94A3B8;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Quick jump pill navigation */
+    .calc-nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 2rem auto 0 auto;
+      max-width: 800px;
+    }
+
+    .calc-nav-pill {
+      background: #161B22;
+      border: 1px solid #30363D;
+      color: #CBD5E1;
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .calc-nav-pill:hover,
+    .calc-nav-pill.active {
+      background: var(--hazard-amber);
+      color: #000000;
+      border-color: var(--hazard-amber);
+    }
+
+    /* Calculator Cards */
+    .calc-card {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-top: 4px solid var(--hazard-amber);
+      border-radius: 10px;
+      padding: 2.25rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .calc-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .calc-card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.85rem;
+      color: #FFFFFF;
+      margin: 0 0 0.35rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .calc-card-desc {
+      color: #94A3B8;
+      font-size: 0.98rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .calc-inputs-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .calc-results-col {
+      background: #0D1117;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .form-label {
+      display: block;
+      color: #F0F6FC;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-label-hint {
+      font-weight: normal;
+      color: #8B949E;
+      font-size: 0.82rem;
+    }
+
+    .calc-input {
+      width: 100%;
+      height: 46px;
+      padding: 0 1rem;
+      background: #0D1117;
+      border: 1.5px solid #30363D;
+      border-radius: 6px;
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-family: 'IBM Plex Mono', monospace;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .calc-input:focus {
+      border-color: var(--hazard-amber);
+      box-shadow: 0 0 0 3px rgba(226, 144, 15, 0.2);
+    }
+
+    /* Section Row Items */
+    .section-row {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid #30363D;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    .section-row-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title-label {
+      font-weight: 700;
+      color: var(--hazard-amber);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-remove-section {
+      background: none;
+      border: none;
+      color: #F85149;
+      font-size: 0.82rem;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-remove-section:hover {
+      background: rgba(248, 81, 73, 0.15);
+    }
+
+    .section-inputs-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .btn-add-section {
+      background: rgba(226, 144, 15, 0.12);
+      border: 1.5px dashed var(--hazard-amber);
+      color: var(--hazard-amber);
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.92rem;
+      width: 100%;
+      text-align: center;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-add-section:hover {
+      background: var(--hazard-amber);
+      color: #000000;
+    }
+
+    /* Output Displays */
+    .result-block {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .result-block:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .result-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: #8B949E;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .result-value-large {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 2.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.1;
+    }
+
+    .result-value-large span {
+      color: var(--hazard-amber);
+    }
+
+    .result-pill-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .badge-status-green {
+      background: rgba(46, 160, 67, 0.15);
+      border: 1px solid rgba(46, 160, 67, 0.35);
+      color: #3FB950;
+    }
+
+    .badge-status-yellow {
+      background: rgba(226, 144, 15, 0.15);
+      border: 1px solid rgba(226, 144, 15, 0.35);
+      color: var(--hazard-amber);
+    }
+
+    .badge-status-orange {
+      background: rgba(255, 107, 0, 0.15);
+      border: 1px solid rgba(255, 107, 0, 0.35);
+      color: #FF6B00;
+    }
+
+    .badge-status-blue {
+      background: rgba(56, 139, 253, 0.15);
+      border: 1px solid rgba(56, 139, 253, 0.35);
+      color: #58A6FF;
+    }
+
+    /* Calculator Disclaimer / Callout Footer */
+    .calc-callout-footer {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.95rem;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .calc-callout-footer a {
+      color: var(--hazard-amber);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .calc-callout-footer a:hover {
+      color: #FFFFFF;
+    }
+
+    /* SVG Pitch Triangle Visualizer */
+    .pitch-diagram-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      border: 1px solid #21262D;
+      text-align: center;
+    }
+
+    .pitch-svg-canvas {
+      max-width: 100%;
+      height: 120px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Informational Section */
+    .info-section {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .info-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .info-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-card {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .info-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google Analytics 4 (GA4) Tracking -->
+  <script src="/analytics.js" defer></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Epic Roofing Houston Roofing Calculators",
+    "url": "https://www.epicroofingtx.com/roofing-calculators",
+    "description": "Interactive Houston roofing calculators for calculating roof square footage, roofing squares, pitch ratio, angle degrees, and slope percentage.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "provider": {
+      "@type": "RoofingContractor",
+      "name": "Epic Roofing & Construction LLC",
+      "telephone": "+1-281-326-9905",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9402 Spaulding St",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77016",
+        "addressCountry": "US"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Houston Storm Season: Free Same-Day Roof Inspection | Call Now <a href="tel:+12813269905">📞 (281) 326-9905</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" id="site-logo">
+        <img src="/images/epic-roofing-logo.svg" 
+        alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
+        style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <!-- 1. Services (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Services</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <div>
+              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Replacement</a>
+              <a class="dropdown-item" href="/metal-roofing-houston">Metal Roofing</a>
+              <a class="dropdown-item" href="/roof-coating-houston">Commercial Coating</a>
+              <a class="dropdown-item" href="/free-roof-inspection-houston">Free Inspection</a>
+              <a class="dropdown-item" href="/tile-roofing-houston">Tile &amp; Slate Roofing</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/gutter-installation-houston">Seamless Gutters</a>
+              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Flashing &amp; Chimney</a>
+              <a class="dropdown-item" href="/roof-repair-houston">Roof Repairs &amp; Sealing</a>
+              <a class="dropdown-item" href="/affordable-roofing-houston">Affordable Roofing</a>
+              <a class="dropdown-item" href="/roof-leak-detection-houston">Leak Detection</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Storm Damage (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Damage</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston">General Storm Damage</a>
+            <a class="dropdown-item" href="/insurance-claim-roofing-houston">Insurance Claim Help</a>
+          </div>
+        </div>
+
+        <!-- 3. Service Areas (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide dropdown-menu-scrollable">
+            <div>
+              <a class="dropdown-item" href="/">Houston Core</a>
+              <a class="dropdown-item" href="/katy-roofing-contractor">Katy</a>
+              <a class="dropdown-item" href="/the-woodlands-roofing-contractor">The Woodlands</a>
+              <a class="dropdown-item" href="/sugar-land-roofing-contractor">Sugar Land</a>
+              <a class="dropdown-item" href="/cypress-roofing-contractor">Cypress</a>
+              <a class="dropdown-item" href="/pearland-roofing-contractor">Pearland</a>
+              <a class="dropdown-item" href="/league-city-roofing-contractor">League City</a>
+              <a class="dropdown-item" href="/spring-tx-roofing-contractor">Spring</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/pasadena-tx-roofing-contractor">Pasadena</a>
+              <a class="dropdown-item" href="/tomball-tx-roofing-contractor">Tomball</a>
+              <a class="dropdown-item" href="/baytown-tx-roofing-contractor">Baytown</a>
+              <a class="dropdown-item" href="/conroe-tx-roofing-contractor">Conroe</a>
+              <a class="dropdown-item" href="/galveston-tx-roofing-contractor">Galveston</a>
+              <a class="dropdown-item" href="/humble-tx-roofing-contractor">Humble / Kingwood</a>
+              <a class="dropdown-item" href="/richmond-tx-roofing-contractor">Richmond</a>
+              <a class="dropdown-item" href="/missouri-city-roofing-contractor">Missouri City</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Resources (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle" style="color: var(--orange-accent);">Resources</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
+            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
+            <a class="dropdown-item" href="/roofing-calculators" style="color: var(--orange-accent); font-weight: 700;">Roofing Calculators</a>
+            <a class="dropdown-item" href="/financing">Financing</a>
+            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
+          </div>
+        </div>
+
+        <!-- 5. Contact Direct Link -->
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 (281) 326-9905
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" style="height: 40px; width: 160px;" width="160" height="40">
+      <button class="menu-close-btn" id="menu-close-btn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+
+    <!-- Accordion 1: Services -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Services</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/roof-replacement-houston" class="mobile-accordion-link">Shingle Replacement</a>
+        <a href="/metal-roofing-houston" class="mobile-accordion-link">Metal Roofing</a>
+        <a href="/roof-coating-houston" class="mobile-accordion-link">Commercial Coating</a>
+        <a href="/free-roof-inspection-houston" class="mobile-accordion-link">Free Inspection</a>
+        <a href="/tile-roofing-houston" class="mobile-accordion-link">Tile &amp; Slate</a>
+        <a href="/gutter-installation-houston" class="mobile-accordion-link">Seamless Gutters</a>
+        <a href="/chimney-flashing-repair-houston" class="mobile-accordion-link">Flashing &amp; Chimney</a>
+        <a href="/roof-repair-houston" class="mobile-accordion-link">Roof Repairs &amp; Sealing</a>
+        <a href="/affordable-roofing-houston" class="mobile-accordion-link">Affordable Roofing</a>
+        <a href="/roof-leak-detection-houston" class="mobile-accordion-link">Leak Detection</a>
+      </div>
+    </div>
+
+    <!-- Accordion 2: Storm Damage -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Storm Damage</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/hail-damage-roof-repair-houston" class="mobile-accordion-link">Hail Damage Restoration</a>
+        <a href="/wind-damage-roof-repair-houston" class="mobile-accordion-link">Wind Damage Restoration</a>
+        <a href="/emergency-roof-tarping-houston" class="mobile-accordion-link">Emergency Tarping</a>
+        <a href="/storm-damage-roofing-houston" class="mobile-accordion-link">General Storm Damage</a>
+        <a href="/insurance-claim-roofing-houston" class="mobile-accordion-link">Insurance Claim Help</a>
+      </div>
+    </div>
+
+    <!-- Accordion 3: Service Areas -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Service Areas</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/katy-roofing-contractor" class="mobile-accordion-link">Katy</a>
+        <a href="/the-woodlands-roofing-contractor" class="mobile-accordion-link">The Woodlands</a>
+        <a href="/sugar-land-roofing-contractor" class="mobile-accordion-link">Sugar Land</a>
+        <a href="/cypress-roofing-contractor" class="mobile-accordion-link">Cypress</a>
+        <a href="/pearland-roofing-contractor" class="mobile-accordion-link">Pearland</a>
+        <a href="/league-city-roofing-contractor" class="mobile-accordion-link">League City</a>
+        <a href="/spring-tx-roofing-contractor" class="mobile-accordion-link">Spring</a>
+        <a href="/pasadena-tx-roofing-contractor" class="mobile-accordion-link">Pasadena</a>
+        <a href="/tomball-tx-roofing-contractor" class="mobile-accordion-link">Tomball</a>
+        <a href="/baytown-tx-roofing-contractor" class="mobile-accordion-link">Baytown</a>
+        <a href="/conroe-tx-roofing-contractor" class="mobile-accordion-link">Conroe</a>
+        <a href="/galveston-tx-roofing-contractor" class="mobile-accordion-link">Galveston</a>
+        <a href="/humble-tx-roofing-contractor" class="mobile-accordion-link">Humble</a>
+        <a href="/richmond-tx-roofing-contractor" class="mobile-accordion-link">Richmond</a>
+        <a href="/missouri-city-roofing-contractor" class="mobile-accordion-link">Missouri City</a>
+      </div>
+    </div>
+
+    <!-- Accordion 4: Resources -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Resources</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/blog" class="mobile-accordion-link">Blog &amp; Guides</a>
+        <a href="/calculator" class="mobile-accordion-link">Cost Calculator</a>
+        <a href="/roofing-calculators" class="mobile-accordion-link" style="color: var(--orange-accent); font-weight: bold;">Roofing Calculators</a>
+        <a href="/financing" class="mobile-accordion-link">Financing</a>
+        <a href="/#case-studies" class="mobile-accordion-link">Case Studies</a>
+      </div>
+    </div>
+
+    <a href="/contact" class="mobile-nav-link">Contact</a>
+
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:0.75rem; width:100%;">📞 Call (281) 326-9905</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1.5rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/" style="color: #94A3B8;">Home</a> <span>/</span> <span style="color: var(--hazard-amber); font-weight:700;">Roofing Calculators</span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="calc-hero" id="calc-intro">
+    <div class="container" style="max-width: 960px;">
+      <div class="badge-orange-light">
+        📐 Interactive Estimator Tools &bull; 100% Free
+      </div>
+      <h1 class="calc-hero-title">
+        Roofing <span>Calculators</span>: Area, Pitch &amp; Slope
+      </h1>
+      <p class="calc-hero-sub">
+        Accurately measure your Houston roof planes, calculate total roofing squares, find pitch ratios &amp; angles, and determine slope walkability with instant client-side tools.
+      </p>
+
+      <!-- Quick Nav Pills -->
+      <div class="calc-nav-pills">
+        <a href="#calc-area" class="calc-nav-pill">
+          <span>📏</span> Roof Area &amp; Squares
+        </a>
+        <a href="#calc-pitch" class="calc-nav-pill">
+          <span>📐</span> Roof Pitch Calculator
+        </a>
+        <a href="#calc-slope" class="calc-nav-pill">
+          <span>📉</span> Roof Slope Calculator
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CALCULATORS CONTAINER -->
+  <main class="container" style="max-width: 980px; padding-top: 3rem; padding-bottom: 4rem;">
+
+    <!-- ========================================================================= -->
+    <!-- CALCULATOR 1: ROOF AREA & SQUARES CALCULATOR -->
+    <!-- ========================================================================= -->
+    <section class="calc-card" id="calc-area">
+      <div class="calc-card-header">
+        <div>
+          <h2 class="calc-card-title">1. Roof Area &amp; Squares Calculator</h2>
+          <p class="calc-card-desc">
+            Calculate total roof surface area and conversion to standard "roofing squares" (1 square = 100 sq ft). Add multiple planes or sections for gables, hips, and dormers.
+          </p>
+        </div>
+        <span class="badge-orange-light">Multi-Section Enabled</span>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Inputs Column -->
+        <div class="calc-inputs-col">
+          <div id="sections-container">
+            <!-- Initial Section 1 -->
+            <div class="section-row" data-section-id="1">
+              <div class="section-row-header">
+                <span class="section-title-label">Section 1 (Main Plane)</span>
+              </div>
+              <div class="section-inputs-flex">
+                <div>
+                  <label class="form-label" for="sec-len-1">Length <span class="form-label-hint">(ft)</span></label>
+                  <input type="number" id="sec-len-1" class="calc-input sec-len" value="40" min="1" max="1000" step="0.5" placeholder="40">
+                </div>
+                <div>
+                  <label class="form-label" for="sec-wid-1">Width <span class="form-label-hint">(ft)</span></label>
+                  <input type="number" id="sec-wid-1" class="calc-input sec-wid" value="25" min="1" max="1000" step="0.5" placeholder="25">
+                </div>
+              </div>
+            </div>
+
+            <!-- Initial Section 2 -->
+            <div class="section-row" data-section-id="2">
+              <div class="section-row-header">
+                <span class="section-title-label">Section 2 (Rear Plane / Porch)</span>
+                <button type="button" class="btn-remove-section" onclick="removeSectionRow(this)">× Remove</button>
+              </div>
+              <div class="section-inputs-flex">
+                <div>
+                  <label class="form-label" for="sec-len-2">Length <span class="form-label-hint">(ft)</span></label>
+                  <input type="number" id="sec-len-2" class="calc-input sec-len" value="40" min="1" max="1000" step="0.5" placeholder="40">
+                </div>
+                <div>
+                  <label class="form-label" for="sec-wid-2">Width <span class="form-label-hint">(ft)</span></label>
+                  <input type="number" id="sec-wid-2" class="calc-input sec-wid" value="25" min="1" max="1000" step="0.5" placeholder="25">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="btn-add-section" class="btn-add-section">
+            <span style="font-size: 1.2rem; line-height: 1;">+</span> Add Roof Section
+          </button>
+        </div>
+
+        <!-- Outputs Column -->
+        <div class="calc-results-col">
+          <div>
+            <div class="result-block">
+              <div class="result-label">Total Roof Surface Area</div>
+              <div class="result-value-large" id="out-total-sqft">2,000 <span>sq ft</span></div>
+              <div style="font-size: 0.85rem; color: #8B949E; margin-top: 0.35rem;">
+                Sum of all specified roof planes
+              </div>
+            </div>
+
+            <div class="result-block">
+              <div class="result-label">
+                <span>Total Roofing Squares</span>
+                <span style="font-size: 0.75rem; text-transform: none; color: #8B949E;">(1 Square = 100 Sq Ft)</span>
+              </div>
+              <div class="result-value-large" id="out-total-squares">20 <span>Squares</span></div>
+              <div class="result-pill-badge badge-status-yellow" id="out-squares-badge">
+                Rounded up to nearest whole square
+              </div>
+            </div>
+
+            <div class="result-block">
+              <div class="result-label">Recommended Material with Waste (10%)</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 1.25rem; font-weight: 700; color: #CBD5E1;" id="out-waste-squares">
+                22 Squares <span style="font-size: 0.85rem; font-weight: normal; color: #8B949E;">(2,200 sq ft)</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #8B949E; margin: 0.35rem 0 0 0; line-height: 1.4;">
+                Standard practice in Houston roofing accounts for 10% to 15% extra for hip/ridge cap shingles, valleys, starter strips, and cutting waste.
+              </p>
+            </div>
+          </div>
+
+          <div class="calc-callout-footer">
+            <span>📞</span>
+            <div>
+              Not sure what this means for your roof? Call <a href="tel:2813269905">(281) 326-9905</a> for a free inspection.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CALCULATOR 2: ROOF PITCH CALCULATOR -->
+    <!-- ========================================================================= -->
+    <section class="calc-card" id="calc-pitch">
+      <div class="calc-card-header">
+        <div>
+          <h2 class="calc-card-title">2. Roof Pitch Calculator</h2>
+          <p class="calc-card-desc">
+            Calculate roof pitch ratio (rise over run), angle in degrees, and walkability classification. Standard residential horizontal run is 12 inches.
+          </p>
+        </div>
+        <span class="badge-orange-light">Pitch &amp; Angle Engine</span>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Inputs Column -->
+        <div class="calc-inputs-col">
+          <div>
+            <label class="form-label" for="pitch-rise">Rise <span class="form-label-hint">(inches of vertical rise)</span></label>
+            <input type="number" id="pitch-rise" class="calc-input" value="6" min="0" max="36" step="0.5" placeholder="6">
+          </div>
+
+          <div>
+            <label class="form-label" for="pitch-run">Run <span class="form-label-hint">(inches of horizontal run &mdash; standard is 12)</span></label>
+            <input type="number" id="pitch-run" class="calc-input" value="12" min="1" max="48" step="1" placeholder="12">
+          </div>
+
+          <!-- Quick Pitch Preset Buttons -->
+          <div>
+            <span class="form-label" style="margin-bottom: 0.5rem;">Common Houston Pitch Presets:</span>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="calc-nav-pill" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" onclick="setPitchPreset(4, 12)">4:12 (Low)</button>
+              <button type="button" class="calc-nav-pill active" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" onclick="setPitchPreset(6, 12)">6:12 (Standard)</button>
+              <button type="button" class="calc-nav-pill" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" onclick="setPitchPreset(8, 12)">8:12 (Steep)</button>
+              <button type="button" class="calc-nav-pill" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" onclick="setPitchPreset(10, 12)">10:12 (Very Steep)</button>
+            </div>
+          </div>
+
+          <!-- Dynamic SVG Pitch Triangle Visualizer -->
+          <div class="pitch-diagram-box">
+            <span class="form-label-hint" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase;">Live Slope Angle Diagram</span>
+            <svg class="pitch-svg-canvas" viewBox="0 0 260 120" id="pitch-svg">
+              <polygon id="pitch-triangle" points="30,100 230,100 230,40" fill="rgba(226, 144, 15, 0.15)" stroke="#E2900F" stroke-width="2"/>
+              <line x1="30" y1="100" x2="230" y2="100" stroke="#8B949E" stroke-width="1.5" stroke-dasharray="4"/>
+              <line x1="230" y1="100" x2="230" y2="40" stroke="#FF6B00" stroke-width="2"/>
+              <text x="130" y="115" fill="#8B949E" font-size="11" text-anchor="middle" font-family="'IBM Plex Mono', monospace" id="svg-run-text">Run: 12"</text>
+              <text x="245" y="75" fill="#FF6B00" font-size="11" font-family="'IBM Plex Mono', monospace" id="svg-rise-text">6"</text>
+              <text x="80" y="90" fill="#E2900F" font-size="12" font-weight="bold" font-family="'IBM Plex Mono', monospace" id="svg-angle-text">26.6°</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Outputs Column -->
+        <div class="calc-results-col">
+          <div>
+            <div class="result-block">
+              <div class="result-label">Pitch Ratio</div>
+              <div class="result-value-large" id="out-pitch-ratio">6:12</div>
+              <div style="font-size: 0.85rem; color: #8B949E; margin-top: 0.35rem;">
+                Inches of vertical rise per 12 inches of run
+              </div>
+            </div>
+
+            <div class="result-block">
+              <div class="result-label">Roof Slope Angle</div>
+              <div class="result-value-large" id="out-pitch-degrees">26.57<span>°</span></div>
+              <div style="font-size: 0.85rem; color: #8B949E; margin-top: 0.35rem;">
+                Degrees of incline from horizontal baseline
+              </div>
+            </div>
+
+            <div class="result-block">
+              <div class="result-label">Walkability &amp; Application Label</div>
+              <div class="result-pill-badge badge-status-yellow" id="out-pitch-label" style="font-size: 0.95rem; padding: 0.5rem 1rem;">
+                Moderate slope &mdash; standard walkability
+              </div>
+              <p style="font-size: 0.85rem; color: #8B949E; margin: 0.6rem 0 0 0; line-height: 1.4;" id="out-pitch-desc">
+                Ideal for standard architectural shingles. Roofers can walk the roof plane with proper footwear without requiring staging boards.
+              </p>
+            </div>
+          </div>
+
+          <div class="calc-callout-footer">
+            <span>📞</span>
+            <div>
+              Not sure what this means for your roof? Call <a href="tel:2813269905">(281) 326-9905</a> for a free inspection.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CALCULATOR 3: ROOF SLOPE CALCULATOR -->
+    <!-- ========================================================================= -->
+    <section class="calc-card" id="calc-slope">
+      <div class="calc-card-header">
+        <div>
+          <h2 class="calc-card-title">3. Roof Slope Calculator</h2>
+          <p class="calc-card-desc">
+            Calculate roof slope percentage from horizontal span length and total rise to evaluate watershedding, runoff speed, and material requirements.
+          </p>
+        </div>
+        <span class="badge-orange-light">Slope Percentage</span>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Inputs Column -->
+        <div class="calc-inputs-col">
+          <div>
+            <label class="form-label" for="slope-len">Horizontal Roof Length / Span <span class="form-label-hint">(ft)</span></label>
+            <input type="number" id="slope-len" class="calc-input" value="24" min="1" max="500" step="0.5" placeholder="24">
+          </div>
+
+          <div>
+            <label class="form-label" for="slope-rise">Total Vertical Rise <span class="form-label-hint">(ft)</span></label>
+            <input type="number" id="slope-rise" class="calc-input" value="6" min="0" max="250" step="0.25" placeholder="6">
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid #30363D; border-radius: 6px; padding: 1rem;">
+            <span class="form-label" style="margin-bottom: 0.4rem;">Formula Reference:</span>
+            <p style="margin: 0; font-size: 0.85rem; color: #8B949E; line-height: 1.5; font-family: 'IBM Plex Mono', monospace;">
+              Slope % = (Total Rise &divide; Horizontal Length) &times; 100
+            </p>
+            <p style="margin: 0.4rem 0 0 0; font-size: 0.82rem; color: #64748B;">
+              Example: 6 ft rise &divide; 24 ft span = 0.25 &times; 100 = 25.0% slope.
+            </p>
+          </div>
+        </div>
+
+        <!-- Outputs Column -->
+        <div class="calc-results-col">
+          <div>
+            <div class="result-block">
+              <div class="result-label">Calculated Slope Percentage</div>
+              <div class="result-value-large" id="out-slope-percent">25.0<span>%</span></div>
+              <div style="font-size: 0.85rem; color: #8B949E; margin-top: 0.35rem;">
+                Rate of incline expressed as a grade percentage
+              </div>
+            </div>
+
+            <div class="result-block">
+              <div class="result-label">Slope Classification Note</div>
+              <div class="result-pill-badge badge-status-green" id="out-slope-class-badge" style="font-size: 0.95rem; padding: 0.5rem 1rem;">
+                Standard Slope (25% to 75% grade)
+              </div>
+              <p style="font-size: 0.88rem; color: #94A3B8; margin: 0.65rem 0 0 0; line-height: 1.5;" id="out-slope-note">
+                Optimal watershedding for architectural asphalt shingles in Southeast Texas. Water clears valleys and gutters quickly during intense convective downpours.
+              </p>
+            </div>
+          </div>
+
+          <div class="calc-callout-footer">
+            <span>📞</span>
+            <div>
+              Not sure what this means for your roof? Call <a href="tel:2813269905">(281) 326-9905</a> for a free inspection.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMATIONAL GUIDES ON ROOF MEASUREMENTS -->
+    <section class="info-section">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="badge-orange-light">Houston Homeowner Guide</span>
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2rem; color: #FFFFFF; margin-top: 0.75rem; text-transform: uppercase;">
+          Understanding Houston Roofing Calculations
+        </h2>
+        <p style="color: #94A3B8; max-width: 680px; margin: 0 auto; font-size: 1rem;">
+          How contractors in Harris, Fort Bend, and Montgomery counties utilize pitch, slope, and roofing squares to estimate storm restoration.
+        </p>
+      </div>
+
+      <div class="info-card-grid">
+        <div class="info-card">
+          <h3>What Is a Roofing Square?</h3>
+          <p>
+            In the roofing trade, a "square" is a unit of measurement equal to exactly 100 square feet (10' &times; 10'). A typical 2,000 sq ft home with eaves, pitch adjustment, and garage overhangs usually requires between 24 and 30 roofing squares of material.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Why Pitch Matters for Hurricanes</h3>
+          <p>
+            Roofs between 4:12 and 7:12 offer the best aerodynamic balance for Gulf Coast winds. Low-pitch roofs (<4:12) face extreme uplift pressures on eaves, while ultra-steep roofs (>9:12) take higher lateral wind loading from hurricane-force gusts.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Waste Factors on Complex Hips</h3>
+          <p>
+            Simple two-sided gable roofs need only 7% to 10% waste material. Complex hip roofs with dormers, turrets, and multiple valleys require 12% to 18% extra material to ensure continuous starter courses and ridge cap coverage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STICKY BOTTOM CALL ACTION -->
+  <div class="global-call-widget" id="global-call-widget">
+    <a href="tel:+12813269905" class="sticky-call-btn">
+      <span class="phone-icon">📞</span>
+      <span class="btn-text-desktop">Call (281) 326-9905 &bull; Free Houston Inspection</span>
+      <span class="btn-text-mobile">Call (281) 326-9905</span>
+    </a>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer id="site-footer" style="background: #0B1118; border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 4rem 0 2rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem;">
+        <!-- Col 1: About & Map -->
+        <div>
+          <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" style="height: 50px; width: auto; margin-bottom: 1rem;" width="200" height="50">
+          <p style="font-size: 0.95rem; color: #94A3B8; line-height: 1.6; margin-bottom: 1rem;">
+            GAF Master Elite &amp; HAAG Certified roofing specialists in Houston, TX. Providing forensic storm damage assessments, insurance claim negotiation, and precision installations.
+          </p>
+          <div style="color: var(--hazard-amber); font-weight: bold; font-size: 1.1rem; margin-bottom: 0.5rem;">
+            <a href="tel:+12813269905" style="color: var(--hazard-amber); text-decoration: none;">📞 (281) 326-9905</a>
+          </div>
+          <p style="font-size: 0.85rem; color: #64748B;">
+            9402 Spaulding St, Houston, TX 77016
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div>
+          <h4 style="color: #FFFFFF; font-family: 'Oswald', sans-serif; font-size: 1.15rem; margin-bottom: 1rem; text-transform: uppercase;">Roofing Services</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+            <li><a href="/roof-replacement-houston" style="color: #94A3B8; text-decoration: none;">Shingle Replacement</a></li>
+            <li><a href="/metal-roofing-houston" style="color: #94A3B8; text-decoration: none;">Standing Seam Metal</a></li>
+            <li><a href="/free-roof-inspection-houston" style="color: #94A3B8; text-decoration: none;">HAAG Inspection</a></li>
+            <li><a href="/roof-repair-houston" style="color: #94A3B8; text-decoration: none;">Leak Repair &amp; Sealing</a></li>
+            <li><a href="/emergency-roof-tarping-houston" style="color: #94A3B8; text-decoration: none;">Emergency Tarping</a></li>
+            <li><a href="/hail-damage-roof-repair-houston" style="color: #94A3B8; text-decoration: none;">Hail Damage Restoration</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Areas -->
+        <div>
+          <h4 style="color: #FFFFFF; font-family: 'Oswald', sans-serif; font-size: 1.15rem; margin-bottom: 1rem; text-transform: uppercase;">Service Areas</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+            <li><a href="/katy-roofing-contractor" style="color: #94A3B8; text-decoration: none;">Katy Roofing</a></li>
+            <li><a href="/the-woodlands-roofing-contractor" style="color: #94A3B8; text-decoration: none;">The Woodlands</a></li>
+            <li><a href="/sugar-land-roofing-contractor" style="color: #94A3B8; text-decoration: none;">Sugar Land</a></li>
+            <li><a href="/cypress-roofing-contractor" style="color: #94A3B8; text-decoration: none;">Cypress Roofing</a></li>
+            <li><a href="/pearland-roofing-contractor" style="color: #94A3B8; text-decoration: none;">Pearland Roofing</a></li>
+            <li><a href="/spring-tx-roofing-contractor" style="color: #94A3B8; text-decoration: none;">Spring &amp; Tomball</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Calculators & Resources -->
+        <div>
+          <h4 style="color: #FFFFFF; font-family: 'Oswald', sans-serif; font-size: 1.15rem; margin-bottom: 1rem; text-transform: uppercase;">Calculators &amp; Guides</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+            <li><a href="/calculator" style="color: #94A3B8; text-decoration: none;">Cost Estimator</a></li>
+            <li><a href="/roofing-calculators" style="color: var(--hazard-amber); font-weight: bold; text-decoration: none;">Roofing Calculators</a></li>
+            <li><a href="/financing" style="color: #94A3B8; text-decoration: none;">Roof Financing</a></li>
+            <li><a href="/blog" style="color: #94A3B8; text-decoration: none;">Roofing Knowledge Blog</a></li>
+            <li><a href="/contact" style="color: #94A3B8; text-decoration: none;">Contact Our Team</a></li>
+            <li><a href="/privacy-policy" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions" style="color: #94A3B8; text-decoration: none;">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #64748B;">
+        <div>
+          &copy; 2026 Epic Roofing &amp; Construction LLC. All rights reserved. Licensed &amp; Insured in Texas.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/" style="color: #94A3B8; text-decoration: none;">Home</a>
+          <a href="/calculator" style="color: #94A3B8; text-decoration: none;">Cost Calculator</a>
+          <a href="/roofing-calculators" style="color: var(--hazard-amber); text-decoration: none;">Roofing Calculators</a>
+          <a href="/privacy-policy" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a>
+          <a href="/contact" style="color: #94A3B8; text-decoration: none;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: INSTANT CLIENT-SIDE CALCULATOR LOGIC & NAVIGATION -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Nav Drawer
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+
+      const accordionBtns = document.querySelectorAll('.mobile-accordion-btn');
+      accordionBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const content = this.nextElementSibling;
+          if (content) content.classList.toggle('active');
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 1. ROOF AREA & SQUARES CALCULATOR
+      // -------------------------------------------------------------
+      let sectionCounter = 2;
+      const sectionsContainer = document.getElementById('sections-container');
+      const btnAddSection = document.getElementById('btn-add-section');
+
+      function calculateAreaAndSquares() {
+        const rows = document.querySelectorAll('.section-row');
+        let totalSqFt = 0;
+
+        rows.forEach(function(row) {
+          const lenInput = row.querySelector('.sec-len');
+          const widInput = row.querySelector('.sec-wid');
+          const length = parseFloat(lenInput.value) || 0;
+          const width = parseFloat(widInput.value) || 0;
+          totalSqFt += (length * width);
+        });
+
+        // 1 Square = 100 sq ft, rounded up to nearest whole square
+        const exactSquares = totalSqFt / 100;
+        const roundedSquares = Math.ceil(exactSquares);
+        const wasteSqFt = Math.round(totalSqFt * 1.10);
+        const wasteSquares = Math.ceil(wasteSqFt / 100);
+
+        document.getElementById('out-total-sqft').innerHTML = totalSqFt.toLocaleString() + ' <span>sq ft</span>';
+        document.getElementById('out-total-squares').innerHTML = roundedSquares.toLocaleString() + ' <span>Squares</span>';
+        document.getElementById('out-waste-squares').innerHTML = wasteSquares.toLocaleString() + ' Squares <span style="font-size: 0.85rem; font-weight: normal; color: #8B949E;">(' + wasteSqFt.toLocaleString() + ' sq ft)</span>';
+
+        const badge = document.getElementById('out-squares-badge');
+        if (totalSqFt <= 0) {
+          badge.textContent = 'Enter dimensions above';
+          badge.className = 'result-pill-badge badge-status-blue';
+        } else {
+          badge.textContent = 'Exact: ' + exactSquares.toFixed(2) + ' sqs → Rounded up: ' + roundedSquares + ' sqs';
+          badge.className = 'result-pill-badge badge-status-yellow';
+        }
+      }
+
+      function attachInputListeners() {
+        document.querySelectorAll('.sec-len, .sec-wid').forEach(function(input) {
+          input.removeEventListener('input', calculateAreaAndSquares);
+          input.addEventListener('input', calculateAreaAndSquares);
+        });
+      }
+
+      if (btnAddSection) {
+        btnAddSection.addEventListener('click', function() {
+          sectionCounter++;
+          const newRow = document.createElement('div');
+          newRow.className = 'section-row';
+          newRow.dataset.sectionId = sectionCounter;
+          newRow.innerHTML = `
+            <div class="section-row-header">
+              <span class="section-title-label">Section ${sectionCounter} (Addition / Dormer)</span>
+              <button type="button" class="btn-remove-section" onclick="removeSectionRow(this)">× Remove</button>
+            </div>
+            <div class="section-inputs-flex">
+              <div>
+                <label class="form-label">Length <span class="form-label-hint">(ft)</span></label>
+                <input type="number" class="calc-input sec-len" value="20" min="1" max="1000" step="0.5" placeholder="20">
+              </div>
+              <div>
+                <label class="form-label">Width <span class="form-label-hint">(ft)</span></label>
+                <input type="number" class="calc-input sec-wid" value="15" min="1" max="1000" step="0.5" placeholder="15">
+              </div>
+            </div>
+          `;
+          sectionsContainer.appendChild(newRow);
+          attachInputListeners();
+          calculateAreaAndSquares();
+        });
+      }
+
+      window.removeSectionRow = function(btn) {
+        const row = btn.closest('.section-row');
+        if (row) {
+          row.remove();
+          calculateAreaAndSquares();
+        }
+      };
+
+      attachInputListeners();
+      calculateAreaAndSquares();
+
+      // -------------------------------------------------------------
+      // 2. ROOF PITCH CALCULATOR
+      // -------------------------------------------------------------
+      const pitchRiseInput = document.getElementById('pitch-rise');
+      const pitchRunInput = document.getElementById('pitch-run');
+
+      function calculatePitch() {
+        const rise = parseFloat(pitchRiseInput.value) || 0;
+        const run = parseFloat(pitchRunInput.value) || 12;
+
+        const effectiveRatio = (run > 0) ? (rise / run) * 12 : 0;
+        const radians = Math.atan(rise / (run || 1));
+        const degrees = radians * (180 / Math.PI);
+
+        document.getElementById('out-pitch-ratio').textContent = rise + ':' + run;
+        document.getElementById('out-pitch-degrees').innerHTML = degrees.toFixed(1) + '<span>°</span>';
+
+        const labelBadge = document.getElementById('out-pitch-label');
+        const descText = document.getElementById('out-pitch-desc');
+
+        // Plain language label logic
+        if (effectiveRatio < 2) {
+          labelBadge.textContent = 'Flat / Ultra-low slope (< 2:12)';
+          labelBadge.className = 'result-pill-badge badge-status-blue';
+          descText.textContent = 'Flat roof or low pitch. Shingles are not approved; requires commercial TPO, PVC, or modified bitumen waterproofing membranes.';
+        } else if (effectiveRatio < 4) {
+          labelBadge.textContent = 'Low slope — specialized underlayment required (2:12 to 4:12)';
+          labelBadge.className = 'result-pill-badge badge-status-yellow';
+          descText.textContent = 'Walkable with care. Building code requires double-layer underlayment or full-deck ice & water self-adhering membrane under shingles.';
+        } else if (effectiveRatio < 8) {
+          labelBadge.textContent = 'Moderate slope — standard walkability (4:12 to 7:12)';
+          labelBadge.className = 'result-pill-badge badge-status-green';
+          descText.textContent = 'Most common residential roof pitch in Greater Houston. Easy water runoff and standard walkability for maintenance and inspections.';
+        } else if (effectiveRatio < 12) {
+          labelBadge.textContent = 'Steep slope — safety rigging required (8:12 to 11:12)';
+          labelBadge.className = 'result-pill-badge badge-status-orange';
+          descText.textContent = 'Steep incline with limited foot traction. Requires roof jacks, rope harnesses, and steep-slope six-nail shingle fastening.';
+        } else {
+          labelBadge.textContent = 'Extreme / Mansard slope (≥ 12:12, 45°+)';
+          labelBadge.className = 'result-pill-badge badge-status-orange';
+          descText.textContent = 'Very steep to near-vertical slope. Requires full professional rigging, specialized scaffolding, and high-wind tab seals.';
+        }
+
+        // Update SVG triangle representation
+        const svgTriangle = document.getElementById('pitch-triangle');
+        const svgRiseText = document.getElementById('svg-rise-text');
+        const svgRunText = document.getElementById('svg-run-text');
+        const svgAngleText = document.getElementById('svg-angle-text');
+
+        if (svgTriangle) {
+          // base run length 200px (x from 30 to 230), baseline at y=100
+          const clampedRise = Math.min(Math.max(rise, 0), 24);
+          const pixelHeight = Math.min(Math.round((clampedRise / (run || 12)) * 140), 85);
+          const topY = 100 - pixelHeight;
+          svgTriangle.setAttribute('points', '30,100 230,100 230,' + topY);
+          if (svgRiseText) {
+            svgRiseText.textContent = rise + '"';
+            svgRiseText.setAttribute('y', Math.max(topY + (pixelHeight / 2) + 4, 25));
+          }
+          if (svgRunText) {
+            svgRunText.textContent = 'Run: ' + run + '"';
+          }
+          if (svgAngleText) {
+            svgAngleText.textContent = degrees.toFixed(1) + '°';
+          }
+        }
+      }
+
+      window.setPitchPreset = function(rise, run) {
+        pitchRiseInput.value = rise;
+        pitchRunInput.value = run;
+        calculatePitch();
+      };
+
+      pitchRiseInput.addEventListener('input', calculatePitch);
+      pitchRunInput.addEventListener('input', calculatePitch);
+      calculatePitch();
+
+      // -------------------------------------------------------------
+      // 3. ROOF SLOPE CALCULATOR
+      // -------------------------------------------------------------
+      const slopeLenInput = document.getElementById('slope-len');
+      const slopeRiseInput = document.getElementById('slope-rise');
+
+      function calculateSlope() {
+        const length = parseFloat(slopeLenInput.value) || 0;
+        const rise = parseFloat(slopeRiseInput.value) || 0;
+
+        const slopePercent = (length > 0) ? (rise / length) * 100 : 0;
+        document.getElementById('out-slope-percent').innerHTML = slopePercent.toFixed(1) + '<span>%</span>';
+
+        const classBadge = document.getElementById('out-slope-class-badge');
+        const noteText = document.getElementById('out-slope-note');
+
+        if (slopePercent <= 0) {
+          classBadge.textContent = 'Enter length and rise values';
+          classBadge.className = 'result-pill-badge badge-status-blue';
+          noteText.textContent = 'Enter horizontal span length and vertical rise above to see slope classification.';
+        } else if (slopePercent < 25) {
+          classBadge.textContent = 'Low-Slope (under 25% grade)';
+          classBadge.className = 'result-pill-badge badge-status-yellow';
+          noteText.textContent = 'Water drains slowly; requires continuous membrane, modified bitumen, or standing seam metal with sealed laps to prevent pooling.';
+        } else if (slopePercent <= 75) {
+          classBadge.textContent = 'Standard Slope (25% to 75% grade)';
+          classBadge.className = 'result-pill-badge badge-status-green';
+          noteText.textContent = 'Optimal watershedding for architectural asphalt shingles in Southeast Texas. Water clears valleys and gutters quickly during intense downpours.';
+        } else {
+          classBadge.textContent = 'Steep-Slope (over 75% grade)';
+          classBadge.className = 'result-pill-badge badge-status-orange';
+          noteText.textContent = 'Excellent gravity watershedding and high wind deflection. Requires six-nail wind fastening pattern and specialized steep-slope roof mechanics.';
+        }
+      }
+
+      slopeLenInput.addEventListener('input', calculateSlope);
+      slopeRiseInput.addEventListener('input', calculateSlope);
+      calculateSlope();
+    });
+  </script>
+</body>
+</html>
