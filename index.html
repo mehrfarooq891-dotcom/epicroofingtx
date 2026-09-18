@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 
   <style>
     /* Epic Roofing Design System Variables */
@@ -256,11 +257,29 @@
       max-width: 200px;
     }
 
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 1.25rem;
+      height: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+      }
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.75rem;
+      gap: 1.25rem;
       list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
 
     .nav-link {
@@ -273,10 +292,127 @@
       letter-spacing: 0.03em;
       transition: color 0.15s ease;
       position: relative;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-link:focus {
       color: var(--hazard-amber);
+    }
+
+    /* Dropdown Component */
+    .dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* Invisible hover bridge to prevent premature closing */
+    .dropdown::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      display: block;
+    }
+
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .dropdown-toggle::after {
+      content: '▾';
+      font-size: 0.8rem;
+      display: inline-block;
+      opacity: 0.85;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown:hover > .dropdown-toggle::after,
+    .dropdown:focus-within > .dropdown-toggle::after,
+    .dropdown.is-open > .dropdown-toggle::after {
+      transform: rotate(180deg);
+      color: var(--hazard-amber);
+    }
+
+    .dropdown.is-open > .dropdown-toggle {
+      color: var(--hazard-amber);
+    }
+
+    /* Floating Submenu Panel - Hidden by default, absolute positioning */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #161B22;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 3px solid var(--hazard-amber);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
+      min-width: 250px;
+      border-radius: 0 0 6px 6px;
+      padding: 0.75rem 0;
+      z-index: 1010;
+      text-align: left;
+    }
+
+    .dropdown-menu-wide {
+      min-width: 500px;
+    }
+
+    .dropdown-menu-scrollable {
+      max-height: 420px;
+      overflow-y: auto;
+    }
+
+    /* Show floating panel on hover, focus-within, or when .is-open class is active */
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu,
+    .dropdown.is-open > .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown:hover > .dropdown-menu-wide,
+    .dropdown:focus-within > .dropdown-menu-wide,
+    .dropdown.is-open > .dropdown-menu-wide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.25rem;
+      gap: 0.5rem;
+    }
+
+    .dropdown-item {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      border-left: 2px solid transparent;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: rgba(255, 255, 255, 0.06);
+      color: var(--hazard-amber);
+      border-left-color: var(--hazard-amber);
+      padding-left: 1.5rem;
     }
 
     .header-cta-phone {
@@ -1546,18 +1682,53 @@
         <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing & Construction LLC Logo" class="logo-img" width="200" height="48">
       </a>
 
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#storm-damage" class="nav-link">Storm Damage</a></li>
-          <li><a href="#why-epic" class="nav-link">Why Epic</a></li>
-          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-          <li><a href="#service-areas" class="nav-link">Service Areas</a></li>
-          <li><a href="/blog" class="nav-link">Blog</a></li>
-          <li><a href="/calculator" class="nav-link">Cost Calculator</a></li>
-          <li><a href="/roofing-calculators" class="nav-link">Calculators</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
+            <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+
+        <!-- 1. Services (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Services</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <div>
+              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Roof Replacement</a>
+              <a class="dropdown-item" href="/metal-roofing-houston">Standing Seam Metal</a>
+              <a class="dropdown-item" href="/roof-repair-houston">Roof Leak Repair</a>
+              <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
+              <a class="dropdown-item" href="/storm-damage-roofing-houston">Storm Damage Restoration</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Assessment</a>
+              <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Uplift Repair</a>
+              <a class="dropdown-item" href="/gutter-installation-houston">Gutters</a>
+              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Chimney &amp; Flashing</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Storm Damage -->
+        <a href="/#storm-damage" class="nav-link">Storm Damage</a>
+
+        <!-- 3. Why Epic -->
+        <a href="/#why-epic" class="nav-link">Why Epic</a>
+
+        <!-- 4. Resources (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
+            <a class="dropdown-item" href="/blog">Blog</a>
+            <a class="dropdown-item" href="/#faq">FAQ</a>
+            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
+            <a class="dropdown-item" href="/roofing-calculators">Roofing Calculators</a>
+          </div>
+        </div>
+
+        <!-- 5. Service Areas -->
+        <a href="/#service-areas" class="nav-link">Service Areas</a>
+
+        <!-- 6. Contact Direct Link -->
+        <a href="/contact" class="nav-link">Contact</a>
       </nav>
 
       <div>
@@ -1578,23 +1749,53 @@
       <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" width="180" height="42">
       <button class="mobile-nav-close" id="mobile-close-btn" aria-label="Close navigation menu">&times;</button>
     </div>
-    <ul class="mobile-nav-list">
-      <li><a href="#services" class="mobile-link">Services</a></li>
-      <li><a href="#storm-damage" class="mobile-link">Storm Damage</a></li>
-      <li><a href="#why-epic" class="mobile-link">Why Epic</a></li>
-      <li><a href="#case-studies" class="mobile-link">Case Studies</a></li>
-      <li><a href="#service-areas" class="mobile-link">Service Areas</a></li>
-      <li><a href="/blog" class="mobile-link">Blog</a></li>
-      <li><a href="#faq" class="mobile-link">FAQ</a></li>
-      <li><a href="/financing" class="mobile-link">Financing Options</a></li>
-      <li><a href="/calculator" class="mobile-link">Cost Calculator</a></li>
-      <li><a href="/roofing-calculators" class="mobile-link">Roofing Calculators</a></li>
-      <li><a href="/privacy-policy" class="mobile-link">Privacy Policy</a></li>
-      <li><a href="/terms-and-conditions" class="mobile-link">Terms &amp; Conditions</a></li>
-      <li style="margin-top: 1.5rem;">
-        <a href="tel:+12813269905" class="btn-tactile" style="width: 100%;">Call (281) 326-9905</a>
-      </li>
-    </ul>
+    <div class="mobile-nav-list">
+      <a href="/" class="mobile-link">Home</a>
+
+      <!-- Accordion 1: Services -->
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn" type="button">
+          <span>Services</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="mobile-accordion-content">
+          <a href="/roof-replacement-houston" class="mobile-accordion-link">Shingle Roof Replacement</a>
+          <a href="/metal-roofing-houston" class="mobile-accordion-link">Standing Seam Metal</a>
+          <a href="/roof-repair-houston" class="mobile-accordion-link">Roof Leak Repair</a>
+          <a href="/emergency-roof-tarping-houston" class="mobile-accordion-link">Emergency Tarping</a>
+          <a href="/storm-damage-roofing-houston" class="mobile-accordion-link">Storm Damage Restoration</a>
+          <a href="/hail-damage-roof-repair-houston" class="mobile-accordion-link">Hail Damage Assessment</a>
+          <a href="/wind-damage-roof-repair-houston" class="mobile-accordion-link">Wind Uplift Repair</a>
+          <a href="/gutter-installation-houston" class="mobile-accordion-link">Gutters</a>
+          <a href="/chimney-flashing-repair-houston" class="mobile-accordion-link">Chimney &amp; Flashing</a>
+        </div>
+      </div>
+
+      <a href="/#storm-damage" class="mobile-link">Storm Damage</a>
+      <a href="/#why-epic" class="mobile-link">Why Epic</a>
+
+      <!-- Accordion 2: Resources -->
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn" type="button">
+          <span>Resources</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="mobile-accordion-content">
+          <a href="/#case-studies" class="mobile-accordion-link">Case Studies</a>
+          <a href="/blog" class="mobile-accordion-link">Blog</a>
+          <a href="/#faq" class="mobile-accordion-link">FAQ</a>
+          <a href="/calculator" class="mobile-accordion-link">Cost Calculator</a>
+          <a href="/roofing-calculators" class="mobile-accordion-link">Roofing Calculators</a>
+        </div>
+      </div>
+
+      <a href="/#service-areas" class="mobile-link">Service Areas</a>
+      <a href="/contact" class="mobile-link">Contact</a>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="tel:+12813269905" class="btn-tactile" style="width: 100%; display: block; text-align: center;">Call (281) 326-9905</a>
+      </div>
+    </div>
   </div>
 
   <main id="main-content">
@@ -2553,24 +2754,19 @@
   </main>
 
   <!-- 17. FOOTER -->
+    <!-- SITE FOOTER -->
   <footer class="site-footer" id="main-footer">
     <div class="container">
       <div class="footer-grid">
-        
-        <!-- Col 1: Brand & Trust -->
+
+        <!-- Column 1: Brand, Description, Social -->
         <div class="footer-col">
           <a href="/" style="display: inline-block; margin-bottom: 1.25rem;">
             <img src="/images/epic-roofing-logo.svg" alt="Epic Roofing TX Logo" width="200" height="48" loading="lazy">
           </a>
-          <p style="margin-bottom: 1.25rem; line-height: 1.55; color: #8B949E;">
-            Epic Roofing & Construction LLC is a GAF Master Elite and HAAG Forensic Certified roofing contractor headquartered in Houston, Texas.
+          <p style="margin-bottom: 1.25rem; line-height: 1.6; color: #8B949E; font-size: 0.92rem;">
+            Epic Roofing &amp; Construction LLC is a GAF Master Elite and HAAG Certified roofing contractor proudly serving Houston and the Greater Houston area. We specialize in storm damage restoration, shingle and metal roof replacement, leak repair, and insurance claim support.
           </p>
-          <div class="footer-nap">
-            <strong>Headquarters:</strong><br>
-            9402 Spaulding St, Houston, TX 77016<br>
-            Direct: <a href="tel:+12813269905">(281) 326-9905</a><br>
-            Hours: Mon–Sat 7AM–7PM | Emergency 24/7
-          </div>
           <div class="footer-social-links" aria-label="Social Media Links">
             <a href="https://www.facebook.com/EpicRoofingTX/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -2582,88 +2778,100 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.332 1.357-.053.225-.177.272-.408.165-1.524-.709-2.476-2.936-2.476-4.726 0-3.85 2.797-7.387 8.069-7.387 4.236 0 7.528 3.018 7.528 7.053 0 4.209-2.654 7.597-6.338 7.597-1.238 0-2.401-.644-2.8-1.406l-.763 2.911c-.276 1.054-1.025 2.376-1.527 3.187 1.139.351 2.348.543 3.602.543 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
             </a>
           </div>
-          <div class="footer-map-container" style="margin-top: 1.25rem; width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); height: 180px;">
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#storm-damage">Storm Damage</a></li>
+            <li><a href="/#why-epic">Why Epic</a></li>
+            <li><a href="/#case-studies">Case Studies</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/financing">Financing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="/roof-replacement-houston">Shingle Roof Replacement</a></li>
+            <li><a href="/metal-roofing-houston">Standing Seam Metal Roofing</a></li>
+            <li><a href="/emergency-roof-tarping-houston">Emergency Roof Tarping</a></li>
+            <li><a href="/roof-repair-houston">Roof Leak Repair</a></li>
+            <li><a href="/hail-damage-roof-repair-houston">Hail Damage Assessment</a></li>
+            <li><a href="/wind-damage-roof-repair-houston">Wind Uplift Repair</a></li>
+            <li><a href="/chimney-flashing-repair-houston">Chimney &amp; Flashing Repair</a></li>
+            <li><a href="/roofing-calculators">Roofing Calculators</a></li>
+            <li><a href="/calculator">Cost Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-nap" style="margin-bottom: 1rem;">
+            <strong>Headquarters:</strong><br>
+            9402 Spaulding St, Houston, TX 77016<br><br>
+            <strong>Hours of Operation:</strong><br>
+            Mon–Sat 7AM–7PM<br>
+            Emergency Dispatch 24/7<br><br>
+            <strong>Direct Phone:</strong><br>
+            <a href="tel:+12813269905" style="color: var(--hazard-amber); font-weight: 700; font-size: 1.05rem; text-decoration: none;">(281) 326-9905</a>
+          </div>
+          <a href="/#inspection-form" class="btn-tactile" style="display: inline-block; width: 100%; text-align: center; padding: 0.75rem 1rem; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; border-radius: 6px; background-color: var(--hazard-amber); color: #161B22; text-decoration: none; margin-top: 0.5rem; transition: transform 0.15s ease;">
+            Get A Free Quote
+          </a>
+          <div class="footer-map-container" style="margin-top: 1rem; width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); height: 140px;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.593673179513!2d-95.30300489999999!3d29.8471482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1786888441852!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Epic Roofing & Construction LLC Google Map Location"></iframe>
           </div>
         </div>
 
-        <!-- Col 2: Services List -->
-        <div class="footer-col">
-          <h4>Roofing Services</h4>
-          <ul>
-            <li><a href="/roof-replacement-houston">Shingle Roof Replacement</a></li>
-            <li><a href="/metal-roofing-houston">Standing Seam Metal</a></li>
-            <li><a href="/free-roof-inspection-houston">HAAG Forensic Inspection</a></li>
-            <li><a href="/roof-repair-houston">Roof Leak Repair & Sealing</a></li>
-            <li><a href="/emergency-roof-tarping-houston">Emergency Rapid Tarping</a></li>
-            <li><a href="/storm-damage-roofing-houston">Storm Damage Restoration</a></li>
-            <li><a href="/hail-damage-roof-repair-houston">Hail Damage Assessment</a></li>
-            <li><a href="/wind-damage-roof-repair-houston">Wind Uplift Repair</a></li>
-            <li><a href="/gutter-installation-houston">Seamless Gutters</a></li>
-            <li><a href="/chimney-flashing-repair-houston">Chimney & Flashing Repair</a></li>
-          </ul>
-        </div>
+      </div>
 
-        <!-- Col 3: Service Areas List -->
-        <div class="footer-col">
-          <h4>Service Areas</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-            <ul>
-              <li><a href="/">Houston</a></li>
-              <li><a href="/katy-roofing-contractor">Katy</a></li>
-              <li><a href="/sugar-land-roofing-contractor">Sugar Land</a></li>
-              <li><a href="/cypress-roofing-contractor">Cypress</a></li>
-              <li><a href="/the-woodlands-roofing-contractor">The Woodlands</a></li>
-              <li><a href="/pearland-roofing-contractor">Pearland</a></li>
-              <li><a href="/league-city-roofing-contractor">League City</a></li>
-              <li><a href="/spring-tx-roofing-contractor">Spring</a></li>
-              <li><a href="/friendswood-tx-roofing-contractor">Friendswood</a></li>
-            </ul>
-            <ul>
-              <li><a href="/channelview-tx-roofing-contractor">Channelview</a></li>
-              <li><a href="/deer-park-tx-roofing-contractor">Deer Park</a></li>
-              <li><a href="/la-porte-tx-roofing-contractor">La Porte</a></li>
-              <li><a href="/rosenberg-tx-roofing-contractor">Rosenberg</a></li>
-              <li><a href="/manvel-tx-roofing-contractor">Manvel</a></li>
-              <li><a href="/atascocita-kingwood-tx-roofing-contractor">Atascocita/Kingwood</a></li>
-              <li><a href="/webster-clear-lake-tx-roofing-contractor">Webster/Clear Lake</a></li>
-              <li><a href="/pasadena-tx-roofing-contractor">Pasadena</a></li>
-              <li><a href="/tomball-tx-roofing-contractor">Tomball</a></li>
-            </ul>
-          </div>
+      <!-- Service Areas Links Bar -->
+      <div style="margin-top: 2rem; padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.04em;">
+          Greater Houston Service Areas:
         </div>
-
-        <!-- Col 4: Company & Resources -->
-        <div class="footer-col">
-          <h4>Company Links</h4>
-          <ul>
-            <li><a href="/about">About Epic Roofing</a></li>
-            <li><a href="/financing">Roof Financing Options</a></li>
-            <li><a href="/calculator">Instant Cost Calculator</a></li>
-            <li><a href="/roofing-calculators">Roofing Calculators</a></li>
-            <li><a href="/blog">Roofing Knowledge Blog</a></li>
-            <li><a href="/contact">Contact Our Team</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
-            <li><a href="/sitemap.xml">XML Sitemap</a></li>
-          </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 0.85rem; font-size: 0.85rem; color: #8B949E; line-height: 1.6;">
+          <a href="/" style="color: #8B949E; text-decoration: none;">Houston</a> &bull;
+          <a href="/katy-roofing-contractor" style="color: #8B949E; text-decoration: none;">Katy</a> &bull;
+          <a href="/sugar-land-roofing-contractor" style="color: #8B949E; text-decoration: none;">Sugar Land</a> &bull;
+          <a href="/cypress-roofing-contractor" style="color: #8B949E; text-decoration: none;">Cypress</a> &bull;
+          <a href="/the-woodlands-roofing-contractor" style="color: #8B949E; text-decoration: none;">The Woodlands</a> &bull;
+          <a href="/pearland-roofing-contractor" style="color: #8B949E; text-decoration: none;">Pearland</a> &bull;
+          <a href="/league-city-roofing-contractor" style="color: #8B949E; text-decoration: none;">League City</a> &bull;
+          <a href="/spring-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Spring</a> &bull;
+          <a href="/friendswood-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Friendswood</a> &bull;
+          <a href="/channelview-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Channelview</a> &bull;
+          <a href="/deer-park-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Deer Park</a> &bull;
+          <a href="/la-porte-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">La Porte</a> &bull;
+          <a href="/rosenberg-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Rosenberg</a> &bull;
+          <a href="/manvel-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Manvel</a> &bull;
+          <a href="/atascocita-kingwood-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Atascocita / Kingwood</a> &bull;
+          <a href="/webster-clear-lake-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Webster / Clear Lake</a> &bull;
+          <a href="/pasadena-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Pasadena</a> &bull;
+          <a href="/tomball-tx-roofing-contractor" style="color: #8B949E; text-decoration: none;">Tomball</a>
         </div>
-
       </div>
 
       <!-- Footer Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <div>
-          &copy; 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+      <div class="footer-bottom-bar" style="margin-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div style="font-size: 0.85rem; color: #8B949E;">
+          &copy; 2026 Epic Roofing &amp; Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
         </div>
-        <div class="footer-legal-links">
-          <a href="/#case-studies">Case Studies</a>
-          <a href="/financing">Financing</a>
-          <a href="/calculator">Cost Calculator</a>
-          <a href="/roofing-calculators">Roofing Calculators</a>
-          <a href="/blog">Blog</a>
-          <a href="/privacy-policy">Privacy</a>
-          <a href="/terms-and-conditions">Terms</a>
+        <div class="footer-legal-links" style="display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.85rem;">
+          <a href="/privacy-policy" style="color: #8B949E; text-decoration: none;">Privacy Policy</a>
+          <a href="/terms-and-conditions" style="color: #8B949E; text-decoration: none;">Terms &amp; Conditions</a>
+          <a href="/disclaimer" style="color: var(--hazard-amber); text-decoration: none; font-weight: 600;">Disclaimer</a>
+          <a href="/sitemap.xml" style="color: #8B949E; text-decoration: none;">XML Sitemap</a>
         </div>
       </div>
     </div>
@@ -2702,6 +2910,7 @@
       });
     });
   </script>
+  <script src="/nav.js" defer></script>
 
 </body>
 </html>

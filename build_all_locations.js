@@ -486,7 +486,8 @@ function generateFooter() {
         });
       });
     });
-  </script>`;
+  </script>
+  <script src="/nav.js" defer></script>`;
 }
 
 console.log('Header and Footer templates ready.');

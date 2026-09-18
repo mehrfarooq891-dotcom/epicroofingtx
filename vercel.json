@@ -29,6 +29,7 @@
     { "source": "/pasadena-tx-roofing-contractor.html", "destination": "/pasadena-tx-roofing-contractor", "permanent": true },
     { "source": "/pearland-roofing-contractor.html", "destination": "/pearland-roofing-contractor", "permanent": true },
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/disclaimer.html", "destination": "/disclaimer", "permanent": true },
     { "source": "/richmond-tx-roofing-contractor.html", "destination": "/richmond-tx-roofing-contractor", "permanent": true },
     { "source": "/roof-coating-houston.html", "destination": "/roof-coating-houston", "permanent": true },
     { "source": "/roof-leak-detection-houston.html", "destination": "/roof-leak-detection-houston", "permanent": true },
@@ -153,6 +154,7 @@
     { "source": "/roof-replacement-after-hurricane-houston", "destination": "/storm-damage-roofing-houston", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/disclaimer", "destination": "/disclaimer.html" },
     { "source": "/roofing-calculators", "destination": "/roofing-calculators.html" },
     { "source": "/calculator", "destination": "/calculator.html" },
     { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },

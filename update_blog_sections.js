@@ -247,48 +247,59 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
   <!-- STICKY NAVY HEADER -->
   <header id="site-header">
     <div class="header-container">
-      <a href="/index.html" id="site-logo">
+      <a href="/" id="site-logo">
         <img src="/images/epic-roofing-logo.svg" 
         alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
         style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="desktop-nav" id="desktop-navbar">
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Our Services</span>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/roof-replacement-houston.html">Shingle Replacement</a>
-            <a class="dropdown-item" href="/metal-roofing-houston.html">Metal Roofing</a>
-            <a class="dropdown-item" href="/roof-coating-houston.html">Commercial Coating</a>
-            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">Hail & Wind Damage</a>
-            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Leak Tarp</a>
-            <a class="dropdown-item" href="/free-roof-inspection-houston.html">Certified Inspection</a>
-          </div>
-        </div>
+      <nav class="desktop-nav" id="desktop-navbar" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
 
+        <!-- 1. Services (dropdown) -->
         <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Storm Repairs</span>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/hail-damage-roof-repair-houston.html">Hail Damage Restoration</a>
-            <a class="dropdown-item" href="/wind-damage-roof-repair-houston.html">Wind Damage Restoration</a>
-            <a class="dropdown-item" href="/storm-damage-roofing-houston.html">General Storm Damage</a>
-            <a class="dropdown-item" href="/emergency-roof-tarping-houston.html">Emergency Tarp Service</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <span class="nav-link dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Services</span>
           <div class="dropdown-menu dropdown-menu-wide">
-            <a class="dropdown-item" href="/index.html">Houston</a>
-            <a class="dropdown-item" href="/katy-roofing-contractor.html">Katy</a>
-            <a class="dropdown-item" href="/sugar-land-roofing-contractor.html">Sugar Land</a>
-            <a class="dropdown-item" href="/cypress-roofing-contractor.html">Cypress</a>
+            <div>
+              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Roof Replacement</a>
+              <a class="dropdown-item" href="/metal-roofing-houston">Standing Seam Metal</a>
+              <a class="dropdown-item" href="/roof-repair-houston">Roof Leak Repair</a>
+              <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
+              <a class="dropdown-item" href="/storm-damage-roofing-houston">Storm Damage Restoration</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Assessment</a>
+              <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Uplift Repair</a>
+              <a class="dropdown-item" href="/gutter-installation-houston">Gutters</a>
+              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Chimney &amp; Flashing</a>
+            </div>
           </div>
         </div>
-        <a href="/index.html" class="nav-link">Interactive Center</a>
-        <a href="/blog/index.html" class="nav-link">Blog</a>
-        <a href="/contact.html" class="nav-link">Contact</a>
+
+        <!-- 2. Storm Damage -->
+        <a href="/#storm-damage" class="nav-link">Storm Damage</a>
+
+        <!-- 3. Why Epic -->
+        <a href="/#why-epic" class="nav-link">Why Epic</a>
+
+        <!-- 4. Resources (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
+            <a class="dropdown-item" href="/blog">Blog</a>
+            <a class="dropdown-item" href="/#faq">FAQ</a>
+            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
+            <a class="dropdown-item" href="/roofing-calculators">Roofing Calculators</a>
+          </div>
+        </div>
+
+        <!-- 5. Service Areas -->
+        <a href="/#service-areas" class="nav-link">Service Areas</a>
+
+        <!-- 6. Contact Direct Link -->
+        <a href="/contact" class="nav-link">Contact</a>
       </nav>
 
       <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
@@ -303,14 +314,16 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
   <div class="mobile-menu-overlay" id="menu-overlay"></div>
   <div class="mobile-menu" id="mobile-menu">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
-      <a href="/index.html" class="logo">EPIC ROOFING <span>TX</span></a>
+      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
       <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
     </div>
-    <a href="/index.html" class="mobile-nav-link">Home</a>
-    <a href="/roof-replacement-houston.html" class="mobile-nav-link">Shingle Replacement</a>
-    <a href="/storm-damage-roofing-houston.html" class="mobile-nav-link">Storm Damage</a>
-    <a href="/blog/index.html" class="mobile-nav-link">Blog</a>
-    <a href="/index.html" class="mobile-nav-link">Houston Core</a>
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/roof-replacement-houston" class="mobile-nav-link">Shingle Replacement</a>
+    <a href="/storm-damage-roofing-houston" class="mobile-nav-link">Storm Damage</a>
+    <a href="/blog" class="mobile-nav-link">Blog</a>
+    <a href="/calculator" class="mobile-nav-link">Cost Calculator</a>
+    <a href="/roofing-calculators" class="mobile-nav-link">Roofing Calculators</a>
+    <a href="/contact" class="mobile-nav-link">Contact</a>
     <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">📞 Call Free Inspection</a>
   </div>
 `;
@@ -558,6 +571,7 @@ indexHTML = indexHTML.replace('</body>', `
     // Initial load
     renderBlogs('All');
   </script>
+  <script src="/nav.js" defer></script>
 </body>`);
 
 fs.writeFileSync(BLOG_INDEX_PATH, indexHTML, 'utf-8');

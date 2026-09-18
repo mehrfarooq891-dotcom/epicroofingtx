@@ -265,7 +265,8 @@ function getFooter() {
         });
       });
     });
-  </script>`;
+  </script>
+  <script src="/nav.js" defer></script>`;
 }
 function generatePageHTML(data) {
   const {

@@ -54,6 +54,7 @@ for (const entry of entries) {
       name.endsWith('.html') ||
       name === 'style.css' ||
       name === 'analytics.js' ||
+      name === 'nav.js' ||
       name === 'robots.txt' ||
       name.endsWith('.xml') ||
       name === 'metadata.json' ||
