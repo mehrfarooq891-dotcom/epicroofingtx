@@ -195,18 +195,20 @@ function generateHeader() {
           </div>
         </div>
 
-        <!-- 4. Resources -->
+        <!-- 4. Blog -->
+        <a href="/blog" class="nav-link">Blog</a>
+
+        <!-- 5. Resources -->
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Resources</span>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
             <a class="dropdown-item" href="/calculator">Cost Calculator</a>
             <a class="dropdown-item" href="/financing">Financing</a>
             <a class="dropdown-item" href="/#case-studies">Case Studies</a>
           </div>
         </div>
 
-        <!-- 5. Contact -->
+        <!-- 6. Contact -->
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
 

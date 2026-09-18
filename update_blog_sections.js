@@ -283,20 +283,20 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
         <!-- 3. Why Epic -->
         <a href="/#why-epic" class="nav-link">Why Epic</a>
 
-        <!-- 4. Resources (dropdown) -->
+        <!-- 4. Blog (standalone top-level) -->
+        <a href="/blog" class="nav-link">Blog</a>
+
+        <!-- 5. Resources (dropdown) -->
         <div class="dropdown">
           <span class="nav-link dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/#case-studies">Case Studies</a>
-            <a class="dropdown-item" href="/blog">Blog</a>
-            <a class="dropdown-item" href="/#faq">FAQ</a>
+            <a class="dropdown-item" href="/#service-areas">Service Areas</a>
             <a class="dropdown-item" href="/calculator">Cost Calculator</a>
             <a class="dropdown-item" href="/roofing-calculators">Roofing Calculators</a>
+            <a class="dropdown-item" href="/#faq">FAQ</a>
           </div>
         </div>
-
-        <!-- 5. Service Areas -->
-        <a href="/#service-areas" class="nav-link">Service Areas</a>
 
         <!-- 6. Contact Direct Link -->
         <a href="/contact" class="nav-link">Contact</a>

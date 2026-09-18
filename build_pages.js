@@ -662,10 +662,11 @@ ${JSON.stringify(localBusinessSchema, null, 2)}
           </div>
         </div>
 
+        <a href="/blog" class="nav-link">Blog</a>
+
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Resources</span>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
             <a class="dropdown-item" href="/calculator">Cost Calculator</a>
             <a class="dropdown-item" href="/financing">Financing</a>
             <a class="dropdown-item" href="/#case-studies">Case Studies</a>
