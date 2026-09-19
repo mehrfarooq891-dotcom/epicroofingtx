@@ -1419,33 +1419,13 @@
       color: #FFFFFF;
     }
 
-    /* Mobile Sticky Bottom Call Bar */
-    .mobile-sticky-bar {
+    /* Sticky Mobile Call-To-Action Bar */
+    .mobile-sticky-cta-bar {
       display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: var(--hazard-amber);
-      color: #FFFFFF;
-      z-index: 9999;
-      padding: 0.75rem 1rem;
-      text-align: center;
-      box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.25);
     }
 
-    .mobile-sticky-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: #FFFFFF;
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 0.03em;
+    .mobile-sticky-bar {
+      display: none !important;
     }
 
     /* Mobile Nav Overlay */
@@ -1553,8 +1533,11 @@
         flex-direction: column;
         text-align: center;
       }
-      .mobile-sticky-bar {
-        display: block;
+      .mobile-sticky-cta-bar {
+        display: flex !important;
+      }
+      body {
+        padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
       }
     }
 
@@ -2948,10 +2931,21 @@
     </div>
   </footer>
 
-  <!-- 18. MOBILE-ONLY STICKY BOTTOM CALL BAR -->
-  <div class="mobile-sticky-bar" id="mobile-call-bar">
-    <a href="tel:+12813269905" class="mobile-sticky-link">
-      <span>&#128222;</span> Call (281) 326-9905 &mdash; Free Inspection
+  <!-- 18. MOBILE-ONLY STICKY BOTTOM CALL-TO-ACTION BAR -->
+  <div class="mobile-sticky-cta-bar" id="mobile-sticky-cta-bar" role="region" aria-label="Mobile quick actions">
+    <a href="tel:+12813269905" class="mobile-cta-btn mobile-cta-call" id="mobile-sticky-call-btn">
+      <svg class="mobile-cta-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span>CALL NOW</span>
+    </a>
+    <a href="#inspection-form" class="mobile-cta-btn mobile-cta-inspect" id="mobile-sticky-inspect-btn">
+      <svg class="mobile-cta-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+        <path d="m9 14 2 2 4-4"/>
+      </svg>
+      <span>FREE INSPECTION</span>
     </a>
   </div>
 
@@ -2983,5 +2977,15 @@
   </script>
   <script src="/nav.js" defer></script>
 
+  <!-- GLOBAL STICKY PHONE NUMBER WIDGET -->
+  <div class="global-call-widget" id="global-call-widget" role="region" aria-label="Call Epic Roofing">
+    <a href="tel:+12813269905" class="sticky-call-btn" id="sticky-call-btn" aria-label="Call (281) 326-9905">
+      <svg class="sticky-call-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="btn-text-desktop">Call (281) 326-9905</span>
+      <span class="btn-text-mobile">Call (281) 326-9905</span>
+    </a>
+  </div>
 </body>
 </html>

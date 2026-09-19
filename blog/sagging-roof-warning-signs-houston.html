@@ -299,11 +299,13 @@
           </div>
         </div>
 
-        <!-- 4. Resources (dropdown) -->
+        <!-- Blog -->
+        <a href="/blog" class="nav-link">Blog</a>
+
+        <!-- Resources (dropdown) -->
         <div class="dropdown">
           <span class="nav-link dropdown-toggle">Resources</span>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="/blog">Blog &amp; Guides</a>
             <a class="dropdown-item" href="/calculator">Cost Calculator</a>
             <a class="dropdown-item" href="/financing">Financing</a>
             <a class="dropdown-item" href="/#case-studies">Case Studies</a>
@@ -623,12 +625,14 @@
     </div>
   </footer>
 
-  <!-- GLOBAL FLOATING/STICKY CALL ACTION -->
-  <div class="global-call-widget" id="global-call-widget">
-    <a href="tel:2813269905" class="sticky-call-btn">
-      <span class="phone-icon">📞</span>
+    <!-- GLOBAL STICKY PHONE NUMBER WIDGET -->
+  <div class="global-call-widget" id="global-call-widget" role="region" aria-label="Call Epic Roofing">
+    <a href="tel:+12813269905" class="sticky-call-btn" id="sticky-call-btn" aria-label="Call (281) 326-9905">
+      <svg class="sticky-call-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
       <span class="btn-text-desktop">Call (281) 326-9905</span>
-      <span class="btn-text-mobile">Call Now: (281) 326-9905</span>
+      <span class="btn-text-mobile">Call (281) 326-9905</span>
     </a>
   </div>
 
@@ -671,5 +675,6 @@
       if (overlay) overlay.addEventListener('click', toggleMenu);
     });
   </script>
+  <script src="/nav.js" defer></script>
 </body>
 </html>
