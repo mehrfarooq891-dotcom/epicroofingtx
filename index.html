@@ -525,10 +525,23 @@
       color: #FFFFFF;
       font-size: 3rem;
       line-height: 1.12;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.85rem;
     }
 
-    .hero-left h1 .highlight-amber {
+    .hero-left h2,
+    .hero-subheading {
+      color: #FFFFFF;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-left h1 .highlight-amber,
+    .hero-left h2 .highlight-amber,
+    .hero-subheading .highlight-amber {
       color: var(--hazard-amber);
     }
 
@@ -1518,6 +1531,11 @@
       .hero-left h1 {
         font-size: 2.25rem;
       }
+      .hero-left h2,
+      .hero-subheading {
+        font-size: 1.35rem;
+        line-height: 1.25;
+      }
       .hidden-damage-grid,
       .process-grid,
       .case-studies-grid,
@@ -1548,6 +1566,13 @@
     }
 
     @media (max-width: 480px) {
+      .hero-left h1 {
+        font-size: 1.95rem;
+      }
+      .hero-left h2,
+      .hero-subheading {
+        font-size: 1.2rem;
+      }
       .service-area-pills {
         grid-template-columns: 1fr;
       }
@@ -1866,9 +1891,10 @@
           
           <!-- Hero Left Column -->
           <div class="hero-left">
-            <h1>
+            <h1>Roofing Contractor in Houston, TX</h1>
+            <h2 class="hero-subheading">
               Hail or wind damage to your roof? <span class="highlight-amber">Get a free inspection the same day you call.</span>
-            </h1>
+            </h2>
             <p class="hero-subhead">
               We are GAF Master Elite and HAAG Certified roofing inspectors based in Houston. We document damage with date-stamped high-resolution photos, meet your insurance adjuster on the roof, and manage your claim from inspection through final build.
             </p>
