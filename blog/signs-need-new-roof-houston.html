@@ -1,303 +1,901 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161B22'/><path d='M15 65 L50 25 L85 65 Z' fill='%23E2900F'/></svg>">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Cookie check</title>
-      <!-- Google Fonts: Oswald (Headings), Source Sans 3 (Body), IBM Plex Mono (Stats/Data) -->
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161B22'/><path d='M15 65 L50 25 L85 65 Z' fill='%23E2900F'/></svg>">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="description" content="Houston roofing experts detail 10 signs you need a roof replacement. Learn about granule loss, flashing failure, storm damage, and repair vs. replace decisions in Texas.">
+  <title>10 Warning Signs You Need a New Roof in Houston TX | Epic Roofing TX</title>
+  
+  <!-- Fonts -->
+    <!-- Google Fonts: Oswald (Headings), Source Sans 3 (Body), IBM Plex Mono (Stats/Data) -->
     <!-- Google Fonts: Oswald (Headings), Source Sans 3 (Body), IBM Plex Mono (Stats/Data) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        color-scheme: light dark;
-      }
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/style.css">
 
-      body {
-        font-family: 'Inter', Helvetica, Arial, sans-serif;
-        background: light-dark(#F8F8F7, #191919);
-        color: light-dark(#1f1f1f, #e3e3e3);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        min-height: 100vh;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
+  <style>
+    /* Custom Blog Elements */
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-container {
+        grid-template-columns: 8fr 4fr;
       }
+    }
 
-      .container {
-        background: light-dark(#FFFFFF, #1F1F1F);
-        padding: 32px;
-        border-radius: 16px;
-        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
-        max-width: min(80%, 500px);
-        width: 100%;
-        color: light-dark(#2B2D31, #D4D4D4);
-      }
+    .blog-article {
+      background: var(--navy-light);
+      border: 1px solid #1E293B;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-bottom: 4px solid var(--orange);
+    }
 
-      h1 {
-        font-size: 20px;
-        font-weight: 500;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        color: light-dark(#2B2D31, #D4D4D4);
-      }
+    .blog-article h2, .blog-article h3 {
+      text-align: left;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      text-transform: none; /* keep natural title casing for reading flow */
+    }
+    .blog-article h2 {
+      font-size: 1.85rem;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 0.5rem;
+      color: var(--white);
+    }
+    .blog-article h3 {
+      font-size: 1.35rem;
+      color: var(--white);
+    }
 
-      p {
-        font-size: 14px;
-        color: light-dark(#2B2D31, #D4D4D4);
-        line-height: 21px;
-        margin: 0 0 1.5rem 0;
-      }
+    .blog-article p {
+      color: #94A3B8;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
 
-      .icon {
-        margin-bottom: 1rem;
-        line-height: 0;
-      }
+    .blog-article ol {
+      margin-bottom: 2rem;
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+    }
+    .blog-article ol li {
+      color: #94A3B8;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .blog-article ol li strong {
+      color: var(--white);
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
 
-      .button-container {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-top: 2rem;
-      }
+    .aeo-answer-box {
+      background: rgba(234, 88, 12, 0.08);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.75rem;
+      margin: 2rem 0;
+    }
+    .aeo-answer-box h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--f-display);
+      text-transform: uppercase;
+    }
+    .aeo-answer-box p {
+      font-style: italic;
+      color: var(--white) !important;
+      margin-bottom: 0 !important;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
 
-      button {
-        background-color: light-dark(#fff, #323232);
-        color: light-dark(#2B2D31, #FCFCFC);
-        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
-        border-radius: 12px;
-        padding: 8px 12px;
-        font-size: 14px;
-        line-height: 21px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-        font-weight: 400;
-        font-family: 'Inter', Helvetica, Arial, sans-serif;
-        width: 100%;
+    /* Sticky Sidebar Layout */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .blog-sidebar {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
       }
+    }
 
-      button:hover {
-        background-color: light-dark(#EAEAEB, #424242);
-      }
+    .sidebar-cta {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(234, 88, 12, 0.15);
+      position: relative;
+    }
+    .sidebar-cta h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+    .sidebar-cta p {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
 
-      .hidden {
-        display: none;
-      }
+    .meta-strip {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #64748B;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .meta-strip span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  </style>
 
-      /* Loading Spinner Animation */
-      .spinner {
-        margin: 0 auto 1.5rem auto;
-        width: 40px;
-        height: 40px;
-        border: 4px solid light-dark(#f0f0f0, #262626);
-        border-top: 4px solid light-dark(#076eff, #87a9ff); /* Blue color */
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
+  <!-- SEO Schema JSON-LD for Blog Article -->
+  
 
-      .logo {
-        border-radius: 10px;
-        display: block;
-        margin: 0 auto 2rem auto;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does homeowner's insurance cover replacements for old, worn-out roofs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Homeowners insurance is designed to cover sudden, accidental physical damage, such as storm-blown winds or hail impacts. General wear, aging, and leaks caused by neglected maintenance are considered the homeowner's responsibility."
       }
-
-      .logo.hidden {
-        display: none;
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to replace a standard roof in Houston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most standard-sized homes (under 3,000 square feet), a professional crew can complete a full replacement in just 1 to 2 days, assuming clear weather. This includes tearing off old shingles, inspecting the wood deck, installing new underlayments, and a thorough clean-up."
       }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I replace my roof if it has dark, ugly algae streaks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Algae streaks are mostly a cosmetic issue and can often be washed away with professional, low-pressure cleaning. However, if the streaks are accompanied by curling shingles or heavy granule loss, it's a sign the shingles are failing and need to be replaced."
       }
-    </style>
-    <!-- Google Analytics 4 (GA4) Tracking -->
+    },
+    {
+      "@type": "Question",
+      "name": "Can a new, energy-efficient roof lower my monthly AC bills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Upgrading to light-colored shingles or high-reflectivity underlayments, paired with a balanced ridge ventilation system, can lower attic temperatures by up to 30°F, cutting your monthly cooling bills by up to 15%."
+      }
+    }
+  ]
+}
+</script>
+  <!-- Google Analytics 4 (GA4) Tracking -->
   <script src="/analytics.js" defer></script>
 </head>
-  <body>
+<body>
+
+      <!-- EMERGENCY TOP BANNER -->
+  <div class="emergency-strip" id="emergency-banner">
+    🚨 Houston Storm Season: Free Same-Day Roof Inspection | Call Now <a href="tel:+12813269905">📞 (281) 326-9905</a>
+  </div>
+
+  <!-- STICKY NAVY HEADER -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" id="site-logo">
+        <img src="/images/epic-roofing-logo.svg" 
+        alt="Epic Roofing logo for premium roofing contractor | Epic Roofing TX | Houston TX"
+        style="height: 55px; width: 220px; aspect-ratio: 220/55;" width="220" height="55">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" id="desktop-navbar">
+        <!-- 1. Services (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Services</span>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <div>
+              <a class="dropdown-item" href="/roof-replacement-houston">Shingle Replacement</a>
+              <a class="dropdown-item" href="/metal-roofing-houston">Metal Roofing</a>
+              <a class="dropdown-item" href="/roof-coating-houston">Commercial Coating</a>
+              <a class="dropdown-item" href="/free-roof-inspection-houston">Free Inspection</a>
+              <a class="dropdown-item" href="/tile-roofing-houston">Tile &amp; Slate Roofing</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/gutter-installation-houston">Seamless Gutters</a>
+              <a class="dropdown-item" href="/chimney-flashing-repair-houston">Flashing &amp; Chimney</a>
+              <a class="dropdown-item" href="/roof-repair-houston">Roof Repairs &amp; Sealing</a>
+              <a class="dropdown-item" href="/affordable-roofing-houston">Affordable Roofing</a>
+              <a class="dropdown-item" href="/roof-leak-detection-houston">Leak Detection</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Storm Damage (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Storm Damage</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/hail-damage-roof-repair-houston">Hail Damage Restoration</a>
+            <a class="dropdown-item" href="/wind-damage-roof-repair-houston">Wind Damage Restoration</a>
+            <a class="dropdown-item" href="/emergency-roof-tarping-houston">Emergency Tarping</a>
+            <a class="dropdown-item" href="/storm-damage-roofing-houston">General Storm Damage</a>
+            <a class="dropdown-item" href="/insurance-claim-roofing-houston">Insurance Claim Help</a>
+          </div>
+        </div>
+
+        <!-- 3. Service Areas (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Service Areas</span>
+          <div class="dropdown-menu dropdown-menu-wide dropdown-menu-scrollable">
+            <div>
+              <a class="dropdown-item" href="/">Houston Core</a>
+              <a class="dropdown-item" href="/katy-roofing-contractor">Katy</a>
+              <a class="dropdown-item" href="/the-woodlands-roofing-contractor">The Woodlands</a>
+              <a class="dropdown-item" href="/sugar-land-roofing-contractor">Sugar Land</a>
+              <a class="dropdown-item" href="/cypress-roofing-contractor">Cypress</a>
+              <a class="dropdown-item" href="/pearland-roofing-contractor">Pearland</a>
+              <a class="dropdown-item" href="/league-city-roofing-contractor">League City</a>
+              <a class="dropdown-item" href="/spring-tx-roofing-contractor">Spring</a>
+            </div>
+            <div>
+              <a class="dropdown-item" href="/pasadena-tx-roofing-contractor">Pasadena</a>
+              <a class="dropdown-item" href="/tomball-tx-roofing-contractor">Tomball</a>
+              <a class="dropdown-item" href="/baytown-tx-roofing-contractor">Baytown</a>
+              <a class="dropdown-item" href="/conroe-tx-roofing-contractor">Conroe</a>
+              <a class="dropdown-item" href="/galveston-tx-roofing-contractor">Galveston</a>
+              <a class="dropdown-item" href="/humble-tx-roofing-contractor">Humble / Kingwood</a>
+              <a class="dropdown-item" href="/richmond-tx-roofing-contractor">Richmond</a>
+              <a class="dropdown-item" href="/missouri-city-roofing-contractor">Missouri City</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog -->
+        <a href="/blog" class="nav-link">Blog</a>
+
+        <!-- Resources (dropdown) -->
+        <div class="dropdown">
+          <span class="nav-link dropdown-toggle">Resources</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/calculator">Cost Calculator</a>
+            <a class="dropdown-item" href="/financing">Financing</a>
+            <a class="dropdown-item" href="/#case-studies">Case Studies</a>
+          </div>
+        </div>
+
+        <!-- 5. Contact Direct Link -->
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="tel:+12813269905" class="btn btn-primary" id="btn-call-header" style="height: 46px; padding: 0 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center;">
+        📞 (281) 326-9905
+      </a>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+
+    <!-- Slim Secondary Utility Line -->
+    <div class="nav-utility-strip">
+      <div class="container nav-utility-flex">
+        <div class="nav-utility-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span class="nav-utility-divider">|</span>
+          <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+
+      <!-- Mobile Slideout Menu -->
+  <div class="mobile-menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+      <a href="/" class="logo">EPIC ROOFING <span>TX</span></a>
+      <button class="menu-toggle" id="menu-close-btn" style="color:var(--orange);">✕</button>
+    </div>
+
+    <a href="/" class="mobile-nav-link">Home</a>
+
+    <!-- Accordion 1: Services -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Services</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/roof-replacement-houston" class="mobile-accordion-link">Shingle Replacement</a>
+        <a href="/metal-roofing-houston" class="mobile-accordion-link">Metal Roofing</a>
+        <a href="/roof-coating-houston" class="mobile-accordion-link">Commercial Coating</a>
+        <a href="/free-roof-inspection-houston" class="mobile-accordion-link">Free Inspection</a>
+        <a href="/gutter-installation-houston" class="mobile-accordion-link">Seamless Gutters</a>
+        <a href="/chimney-flashing-repair-houston" class="mobile-accordion-link">Flashing &amp; Chimney</a>
+        <a href="/roof-repair-houston" class="mobile-accordion-link">Roof Repairs &amp; Sealing</a>
+        <a href="/tile-roofing-houston" class="mobile-accordion-link">Tile Roofing</a>
+        <a href="/affordable-roofing-houston" class="mobile-accordion-link">Affordable Roofing</a>
+        <a href="/roof-leak-detection-houston" class="mobile-accordion-link">Leak Detection</a>
+      </div>
+    </div>
+
+    <!-- Accordion 2: Storm Damage -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Storm Damage</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/hail-damage-roof-repair-houston" class="mobile-accordion-link">Hail Damage Restoration</a>
+        <a href="/wind-damage-roof-repair-houston" class="mobile-accordion-link">Wind Damage Restoration</a>
+        <a href="/emergency-roof-tarping-houston" class="mobile-accordion-link">Emergency Tarping</a>
+        <a href="/storm-damage-roofing-houston" class="mobile-accordion-link">General Storm Damage</a>
+        <a href="/insurance-claim-roofing-houston" class="mobile-accordion-link">Insurance Claim Help</a>
+      </div>
+    </div>
+
+    <!-- Accordion 3: Service Areas -->
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Service Areas</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/" class="mobile-accordion-link">Houston Core</a>
+        <a href="/katy-roofing-contractor" class="mobile-accordion-link">Katy</a>
+        <a href="/the-woodlands-roofing-contractor" class="mobile-accordion-link">The Woodlands</a>
+        <a href="/sugar-land-roofing-contractor" class="mobile-accordion-link">Sugar Land</a>
+        <a href="/cypress-roofing-contractor" class="mobile-accordion-link">Cypress</a>
+        <a href="/pearland-roofing-contractor" class="mobile-accordion-link">Pearland</a>
+        <a href="/league-city-roofing-contractor" class="mobile-accordion-link">League City</a>
+        <a href="/spring-tx-roofing-contractor" class="mobile-accordion-link">Spring</a>
+        <a href="/pasadena-tx-roofing-contractor" class="mobile-accordion-link">Pasadena</a>
+        <a href="/tomball-tx-roofing-contractor" class="mobile-accordion-link">Tomball</a>
+        <a href="/baytown-tx-roofing-contractor" class="mobile-accordion-link">Baytown</a>
+        <a href="/conroe-tx-roofing-contractor" class="mobile-accordion-link">Conroe</a>
+        <a href="/galveston-tx-roofing-contractor" class="mobile-accordion-link">Galveston</a>
+        <a href="/humble-tx-roofing-contractor" class="mobile-accordion-link">Humble</a>
+        <a href="/richmond-tx-roofing-contractor" class="mobile-accordion-link">Richmond</a>
+        <a href="/missouri-city-roofing-contractor" class="mobile-accordion-link">Missouri City</a>
+      </div>
+    </div>
+
+    <!-- Accordion 4: Resources -->
+    <a href="/blog" class="mobile-link">Blog</a>
+
+      <div class="mobile-accordion">
+      <button class="mobile-accordion-btn" type="button">
+        <span>Resources</span>
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="mobile-accordion-content">
+        <a href="/calculator" class="mobile-accordion-link">Cost Calculator</a>
+        <a href="/financing" class="mobile-accordion-link">Financing</a>
+        <a href="/#case-studies" class="mobile-accordion-link">Case Studies</a>
+      </div>
+    </div>
+
+    <a href="/contact" class="mobile-nav-link">Contact</a>
+
+    <div style="display:flex; gap:0.75rem; justify-content:center; padding-top:0.5rem; font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.06);">
+      <a href="/privacy-policy" style="color:#94A3B8;">Privacy Policy</a>
+      <span style="color:#334155;">|</span>
+      <a href="/terms-and-conditions" style="color:#94A3B8;">Terms &amp; Conditions</a>
+    </div>
+
+    <a href="tel:+12813269905" class="btn btn-primary" style="margin-top:0.75rem; width:100%;">📞 Call (281) 326-9905</a>
+  </div>
+
+  <!-- BREADCRUMBS STRIP -->
+  <div class="container" style="padding-top: 1.5rem; padding-bottom: 0.25rem;">
+    <div class="breadcrumbs" id="top-breadcrumbs">
+      <a href="/#case-studies">Case Studies</a>
+
+      <a href="/blog">Blog</a> <span>/</span> <span style="color:#D32F2F; font-weight:700;">Signs You Need Roof Replacement</span>
+    </div>
+  </div>
+
+  <!-- BLOG HERO -->
+  <section class="hero-section" style="padding: 4rem 0 3rem 0;" id="hero-blog-signs">
     <div class="container">
-      <img
-        class="logo"
-        src="https://www.gstatic.com/images/branding/productlogos/ai_studio/v1/web-512dp/logo_ai_studio_color_1x_web_512dp.png"
-        alt="AI Studio Logo"
-        width="256"
-        height="256"
-      />
-      <div class="spinner"></div>
-      <div id="error-ui" class="hidden">
-        <div class="icon">
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="48px"
-            height="48px"
-            fill="#D73A49"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z"
-            />
-          </svg>
-        </div>
-        <div id="stepOne" class="text-container">
-          <h1>Action required to load your app</h1>
+      <div class="badge-orange-light" style="margin-bottom: 1.25rem;">
+        🏠 Educational homeowner briefing
+      </div>
+      <h1 class="hero-title" style="margin-bottom: 1rem; font-size: 2.5rem; line-height: 1.2;">
+        10 Absolute Signs You Need a <br><span style="color: var(--orange);">Roof Replacement</span> in Houston
+      </h1>
+      <p class="hero-subtitle" style="margin-bottom: 0;">
+        How brutal heat, tropical activity, and high humidity accelerate aging on Southeast Texas residential roofs. Learn when individual repairs are no longer enough.
+      </p>
+      <!-- Blog Hero Image -->
+      <div class="blog-hero-img-container" style="max-width: 1000px; margin: 2rem auto 0 auto; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
+          <img width="800" height="450" loading="lazy" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&auto=format&fit=crop&q=60&fm=jpg" alt="Signs You Need Roof Replacement" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=Cost+%26+Materials';">
+        </picture>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </section>
+
+  <!-- MAIN BLOG BODY (WITH SIDEBAR) -->
+  <section class="section-padding" style="background: var(--navy); padding-top: 1.5rem;" id="main-content-signs">
+    <div class="container">
+      <div class="blog-container">
+        
+        <!-- Main Article Left Column -->
+        <article class="blog-article">
+          
+          <div class="meta-strip">
+            <span>📅 May 17, 2026</span>
+            <span>⏱️ 8 Min Read</span>
+            <span>👮 By HAAG Certified Structural Assessor</span>
+          </div>
+
+          <!-- AEO BLOCK AT TOP -->
+          <div class="aeo-answer-box">
+            <h2>How do I know if I need a new roof in Houston?</h2>
+            <p>
+              In Houston, you need a roof replacement if your home exhibits major architectural leaks, severe asphalt granule loss, curled or missing shingles, deteriorated flashing around vents, structural sag along deck lines, or if the roof exceeds 15-20 years of age. Severe localized storm impacts from hail and high wind can immediately mandate full replacements.
+            </p>
+          </div>
+
+          <h2>Introduction</h2>
           <p>
-            It looks like your browser is blocking a required security cookie, which is common on
-            older versions of iOS and Safari.
+            Operating as residential roofing contractors across Southeast Texas, our HAAG Certified personnel regularly evaluate properties that are on the verge of structural collapse due to unseen water decay. The combination of intense ultraviolet solar radiation, heavy annual precipitation, and high Gulf Coast humidity places unique mechanical pressures on asphalt shingles. Over time, these dynamic weather loops degrade the adhesive underlayment and core asphalt layer.
           </p>
-          <div class="button-container">
-            <button id="authInSeparateWindowButton" onclick="redirectToReturnUrl(true)">Authenticate in new window</button>
+          <p>
+            Understanding the distinction between cosmetic weathering and serious structural compromises can save you thousands of dollars in hidden attic damage. This guide details the 10 most critical mechanical signs that your roof is nearing the end of its useful lifespan and explains why immediate action is required in our hot, wet local climate.
+          </p>
+
+          <h2>10 Physical Signs of Roof Failure</h2>
+          
+          <ol>
+            <li>
+              <strong>Widespread Granule Loss (Bald Spots)</strong>
+              Asphalt shingles rely on hard mineral granules to shield the delicate underlying petroleum-based layer from UV rays. When you find significant amounts of coarse colored gravel accumulating in your gutters, or visible dark patches along the roof facing, key protective layers are gone. This exposes the raw fiberglass matrix to thermal shock and immediate solar baking.
+            </li>
+
+            <li>
+              <strong>Curled, Cup-Shaped, or Buckled Shingle Edges</strong>
+              Intense thermal load combined with poor attic ventilation causes shingles to dry out, contract, and lift away at outer corners. Curling shingles no longer lock down or lie flat against neighboring tabs, generating water catch points. This structural defect allows horizontal rainstorms to blow directly beneath the paper barriers.
+            </li>
+
+            <li>
+              <strong>Claw-Cling Deformation</strong>
+              Claw-clung shingles buckle upward in the center while outer tabs curve down, resembling a bird's talon. This mechanical distress signals advanced age and chemical drying. It makes the shingles highly glass-brittle and vulnerable to complete blow-offs, even during basic summer wind gusts.
+            </li>
+
+            <li>
+              <strong>Active Internal Water Stains or Attic Dampness</strong>
+              Water trickling along rafters, damp insulation, or localized ceiling sheetrock discoloration indicates deep underlayment failure. Water rarely travels in straight vertical drops; a leak dripping over an attic bedroom often originates feet away near cracked ridge vents or flashing gaps.
+            </li>
+
+            <li>
+              <strong>Deteriorated, Cracking, or Rusted Flashing Joints</strong>
+              Steel, aluminum, or copper flashing seals chimneys, skylights, and valley systems. Once mechanical flashing cracks, rusts through, or separates from brick masonry, it creates an open channel for heavy rainwater. Standard roofing cement is only a temporary patch; complete replacement is necessary to secure these joints.
+            </li>
+
+            <li>
+              <strong>Significant Shingle Loss (Exposed Wood Decking)</strong>
+              When severe windstorms tear shingles completely off, leaving raw black underlayment felt or plywood decking exposed to the sky, your home lacks basic weather defense. In Texas, leaving a bare wooden deck uncovered for even a short period invited rapid rot and structural mold.
+            </li>
+
+            <li>
+              <strong>Soft, Sagging, or Sponge-Like Rooflines</strong>
+              If you observe visible dips, valleys, or sagging ridges along your roofline, you may have structural damage. This symptom indicates that chronic leak moisture has saturated the underlying wooden sheathing, causing structural rafters to warp and decay under the weight of the roofing system.
+            </li>
+
+            <li>
+              <strong>Splitting Shingles and Micro-Fracture Webs</strong>
+              Thermal expansion and contraction (extreme daily hot-and-cold cycles) cause old, rigid shingles to split horizontally or develop vertical hairline fractures. These splits allow capillary action to draw water directly into the backing paper, creating widespread concealed leaks.
+            </li>
+
+            <li>
+              <strong>Moss, Lichen, and Algae Colonization</strong>
+              The high humidity of Northwest Cypress and the wider Houston area encourages thick black algae (Gloeocapsa magma) or root-bearing moss to colonize roof sections. Moss acts like a wet sponge, trapping moisture and rotting deck sheathing. Lichens chemically digest asphalt material, stripping away protective granules.
+            </li>
+
+            <li>
+              <strong>Advanced Cumulative Age (Over 15 to 20 Years)</strong>
+              Even a high-grade 30-year architectural shingle rarely reaches its full paper lifespan in Southeast Texas. Widespread exposure to thermal fluctuations, high wind, and severe storm events diminishes reliable waterproofing. Routine inspections are highly recommended once any standard asphalt system passes the 15-year mark.
+            </li>
+          </ol>
+
+          <h2>The Brutal Reality of Houston’s Climate on Roof Lifespans</h2>
+          <p>
+            Houston homeowners must understand that manufacturing warranties are tested under laboratory conditions. In Southeast Texas, roofs face intense heat index peaks, sudden tropical downpours, and severe storm movements. Rapid thermal contraction occurs when a 130-degree roof is suddenly drenched by a cold summer rain, causing structural micro-fractures in older shingles.
+          </p>
+          <p>
+            Furthermore, the combination of high relative humidity and warm air provides an ideal environment for mold, wood rot, and wood-destroying fungi to thrive on saturated decking. Waiting until a leak becomes visible through your ceiling drywall often means expensive plywood, drywall, and structural timber repairs are already required.
+          </p>
+
+          <h2>Repair vs. Replacement: Making the Right Business Decision</h2>
+          <p>
+            When minor damage occurs—such as a single shingle blown off by wind, or a loose plumbing boot collar—a clean spot repair is highly effective. However, if more than 20% of the entire roof area shows advanced granule loss, localized curling, or severe storm bruising, piecemeal patches are merely postponing the inevitable.
+          </p>
+          <p>
+            Investing in a modern, continuous roof replacement using GAF laminate shingles or premium standing seam metal provides many benefits:
+          </p>
+          <ul>
+            <li>Significantly reduced monthly attic cooling costs due to modern reflective underlayments and ventilation.</li>
+            <li>Guaranteed wind ratings of up to 130 MPH to withstand severe regional storms.</li>
+            <li>Possibility of lower annual homeowner insurance premiums through windstorm certification (TDI).</li>
+            <li>Total protection backed by non-prorated manufacturers' warranties.</li>
+          </ul>
+
+          <p>
+            If you suspect your roof is failing, do not wait for the next severe weather event to test your home's envelope. Schedule a comprehensive HAAG-certified forensic analysis to determine the exact condition of your structure.
+          </p>
+
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Does homeowner's insurance cover replacements for old, worn-out roofs?</h3>
+              <p>
+                No. Homeowners insurance is designed to cover sudden, accidental physical damage, such as storm-blown winds or hail impacts. General wear, aging, and leaks caused by neglected maintenance are considered the homeowner's responsibility.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>How long does it take to replace a standard roof in Houston?</h3>
+              <p>
+                For most standard-sized homes (under 3,000 square feet), a professional crew can complete a full replacement in just 1 to 2 days, assuming clear weather. This includes tearing off old shingles, inspecting the wood deck, installing new underlayments, and a thorough clean-up.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Should I replace my roof if it has dark, ugly algae streaks?</h3>
+              <p>
+                Not necessarily. Algae streaks are mostly a cosmetic issue and can often be washed away with professional, low-pressure cleaning. However, if the streaks are accompanied by curling shingles or heavy granule loss, it's a sign the shingles are failing and need to be replaced.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Can a new, energy-efficient roof lower my monthly AC bills?</h3>
+              <p>
+                Yes! Upgrading to light-colored shingles or high-reflectivity underlayments, paired with a balanced ridge ventilation system, can lower attic temperatures by up to 30°F, cutting your monthly cooling bills by up to 15%.
+               Contact Epic Roofing TX today to schedule your <a href="/free-roof-inspection-houston" style="color: var(--hazard-amber); text-decoration: underline; font-weight: 600;">free 21-point roof inspection</a> and protect your property. Contact Epic Roofing TX today to schedule your <a href="/free-roof-inspection-houston" style="color: var(--hazard-amber); text-decoration: underline; font-weight: 600;">free 21-point roof inspection</a> and protect your property.</p>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- Sidebar Right Column -->
+        <aside class="blog-sidebar">
+          
+          <!-- CTA Card -->
+          <div class="sidebar-cta">
+            <h3>Suspect Severe Damage?</h3>
+            <p>
+              Get a certified HAAG forensic evaluation of your roof. We provide full high-definition physical assessments and digital damage reports.
+            </p>
+            <a href="/free-roof-inspection-houston" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+              📅 Schedule Inspection
+            </a>
+            <a href="tel:+12813269905" class="btn btn-secondary" style="width: 100%;">
+              📞 +1 (281) 326-9905
+            </a>
+          </div>
+
+          <!-- Internal Navigation Links -->
+          <div class="card" style="border-bottom-color: #D32F2F;">
+            <h4 style="color: var(--white); border-bottom: 2px solid #FFC107; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+              Explore Services
+            </h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem;">
+              <li><a href="/roof-replacement-houston" style="color: #94A3B8; hover:color:var(--orange);">• GAF Roof Replacement</a></li>
+              <li><a href="/storm-damage-roofing-houston" style="color: #94A3B8; hover:color:var(--orange);">• Storm Damage Repair</a></li>
+              <li><a href="/free-roof-inspection-houston" style="color: #94A3B8; hover:color:var(--orange);">• Forensic Inspections</a></li>
+              <li><a href="/financing" style="color: #94A3B8; hover:color:var(--orange);">• Financing Plans</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  
+<div class="container">
+<div style="background: #333333;border-left: 4px solid #FFC107;padding:24px 28px;margin:40px 0;border-radius:4px;">
+<h3 style="color:#1E1E1E;font-size:18px;margin-bottom:16px;">
+Related Services — Epic Roofing TX</h3>
+<ul style="list-style:none;padding:0;margin:0;">
+<li style="margin-bottom:10px;">
+🔧 <a href="/storm-damage-roofing-houston" 
+style="color: #D32F2F;font-weight:600;">
+Storm Damage Roof Repair Houston TX</a></li>
+<li style="margin-bottom:10px;">
+🔍 <a href="/free-roof-inspection-houston" 
+style="color: #D32F2F;font-weight:600;">
+Free Roof Inspection Houston TX</a></li>
+<li style="margin-bottom:10px;">
+🏠 <a href="/roof-replacement-houston" 
+style="color: #D32F2F;font-weight:600;">
+Roof Replacement Houston TX</a></li>
+<li style="margin-bottom:10px;">
+💰 <a href="/insurance-claim-roofing-houston" 
+style="color: #D32F2F;font-weight:600;">
+Insurance Claim Roofing Houston TX</a></li>
+<li style="margin-bottom:10px;">
+🔨 <a href="/roof-repair-houston" 
+style="color: #D32F2F;font-weight:600;">
+Roof Repair Houston TX</a></li>
+</ul>
+</div>
+</div>
+
+<section style="background: #1E1E1E;padding:48px 24px;
+text-align:center;margin:0;">
+<h2 style="color:#fff;font-size:28px;font-weight:800;
+margin-bottom:12px;">
+Need a Houston Roofing Expert?</h2>
+<p style="color:#aac4e8;font-size:16px;margin-bottom:8px;">
+Free inspection. No obligation. Same-day response.</p>
+<p style="color:#aac4e8;font-size:15px;margin-bottom:28px;">
+Serving Houston, Katy, Sugar Land, Cypress, Pearland 
+& all surrounding areas.</p>
+<a href="tel:+12813269905" 
+style="display:inline-block;background: #D32F2F; color: #111111;padding:16px 40px;font-size:18px;
+font-weight:800;border-radius:4px;text-decoration:none;
+margin-bottom:16px;">
+📞 Call +1 (281) 326-9905 — Free Inspection
+</a>
+<br>
+<a href="/contact" 
+style="display:inline-block;background:transparent;
+color: #D32F2F;padding:12px 32px;font-size:15px;
+font-weight:600;border: 2px solid #FFC107;
+border-radius:4px;text-decoration:none;margin-top:8px;">
+Or Fill Out Our Contact Form →
+</a>
+<p style="color:#555;font-size:12px;margin-top:20px;">
+© Epic Roofing & Construction LLC | 
+9402 Spaulding St, Houston, TX 77016 | 
+Licensed & Insured Texas Roofing Contractor</p>
+</section>
+
+<!-- FOOTER -->
+  </main>
+  <footer>
+    <div class="container">
+      <div class="grid grid-4 footer-columns">
+        <div>
+          <a href="/" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            EPIC ROOFING & CONSTRUCTION <span>LLC</span>
+          </a>
+          <p style="margin-bottom: 1.5rem; line-height: 1.6; color: #94A3B8; font-size: 0.9rem;">
+            Premium high-velocity wind-resistant roofing assemblies, lifetime shingles, durable leak-protection systems and HAAG-certified evaluations.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <span class="badge-css-gaf">GAF Certified</span>
+            <span class="badge-css-bbb">BBB Accredited A+</span>
           </div>
         </div>
-        <div id="stepTwo" class="text-container hidden">
-          <h1>Action required to load your app</h1>
-          <p>
-            It looks like your browser is blocking a required security cookie, which is common on
-            older versions of iOS and Safari.
-          </p>
-          <div class="button-container">
-            <button id="interactButton" onclick="redirectToReturnUrl(false)">Close and continue</button>
+
+        <div>
+          <h3>Core Solutions</h3>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <li><a href="/roof-replacement-houston">GAF Asphalt Shingles</a></li>
+            <li><a href="/metal-roofing-houston">Standing Seam Metal</a></li>
+            <li><a href="/roof-coating-houston">Commercial Coatings</a></li>
+            <li><a href="/hail-damage-roof-repair-houston">Storm Restoration</a></li>
+            <li><a href="/emergency-roof-tarping-houston">Rapid Roof Tarping</a></li>
+            <li><a href="/free-roof-inspection-houston">HAAG Forensic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Service Areas</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/katy-roofing-contractor">Katy</a></li>
+              <li><a href="/sugar-land-roofing-contractor">Sugar Land</a></li>
+              <li><a href="/cypress-roofing-contractor">Cypress</a></li>
+              <li><a href="/the-woodlands-roofing-contractor">Woodlands</a></li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+              <li><a href="/pearland-roofing-contractor">Pearland</a></li>
+              <li><a href="/league-city-roofing-contractor">League City</a></li>
+              <li><a href="/spring-tx-roofing-contractor">Spring</a></li>
+              <li><a href="/tomball-tx-roofing-contractor">Tomball</a></li>
+            </ul>
           </div>
         </div>
-        <div id="stepThree" class="text-container hidden">
-          <h1>Almost there!</h1>
-          <p>
-            Grant permission for the required security cookie below.
+
+        <div>
+          <h4>Houston Office</h4>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            <strong>Assessor Hotline:</strong><br>
+            <a href="tel:+12813269905" style="color: var(--white); font-weight: bold; font-size: 1.1rem; text-decoration: underline;">+1 (281) 326-9905</a><br><br>
+Epic Roofing & Construction LLC<br>
+9402 Spaulding St, Houston, TX 77016<br>
+Phone: +1 (281) 326-9905
           </p>
-          <div class="button-container">
-            <button id="grantPermissionButton" onclick="grantStorageAccess()">Grant permission</button>
+          <div class="footer-map-container" style="margin-top: 1rem; width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); height: 180px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.593673179513!2d-95.30300489999999!3d29.8471482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bb7e3984dd09%3A0x133cf4def5feeaee!2sEpic%20Roofing%20%26%20Construction%20LLC!5e0!3m2!1sen!2s!4v1786888441852!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Epic Roofing & Construction LLC Location"></iframe>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      const AUTH_FLOW_TEST_COOKIE_NAME = '__SECURE-aistudio_auth_flow_may_set_cookies';
-      const COOKIE_VALUE = 'true';
 
-      function getCookie(name) {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-          let cookie = cookies[i].trim();
-          if (cookie.startsWith(name + '=')) {
-            return cookie.substring(name.length + 1);
-          }
-        }
-        return null;
-      }
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2026 Epic Roofing & Construction LLC. All rights reserved. GAF and Golden Pledge are registered trademarks of GAF Materials LLC.
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="/">Home</a>
+          <a href="/#case-studies">Case Studies</a>
 
-      function setAuthFlowTestCookie() {
-        // Set the cookie's TTL to 1 minute. This is a short lived cookie because it is only used
-        // when the user does not have an auth token or their auth token needs to be reset.
-        // Making this cookie too long-lived allows the user to get into a state where they can't
-        // mint a new auth token.
-        document.cookie = `${AUTH_FLOW_TEST_COOKIE_NAME}=${COOKIE_VALUE}; Path=/; Secure; SameSite=None; Domain=${window.location.hostname}; Partitioned; Max-Age=60;`;
-      }
+          <a href="/blog">Blog</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-      /**
-       * Returns true if the test cookie is set, false otherwise.
-       */
-      function authFlowTestCookieIsSet() {
-        return getCookie(AUTH_FLOW_TEST_COOKIE_NAME) === COOKIE_VALUE;
-      }
-
-      /**
-       * Redirects to the return url. If autoClose is true, then the return url will be opened in a
-       * new window, and it will be closed automatically when the page loads.
-       * Options:
-       *   storageAccessGranted: if true, appends __storage_access_granted=1 to
-       *   the return url so the Lua auth script can set the test cookie
-       *   server-side (needed for Safari/iOS where document.cookie is blocked).
-       */
-      async function redirectToReturnUrl(autoClose, storageAccessGranted = false) {
-        const initialReturnUrlStr = new URLSearchParams(window.location.search).get('return_url');
-        const returnUrl = initialReturnUrlStr ? new URL(initialReturnUrlStr) : null;
-
-        // Prevent potentially malicious URLs from being used
-        if (returnUrl.protocol.toLowerCase() === 'javascript:') {
-          console.error('Potentially malicious return URL blocked');
-          return;
-        }
-
-        if (storageAccessGranted) {
-          returnUrl.searchParams.set('__storage_access_granted', '1');
-        }
-
-        if (autoClose) {
-          returnUrl.searchParams.set('__auto_close', '1');
-          const url = new URL(window.location.href);
-          url.searchParams.set('return_url', returnUrl.toString());
-          // Land on the cookie check page first, so the user can interact with it before proceeding
-          // to the return url where cookies can be set.
-          window.open(url.toString(), '_blank');
-          const hasAccess = await document.hasStorageAccess();
-          document.querySelector('#stepOne').classList.add('hidden');
-          if (!hasAccess) {
-            document.querySelector('#stepThree').classList.remove('hidden');
-          } else {
-            window.location.reload();
-          }
-        } else {
-          window.location.href = returnUrl.toString();
-        }
-      }
-
-      /**
-       * Grants the browser permission to set cookies. If successful, then it redirects to the
-       * return url.
-       */
-      async function grantStorageAccess() {
-        try {
-          await document.requestStorageAccess();
-          // Recent Safari/iOS versions block document.cookie entirely in
-          // cross-site iframes, even after requestStorageAccess(). Only
-          // server-side Set-Cookie headers work. Signal to the Lua auth script
-          // via query param so it can set the test cookie server-side.
-          redirectToReturnUrl(false, /* storageAccessGranted= */ true);
-        } catch (err) {
-          console.log('error after button click: ', err);
-        }
-      }
-
-      /**
-       * Verifies that the browser can set cookies. If it can, then it redirects to the return url.
-       * If it can't, then it shows the error UI.
-       */
-      function verifyCanSetCookies() {
-        setAuthFlowTestCookie();
-        if (authFlowTestCookieIsSet()) {
-          // Check if we are on the auto-close flow, and if so show the interact button.
-          const returnUrl = new URLSearchParams(window.location.search).get('return_url');
-          const autoClose = new URL(returnUrl).searchParams.has('__auto_close');
-          if (autoClose) {
-            document.querySelector('#stepOne').classList.add('hidden');
-            document.querySelector('#stepTwo').classList.remove('hidden');
-          } else {
-            redirectToReturnUrl(false);
-            return;
-          }
-        }
-        // The cookie could not be set, so initiate the recovery flow.
-        document.querySelector('.logo').classList.add('hidden');
-        document.querySelector('.spinner').classList.add('hidden');
-        document.querySelector('#error-ui').classList.remove('hidden');
-      }
-
-      // Start the cookie verification process.
-      verifyCanSetCookies();
-    </script>
-        <!-- GLOBAL STICKY PHONE NUMBER WIDGET -->
+      <!-- GLOBAL STICKY PHONE NUMBER WIDGET -->
   <div class="global-call-widget" id="global-call-widget" role="region" aria-label="Call Epic Roofing">
     <a href="tel:+12813269905" class="sticky-call-btn" id="sticky-call-btn" aria-label="Call (281) 326-9905">
       <svg class="sticky-call-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
@@ -307,6 +905,58 @@
       <span class="btn-text-mobile">Call (281) 326-9905</span>
     </a>
   </div>
+
+  <!-- INVISIBLE COMPLIANT LOCAL NAP SHELL -->
+  <div class="epic-nap-hidden">
+    <div itemscope itemtype="https://schema.org/RoofingContractor">
+      <span itemprop="name">Epic Roofing TX</span>
+      <span itemprop="telephone">+1 (281) 326-9905</span>
+      <span itemprop="email">info@epicroofingconstruction.com</span>
+      <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Houston</span>,
+        <span itemprop="addressRegion">TX</span>
+        <span itemprop="addressCountry">US</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+      <!-- Navigation Helper Toggle scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const menuCloseBtn = document.getElementById('menu-close-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay = document.getElementById('menu-overlay');
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+      if (menuCloseBtn) menuCloseBtn.addEventListener('click', toggleMenu);
+      if (overlay) overlay.addEventListener('click', toggleMenu);
+
+      // Mobile Accordions
+      const accordionBtns = document.querySelectorAll('.mobile-accordion-btn');
+      accordionBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const content = this.nextElementSibling;
+          if (content) {
+            content.classList.toggle('active');
+          }
+        });
+      });
+    });
+  </script>
+
   <script src="/nav.js" defer></script>
 </body>
 </html>
