@@ -29,6 +29,9 @@
   <!-- Non-Blocking Google Fonts Loading Pattern -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload Hero / LCP Image to hit sub-2.5s LCP -->
+  <link rel="preload" as="image" href="/images/houston-roof-shingle-replacement-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/houston-roof-shingle-replacement.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"></noscript>
@@ -39,8 +42,9 @@
   <noscript><link rel="stylesheet" href="/style.css"></noscript>
 
   <style>
+  #site-header,.site-header{background-color:var(--storm-charcoal);position:sticky;top:0;left:0;right:0;width:100%;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.25);border-bottom:1px solid rgba(255,255,255,0.08)}.header-container{display:flex;justify-content:space-between;align-items:center;height:75px;max-width:1240px;margin:0 auto;padding:0 1.5rem;gap:1.5rem}@font-face{font-family:'Oswald Fallback';src:local('Arial Narrow'),local('Impact'),local('Arial');ascent-override:105%;descent-override:28%;line-gap-override:0%;size-adjust:90%}@font-face{font-family:'Source Sans 3 Fallback';src:local('Segoe UI'),local('Arial');ascent-override:95%;descent-override:25%;line-gap-override:0%;size-adjust:100%}
   /* Critical Above-the-Fold Styles (Minified) */
-  :root{--storm-charcoal:#161B22;--slate-surface:#28374A;--cloud-white:#F5F3EE;--cloud-grey:#EBE7DE;--hazard-amber:#E2900F;--amber-dark:#B96F08;--alert-red:#B23A2E;--success-green:#3E7A4C;--text-dark:#1F242D;--text-muted:#5A6270;--text-light:#E6EDF3;--text-dim:#8B949E;--border-dark:rgba(255,255,255,0.1);--border-light:rgba(0,0,0,0.08);--font-display:'Oswald',sans-serif;--font-body:'Source Sans 3',sans-serif;--font-mono:'IBM Plex Mono',monospace}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--text-dark);background-color:var(--cloud-white);-webkit-font-smoothing:antialiased;overflow-x:hidden}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 1.5rem}h1,h2,h3,h4,h5,h6{font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.02em;line-height:1.15}h1{font-size:2.75rem;font-weight:700}h2{font-size:2.25rem;font-weight:700;margin-bottom:1rem}h3{font-size:1.4rem;font-weight:600;margin-bottom:0.5rem}.mono-badge{font-family:var(--font-mono);font-size:0.85rem;font-weight:600;letter-spacing:0.04em}.btn-tactile{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background-color:var(--hazard-amber);color:#FFFFFF;font-family:var(--font-display);font-size:1.15rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.9rem 1.8rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;box-shadow:0 4px 0 var(--amber-dark);transition:transform 0.1s ease,box-shadow 0.1s ease,background-color 0.15s ease;white-space:nowrap}.btn-tactile:hover{background-color:#EC9A18;transform:translateY(1px);box-shadow:0 3px 0 var(--amber-dark)}.btn-tactile:active{transform:translateY(4px);box-shadow:0 0 0 var(--amber-dark)}.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background-color:transparent;color:#FFFFFF;font-family:var(--font-display);font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;padding:0.85rem 1.75rem;border:2px solid rgba(255,255,255,0.8);border-radius:4px;cursor:pointer;text-decoration:none;transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease;white-space:nowrap}.btn-outline:hover{background-color:rgba(255,255,255,0.1);border-color:#FFFFFF;color:#FFFFFF}.shingle-divider{width:100%;height:24px;display:block;line-height:0;position:relative;z-index:2}.shingle-divider svg{width:100%;height:24px;display:block}.top-info-bar{background-color:#0E1217;color:var(--text-dim);font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.45rem 0}.top-info-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}.top-info-left{display:flex;align-items:center;gap:1.25rem;font-family:var(--font-mono);font-size:0.8rem}.top-info-phone{color:var(--hazard-amber);font-family:var(--font-mono);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem}.top-info-phone:hover{text-decoration:underline}.sticky-header{position:sticky;top:0;z-index:1000;background-color:var(--storm-charcoal);border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.3)}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0;gap:1.5rem}.logo-link{display:flex;align-items:center;gap:0.75rem;text-decoration:none;flex-shrink:0}.logo-img{height:48px;width:auto;max-width:200px}.desktop-nav{display:none;align-items:center;gap:1.1rem;height:100%}@media (min-width:1024px){.desktop-nav{display:flex;flex-wrap:nowrap;white-space:nowrap}}@media (min-width:1200px){.desktop-nav{gap:1.35rem}}@media (min-width:1350px){.desktop-nav{gap:1.65rem}}.nav-links{display:flex;align-items:center;gap:1.1rem;list-style:none;margin:0;padding:0;height:100%}.nav-link{color:var(--text-light);font-family:var(--font-display);font-size:0.98rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.025em;padding:0.5rem 0.35rem;transition:color 0.15s ease;position:relative;white-space:nowrap;cursor:pointer;display:inline-flex;align-items:center}.nav-link:hover,.nav-link:focus{color:var(--hazard-amber)}.dropdown{position:relative;display:inline-flex;align-items:center;height:100%}.dropdown::before{content:'';position:absolute;top:100%;left:0;width:100%;height:18px;display:block}.dropdown-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;white-space:nowrap;user-select:none}.dropdown-toggle::after{content:'▾';font-size:0.8rem;display:inline-block;opacity:0.85;transition:transform 0.2s ease,color 0.2s ease}.dropdown:hover > .dropdown-toggle::after,.dropdown:focus-within > .dropdown-toggle::after,.dropdown.is-open > .dropdown-toggle::after{transform:rotate(180deg);color:var(--hazard-amber)}.dropdown.is-open > .dropdown-toggle{color:var(--hazard-amber)}.dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background-color:#161B22;border:1px solid rgba(255,255,255,0.12);border-top:3px solid var(--hazard-amber);box-shadow:0 12px 32px rgba(0,0,0,0.65);min-width:250px;border-radius:0 0 6px 6px;padding:0.75rem 0;z-index:1010;text-align:left}.dropdown-menu-wide{min-width:500px}.dropdown-menu-scrollable{max-height:420px;overflow-y:auto}.dropdown:hover > .dropdown-menu,.dropdown:focus-within > .dropdown-menu,.dropdown.is-open > .dropdown-menu{display:block}.dropdown:hover > .dropdown-menu-wide,.dropdown:focus-within > .dropdown-menu-wide,.dropdown.is-open > .dropdown-menu-wide{display:grid;grid-template-columns:1fr 1fr;padding:1.25rem;gap:0.5rem}.dropdown-item{display:block;padding:0.65rem 1.25rem;color:var(--text-light);font-family:var(--font-body);font-size:0.95rem;font-weight:600;line-height:1.4;border-left:2px solid transparent;transition:all 0.2s ease;text-decoration:none;white-space:nowrap}.dropdown-item:hover,.dropdown-item:focus{background-color:rgba(255,255,255,0.06);color:var(--hazard-amber);border-left-color:var(--hazard-amber);padding-left:1.5rem}.header-cta-phone{font-family:var(--font-mono);font-size:1.05rem;font-weight:700;color:#FFFFFF;background-color:rgba(226,144,15,0.15);border:1px solid var(--hazard-amber);padding:0.45rem 1rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background-color 0.2s ease}.header-cta-phone:hover{background-color:var(--hazard-amber);color:#FFFFFF}.mobile-menu-btn{display:none;background:none;border:none;color:#FFFFFF;font-size:1.75rem;cursor:pointer;padding:0.25rem}.hero-section{background-color:var(--storm-charcoal);color:#FFFFFF;padding:4.5rem 0 3.5rem 0;position:relative;overflow:hidden}.hero-bg-wrapper{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:hidden;pointer-events:none}.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}.hero-overlay{position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(90deg,rgba(22,27,34,0.80) 0%,rgba(22,27,34,0.70) 50%,rgba(22,27,34,0.50) 100%)}.hero-container{position:relative;z-index:2}@media (max-width:991px){.hero-bg-img{object-position:65% center}.hero-overlay{background:linear-gradient(180deg,rgba(22,27,34,0.85) 0%,rgba(22,27,34,0.75) 50%,rgba(22,27,34,0.55) 100%)}}.hero-grid{display:grid;grid-template-columns:1.25fr 0.95fr;gap:3.5rem;align-items:center}.hero-left h1{color:#FFFFFF;font-size:3rem;line-height:1.12;margin-bottom:0.85rem}.hero-left h2,.hero-subheading{color:#FFFFFF;font-size:1.65rem;line-height:1.25;margin-bottom:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:0.02em}.hero-left h1 .highlight-amber,.hero-left h2 .highlight-amber,.hero-subheading .highlight-amber{color:var(--hazard-amber)}.hero-subhead{font-size:1.15rem;color:#CBD5E1;margin-bottom:2rem;line-height:1.55;max-width:620px}.hero-cta-row{display:flex;gap:1rem;margin-bottom:2.75rem;flex-wrap:wrap}.trust-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;border-top:1px solid rgba(255,255,255,0.12);padding-top:1.75rem}.trust-item{display:flex;align-items:center;gap:0.75rem}.trust-icon{width:34px;height:34px;background-color:rgba(226,144,15,0.15);border:1px solid var(--hazard-amber);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--hazard-amber);font-size:1.1rem}.trust-label{font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:#E2E8F0;text-transform:uppercase;letter-spacing:0.02em}.lead-form-card{background-color:#FFFFFF;color:var(--text-dark);padding:2.25rem;border-radius:6px;box-shadow:0 16px 36px rgba(0,0,0,0.35);border-top:5px solid var(--hazard-amber);position:relative}.storm-tag{position:absolute;top:-14px;right:20px;background-color:var(--alert-red);color:#FFFFFF;font-family:var(--font-mono);font-size:0.75rem;font-weight:700;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:3px;letter-spacing:0.05em;box-shadow:0 2px 6px rgba(178,58,46,0.4)}.lead-form-title{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--storm-charcoal);margin-bottom:0.35rem}.lead-form-desc{font-size:0.95rem;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.4}.form-group{margin-bottom:1.1rem}.form-label{display:block;font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--text-dark);margin-bottom:0.3rem;text-transform:uppercase}.form-input{width:100%;padding:0.8rem 0.95rem;border:1px solid #CBD5E1;border-radius:4px;font-family:var(--font-body);font-size:1rem;color:var(--text-dark);background-color:#F8FAFC}.form-input:focus{outline:none;border-color:var(--hazard-amber);background-color:#FFFFFF}.form-submit-btn{width:100%;margin-top:0.5rem}.form-privacy-note{font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;line-height:1.3}.mobile-sticky-cta-bar{display:none}.mobile-sticky-bar{display:none !important}.mobile-nav-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:var(--storm-charcoal);z-index:10000;padding:2rem 1.5rem;overflow-y:auto}.mobile-nav-overlay.active{display:block}.mobile-nav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}.mobile-nav-close{background:none;border:none;color:#FFFFFF;font-size:2rem;cursor:pointer}.mobile-nav-list{list-style:none;display:flex;flex-direction:column;gap:1.5rem}.mobile-nav-list a{color:#FFFFFF;font-family:var(--font-display);font-size:1.5rem;font-weight:600;text-transform:uppercase;text-decoration:none}@media (max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}.why-cards-grid,.calendar-grid{grid-template-columns:repeat(2,1fr)}.service-area-pills{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:768px){body{padding-bottom:50px}.top-info-bar{display:none}.nav-links,.header-cta-phone{display:none}.mobile-menu-btn{display:block}.hero-left h1{font-size:2.25rem}.hero-left h2,.hero-subheading{font-size:1.35rem;line-height:1.25}.hidden-damage-grid,.process-grid,.case-studies-grid,.reviews-grid,.cost-grid{grid-template-columns:1fr}.why-cards-grid,.calendar-grid{grid-template-columns:1fr}.service-area-pills{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.footer-bottom-bar{flex-direction:column;text-align:center}.mobile-sticky-cta-bar{display:flex !important}body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px)) !important}}@media (max-width:480px){.hero-left h1{font-size:1.95rem}.hero-left h2,.hero-subheading{font-size:1.2rem}.service-area-pills{grid-template-columns:1fr}.trust-row{grid-template-columns:1fr}.hero-cta-row{flex-direction:column}.btn-tactile,.btn-outline{width:100%}}
+  :root{--storm-charcoal:#161B22;--slate-surface:#28374A;--cloud-white:#F5F3EE;--cloud-grey:#EBE7DE;--hazard-amber:#E2900F;--amber-dark:#B96F08;--alert-red:#B23A2E;--success-green:#3E7A4C;--text-dark:#1F242D;--text-muted:#5A6270;--text-light:#E6EDF3;--text-dim:#8B949E;--border-dark:rgba(255,255,255,0.1);--border-light:rgba(0,0,0,0.08);--font-display:'Oswald','Oswald Fallback',sans-serif;--font-body:'Source Sans 3','Source Sans 3 Fallback',sans-serif;--font-mono:'IBM Plex Mono',monospace}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--text-dark);background-color:var(--cloud-white);-webkit-font-smoothing:antialiased;overflow-x:hidden}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 1.5rem}h1,h2,h3,h4,h5,h6{font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.02em;line-height:1.15}h1{font-size:2.75rem;font-weight:700}h2{font-size:2.25rem;font-weight:700;margin-bottom:1rem}h3{font-size:1.4rem;font-weight:600;margin-bottom:0.5rem}.mono-badge{font-family:var(--font-mono);font-size:0.85rem;font-weight:600;letter-spacing:0.04em}.btn-tactile{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background-color:var(--hazard-amber);color:#FFFFFF;font-family:var(--font-display);font-size:1.15rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:0.9rem 1.8rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;box-shadow:0 4px 0 var(--amber-dark);transition:transform 0.1s ease,box-shadow 0.1s ease,background-color 0.15s ease;white-space:nowrap}.btn-tactile:hover{background-color:#EC9A18;transform:translateY(1px);box-shadow:0 3px 0 var(--amber-dark)}.btn-tactile:active{transform:translateY(4px);box-shadow:0 0 0 var(--amber-dark)}.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background-color:transparent;color:#FFFFFF;font-family:var(--font-display);font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;padding:0.85rem 1.75rem;border:2px solid rgba(255,255,255,0.8);border-radius:4px;cursor:pointer;text-decoration:none;transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease;white-space:nowrap}.btn-outline:hover{background-color:rgba(255,255,255,0.1);border-color:#FFFFFF;color:#FFFFFF}.shingle-divider{width:100%;height:24px;display:block;line-height:0;position:relative;z-index:2}.shingle-divider svg{width:100%;height:24px;display:block}.top-info-bar{background-color:#0E1217;color:var(--text-dim);font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.45rem 0}.top-info-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}.top-info-left{display:flex;align-items:center;gap:1.25rem;font-family:var(--font-mono);font-size:0.8rem}.top-info-phone{color:var(--hazard-amber);font-family:var(--font-mono);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem}.top-info-phone:hover{text-decoration:underline}.sticky-header{position:sticky;top:0;z-index:1000;background-color:var(--storm-charcoal);border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.3)}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0;gap:1.5rem}.logo-link{display:flex;align-items:center;gap:0.75rem;text-decoration:none;flex-shrink:0}.logo-img{height:48px;width:auto;max-width:200px}.desktop-nav{display:none;align-items:center;gap:1.1rem;height:100%}@media (min-width:1024px){.desktop-nav{display:flex;flex-wrap:nowrap;white-space:nowrap}}@media (min-width:1200px){.desktop-nav{gap:1.35rem}}@media (min-width:1350px){.desktop-nav{gap:1.65rem}}.nav-links{display:flex;align-items:center;gap:1.1rem;list-style:none;margin:0;padding:0;height:100%}.nav-link{color:var(--text-light);font-family:var(--font-display);font-size:0.98rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.025em;padding:0.5rem 0.35rem;transition:color 0.15s ease;position:relative;white-space:nowrap;cursor:pointer;display:inline-flex;align-items:center}.nav-link:hover,.nav-link:focus{color:var(--hazard-amber)}.dropdown{position:relative;display:inline-flex;align-items:center;height:100%}.dropdown::before{content:'';position:absolute;top:100%;left:0;width:100%;height:18px;display:block}.dropdown-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;white-space:nowrap;user-select:none}.dropdown-toggle::after{content:'▾';font-size:0.8rem;display:inline-block;opacity:0.85;transition:transform 0.2s ease,color 0.2s ease}.dropdown:hover > .dropdown-toggle::after,.dropdown:focus-within > .dropdown-toggle::after,.dropdown.is-open > .dropdown-toggle::after{transform:rotate(180deg);color:var(--hazard-amber)}.dropdown.is-open > .dropdown-toggle{color:var(--hazard-amber)}.dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background-color:#161B22;border:1px solid rgba(255,255,255,0.12);border-top:3px solid var(--hazard-amber);box-shadow:0 12px 32px rgba(0,0,0,0.65);min-width:250px;border-radius:0 0 6px 6px;padding:0.75rem 0;z-index:1010;text-align:left}.dropdown-menu-wide{min-width:500px}.dropdown-menu-scrollable{max-height:420px;overflow-y:auto}.dropdown:hover > .dropdown-menu,.dropdown:focus-within > .dropdown-menu,.dropdown.is-open > .dropdown-menu{display:block}.dropdown:hover > .dropdown-menu-wide,.dropdown:focus-within > .dropdown-menu-wide,.dropdown.is-open > .dropdown-menu-wide{display:grid;grid-template-columns:1fr 1fr;padding:1.25rem;gap:0.5rem}.dropdown-item{display:block;padding:0.65rem 1.25rem;color:var(--text-light);font-family:var(--font-body);font-size:0.95rem;font-weight:600;line-height:1.4;border-left:2px solid transparent;transition:all 0.2s ease;text-decoration:none;white-space:nowrap}.dropdown-item:hover,.dropdown-item:focus{background-color:rgba(255,255,255,0.06);color:var(--hazard-amber);border-left-color:var(--hazard-amber);padding-left:1.5rem}.header-cta-phone{font-family:var(--font-mono);font-size:1.05rem;font-weight:700;color:#FFFFFF;background-color:rgba(226,144,15,0.15);border:1px solid var(--hazard-amber);padding:0.45rem 1rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background-color 0.2s ease}.header-cta-phone:hover{background-color:var(--hazard-amber);color:#FFFFFF}.mobile-menu-btn{display:none;background:none;border:none;color:#FFFFFF;font-size:1.75rem;cursor:pointer;padding:0.25rem}.hero-section{background-color:var(--storm-charcoal);color:#FFFFFF;padding:4.5rem 0 3.5rem 0;position:relative;overflow:hidden}.hero-bg-wrapper{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:hidden;pointer-events:none}.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}.hero-overlay{position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(90deg,rgba(22,27,34,0.80) 0%,rgba(22,27,34,0.70) 50%,rgba(22,27,34,0.50) 100%)}.hero-container{position:relative;z-index:2}@media (max-width:991px){.hero-bg-img{object-position:65% center}.hero-overlay{background:linear-gradient(180deg,rgba(22,27,34,0.85) 0%,rgba(22,27,34,0.75) 50%,rgba(22,27,34,0.55) 100%)}}.hero-grid{display:grid;grid-template-columns:1.25fr 0.95fr;gap:3.5rem;align-items:center}.hero-left h1{color:#FFFFFF;font-size:3rem;line-height:1.12;margin-bottom:0.85rem}.hero-left h2,.hero-subheading{color:#FFFFFF;font-size:1.65rem;line-height:1.25;margin-bottom:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:0.02em}.hero-left h1 .highlight-amber,.hero-left h2 .highlight-amber,.hero-subheading .highlight-amber{color:var(--hazard-amber)}.hero-subhead{font-size:1.15rem;color:#CBD5E1;margin-bottom:2rem;line-height:1.55;max-width:620px}.hero-cta-row{display:flex;gap:1rem;margin-bottom:2.75rem;flex-wrap:wrap}.trust-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;border-top:1px solid rgba(255,255,255,0.12);padding-top:1.75rem}.trust-item{display:flex;align-items:center;gap:0.75rem}.trust-icon{width:34px;height:34px;background-color:rgba(226,144,15,0.15);border:1px solid var(--hazard-amber);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--hazard-amber);font-size:1.1rem}.trust-label{font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:#E2E8F0;text-transform:uppercase;letter-spacing:0.02em}.lead-form-card{background-color:#FFFFFF;color:var(--text-dark);padding:2.25rem;border-radius:6px;box-shadow:0 16px 36px rgba(0,0,0,0.35);border-top:5px solid var(--hazard-amber);position:relative}.storm-tag{position:absolute;top:-14px;right:20px;background-color:var(--alert-red);color:#FFFFFF;font-family:var(--font-mono);font-size:0.75rem;font-weight:700;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:3px;letter-spacing:0.05em;box-shadow:0 2px 6px rgba(178,58,46,0.4)}.lead-form-title{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--storm-charcoal);margin-bottom:0.35rem}.lead-form-desc{font-size:0.95rem;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.4}.form-group{margin-bottom:1.1rem}.form-label{display:block;font-family:var(--font-mono);font-size:0.8rem;font-weight:600;color:var(--text-dark);margin-bottom:0.3rem;text-transform:uppercase}.form-input{width:100%;padding:0.8rem 0.95rem;border:1px solid #CBD5E1;border-radius:4px;font-family:var(--font-body);font-size:1rem;color:var(--text-dark);background-color:#F8FAFC}.form-input:focus{outline:none;border-color:var(--hazard-amber);background-color:#FFFFFF}.form-submit-btn{width:100%;margin-top:0.5rem}.form-privacy-note{font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;line-height:1.3}.mobile-sticky-cta-bar{display:none}.mobile-sticky-bar{display:none !important}.mobile-nav-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:var(--storm-charcoal);z-index:10000;padding:2rem 1.5rem;overflow-y:auto}.mobile-nav-overlay.active{display:block}.mobile-nav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}.mobile-nav-close{background:none;border:none;color:#FFFFFF;font-size:2rem;cursor:pointer}.mobile-nav-list{list-style:none;display:flex;flex-direction:column;gap:1.5rem}.mobile-nav-list a{color:#FFFFFF;font-family:var(--font-display);font-size:1.5rem;font-weight:600;text-transform:uppercase;text-decoration:none}@media (max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}.why-cards-grid,.calendar-grid{grid-template-columns:repeat(2,1fr)}.service-area-pills{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:768px){body{padding-bottom:50px}.top-info-bar{display:none}.nav-links,.header-cta-phone{display:none}.mobile-menu-btn{display:block}.hero-left h1{font-size:2.25rem}.hero-left h2,.hero-subheading{font-size:1.35rem;line-height:1.25}.hidden-damage-grid,.process-grid,.case-studies-grid,.reviews-grid,.cost-grid{grid-template-columns:1fr}.why-cards-grid,.calendar-grid{grid-template-columns:1fr}.service-area-pills{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.footer-bottom-bar{flex-direction:column;text-align:center}.mobile-sticky-cta-bar{display:flex !important}body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px)) !important}}@media (max-width:480px){.hero-left h1{font-size:1.95rem}.hero-left h2,.hero-subheading{font-size:1.2rem}.service-area-pills{grid-template-columns:1fr}.trust-row{grid-template-columns:1fr}.hero-cta-row{flex-direction:column}.btn-tactile,.btn-outline{width:100%}}
   </style>
 
   <!-- JSON-LD Structured Data: FAQPage -->
@@ -446,7 +450,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Built For Texas Weather</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Built For Texas Weather</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Why Houston Homeowners Choose Us</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Houston roofs take more abuse than almost anywhere else in North America. Here is why local construction standards matter.
@@ -470,7 +474,7 @@
             <p>
               Factory-trained installation crews using genuine GAF Timberline HDZ shingles with LayerLock technology and WindProven infinite-wind-speed warranty coverage.
             </p>
-            <a href="/roof-replacement-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+            <a href="/roof-replacement-houston" style="margin-top: auto; padding-top: 1rem; color: #9A5000; font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
               Replacement Options &rarr;
             </a>
           </div>
@@ -481,7 +485,7 @@
             <p>
               We inspect shingles and soft metals using forensic test squares, identifying granule fracture patterns and wind crease lines that untrained adjusters miss.
             </p>
-            <a href="/free-roof-inspection-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+            <a href="/free-roof-inspection-houston" style="margin-top: auto; padding-top: 1rem; color: #9A5000; font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
               Inspection Details &rarr;
             </a>
           </div>
@@ -492,7 +496,7 @@
             <p>
               Every full replacement includes our written 10-year contractor workmanship guarantee covering flashings, valleys, ridge caps, and pipe boots against leaks.
             </p>
-            <a href="/roof-repair-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+            <a href="/roof-repair-houston" style="margin-top: auto; padding-top: 1rem; color: #9A5000; font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
               Warranty Coverage &rarr;
             </a>
           </div>
@@ -503,7 +507,7 @@
             <p>
               We produce itemized Xactimate estimates with dated photos, file supplemental requests, and meet your insurance adjuster directly on your roof to advocate for full coverage.
             </p>
-            <a href="/insurance-claim-roofing-houston" style="margin-top: auto; padding-top: 1rem; color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
+            <a href="/insurance-claim-roofing-houston" style="margin-top: auto; padding-top: 1rem; color: #9A5000; font-weight: 700; font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; text-decoration: none;">
               Claim Process &rarr;
             </a>
           </div>
@@ -525,7 +529,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Forensic Diagnostics</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Forensic Diagnostics</span>
           <h2 style="color: #FFFFFF; margin-top: 0.5rem;">Hidden Damage You Cannot See From The Ground</h2>
           <p style="color: #CBD5E1; font-size: 1.05rem;">
             Most storm damage never produces an immediate water drip inside your living room. The structural degradation happens quietly under the surface.
@@ -586,7 +590,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Direct Answers</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Direct Answers</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Texas Insurance & Storm Damage Facts</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Plain facts on hail detection, claim eligibility, and policy terms without sales speak.
@@ -647,7 +651,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Consumer Protection</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Consumer Protection</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">How We Compare</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Texas is one of the few states that does not require a state roofing license. Anyone with a ladder and a magnetic sign can market themselves as a roofer. Here is how Epic Roofing stands apart.
@@ -661,7 +665,7 @@
                 <th style="width: 22%;">Standard</th>
                 <th style="width: 26%;">Storm-Chaser Crews</th>
                 <th style="width: 26%;">Corporate Franchises</th>
-                <th style="width: 26%; background-color: var(--slate-surface); color: var(--hazard-amber);">Epic Roofing & Construction</th>
+                <th style="width: 26%; background-color: var(--slate-surface); color: #FBBF24;">Epic Roofing & Construction</th>
               </tr>
             </thead>
             <tbody>
@@ -714,7 +718,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Step-By-Step Workflow</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Step-By-Step Workflow</span>
           <h2 style="color: #FFFFFF; margin-top: 0.5rem;">How We Work</h2>
           <p style="color: #CBD5E1; font-size: 1.05rem;">
             From initial call to clean yard and final paperwork, here is our six-step operating procedure.
@@ -788,7 +792,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Field Results</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Field Results</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Recent Houston Case Studies</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Real scenarios showing how our forensic inspections and rapid repairs protect homeowners.
@@ -877,7 +881,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 2rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Verified Homeowner Feedback</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Verified Homeowner Feedback</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Google Reviews from Houston Clients</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Real customer experiences with Josh and the Epic Roofing crew across Houston and surrounding counties.
@@ -897,10 +901,10 @@
             <div>
               <div style="display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;">
                 <span style="font-family: var(--font-display, 'Oswald', sans-serif); font-size: 2.25rem; font-weight: 700; color: var(--storm-charcoal, #161B22); line-height: 1;">5.0</span>
-                <span style="color: #F59E0B; font-size: 1.35rem; letter-spacing: 2px;">★★★★★</span>
+                <span style="color: #B45309; font-size: 1.35rem; letter-spacing: 2px;" aria-hidden="true">★★★★★</span>
                 <span style="font-family: var(--font-mono, monospace); font-size: 1rem; font-weight: 600; color: #4B5563;">5.0 ★ (7 Google Reviews)</span>
               </div>
-              <p style="margin: 0.25rem 0 0 0; font-size: 0.88rem; color: #64748B;">
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.88rem; color: #475569;">
                 Based on Google Business Profile reviews &bull; Houston, TX
               </p>
             </div>
@@ -1054,7 +1058,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Greater Houston Metro</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Greater Houston Metro</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Areas We Serve Daily</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Click your city below to see local roof codes, recent storm history, and dedicated crews.
@@ -1151,7 +1155,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Seasonal Maintenance</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Seasonal Maintenance</span>
           <h2 style="color: #FFFFFF; margin-top: 0.5rem;">Houston Roof-Risk Calendar</h2>
           <p style="color: #CBD5E1; font-size: 1.05rem;">
             Plan your roof inspections and replacements around Southeast Texas weather patterns.
@@ -1209,7 +1213,7 @@
       <div class="container">
         
         <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
-          <span class="mono-badge" style="color: var(--hazard-amber); text-transform: uppercase;">Houston Roofing Answers</span>
+          <span class="mono-badge" style="color: #9A5000; font-weight: 700; text-transform: uppercase;">Houston Roofing Answers</span>
           <h2 style="color: var(--storm-charcoal); margin-top: 0.5rem;">Frequently Asked Questions</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
             Clear answers to common questions about inspections, permits, and replacements.
@@ -1321,7 +1325,7 @@
 
         <!-- Column 2: Quick Links -->
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -1338,7 +1342,7 @@
 
         <!-- Column 3: Our Services -->
         <div class="footer-col">
-          <h4>Our Services</h4>
+          <h3>Our Services</h3>
           <ul>
             <li><a href="/roof-replacement-houston">Shingle Roof Replacement</a></li>
             <li><a href="/metal-roofing-houston">Standing Seam Metal Roofing</a></li>
@@ -1354,7 +1358,7 @@
 
         <!-- Column 4: Contact Us -->
         <div class="footer-col">
-          <h4>Contact Us</h4>
+          <h3>Contact Us</h3>
           <div class="footer-nap" style="margin-bottom: 1rem;">
             <strong>Headquarters:</strong><br>
             9402 Spaulding St, Houston, TX 77016<br><br>
@@ -1434,32 +1438,7 @@
     </a>
   </div>
 
-  <!-- Mobile Menu Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleBtn = document.getElementById('mobile-toggle-btn');
-      const closeBtn = document.getElementById('mobile-close-btn');
-      const overlay = document.getElementById('mobile-overlay');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function openMenu() {
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMenu() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
-      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-
-      mobileLinks.forEach(function(link) {
-        link.addEventListener('click', closeMenu);
-      });
-    });
-  </script>
+  <!-- Mobile Menu Toggle handled via deferred nav.js -->
   <script src="/nav.js" defer></script>
 
     <!-- GLOBAL STICKY PHONE NUMBER WIDGET -->
