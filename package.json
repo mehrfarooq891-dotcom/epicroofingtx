@@ -10,5 +10,7 @@
     "lint": "echo 'Linting completed successfully'"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^26.6.3"
+  }
 }
