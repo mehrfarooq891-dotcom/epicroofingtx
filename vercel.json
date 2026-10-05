@@ -7,7 +7,8 @@
     { "source": "/about.html", "destination": "/about", "permanent": true },
     { "source": "/affordable-roofing-houston.html", "destination": "/affordable-roofing-houston", "permanent": true },
     { "source": "/baytown-tx-roofing-contractor.html", "destination": "/baytown-tx-roofing-contractor", "permanent": true },
-    { "source": "/calculator.html", "destination": "/calculator", "permanent": true },
+    { "source": "/calculator.html", "destination": "/roofing-calculators", "permanent": true },
+    { "source": "/calculator", "destination": "/roofing-calculators", "permanent": true },
     { "source": "/roofing-calculators.html", "destination": "/roofing-calculators", "permanent": true },
     { "source": "/chimney-flashing-repair-houston.html", "destination": "/chimney-flashing-repair-houston", "permanent": true },
     { "source": "/commercial-roofing-houston.html", "destination": "/commercial-roofing-houston", "permanent": true },
@@ -157,7 +158,6 @@
   "rewrites": [
     { "source": "/disclaimer", "destination": "/disclaimer.html" },
     { "source": "/roofing-calculators", "destination": "/roofing-calculators.html" },
-    { "source": "/calculator", "destination": "/calculator.html" },
     { "source": "/roof-leak-detection-houston", "destination": "/roof-leak-detection-houston.html" },
     { "source": "/affordable-roofing-houston", "destination": "/affordable-roofing-houston.html" },
     { "source": "/houston-hail-damage-report-2026", "destination": "/houston-hail-damage-report-2026.html" },
