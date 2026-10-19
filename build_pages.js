@@ -316,7 +316,7 @@ function generatePageHTML(data) {
     "image": "https://www.epicroofingtx.com/images/epic-roofing-logo.svg",
     "description": metaDescription,
     "telephone": "(281) 326-9905",
-    "email": "info@epicroofingtx.com",
+    "email": "contact@epicroofingtx.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "9402 Spaulding St",
