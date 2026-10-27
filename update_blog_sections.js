@@ -71,7 +71,30 @@ const blogPosts = [
   { title: "How to Choose a Roofing Contractor in Houston TX (Ultimate Guide)", filename: "how-choose-roofing-contractor-houston.html", description: "Hiring a roofer? Learn how to choose roofing contractor houston with our checklist of licenses, insurance, local address, red flags, and essential questions.", category: "Local Guides", date: "June 29, 2026", readTime: "11 Min Read" },
   { title: "Commercial Roofing in Houston TX: TPO, Metal & Flat Roof Guide for Business Owners", filename: "commercial-roofing-houston-guide.html", description: "Ultimate commercial roofing houston guide. Learn the key differences of commercial vs residential roofing, low-slope TPO roofing, flat roof repair, local cost per sq ft, and protective PM plans.", category: "Maintenance Guides", date: "July 1, 2026", readTime: "11 Min Read" },
   { title: "Roof Financing in Houston TX: How to Pay for a New Roof Without Breaking the Bank", filename: "roof-financing-options-houston.html", description: "Struggling to pay for a new roof? Read our ultimate local guide on roof financing houston tx. Explore contractor 0% APR plans, HELOCs, personal loans, and insurance deductible options.", category: "Cost & Materials", date: "July 3, 2026", readTime: "10 Min Read" },
-  { title: "Hail Hit Your Houston Home? Here's Exactly What to Do in the Next 48 Hours", filename: "roof-damage-after-hail-houston-what-to-do.html", description: "Discover exactly what to do after hail damage in Houston. Follow our step-by-step pro checklist, learn how to handle insurance claims, avoid common scams, and secure a free professional inspection.", category: "Local Guides", date: "July 8, 2026", readTime: "11 Min Read" }
+  { title: "Hail Hit Your Houston Home? Here's Exactly What to Do in the Next 48 Hours", filename: "roof-damage-after-hail-houston-what-to-do.html", description: "Discover exactly what to do after hail damage in Houston. Follow our step-by-step pro checklist, learn how to handle insurance claims, avoid common scams, and secure a free professional inspection.", category: "Local Guides", date: "July 8, 2026", readTime: "11 Min Read" },
+  { title: "Roof Leak in the Attic vs a Ceiling Leak: What Each One Means", filename: "attic-leak-vs-ceiling-leak-houston.html", description: "Attic leak or ceiling stain? Learn what each one means, where the water is really coming from, and when to call a roofer. Call (281) 326-9905.", category: "Roof Inspection", date: "October 10, 2026", readTime: "14 Min Read" },
+  { title: "Curling or Buckling Shingles in Houston Heat: Repair Now or Replace Soon?", filename: "curling-buckling-shingles-houston-heat.html", description: "Curling or buckling shingles in Houston heat? What cupping and buckling mean, and how to decide between repair and replacement.", category: "Roof Inspection", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "DIY Roof Tarping vs Professional Emergency Tarping", filename: "diy-vs-professional-roof-tarping-houston.html", description: "Storm tore your roof? A DIY tarp can fail in the next gust. See when DIY tarping works, when it doesn't, and what pros do differently in Houston.", category: "Storm Repair", date: "October 10, 2026", readTime: "11 Min Read" },
+  { title: "How Much Does Emergency Roof Tarping Cost in Houston?", filename: "emergency-roof-tarping-cost-houston.html", description: "Emergency roof tarping cost in Houston: what tarping involves, what drives its price, and why it is cheaper than the water damage it prevents.", category: "Cost & Materials", date: "October 27, 2026", readTime: "6 Min Read" },
+  { title: "Golf-Ball Size Hail: What It Actually Does to a Houston Roof", filename: "golf-ball-hail-damage-houston.html", description: "Golf-ball hail hits Houston roofs every spring. Learn what 1.75-inch hail does to shingles, flashing and vents — and how adjusters measure the damage.", category: "Hail Damage", date: "October 10, 2026", readTime: "12 Min Read" },
+  { title: "Roof Damage You Can't See From the Ground After a Storm", filename: "hidden-roof-damage-after-storm-houston.html", description: "Your roof can look fine from the driveway and still be damaged. The hidden storm damage signs Houston homeowners miss most — and what to do this week.", category: "Storm Repair", date: "October 10, 2026", readTime: "12 Min Read" },
+  { title: "How Much Does a Metal Roof Cost in Houston? (Per Sq. Ft. Breakdown)", filename: "metal-roof-cost-houston.html", description: "Metal roof cost in Houston: what drives the price per square foot — panel type, gauge, roof complexity — and why firm prices need an inspection.", category: "Cost & Materials", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "Missing Shingles After a Storm: Emergency Repair Guide", filename: "missing-shingles-after-storm-houston.html", description: "Missing shingles after a Houston storm? What to do right now, when tarping beats repair, and how insurance handles claims. Call (281) 326-9905.", category: "Storm Repair", date: "October 10, 2026", readTime: "14 Min Read" },
+  { title: "Multiple Roof Leaks at Once: What It Really Means", filename: "multiple-roof-leaks-houston.html", description: "Water dripping in two rooms at once? What multiple roof leaks really mean, when repair makes sense, and when replacement is the smarter call.", category: "Roof Inspection", date: "October 10, 2026", readTime: "12 Min Read" },
+  { title: "Public Adjuster vs Insurance Company Adjuster for Emergency Claims", filename: "public-adjuster-vs-insurance-adjuster-houston.html", description: "Should you hire a public adjuster for your Houston roof claim? Learn the cost difference, when it helps, and when contractor documentation is enough.", category: "Insurance Claims", date: "October 10, 2026", readTime: "12 Min Read" },
+  { title: "Black Streaks on Your Houston Roof? It's Algae — Here's What to Do", filename: "roof-algae-black-streaks-houston.html", description: "Black streaks on your Houston roof are usually Gloeocapsa magma algae — not mold. Learn why it thrives here, whether it damages shingles, and safe removal. (281) 326-9905.", category: "Maintenance Guides", date: "October 18, 2026", readTime: "12 Min Read" },
+  { title: "Roof Coating vs Roof Replacement: Which Saves More Long-Term?", filename: "roof-coating-vs-roof-replacement-houston.html", description: "Roof coating runs $1,500–$4,000 and lasts 5–10 years in Houston. A replacement costs $9,500–$16,000 for 15–20 years. Here is the honest math.", category: "Cost & Materials", date: "October 10, 2026", readTime: "12 Min Read" },
+  { title: "Why Your Roof Leaks Around Vent Pipes (and the Small Part That Fails)", filename: "roof-leaking-around-vent-pipe-houston.html", description: "Roof leaking around a vent pipe? Why pipe boots fail in Houston sun — and the small, inexpensive fix that stops it.", category: "Roof Inspection", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "Roof Repair Cost in Houston: What Common Repairs Actually Run", filename: "roof-repair-cost-houston.html", description: "Roof repair cost in Houston: what common repairs involve, what drives their price, and how to get a written repair estimate.", category: "Cost & Materials", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "Roof Replacement Cost in Houston TX 2026: Complete Price Guide", filename: "roof-replacement-cost-houston-2025.html", description: "Complete 2026 local pricing guide on roof replacement cost in Houston TX. View current cost tables by home size and material type (asphalt, metal, tile).", category: "Cost & Materials", date: "June 22, 2026", readTime: "13 Min Read" },
+  { title: "Roof Replacement Cost in Katy, TX (2026 Local Price Guide)", filename: "roof-replacement-cost-katy-tx.html", description: "Roof replacement cost in Katy, TX: what local roofers publish for asphalt replacements, what drives the price, and how to get a written estimate.", category: "Cost & Materials", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "Roof Financing in Houston TX: Pay for a New Roof Without Breaking the Bank", filename: "roof-replacement-financing-houston.html", description: "Struggling to pay for a new roof? Read our ultimate local guide on roof financing houston tx. Explore contractor 0% APR plans, HELOCs, personal loans, and insurance deductible options.", category: "Cost & Materials", date: "July 3, 2026", readTime: "14 Min Read" },
+  { title: "How to Choose Roofing Underlayment in Houston's Humidity", filename: "roofing-underlayment-houston-humidity-guide.html", description: "Choosing roofing underlayment in Houston? Compare felt, synthetic, and peel-and-stick underlayment for Gulf Coast humidity, and learn which protects best.", category: "Maintenance Guides", date: "October 17, 2026", readTime: "16 Min Read" },
+  { title: "Granules in Your Gutters? What Shingle Granule Loss Means in Houston", filename: "shingle-granules-in-gutters-houston.html", description: "Sand-like granules in your gutters? What granule loss means for a Houston shingle roof — and when it means replacement.", category: "Roof Inspection", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "Found Shingles in Your Yard After a Houston Storm? Here's What It Means", filename: "shingles-in-yard-after-storm-houston.html", description: "Shingles in your yard after a Houston storm? What found shingles tell you about your roof — and the 3 checks to do next.", category: "Storm Repair", date: "October 27, 2026", readTime: "7 Min Read" },
+  { title: "10 Absolute Signs You Need a Roof Replacement in Houston", filename: "signs-need-new-roof-houston.html", description: "Houston roofing experts detail 10 signs you need a roof replacement. Learn about granule loss, flashing failure, storm damage, and repair vs. replace decisions in Texas.", category: "Roof Inspection", date: "May 17, 2026", readTime: "12 Min Read" },
+  { title: "Skylight Leak Repair: Emergency Fixes for Houston Homes", filename: "skylight-leak-repair-houston.html", description: "Skylight leaking in your Houston home? Emergency fixes to stop the drip, what causes skylight leaks, and when to call a pro. Call (281) 326-9905.", category: "Roof Inspection", date: "October 10, 2026", readTime: "14 Min Read" },
+  { title: "A Tree Fell on Your Roof in Houston? Do These 5 Things First", filename: "tree-fell-on-roof-houston.html", description: "A tree fell on your Houston roof? Safety first, then photos, tarping, and insurance — the 5 things to do in order.", category: "Storm Repair", date: "October 27, 2026", readTime: "7 Min Read" },
 ];
 
 // Unsplash photo mappings for each blog file
@@ -134,7 +157,30 @@ const unsplashIdMap = {
   "how-choose-roofing-contractor-houston.html": "photo-1504307651254-35680f356dfd",
   "commercial-roofing-houston-guide.html": "photo-1486406146926-c627a92ad1ab",
   "roof-financing-options-houston.html": "photo-1554224155-8d04cb21cd6c",
-  "roof-damage-after-hail-houston-what-to-do.html": "photo-1504608524841-42fe6f032b4b"
+  "roof-damage-after-hail-houston-what-to-do.html": "photo-1504608524841-42fe6f032b4b",
+  "attic-leak-vs-ceiling-leak-houston.html": "photo-1527030280862-64139fba04ca",
+  "curling-buckling-shingles-houston-heat.html": "photo-1632759145351-1d592919f522",
+  "diy-vs-professional-roof-tarping-houston.html": "photo-1527030280862-64139fba04ca",
+  "emergency-roof-tarping-cost-houston.html": "photo-1632759145351-1d592919f522",
+  "golf-ball-hail-damage-houston.html": "photo-1527030280862-64139fba04ca",
+  "hidden-roof-damage-after-storm-houston.html": "photo-1513694203232-719a280e022f",
+  "metal-roof-cost-houston.html": "photo-1632759145351-1d592919f522",
+  "missing-shingles-after-storm-houston.html": "photo-1632759145351-1d592919f522",
+  "multiple-roof-leaks-houston.html": "photo-1632759145351-1d592919f522",
+  "public-adjuster-vs-insurance-adjuster-houston.html": "photo-1600585154340-be6161a56a0c",
+  "roof-algae-black-streaks-houston.html": "photo-1632759145351-1d592919f522",
+  "roof-coating-vs-roof-replacement-houston.html": "photo-1632759145351-1d592919f522",
+  "roof-leaking-around-vent-pipe-houston.html": "photo-1632759145351-1d592919f522",
+  "roof-repair-cost-houston.html": "photo-1632759145351-1d592919f522",
+  "roof-replacement-cost-houston-2025.html": "photo-1563013544-824ae1d704d3",
+  "roof-replacement-cost-katy-tx.html": "photo-1632759145351-1d592919f522",
+  "roof-replacement-financing-houston.html": "photo-1554224155-8d04cb21cd6c",
+  "roofing-underlayment-houston-humidity-guide.html": "photo-1632759145351-1d592919f522",
+  "shingle-granules-in-gutters-houston.html": "photo-1632759145351-1d592919f522",
+  "shingles-in-yard-after-storm-houston.html": "photo-1632759145351-1d592919f522",
+  "signs-need-new-roof-houston.html": "photo-1507089947368-19c1da9775ae",
+  "skylight-leak-repair-houston.html": "photo-1600585154340-be6161a56a0c",
+  "tree-fell-on-roof-houston.html": "photo-1632759145351-1d592919f522",
 };
 
 // Map Unsplash ID to blogPost list
@@ -144,7 +190,7 @@ blogPosts.forEach(post => {
 
 // Sort posts by date (newest first)
 const parseDate = (dStr) => {
-  return new Date(dStr.replace('July', '7').replace('June', '6').replace('May', '5').replace('April', '4').replace(', 2026', '/2026'));
+  return new Date(dStr);
 };
 blogPosts.sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
@@ -357,6 +403,7 @@ indexHTML += `
       <p class="hero-subtitle" style="margin-bottom: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
         Expert technical advice, storm-damage assessments, Texas insurance claim playbooks, and localized suburban guidelines to help you make informed decisions about your home's roof investment.
       </p>
+      <p style="color: var(--orange); font-size: 1rem; font-weight: 700; margin-top: 1rem;">All (${blogPosts.length}) — every blog article on this site, listed below.</p>
     </div>
   </section>
 `;
