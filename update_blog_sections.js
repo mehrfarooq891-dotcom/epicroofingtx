@@ -240,6 +240,10 @@ files.forEach(file => {
     content = content.replace(/<!-- Blog Hero Image -->[\s\S]*?<\/picture>\s*<\/div>/gi, '');
 
     // Inject the new hero image after the closing tag of the hero-subtitle paragraph
+      // Skip injection when the post already has its own hero photo (trio posts have a template lead image) — otherwise every build adds a second copy.
+      const postSlug = post.filename.replace(/\.html$/, '');
+      const hasOwnHero = new RegExp('<img[^>]*\\/images\\/blog\\/' + postSlug + '\\.webp', 'i').test(content);
+      if (!hasOwnHero) {
     const imageHTML = `<!-- Blog Hero Image -->
       <div class="blog-hero-img-container" style="max-width: 1000px; margin: 2rem auto 0 auto; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
         <picture>
@@ -249,6 +253,7 @@ files.forEach(file => {
       </div>`;
 
     content = content.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/i, `$1\n      ${imageHTML}`);
+      }
   }
 
   if (content !== originalContent) {
