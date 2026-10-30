@@ -86,9 +86,9 @@ const blogPosts = [
   { title: "Roof Coating vs Roof Replacement: Which Saves More Long-Term?", filename: "roof-coating-vs-roof-replacement-houston.html", description: "Roof coating runs $1,500–$4,000 and lasts 5–10 years in Houston. A replacement costs $9,500–$16,000 for 15–20 years. Here is the honest math.", category: "Cost & Materials", date: "October 10, 2026", readTime: "12 Min Read" },
   { title: "Why Your Roof Leaks Around Vent Pipes (and the Small Part That Fails)", filename: "roof-leaking-around-vent-pipe-houston.html", description: "Roof leaking around a vent pipe? Why pipe boots fail in Houston sun — and the small, inexpensive fix that stops it.", category: "Roof Inspection", date: "October 27, 2026", readTime: "7 Min Read" },
   { title: "Roof Repair Cost in Houston: What Common Repairs Actually Run", filename: "roof-repair-cost-houston.html", description: "Roof repair cost in Houston: what common repairs involve, what drives their price, and how to get a written repair estimate.", category: "Cost & Materials", date: "October 27, 2026", readTime: "7 Min Read" },
-  { title: "Roof Replacement Cost in Houston TX 2026: Complete Price Guide", filename: "roof-replacement-cost-houston-2025.html", description: "Complete 2026 local pricing guide on roof replacement cost in Houston TX. View current cost tables by home size and material type (asphalt, metal, tile).", category: "Cost & Materials", date: "June 22, 2026", readTime: "13 Min Read" },
+  
   { title: "Roof Replacement Cost in Katy, TX (2026 Local Price Guide)", filename: "roof-replacement-cost-katy-tx.html", description: "Roof replacement cost in Katy, TX: what local roofers publish for asphalt replacements, what drives the price, and how to get a written estimate.", category: "Cost & Materials", date: "October 27, 2026", readTime: "7 Min Read" },
-  { title: "Roof Financing in Houston TX: Pay for a New Roof Without Breaking the Bank", filename: "roof-replacement-financing-houston.html", description: "Struggling to pay for a new roof? Read our ultimate local guide on roof financing houston tx. Explore contractor 0% APR plans, HELOCs, personal loans, and insurance deductible options.", category: "Cost & Materials", date: "July 3, 2026", readTime: "14 Min Read" },
+  
   { title: "How to Choose Roofing Underlayment in Houston's Humidity", filename: "roofing-underlayment-houston-humidity-guide.html", description: "Choosing roofing underlayment in Houston? Compare felt, synthetic, and peel-and-stick underlayment for Gulf Coast humidity, and learn which protects best.", category: "Maintenance Guides", date: "October 17, 2026", readTime: "16 Min Read" },
   { title: "Granules in Your Gutters? What Shingle Granule Loss Means in Houston", filename: "shingle-granules-in-gutters-houston.html", description: "Sand-like granules in your gutters? What granule loss means for a Houston shingle roof — and when it means replacement.", category: "Roof Inspection", date: "October 27, 2026", readTime: "7 Min Read" },
   { title: "Found Shingles in Your Yard After a Houston Storm? Here's What It Means", filename: "shingles-in-yard-after-storm-houston.html", description: "Shingles in your yard after a Houston storm? What found shingles tell you about your roof — and the 3 checks to do next.", category: "Storm Repair", date: "October 27, 2026", readTime: "7 Min Read" },
@@ -97,6 +97,8 @@ const blogPosts = [
   { title: "A Tree Fell on Your Roof in Houston? Do These 5 Things First", filename: "tree-fell-on-roof-houston.html", description: "A tree fell on your Houston roof? Safety first, then photos, tarping, and insurance — the 5 things to do in order.", category: "Storm Repair", date: "October 27, 2026", readTime: "7 Min Read" },
 ];
 
+// NOTE (2026-10-30): card + hero images are now local /images/blog/<slug>.webp files (logo-watermarked).
+// unsplashIdMap below is kept for reference only and is no longer used for image URLs.
 // Unsplash photo mappings for each blog file
 const unsplashIdMap = {
   "storm-damage-roof-repair-timeline-houston.html": "photo-1513694203232-719a280e022f",
@@ -172,9 +174,7 @@ const unsplashIdMap = {
   "roof-coating-vs-roof-replacement-houston.html": "photo-1632759145351-1d592919f522",
   "roof-leaking-around-vent-pipe-houston.html": "photo-1632759145351-1d592919f522",
   "roof-repair-cost-houston.html": "photo-1632759145351-1d592919f522",
-  "roof-replacement-cost-houston-2025.html": "photo-1563013544-824ae1d704d3",
   "roof-replacement-cost-katy-tx.html": "photo-1632759145351-1d592919f522",
-  "roof-replacement-financing-houston.html": "photo-1554224155-8d04cb21cd6c",
   "roofing-underlayment-houston-humidity-guide.html": "photo-1632759145351-1d592919f522",
   "shingle-granules-in-gutters-houston.html": "photo-1632759145351-1d592919f522",
   "shingles-in-yard-after-storm-houston.html": "photo-1632759145351-1d592919f522",
@@ -184,9 +184,6 @@ const unsplashIdMap = {
 };
 
 // Map Unsplash ID to blogPost list
-blogPosts.forEach(post => {
-  post.unsplashId = unsplashIdMap[post.filename] || "photo-1504307651254-35680f356dfd";
-});
 
 // Sort posts by date (newest first)
 const parseDate = (dStr) => {
@@ -238,7 +235,7 @@ files.forEach(file => {
 
   // Hero Image Insertion
   const post = blogPosts.find(p => p.filename === file);
-  if (post && post.unsplashId) {
+  if (post) {
     // Remove any existing injected blog hero image to keep it idempotent
     content = content.replace(/<!-- Blog Hero Image -->[\s\S]*?<\/picture>\s*<\/div>/gi, '');
 
@@ -246,8 +243,8 @@ files.forEach(file => {
     const imageHTML = `<!-- Blog Hero Image -->
       <div class="blog-hero-img-container" style="max-width: 1000px; margin: 2rem auto 0 auto; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
         <picture>
-          <source srcset="https://images.unsplash.com/${post.unsplashId}?w=800&auto=format&fit=crop&q=60&fm=webp" type="image/webp">
-          <img width="800" height="450" loading="lazy" src="https://images.unsplash.com/${post.unsplashId}?w=800&auto=format&fit=crop&q=60&fm=jpg" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+          <source srcset="/images/blog/${post.filename.replace('.html','')}.webp" type="image/webp">
+          <img width="800" height="450" loading="lazy" src="/images/blog/${post.filename.replace('.html','')}.webp" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x630/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
         </picture>
       </div>`;
 
@@ -394,9 +391,7 @@ indexHTML += `
   <!-- HERO SECTION -->
   <section class="hero-section" style="padding: 4.5rem 0 3.5rem 0;" id="hero-blog-index">
     <div class="container" style="text-align: center;">
-      <div class="badge-orange-light" style="margin-bottom: 1.25rem; display: inline-flex;">
-        📋 Certified Roofer Advisory Board
-      </div>
+      
       <h1 class="hero-title" style="margin-bottom: 1.25rem; font-size: 2.75rem; line-height: 1.2;">
         Roofing Resources <span style="color: var(--orange);">& Homeowner Guides</span>
       </h1>
@@ -426,15 +421,14 @@ const staticCardsHTML = blogPosts.map(post => {
   }
   
   const cardId = 'card-' + post.filename.replace('.html', '');
-  const unsplashId = unsplashIdMap[post.filename] || 'photo-1504307651254-35680f356dfd';
 
   return `
           <div id="${cardId}" class="sitemap-card" style="background: var(--navy-light); border: 1px solid #1E293B; border-radius: 12px; padding: 1.75rem; border-bottom: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: var(--transition);">
             <div>
               <div style="height: 180px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.05); position: relative;">
                 <picture>
-                  <source srcset="https://images.unsplash.com/${unsplashId}?w=350&auto=format&fit=crop&q=50&fm=webp" type="image/webp">
-                  <img width="350" height="256" loading="lazy" src="https://images.unsplash.com/${unsplashId}?w=350&auto=format&fit=crop&q=50&fm=jpg" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+                  <source srcset="/images/blog/${post.filename.replace('.html','')}.webp" type="image/webp">
+                  <img width="350" height="256" loading="lazy" src="/images/blog/${post.filename.replace('.html','')}.webp" alt="${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
                 </picture>
               </div>
 
@@ -546,8 +540,8 @@ indexHTML = indexHTML.replace('</body>', `
               <!-- Blog Card Image Thumbnail -->
               <div style="height: 180px; width: 100%; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.05); position: relative;">
                 <picture>
-                  <source srcset="https://images.unsplash.com/\${post.unsplashId}?w=350&auto=format&fit=crop&q=50&fm=webp" type="image/webp">
-                  <img width="350" height="256" loading="lazy" src="https://images.unsplash.com/\${post.unsplashId}?w=350&auto=format&fit=crop&q=50&fm=jpg" alt="\${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=\${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
+                  <source srcset="/images/blog/\${post.filename.replace('.html','')}.webp" type="image/webp">
+                  <img width="350" height="256" loading="lazy" src="/images/blog/\${post.filename.replace('.html','')}.webp" alt="\${post.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e3a5f/ffffff?text=\${encodeURIComponent(post.category).replace(/%20/g, '+')}';">
                 </picture>
               </div>
 
