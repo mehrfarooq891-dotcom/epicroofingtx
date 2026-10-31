@@ -252,7 +252,16 @@ files.forEach(file => {
         </picture>
       </div>`;
 
-    content = content.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/i, `$1\n      ${imageHTML}`);
+    // Anchor first on the hero-subtitle paragraph; fall back to the subtitle paragraph
+    // after the H1 for older-template posts (e.g. signs-of-hidden-roof-leak-houston)
+    // whose subtitle has no hero-subtitle class — otherwise the hero is removed at
+    // build time and never re-injected, leaving the post hero-less live.
+    const heroAnchor = /(<p class="hero-subtitle"[\s\S]*?<\/p>)/i;
+    if (heroAnchor.test(content)) {
+      content = content.replace(heroAnchor, `$1\n      ${imageHTML}`);
+    } else {
+      content = content.replace(/(<\/h1>[\s\S]*?<\/p>)/i, `$1\n      ${imageHTML}`);
+    }
       }
   }
 
