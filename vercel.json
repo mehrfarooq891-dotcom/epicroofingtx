@@ -794,6 +794,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/hail-damage-roof-first-48-hours-houston.html",
+      "destination": "/blog/hail-damage-roof-first-48-hours-houston",
+      "permanent": true
+    },
+    {
       "source": "/write-for-us.html",
       "destination": "/write-for-us",
       "permanent": true
