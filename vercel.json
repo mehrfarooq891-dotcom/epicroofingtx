@@ -784,6 +784,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/roof-repair-pasadena-tx.html",
+      "destination": "/blog/roof-repair-pasadena-tx",
+      "permanent": true
+    },
+    {
       "source": "/write-for-us.html",
       "destination": "/write-for-us",
       "permanent": true
