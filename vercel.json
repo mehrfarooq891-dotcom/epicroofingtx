@@ -789,6 +789,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/what-does-a-roof-cost-houston.html",
+      "destination": "/blog/what-does-a-roof-cost-houston",
+      "permanent": true
+    },
+    {
       "source": "/write-for-us.html",
       "destination": "/write-for-us",
       "permanent": true
