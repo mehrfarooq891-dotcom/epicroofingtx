@@ -2,6 +2,16 @@
 
 All notable changes to the Epic Roofing & Construction LLC website will be documented in this file.
 
+## [1.3.1] - 2026-11-06
+
+### Changed
+- Title & meta CTR fixes (PDF Page 1 Push Plan §7.1–§7.4, changed 2026-11-06):
+  - Homepage (/): title "Epic Roofing & Construction | Houston Roofing Contractor"; meta "Epic Roofing & Construction LLC — Houston's roofing contractor for roof repair, replacement and storm damage. Free roof inspection. Call (281) 326-9905." (OG title/description updated to match.)
+  - /metal-roofing-houston: title "Metal Roofing Houston TX | Cost, Lifespan & Free Quote"; meta "Metal roofing in Houston, TX: standing seam and panels built for hurricanes and Gulf heat. Real costs, 40+ year lifespan, free quotes — (281) 326-9905."
+  - /free-roof-inspection-houston: title "Free Roof Inspection Houston | Photo Report, No Obligation"; meta "Free roof inspection in Houston, TX: we photograph all damage and hand you a written report — no pressure, no obligation. Book yours: (281) 326-9905."
+  - /chimney-flashing-repair-houston: title "Chimney Leak & Flashing Repair Houston | Epic Roofing TX"; meta "Chimney leaking in Houston? Failed flashing lets water rot your decking in silence. Expert chimney & step-flashing repair — call (281) 326-9905."
+- Footer "Write for Us" links verified present (homepage Quick Links, /blog index via template, /contact) — no changes needed.
+
 ## [1.3.0] - 2026-11-06
 
 ### Added
