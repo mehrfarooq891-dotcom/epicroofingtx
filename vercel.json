@@ -799,6 +799,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/houston-roofing-questions-answered.html",
+      "destination": "/blog/houston-roofing-questions-answered",
+      "permanent": true
+    },
+    {
       "source": "/write-for-us.html",
       "destination": "/write-for-us",
       "permanent": true
