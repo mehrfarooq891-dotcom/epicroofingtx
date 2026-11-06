@@ -310,7 +310,6 @@ function getFooter() {
             <p><strong>Physical Address:</strong><br>9402 Spaulding St<br>Houston, TX 77016</p>
             <p style="margin-top: 0.75rem;"><strong>Direct Line:</strong><br><a href="tel:+12813269905" style="color: var(--hazard-amber); font-weight: 700;">(281) 326-9905</a></p>
             <p style="margin-top: 0.75rem;"><strong>Hours of Operation:</strong><br>Mon &ndash; Sat: 7:00 AM &ndash; 7:00 PM<br>24/7 Emergency Storm Tarping</p>
-            <p style="margin-top: 0.75rem;"><strong>Licenses &amp; Certs:</strong><br>RCAT Licensed Commercial &amp; Residential</p>
           </div>
         </div>
 
@@ -377,7 +376,7 @@ function getFooter() {
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
         <div>
-          &copy; 2026 Epic Roofing &amp; Construction LLC. All rights reserved. Texas RCAT Licensed &amp; Insured.
+          &copy; 2026 Epic Roofing &amp; Construction LLC. All rights reserved.
         </div>
         <div style="display:flex; gap:1.25rem;">
           <a href="/privacy-policy">Privacy Policy</a>
