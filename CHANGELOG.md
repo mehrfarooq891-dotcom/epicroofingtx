@@ -2,6 +2,16 @@
 
 All notable changes to the Epic Roofing & Construction LLC website will be documented in this file.
 
+## [1.4.0] - 2026-11-06
+
+### Added
+- Added Asphalt Shingle Roofing service page: `/asphalt-roofing-houston.html` (served at `/asphalt-roofing-houston`, PDF Page 1 Push Plan §6)
+  - Title: "Asphalt Shingle Roofing Houston TX | Epic Roofing TX"; meta per PDF §6; H1 "Asphalt Shingle Roofing in Houston, TX".
+  - Sections: hero, 3 option cards (Architectural / 3-tab / Class 4 impact-resistant), Why Asphalt Wins, cost drivers (ranges from the site's own 2026 Houston pricing guide), Repair or Replace, 5 FAQs with FAQPage JSON-LD, anonymised Homeowner Incident Spotlight (no names, ratings or review language), closing CTA band.
+  - Images: hero + 2 in-body photos (.jpg + .webp pairs in /images/), hero watermarked in the Epic style; no geo-tagging on this page.
+  - Registered in service-sitemap.xml; redirect added to vercel.json; footer "Our Services" entry added on this page and the homepage (site-wide footer rollout is a later batch).
+  - Pending links (to add when the posts go live): Blog 1 (/blog/asphalt-shingle-roofing-houston) and Blog 3 (/blog/what-does-a-roof-cost-houston) from the cost / repair-or-replace sections.
+
 ## [1.3.1] - 2026-11-06
 
 ### Changed
