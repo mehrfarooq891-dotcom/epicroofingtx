@@ -757,6 +757,26 @@
       "source": "/roof-replacement-after-hurricane-houston",
       "destination": "/storm-damage-roofing-houston",
       "permanent": true
+    },
+    {
+      "source": "/blog/metal-roofing-companies-houston-guide.html",
+      "destination": "/blog/metal-roofing-companies-houston-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/roof-insurance-claim-specialist-houston.html",
+      "destination": "/blog/roof-insurance-claim-specialist-houston",
+      "permanent": true
+    },
+    {
+      "source": "/blog/emergency-roof-repair-cypress-wind-damage.html",
+      "destination": "/blog/emergency-roof-repair-cypress-wind-damage",
+      "permanent": true
+    },
+    {
+      "source": "/write-for-us.html",
+      "destination": "/write-for-us",
+      "permanent": true
     }
   ],
   "rewrites": [
