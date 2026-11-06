@@ -126,7 +126,7 @@ function getFooter() {
             <p><strong>Physical Address:</strong><br>9402 Spaulding St<br>Houston, TX 77016</p>
             <p style="margin-top: 0.75rem;"><strong>Direct Line:</strong><br><a href="tel:+12813269905" style="color: var(--hazard-amber); font-weight: 700;">(281) 326-9905</a></p>
             <p style="margin-top: 0.75rem;"><strong>Hours of Operation:</strong><br>Mon &ndash; Sat: 7:00 AM &ndash; 7:00 PM<br>24/7 Emergency Storm Tarping</p>
-            <p style="margin-top: 0.75rem;"><strong>Licenses &amp; Certs:</strong><br>GAF Master Elite Contractor<br>HAAG Certified Roof Inspector<br>RCAT Licensed Commercial &amp; Residential</p>
+            <p style="margin-top: 0.75rem;"><strong>Licenses &amp; Certs:</strong><br>GAF Master Elite Contractor<br>HAAG Roof Inspector<br>RCAT Licensed Commercial &amp; Residential</p>
           </div>
         </div>
 
@@ -835,10 +835,10 @@ ${JSON.stringify(localBusinessSchema, null, 2)}
             <div class="trust-badges-row">
               <div class="trust-badge-item">
                 <span class="trust-badge-title">GAF Elite</span>
-                <span class="trust-badge-sub">Factory Certified</span>
+                <span class="trust-badge-sub">Factory</span>
               </div>
               <div class="trust-badge-item">
-                <span class="trust-badge-title">HAAG Certified</span>
+                <span class="trust-badge-title">HAAG</span>
                 <span class="trust-badge-sub">Damage Inspectors</span>
               </div>
               <div class="trust-badge-item">
@@ -1003,7 +1003,7 @@ ${JSON.stringify(localBusinessSchema, null, 2)}
           <div class="card">
             <h3 style="color: var(--storm-charcoal);"><a href="/hail-damage-roof-repair-houston" style="color: var(--storm-charcoal); text-decoration: none;">Hail Damage Repair</a></h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-              Certified HAAG inspections to detect micro-fractures, asphalt bruising, and granule stripping caused by severe spring thunderstorm hail cores.
+              HAAG inspections to detect micro-fractures, asphalt bruising, and granule stripping caused by severe spring thunderstorm hail cores.
             </p>
             <a href="/hail-damage-roof-repair-houston" style="color: var(--hazard-amber); font-weight: 700; font-family: var(--font-display); text-transform: uppercase;">Hail Damage Help &rarr;</a>
           </div>
@@ -1128,7 +1128,7 @@ const pagesData = [
     title: "Friendswood TX Roofing Contractor | Epic Roofing TX",
     metaDescription: "GAF Master Elite roofing in Friendswood TX. Storm damage repair, roof replacement & insurance claim help. Free inspections. Call (281) 326-9905.",
     h1: "Friendswood TX Roofing Contractor & Storm Damage Repair",
-    heroSubtitle: "Serving Heritage Park, West Ranch, and Clear Creek subdivisions with certified roof inspections, heavy-duty shingle replacements, and insurance claim documentation.",
+    heroSubtitle: "Serving Heritage Park, West Ranch, and Clear Creek subdivisions with roof inspections, heavy-duty shingle replacements, and insurance claim documentation.",
     painPointBadge: "Local Neighborhood Focus",
     painPointHeadline: "Aging Roofs and Tree Canopy Challenges in Friendswood",
     painPointParagraphs: [
@@ -1151,17 +1151,17 @@ const pagesData = [
       }
     ],
     hasStormChaserSection: true,
-    inspectionHeading: "Certified 21-Point Roof Inspections in Friendswood",
+    inspectionHeading: "21-Point Roof Inspections in Friendswood",
     inspectionText: `
       <p style="margin-bottom: 1rem;">
         Hail stones hitting architectural shingles do not always cause immediate leaks. Instead, hail crushes the protective ceramic granules into the asphalt layer, creating soft bruise spots where ultraviolet sunlight rapidly degrades the fiberglass core.
       </p>
       <p>
-        Our HAAG-certified inspectors climb your roof, mark test squares, photograph granular loss, and provide a detailed physical report you can submit directly to your insurance company.
+        Our HAAG inspectors climb your roof, mark test squares, photograph granular loss, and provide a detailed physical report you can submit directly to your insurance company.
       </p>`,
     whyChoosePoints: [
       {
-        title: "GAF Master Elite Certified",
+        title: "GAF Master Elite",
         text: "Only 2% of roofing contractors in North America earn GAF Master Elite status, allowing us to offer 50-year non-prorated system warranties."
       },
       {
@@ -1215,7 +1215,7 @@ const pagesData = [
     city: "Channelview",
     slug: "channelview-tx-roofing-contractor",
     title: "Channelview TX Roofing Contractor | Epic Roofing TX",
-    metaDescription: "GAF certified roofing contractor in Channelview TX. Storm damage repair, shingle replacement & insurance claims. Free inspections. Call (281) 326-9905.",
+    metaDescription: "GAF roofing contractor in Channelview TX. Storm damage repair, shingle replacement & insurance claims. Free inspections. Call (281) 326-9905.",
     h1: "Channelview TX Roofing Contractor & Storm Damage Repair",
     heroSubtitle: "Providing industrial-grade shingle installations, hurricane wind repairs, and complete roof replacements along the I-10 and Market Street corridors.",
     painPointBadge: "Ship Channel Corridor Climate",
@@ -1232,11 +1232,11 @@ const pagesData = [
       },
       {
         q: "How do insurance claims work for roof damage in Channelview?",
-        a: "When wind or hail damages more than 30% of a roof surface in Channelview, property insurance carriers typically approve a full roof replacement. The insurer pays the replacement cost value minus depreciation and your deductible, issuing the remaining depreciation holdback once the work is certified complete."
+        a: "When wind or hail damages more than 30% of a roof surface in Channelview, property insurance carriers typically approve a full roof replacement. The insurer pays the replacement cost value minus depreciation and your deductible, issuing the remaining depreciation holdback once the work is complete."
       },
       {
         q: "What should I do if my roof got hit by hail in Channelview?",
-        a: "If your roof was struck by hail in Channelview, first take ground-level photographs of dented gutters, window screens, or outdoor AC units. Then schedule a free inspection with a certified roofing contractor to physically document test squares before contacting your insurance company to file a claim."
+        a: "If your roof was struck by hail in Channelview, first take ground-level photographs of dented gutters, window screens, or outdoor AC units. Then schedule a free inspection with a roofing contractor to physically document test squares before contacting your insurance company to file a claim."
       }
     ],
     hasStormChaserSection: true,
@@ -1281,7 +1281,7 @@ const pagesData = [
       },
       {
         q: "What certifications do your Channelview roofers hold?",
-        a: "Our roofers are GAF Master Elite certified, HAAG forensic damage trained, and licensed with the Roofing Contractors Association of Texas (RCAT)."
+        a: "Our roofers are GAF Master Elite HAAG forensic damage trained, and licensed with the Roofing Contractors Association of Texas (RCAT)."
       }
     ],
     neighboringLinks: [
@@ -1333,7 +1333,7 @@ const pagesData = [
         Because Deer Park homes experience both industrial atmospheric exposure and severe thunderstorm fronts, visual ground inspections are never sufficient. Hail hits frequently hide underneath dirt films and overlapping shingle tabs.
       </p>
       <p>
-        Our HAAG-certified inspectors physically evaluate all four slopes, testing shingle pliability, nail pull-through resistance, and valley flashing integrity.
+        Our HAAG inspectors physically evaluate all four slopes, testing shingle pliability, nail pull-through resistance, and valley flashing integrity.
       </p>`,
     whyChoosePoints: [
       {
@@ -1341,7 +1341,7 @@ const pagesData = [
         text: "We specify GAF architectural shingles with Dura Grip adhesive seals that withstand 130 mph wind uplift and environmental chemical stress."
       },
       {
-        title: "HAAG Certified Inspectors",
+        title: "HAAG Roof Inspectors",
         text: "Our team is trained in forensic engineering methods, providing defensible photo documentation that insurance adjusters accept."
       },
       {
@@ -1501,7 +1501,7 @@ const pagesData = [
       }
     ],
     hasStormChaserSection: true,
-    inspectionHeading: "Certified Storm Damage Inspections in Rosenberg",
+    inspectionHeading: "Storm Damage Inspections in Rosenberg",
     inspectionText: `
       <p style="margin-bottom: 1rem;">
         Open prairie thunderstorms across Fort Bend County push hail and high winds into Rosenberg subdivisions with extreme velocity.
@@ -1563,7 +1563,7 @@ const pagesData = [
     city: "Manvel",
     slug: "manvel-tx-roofing-contractor",
     title: "Manvel TX Roofing Contractor | Epic Roofing TX",
-    metaDescription: "Certified Manvel TX roofing contractor. Hail damage repair, roof replacement & insurance claim assistance. Free inspections. Call (281) 326-9905.",
+    metaDescription: "Manvel TX roofing contractor. Hail damage repair, roof replacement & insurance claim assistance. Free inspections. Call (281) 326-9905.",
     h1: "Manvel TX Roofing Contractor & Storm Damage Repair",
     heroSubtitle: "Protecting homes in Pomona, Rodeo Palms, Bluewater Lakes, and rural Manvel with heavy-duty shingle replacements and hail restorations.",
     painPointBadge: "Brazoria County Growth Corridor",
@@ -1576,7 +1576,7 @@ const pagesData = [
     aeoBlocks: [
       {
         q: "What should I do if my roof got hit by hail in Manvel?",
-        a: "If your roof was hit by hail in Manvel, schedule a free forensic inspection with a HAAG-certified roofer before calling your insurance company. The inspector will document whether your roof meets the 10-hit-per-test-square threshold required for full insurance claim approval."
+        a: "If your roof was hit by hail in Manvel, schedule a free forensic inspection with a HAAG roofer before calling your insurance company. The inspector will document whether your roof meets the 10-hit-per-test-square threshold required for full insurance claim approval."
       },
       {
         q: "How long does a roof replacement take in Manvel?",
@@ -1594,7 +1594,7 @@ const pagesData = [
         Newer homes in Pomona and Rodeo Palms often look undamaged from the street after a storm, yet hail impacts fracture shingle backing without blowing shingles off the roof.
       </p>
       <p>
-        Our certified inspectors climb onto your roof, conduct tactile test square evaluations, check plumbing boots and ridge caps, and provide clear photographic evidence.
+        Our inspectors climb onto your roof, conduct tactile test square evaluations, check plumbing boots and ridge caps, and provide clear photographic evidence.
       </p>`,
     whyChoosePoints: [
       {
@@ -1629,7 +1629,7 @@ const pagesData = [
       },
       {
         q: "What shingle brands do you install in Manvel?",
-        a: "We are a certified installer of GAF, Owens Corning, and CertainTeed architectural and Class 4 impact-resistant shingles."
+        a: "We are an installer of GAF, Owens Corning, and CertainTeed architectural and Class 4 impact-resistant shingles."
       }
     ],
     neighboringLinks: [
@@ -1693,8 +1693,8 @@ const pagesData = [
         text: "We install 6-inch aluminum gutters and heavy-duty leaf guards designed to handle heavy pine needle runoff."
       },
       {
-        title: "GAF Master Elite Certified",
-        text: "Our certified installations include full 50-year non-prorated system warranty coverage backed directly by GAF."
+        title: "GAF Master Elite",
+        text: "Our installations include full 50-year non-prorated system warranty coverage backed directly by GAF."
       }
     ],
     faqs: [
@@ -1776,8 +1776,8 @@ const pagesData = [
         text: "We use corrosion-resistant Galvalume flashing and ring-shank nails that resist salt-air oxidation along Clear Lake."
       },
       {
-        title: "GAF Master Elite Certified",
-        text: "Factory-certified installations backed by GAF's 50-year Golden Pledge non-prorated system warranty."
+        title: "GAF Master Elite",
+        text: "Factory installations backed by GAF's 50-year Golden Pledge non-prorated system warranty."
       },
       {
         title: "Detailed Engineering Reports",

@@ -298,7 +298,7 @@ if (navStartIndex !== -1 && navEndIndex !== -1) {
   let navHTML = `
   <!-- EMERGENCY TOP BANNER -->
   <div class="emergency-strip" id="emergency-banner">
-    🚨 Active Roof Leak? Get Certified Same-Day Solutions & Water Isolation | <a href="tel:+12813269905">📞+1 (281) 326-9905</a>
+    🚨 Active Roof Leak? Get Same-Day Solutions & Water Isolation | <a href="tel:+12813269905">📞+1 (281) 326-9905</a>
   </div>
 
   <!-- STICKY NAVY HEADER -->
