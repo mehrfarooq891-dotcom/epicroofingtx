@@ -779,6 +779,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/asphalt-shingle-roofing-houston.html",
+      "destination": "/blog/asphalt-shingle-roofing-houston",
+      "permanent": true
+    },
+    {
       "source": "/write-for-us.html",
       "destination": "/write-for-us",
       "permanent": true
