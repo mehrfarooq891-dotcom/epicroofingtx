@@ -419,6 +419,71 @@
  </div>
  </section>
 
+ <!-- ROOF STORY: STORM TO SOUND ROOF (3 steps, light scroll-reveal) -->
+ <style>
+ .roof-story{background-color:var(--cloud-white);padding:3.5rem 0}
+ .roof-story-head{text-align:center;max-width:720px;margin:0 auto 2.5rem}
+ .roof-story-head h2{font-size:2.25rem;margin-bottom:.5rem}
+ .roof-story-head p{color:var(--text-muted);font-size:1.1rem;margin:0}
+ .roof-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+ .roof-story-card{background:#FFFFFF;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+ .roof-story-card.is-visible{opacity:1;transform:none}
+ .roof-story-card:nth-child(2){transition-delay:.12s}
+ .roof-story-card:nth-child(3){transition-delay:.24s}
+ .roof-story-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+ .roof-story-body{padding:1.4rem 1.4rem 1.6rem}
+ .roof-story-step{font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--hazard-amber);text-transform:uppercase}
+ .roof-story-body h3{margin:.35rem 0 .5rem;font-size:1.3rem}
+ .roof-story-body p{margin:0;color:var(--text-muted);font-size:1rem;line-height:1.55}
+ .roof-story-cta{text-align:center;margin-top:2.25rem}
+ .roof-story-cta .btn-tactile{margin:0 .4rem .6rem}
+ .roof-story-cta-note{color:var(--text-muted);font-size:.95rem;margin:.25rem 0 0}
+ @media (prefers-reduced-motion:reduce){.roof-story-card{opacity:1;transform:none;transition:none}}
+ @media (max-width:768px){.roof-story{padding:2.5rem 0}.roof-story-grid{grid-template-columns:1fr}.roof-story-head h2{font-size:1.8rem}}
+ </style>
+ <section class="roof-story" id="roof-story" aria-label="How your roof gets fixed">
+ <div class="container">
+ <div class="roof-story-head">
+ <h2>From Storm Damage to a Sound Roof</h2>
+ <p>Three steps. No surprises. Here is how it works.</p>
+ </div>
+ <div class="roof-story-grid">
+ <article class="roof-story-card" data-reveal>
+ <img src="/images/blog/hail-damage-roof-first-48-hours-houston.webp" alt="Hailstones resting on a wet surface after a hailstorm" width="1200" height="800" loading="lazy" decoding="async">
+ <div class="roof-story-body">
+ <span class="roof-story-step">Step 1</span>
+ <h3>The Storm Hits</h3>
+ <p>Hail and high wind can bruise shingles and lift flashing &mdash; damage you can&rsquo;t always see from the ground.</p>
+ </div>
+ </article>
+ <article class="roof-story-card" data-reveal>
+ <img src="/images/blog/free-roof-inspection-houston-guide.webp" alt="A roofing worker on a lift inspecting a tile roof" width="1200" height="800" loading="lazy" decoding="async">
+ <div class="roof-story-body">
+ <span class="roof-story-step">Step 2</span>
+ <h3>Free Inspection Finds It</h3>
+ <p>We inspect the roof, document what we find with photos, and walk you through it. Free inspection, no obligation.</p>
+ </div>
+ </article>
+ <article class="roof-story-card" data-reveal>
+ <img src="/images/blog/hail-damage-roof-inspection-checklist-houston.webp" alt="Roof tiles being installed on wooden battens during a roof installation" width="1200" height="800" loading="lazy" decoding="async">
+ <div class="roof-story-body">
+ <span class="roof-story-step">Step 3</span>
+ <h3>Repair, Done Right</h3>
+ <p>Repair or replacement, built for Houston storms. Crews on call 24/7, same-day tarping when the roof is open to the rain, and a callback within 15 minutes.</p>
+ </div>
+ </article>
+ </div>
+ <div class="roof-story-cta">
+ <a href="tel:+12813269905" class="btn-tactile">Call (281) 326-9905</a>
+ <a href="/free-roof-inspection-houston" class="btn-tactile" style="background-color:var(--storm-charcoal);box-shadow:0 4px 0 #0E1217;">Request Free Inspection</a>
+ <p class="roof-story-cta-note">Free inspection. No obligation.</p>
+ </div>
+ </div>
+ </section>
+ <script>
+ (function(){var cards=document.querySelectorAll('.roof-story-card[data-reveal]');if(!cards.length)return;if(!('IntersectionObserver' in window)){cards.forEach(function(c){c.classList.add('is-visible')});return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});cards.forEach(function(c){io.observe(c);});})();
+ </script>
+
  <!-- PRICE-BEAT GUARANTEE BANNER -->
  <section style="background: linear-gradient(135deg, #E2900F 0%, #B96F08 100%); padding: 1.75rem 0;">
  <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; text-align: center;">
