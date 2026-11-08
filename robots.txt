@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you
 Sitemap: https://epicroofingtx.com/sitemap.xml
+Sitemap: https://www.epicroofingtx.com/sitemap-index.xml
